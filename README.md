@@ -1,0 +1,1 @@
+# suchiguma.github.io
