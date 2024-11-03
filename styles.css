@@ -1,71 +1,130 @@
 /* Global styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #510587;
-    color: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #38065c;
+    color: #eee;
     margin: 0;
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4, h5, h6 {
+    font-size: 1.3rem;
+}
+
+p, li, span, small {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .container {
-    max-width: 1000px;
+    width: 90%;
+    max-width: 1920px;
     margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+    padding: 0px;
+    text-align: left;
+}
+
+.fleet {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+
+/* .fleet img {
+    width: 697px;
+    height: auto;
+} */
+
+.fleet p {
+    margin: 0;
+    padding: 0;
+    max-width: 500px;
+}
+
+.video-player-limit {
+    max-width: 560px;
+    width: 100%;
+}
+
+.video-player {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+  
+.video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 header {
     margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #fff;
+    text-align: center;
 }
 
 p {
     font-size: 1.0rem;
-    color: #dcdcdc;
 }
 
-h2 {
-    font-size: 1.8rem;
-    color: #f7f7f7;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-ul.links-list {
-    list-style-type: none;
-    padding: 10;
-    text-align: left;
-}
-
-ul.links-list li {
-    margin: 12px 0;
-}
-
-ul.links-list li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
+a {
     color: #ffccff;
     transition: color 0.3s ease;
+    display: inline-block;
 }
 
-ul.links-list li a:hover {
-    color: #fff9f9;
+a:hover {
+    color: #ffffff;
 }
 
-ul.links-list li .desc {
-    font-size: 1rem;
-    color: #dcdcdc;
-    margin-left: 10px;
+.two-column-list {
+    column-count: 2;
+    column-gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
 }
 
-footer {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #dcdcdc;
+.two-column-list li {
+    break-inside: avoid;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 3px;
+}
+
+.toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+.toc li {
+    margin: 0;
+}
+
+@media (max-width: 720px) {
+    .two-column-list {
+        column-count: 1;
+    }
 }
