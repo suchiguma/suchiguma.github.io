@@ -4,6 +4,10 @@ img {
     height: auto;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #38065c;
@@ -40,7 +44,7 @@ p, li, span, small {
 }
 
 header {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-align: center;
 }
 

@@ -4,6 +4,10 @@ img {
     height: auto;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #38065c;
