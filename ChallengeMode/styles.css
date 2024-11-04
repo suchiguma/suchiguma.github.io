@@ -65,6 +65,7 @@
 
 .month-div {
     display: none;
+    text-align: center;
 }
 .active {
     display: block;
