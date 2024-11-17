@@ -5,6 +5,10 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+  contents: write
+
 jobs:
   sitemap_job:
     runs-on: ubuntu-latest
