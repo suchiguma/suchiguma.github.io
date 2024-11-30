@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Azur Lane Guides</title>
+<link rel="stylesheet" type="text/css" href="/docs/static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/docs/static/main.css">
+<link rel="stylesheet" type="text/css" href="/docs/static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/docs/style.css">
+</head>
+<link rel="shortcut icon" href="/docs/favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Introduction</h1></header>
+<p>Learn how to beat Challenge Mode with strategies and multiple example fleets for each month of the constellation extreme challenge mode in Azur Lane Each month s page will have strategies and several example fleets Although we try to be detailed in strategies and provide multiple example fleets we do not know what ships or gear you have Treat the example fleets as examples and consider your own better upgrades or close substitutes We assume Hard Augur difficulty but the same strategies usually work for lower difficulties with worse fleets and gear We also assume auto battle only because most of the difficult CM gimmicks are nullified by proper manualing Always check boss stats and skills on Extreme Challenge wiki or in game but sometimes the game says a wrong number Tip Fleet screenshots using Azur Lane Fleet Tool show the vanguard from bottom main tank to top off tank It s like the in game Formation screen but rotated counter clockwise The ships are also marked with 1 2 and 3 from bottom to top</p>
+</article>
+
+<article>
+<header><h1>Timing</h1></header>
+<p>Most CM s are exercises in reading and timing Oaths or exact gear levels 10 to 13 are not required unless for timing However many example fleets are timing sensitive and you often won t have the exact ships oaths gear cat RLD and RLD tech to copy them correctly Then you will need to calculate your own fleet timing To the best of our knowledge this online calculator henceforth referred to as the calculator is the only one that is precise enough for these CM timing calculations We highly recommend not being scared by it and learning how to use it on desktop If an example fleet requires 50 CV RLD with oath that means you need oathed CVs and have CV reload from tech cats 50 Alternatively it would also probably work without oaths and with CV tech cats 57 or 58 Due to how the game code loop works some boss skills boss movement patterns or ship skills can be delayed by 0 0s to 0 1s every time This is more noticeable in long battles like the game mode this guide is for Some strategies attempt to account for this delay but sometimes it can t be fixed</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/docs/footer.js"></script>
+<script type="text/javascript" src="/docs/toc.js"></script>
+<script type="text/javascript" src="/docs/assets.js"></script>
+<script type="text/javascript" src="/docs/static/main.js"></script>
+<script type="text/javascript" src="/docs/search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : "docs",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "url" : "challenge-mode/challenge-mode",
+      "type" : "Redirect"
+    } ],
+    "lastModifiedTime" : 0,
+    "tocItem" : {
+      "chapterTitle" : "",
+      "pageTitle" : "",
+      "pageMeta" : { },
+      "dirName" : "",
+      "fileName" : "index",
+      "fileExtension" : "",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
