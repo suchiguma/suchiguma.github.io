@@ -24,7 +24,7 @@ jobs:
       with:
         base-url-path: https://suchiguma.github.io
         drop-html-extension: true
-        exclude-paths: /googlef1c326092f50715e.html /googlef1c326092f50715e
+        exclude-paths: /googlef1c326092f50715e.html /googlef1c326092f50715e /ChallengeMode /videos /static
 
     - name: Output stats
       run: |
