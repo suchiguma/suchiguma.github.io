@@ -1,0 +1,16 @@
+:root {
+    --znai-inversed-text-color: #ddd;
+    --znai-background-color: #eee;
+    --znai-toc-title-background-color: #d9d9d9;
+    --znai-toc-panel-background-color: #d9d9d9;
+    --znai-color-orange: #ffa500;
+    --znai-color-purered: #ff0000;
+    --znai-color-puregreen: #00b900;
+    --znai-scrollbar-width: auto;
+    --znai-scrollbar-height: auto;
+}
+
+.theme-znai-dark {
+    --znai-background-color: #1a1a1a;
+    --znai-scrollbar-background-color: #555;
+}
