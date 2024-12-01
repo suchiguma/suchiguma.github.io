@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Azur Lane Guides: December Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>Comprehensive strategies and example fleets for how to beat Warspite the December Incarnation of Sagittarius extreme challenge mode boss read the wiki Timing precision Medium DPS check Easy Tank check Medium First read the boss skills if you haven t You must consistently interrupt Warspite every 20s and not mentioned is that her charge attack has 30k HP and finishes in 5s Let success denote your fleet successfully interrupting Warspite by dealing enough damage Let failure denote the opposite Generally a success causes your main fleet to lose a little HP and a failure causes it to lose a LOT of HP Do not expect to tank two or more failures On average the charge attack happens every ~20 05s and Warspite stops for ~8 2s shown in the chart below every ~20 45s Strategies that attempt to take advantage of her stop should consider that timing attacks to her charge attack will become desynced with her stop later in the battle One recurring strategy you will find in the following fleets is a BB excluding Alsace or Unzen with 20s reload time After one failure Warspite will blind your fleet preventing torpedos airstrikes and main fleet salvos from launching The blindness ends around the same time Warspite begins the next charge Since BBs and Unzen cannot begin reloading the next attack while holding one they will become synced with Warspite s charging for the rest of the battle Time graph for skills</p>
+</article>
+
+<article>
+<header><h1>Mid-End BB</h1></header>
+<p>Possibly coming in December no promises</p>
+</article>
+
+<article>
+<header><h1>YOLO: High-End BB</h1></header>
+<p>The least effort strategy that may randomly lose even when geared well The BBs have no sync whatsoever so they fire at arbitrary times with UvH offering frequent salvos Every 20s pray that at least one BB s salvo partially falls within the 5s charge attack window and some high DPS vanguard ships can also help reach the 30k threshold The fleet is expected to get a few interrupt failures so you should also pray that your BBs evade enough shells If you put in more effort you can try to get Unzen s torpedos or one of the BBs to have around 20s reload time High End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>Mid-End CV</h1></header>
+<p>Warning This fleet has not been tested Maryland or any other decent BB must have 20 0s to 20 06s reload time A level 120 unoathed Maryland with 0 RLD and a 4 Autoloader shows 19 84s in the fleet builder which is around 20 04s in battle you can use the calculator to verify Enterprise without La 9 sucks against heavy armor and she was only chosen because everyone has her Amagi is flag because of Watarase otherwise she should be bottom Mid End CV example fleet</p>
+</article>
+
+<article>
+<header><h1>High-End CV</h1></header>
+<p>Because carriers except Impero can store airstrikes being blinded once by Warspite will not sync the 20s carriers to the charge attack Therefore these fleets must rely on the vanguard to deal 30k damage in 5s If you can get the vanguard damage to work then ~20s CVs with Helena should produce the fastest possible clear times Warning Unzen s 20 0s to 20 1s improved quad mag torpedos are all but required Shown here is an unoathed Unzen with 10 CA RLD tech and a 4 Autoloader yielding a faster reload than 20 0s but Unzen can be lagged or blocked so 19 98s is suitable Ideally you should find a sync with one or two oxytorps instead of autoloader The example could have put two oxytorps but the autoloader toolkit was chosen for people who win slower Shinano being the slowest of the three carriers takes defensive auxes to survive for over 5 minutes High End CV example fleet</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script type="text/javascript" src="/./search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Comprehensive strategies and example fleets for how to beat Warspite, the December Incarnation of Sagittarius extreme challenge mode boss.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Sagittarius",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "read the wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "First, read the boss skills if you haven't. You must consistently interrupt Warspite every 20s, and not mentioned is that her charge attack has 30k HP and finishes in 5s. Let \"success\" denote your fleet successfully interrupting Warspite by dealing enough damage. Let \"failure\" denote the opposite. Generally, a success causes your main fleet to lose a little HP, and a failure causes it to lose a LOT of HP. Do not expect to tank two or more failures.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "On average, the charge attack happens every ~20.05s, and Warspite stops for ~8.2s (shown in the chart below) every ~20.45s. Strategies that attempt to take advantage of her stop should consider that timing attacks to her charge attack will become desynced with her stop later in the battle.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "One recurring strategy you will find in the following fleets is a BB (excluding Alsace) or Unzen with 20s reload time. After one failure, Warspite will blind your fleet, preventing torpedos, airstrikes, and main fleet salvos from launching. The blindness ends around the same time Warspite begins the next charge. Since BBs and Unzen cannot begin reloading the next attack while holding one, they will become synced with Warspite's charging for the rest of the battle.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\sagittarius_cm_time.webp",
+        "alt" : "Time graph for skills.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1731824189624,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "mid-end-bb",
+      "additionalIds" : [ ],
+      "title" : "Mid-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Possibly coming in December, no promises",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "yolo-high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "YOLO: High-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The least-effort strategy that may randomly lose even when geared well. The BBs have no sync whatsoever, so they fire at arbitrary times, with UvH offering frequent salvos. Every 20s, pray that at least one BB's salvo partially falls within the 5s charge attack window, and some high-DPS vanguard ships can also help reach the 30k threshold. The fleet is expected to get a few interrupt failures, so you should also pray that your BBs evade enough shells.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you put in more effort, you can try to get Unzen's torpedos or one of the BBs to have around 20s reload time.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\sagittarius_highBB.webp",
+        "alt" : "High-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1733009598932,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "mid-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Mid-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: This fleet has not been tested.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Maryland (or any other decent BB) must have 20.0s to 20.06s reload time. A level 120 unoathed Maryland with +0 RLD and a +4 Autoloader shows 19.84s in the fleet builder which is around 20.04s in battle (you can use the calculator to verify). Enterprise without La-9 sucks against heavy armor, and she was only chosen because everyone has her. Amagi is flag because of Watarase, otherwise she should be bottom.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\sagittarius_midCV.webp",
+        "alt" : "Mid-End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1733009599135,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "High-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Because carriers (except Impero) can store airstrikes, being blinded once by Warspite will not sync the 20s carriers to the charge attack. Therefore, these fleets must rely on the vanguard to deal 30k damage in 5s. If you can get the vanguard damage to work, then ~20s CVs with Helena should produce the fastest possible clear times.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: Unzen's 20.0s to 20.1s (improved) quad mag torpedos are all but required.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Shown here is an unoathed Unzen with 10 CA RLD tech and a +4 Autoloader yielding a faster reload than 20.0s, but Unzen can be lagged or blocked so 19.98s is suitable. Ideally you should find a sync with one or two oxytorps instead of autoloader. The example could have put two oxytorps, but the autoloader+toolkit was chosen for people who win slower. Shinano, being the slowest of the three carriers, takes defensive auxes to survive for over 5 minutes.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\sagittarius_highCV.webp",
+        "alt" : "High-End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1733009599032,
+        "type" : "Image"
+      }, {
+        "src" : "/./videos/lite_b9g8DJmX_Ec.html",
+        "previewMarker" : "e998c940-7f70-4b7b-816b-bbc0a1ba90d6",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
+    } ],
+    "lastModifiedTime" : 1733014200215,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "December Challenge",
+      "pageMeta" : {
+        "title" : [ "December Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "december",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Mid-End BB",
+        "id" : "mid-end-bb",
+        "customAnchorId" : "mid-end-bb"
+      }, {
+        "title" : "YOLO: High-End BB",
+        "id" : "yolo-high-end-bb",
+        "customAnchorId" : "yolo-high-end-bb"
+      }, {
+        "title" : "Mid-End CV",
+        "id" : "mid-end-cv",
+        "customAnchorId" : "mid-end-cv"
+      }, {
+        "title" : "High-End CV",
+        "id" : "high-end-cv",
+        "customAnchorId" : "high-end-cv"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

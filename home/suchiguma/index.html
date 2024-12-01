@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<title>Azur Lane Guides: Suchiguma</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Who Am I</h1></header>
+<p>I Suchiguma you may call me sushi or sushigummy if that s easier am the main author of this website which contains several guides and resources for Azur Lane endgame I specialize in crafting fleet gear strategy for endgame PvE battles These are some examples of my achievements EX Usually top 3 EX score across EN servers Extreme Challenge Auto speedruns with the world s fastest or near fastest clear times in multiple months Hard Arbiter Auto speedruns like killing each arbiter in 21 seconds using faster but lower damage gear Campaign Auto lethal 15 4 with a single fleet no subs no support carriers no crossfleet Go back to the Home Page view my work</p>
+</article>
+
+<article>
+<header><h1>My Story</h1></header>
+<p>A long long time ago but after EN servers beta period I was a clueless little new player I found some deteriorating and in hindsight often questionable guides on the street and perused them diligently along with the EN wiki helping me clear Chapter 12 with ease However as a casual player I fell victim to mistakes such as retiring ships after level 70 MLB for the noble but misguided ideal of clearing dock space some of the ships lost in the great purges offered key level 120 tech stats sorry Intrepid and Eskimo Sometime in late 2020 I began taking the game more seriously I farmed 12 2 and 12 4 with a 1 3 fleet and even wrote a simulation to calculate when to retreat from 12 4 for maximum ship experience gains this was before clearing rewards were added for completing the boss battle However mobilizing my account to handle the endgame content of the time proved slow and I failed to one shot Hiryuu META and Ark Royal META when Operation Siren released Fast forward a few years and it seems I ve made rather respectable progress despite my dubious beginnings Today Im hailed as one of the most eminent scholars of my field My journey proves that I I forgot the point of writing this story</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script type="text/javascript" src="/./search-index.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "who-am-i",
+      "additionalIds" : [ ],
+      "title" : "Who Am I",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "I, Suchiguma (you may call me sushi or sushigummy if that's easier), am the main author of this website, which contains several guides and resources for Azur Lane endgame.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "I specialize in crafting fleet/gear strategy for endgame PvE battles. These are some examples of my achievements:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "EX: Usually top 3 EX score across EN servers.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Extreme Challenge: Auto speedruns with the world's fastest or near-fastest clear times in multiple months.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Hard Arbiter: Auto speedruns like killing each arbiter in 21 seconds using faster but lower-damage gear.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Campaign: Auto lethal 15-4 with a single fleet (no subs, no support carriers, no crossfleet).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Go back to the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./home/home-page",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Home Page",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " view my work.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "my-story",
+      "additionalIds" : [ ],
+      "title" : "My Story",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "A long, long time ago (but after EN servers' beta period), I was a clueless little new player. I found some deteriorating (and, in hindsight, often questionable) guides on the street and perused them diligently along with the EN wiki, helping me clear Chapter 12 with ease. However, as a casual player, I fell victim to mistakes such as retiring ships after level 70 MLB for the noble but misguided ideal of clearing dock space; some of the ships lost in the great purges offered key level 120 tech stats (sorry, Intrepid and Eskimo).",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Sometime in late 2020, I began taking the game more seriously. I farmed 12-2 and 12-4 with a 1:3 fleet and even wrote a simulation to calculate when to retreat from 12-4 for maximum ship experience gains (this was before clearing rewards were added for completing the boss battle). However, mobilizing my account to handle the endgame content of the time proved slow, and I failed to one-shot Hiryuu META and Ark Royal META when Operation Siren released.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Fast forward a few years, and it seems I've made rather respectable progress, despite my dubious beginnings. Today, I’m hailed as one of the most eminent scholars of my field. My journey proves that I...I forgot the point of writing this story.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1733037901085,
+    "tocItem" : {
+      "chapterTitle" : "Home",
+      "pageTitle" : "Suchiguma",
+      "pageMeta" : { },
+      "dirName" : "home",
+      "fileName" : "suchiguma",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Who Am I",
+        "id" : "who-am-i",
+        "customAnchorId" : "who-am-i"
+      }, {
+        "title" : "My Story",
+        "id" : "my-story",
+        "customAnchorId" : "my-story"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
