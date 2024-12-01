@@ -56,6 +56,15 @@ toc = [ {
       "id" : "my-story",
       "customAnchorId" : "my-story"
     } ]
+  }, {
+    "chapterTitle" : "Home",
+    "pageTitle" : "Contact",
+    "pageMeta" : { },
+    "dirName" : "home",
+    "fileName" : "contact",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ ]
   } ]
 }, {
   "chapterTitle" : "Challenge Mode",
@@ -138,10 +147,6 @@ toc = [ {
       "title" : "YOLO: High-End BB",
       "id" : "yolo-high-end-bb",
       "customAnchorId" : "yolo-high-end-bb"
-    }, {
-      "title" : "Mid-End CV",
-      "id" : "mid-end-cv",
-      "customAnchorId" : "mid-end-cv"
     }, {
       "title" : "High-End CV",
       "id" : "high-end-cv",
