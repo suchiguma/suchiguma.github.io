@@ -140,10 +140,6 @@ toc = [ {
       "id" : "strategy",
       "customAnchorId" : "strategy"
     }, {
-      "title" : "Mid-End BB",
-      "id" : "mid-end-bb",
-      "customAnchorId" : "mid-end-bb"
-    }, {
       "title" : "YOLO: High-End BB",
       "id" : "yolo-high-end-bb",
       "customAnchorId" : "yolo-high-end-bb"
