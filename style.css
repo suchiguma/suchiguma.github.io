@@ -6,6 +6,9 @@
     --znai-color-orange: #ffa500;
     --znai-color-purered: #ff0000;
     --znai-color-puregreen: #00b900;
+    --darkreader-text--znai-color-orange: #ffa500;
+    --darkreader-text--znai-color-purered: #ff0000;
+    --darkreader-text--znai-color-puregreen: #00b900;
     --znai-scrollbar-width: auto;
     --znai-scrollbar-height: auto;
 }
