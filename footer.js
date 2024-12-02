@@ -1,31 +1,33 @@
 footer = {
   "type" : "Footer",
   "content" : [ {
-    "type" : "Paragraph",
-    "content" : [ {
-      "text" : "left:",
-      "type" : "SimpleText"
-    }, {
-      "type" : "SoftLineBreak"
-    }, {
-      "text" : "© 2024 Suchiguma",
-      "type" : "SimpleText"
-    } ]
-  }, {
-    "type" : "Paragraph",
-    "content" : [ {
-      "text" : "right:",
-      "type" : "SimpleText"
-    }, {
-      "type" : "SoftLineBreak"
-    }, {
-      "url" : "/./home/contact",
-      "isFile" : false,
-      "type" : "Link",
+    "columns" : [ {
       "content" : [ {
-        "text" : "Contact",
-        "type" : "SimpleText"
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "© 2024 Suchiguma",
+          "type" : "SimpleText"
+        } ]
       } ]
-    } ]
+    }, {
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "url" : "/./home/contact",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Contact",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    } ],
+    "config" : {
+      "right" : {
+        "align" : "right"
+      }
+    },
+    "type" : "Columns"
   } ]
 }
