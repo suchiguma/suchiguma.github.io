@@ -1,1 +1,1 @@
-{"includePlugins":{"redirect":{"count":1},"image":{"count":2,"params":["fit","title"]},"iframe":{"count":2,"params":["fit"]}},"fencePlugins":{},"inlineCodePlugins":{"icon":{"count":15,"params":["fill","stroke"]}}}
+{"includePlugins":{"redirect":{"count":1},"image":{"count":2,"params":["fit","title"]},"iframe":{"count":2,"params":["fit"]}},"fencePlugins":{"columns":{"count":1,"params":["right"]}},"inlineCodePlugins":{"icon":{"count":15,"params":["fill","stroke"]}}}
