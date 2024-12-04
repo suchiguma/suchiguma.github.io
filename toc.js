@@ -129,6 +129,7 @@ toc = [ {
     "chapterTitle" : "Challenge Mode",
     "pageTitle" : "December Challenge",
     "pageMeta" : {
+      "bonus" : [ "nothing" ],
       "title" : [ "December Challenge" ]
     },
     "dirName" : "challengemode",
