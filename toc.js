@@ -67,6 +67,39 @@ toc = [ {
     "pageSectionIdTitles" : [ ]
   } ]
 }, {
+  "chapterTitle" : "Guides",
+  "dirName" : "guides",
+  "items" : [ {
+    "chapterTitle" : "Guides",
+    "pageTitle" : "Chapter 15",
+    "pageMeta" : { },
+    "dirName" : "guides",
+    "fileName" : "chapter-15",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Map Walkthrough",
+      "id" : "map-walkthrough",
+      "customAnchorId" : "map-walkthrough"
+    }, {
+      "title" : "General Fleet Structure",
+      "id" : "general-fleet-structure",
+      "customAnchorId" : "general-fleet-structure"
+    }, {
+      "title" : "Gear Notes",
+      "id" : "gear-notes",
+      "customAnchorId" : "gear-notes"
+    }, {
+      "title" : "Misc. Recommendations",
+      "id" : "misc-recommendations",
+      "customAnchorId" : "misc-recommendations"
+    }, {
+      "title" : "Example Fleets",
+      "id" : "example-fleets",
+      "customAnchorId" : "example-fleets"
+    } ]
+  } ]
+}, {
   "chapterTitle" : "Challenge Mode",
   "dirName" : "challengemode",
   "items" : [ {
@@ -129,7 +162,6 @@ toc = [ {
     "chapterTitle" : "Challenge Mode",
     "pageTitle" : "December Challenge",
     "pageMeta" : {
-      "bonus" : [ "nothing" ],
       "title" : [ "December Challenge" ]
     },
     "dirName" : "challengemode",

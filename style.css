@@ -1,19 +1,42 @@
 :root {
-    --znai-inversed-text-color: #ddd;
+    --znai-regular-text-color: #111;
     --znai-background-color: #eee;
     --znai-toc-title-background-color: #d9d9d9;
+    --znai-toc-chapter-title-color: #333;
+    --znai-toc-title-color: #000;
+    --znai-toc-page-section-color: #111;
+    --znai-toc-page-title-color: #111;
     --znai-toc-panel-background-color: #d9d9d9;
+    --znai-inversed-text-color: #ddd;
+    
     --znai-color-orange: #ffa500;
     --znai-color-purered: #ff0000;
     --znai-color-puregreen: #00b900;
+    --znai-color-gray: #888;
     --darkreader-text--znai-color-orange: #ffa500;
     --darkreader-text--znai-color-purered: #ff0000;
     --darkreader-text--znai-color-puregreen: #00b900;
+    --darkreader-text--znai-color-gray: #888;
+    
     --znai-scrollbar-width: auto;
     --znai-scrollbar-height: auto;
+    --znai-toc-panel-scrollbar-color: var(--znai-color-gray);
+}
+
+.toc-menu::-webkit-scrollbar {
+    width: 10px;
 }
 
 .theme-znai-dark {
     --znai-background-color: #1a1a1a;
     --znai-scrollbar-background-color: #555;
+    --znai-regular-text-color: #eee;
+    --znai-toc-title-background-color: #272727;
+    --znai-toc-chapter-title-color: #ccc;
+    --znai-toc-title-color: #fff;
+    /* --znai-toc-selected-text-color: #c2b9ff; */
+    --znai-toc-page-section-color: #eee;
+    --znai-toc-page-title-color: #eee;
+    --znai-toc-panel-background-color: #272727;
+    --znai-inversed-text-color: #222;
 }
