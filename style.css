@@ -9,6 +9,9 @@
     --znai-toc-panel-background-color: #d9d9d9;
     --znai-inversed-text-color: #ddd;
     
+    --znai-table-header-background-color: #d8d8d8;
+    --znai-table-body-background-color: #ffffff;
+    
     --znai-color-orange: #ffa500;
     --znai-color-purered: #ff0000;
     --znai-color-puregreen: #00b900;
@@ -39,4 +42,11 @@
     --znai-toc-page-title-color: #eee;
     --znai-toc-panel-background-color: #272727;
     --znai-inversed-text-color: #222;
+    
+    --znai-table-text-color: var(--znai-regular-text-color);
+    --znai-table-header-background-color: #272f33;
+}
+
+.znai-table {
+    border: 0px;
 }
