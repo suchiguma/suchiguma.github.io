@@ -7,12 +7,9 @@ footer = {
         "content" : [ {
           "text" : "© 2024 Suchiguma",
           "type" : "SimpleText"
-        } ]
-      } ]
-    }, {
-      "content" : [ {
-        "type" : "Paragraph",
-        "content" : [ {
+        }, {
+          "type" : "HardLineBreak"
+        }, {
           "url" : "/./home/contact",
           "isFile" : false,
           "type" : "Link",
@@ -20,6 +17,25 @@ footer = {
             "text" : "Contact",
             "type" : "SimpleText"
           } ]
+        } ]
+      } ]
+    }, {
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "Azur Lane",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : "-related images displayed here are owned by",
+          "type" : "SimpleText"
+        }, {
+          "type" : "HardLineBreak"
+        }, {
+          "text" : "Manjuu Co.,Ltd., YongShi Co.,Ltd., Yostar, Inc.",
+          "type" : "SimpleText"
         } ]
       } ]
     } ],
