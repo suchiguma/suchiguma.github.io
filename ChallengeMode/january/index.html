@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat Katsuragi, the January Incarnation of Capricorn extreme challenge mode boss.">
+<title>Azur Lane Guides: January Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>read the wiki Timing precision Easy DPS check Hard Tank check Easy This month is a straight DPS and reading check Light status shielded healing 1% HP per second Dark status easy mode Bring vanguard ships that spam a lot of shells to break the shield as fast as possible because you do not want to let Katsuragi heal 15% HP for every 30% lost Other than the vanguard shell spam there are no other gimmicks so bring typical good anti medium DPS We only provide examples of fleets with good synergy and sync to attain high DPS If you do not know how to set up high DPS fleets in the absence of boss gimmicks by yourself we recommend asking or lurking in ALO Discord #gameplay help Note Katsuragi s movement cycle is approximately 28 45s long so you should bring your own slow freeze Although Katsuragi s skill descriptions imply that the five rotating shields can each block 70 shells in reality they share the same hit count So if 70 shells each hit any of the shields all five shields disappear and Katsuragi enters Dark status Furthermore like typical rotating shields her shields will not block arcing shells from BB guns CB guns torpedos and bombs Katsuragi also often moves back to the far right of the screen as 13 4 Taihou does when carpet bombing Taking this information into consideration some example favored and unfavored things are listed here Things that are good against Katsuragi Twin 138 6mm and both Twin 130mm s have high range and shells per second Twin 100mm Kai has high shells per second and spams barrages but is more inconsistent due to low range Plymouth has 3 main gun mounts MGMs and a guaranteed aimed barrage every 10s San Diego and Scylla spam shells and have good AA to keep carriers concealed though Sandy s augment barrage ignores shields Helena has 2 CL MGMs and 1 DD mount Barrage or MGM spammers like Mogador Harbin or Tashkent s Things that may be good in general but are less so against Katsuragi Triple 155mm Kai or any other slow gun CA guns have low shells per second CBs and basically all CAs have poor shield breaking capabilities and their tankiness is not needed Hindenburg s guns ignore shields Z52 s barrages pass through shields and she only has 1 MGM Tempesta submarine frigates can also help break one shield cycle Summon them a few seconds before you will pass the 30% HP difference since Katsuragi last had shields Just put cheap gear no need to spend core data on all the 12 pounders and Round Shots Tempesta example fleet</p>
+</article>
+
+<article>
+<header><h1>Mid-End CV</h1></header>
+<p>A fleet like this should win in under 10 minutes with half tech and mid cats Fritz is not using double BF109G because that would make her too fast To keep Fritz before AvP do not exceed 50 CV RLD Enterprise will desync eventually but not much we can do about it Scylla has been unavailable for a while now so pick a substitute from above if you don t have her Since Scylla s torpedos are too hard to sync for 10 minutes we opt for the fastest torps to spam more barrage Mid End CV example fleet</p>
+</article>
+
+<article>
+<header><h1>Mid-End BB</h1></header>
+<p>None Even the High End BB fleet will take over 6 minutes with half tech and mid cats</p>
+</article>
+
+<article>
+<header><h1>High-End CV</h1></header>
+<p>Should clear in 4 to 6 minutes with high tech bad cats and no subs For this specific gear and oaths Nakhimov syncs with Soyuz at 56 CV RLD and 17 BB RLD or subtract an equal amount of RLD from both CVs and BBs Don t forget to decrease your CV tech to use cats with CV RLD Flandre gun was chosen to keep Helena sync You may also use Champagne gun with 45 CV RLD and 17 BB RLD Calculator Link High End CV example fleet</p>
+</article>
+
+<article>
+<header><h1>High-End BB</h1></header>
+<p>There s not much else to explain at this point As usual for CM block Bismarck behind Soyuz and or Alsace so that they stay synced High End BB example fleet</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Capricorn",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "read the wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "red",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This month is a straight DPS and reading check. Light status = shielded = healing 1% HP per second. Dark status = easy mode. Bring vanguard ships that spam a lot of shells to break the shield as fast as possible, because you do not want to let Katsuragi heal 15% HP for every 30% lost. Other than the vanguard shell spam, there are no other gimmicks, so bring typical good anti-medium DPS. We only provide examples of fleets with good synergy and sync to attain high DPS. If you do not know how to set up high DPS fleets in the absence of boss gimmicks by yourself, we recommend asking or lurking in ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://discord.gg/azurlane",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "ALO Discord",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " #gameplay-help.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Katsuragi's movement cycle is approximately 28.45s long, so you should bring your own slow/freeze.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Although Katsuragi's skill descriptions imply that the five rotating shields can each block 70 shells, in reality they share the same hit count. So if 70 shells each hit any of the shields, all five shields disappear, and Katsuragi enters Dark status. Furthermore, like typical rotating shields, her shields will not block arcing shells from BB guns, CB guns, torpedos, and bombs. Katsuragi also often moves back to the far right of the screen (as 13-4 Taihou does when carpet bombing).",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Taking this information into consideration, some example favored and unfavored things are listed here:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "stroke" : "puregreen",
+          "id" : "check-circle",
+          "type" : "Icon"
+        }, {
+          "text" : " Things that are good against Katsuragi.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Twin 138.6mm and both Twin 130mm's have high range and shells per second.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Twin 100mm Kai has high shells per second and spams barrages, but is more inconsistent due to low range.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Plymouth has 3 main gun mounts (MGMs) and a guaranteed aimed barrage every 10s.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "San Diego and Scylla spam shells and have good AA to keep carriers concealed, though Sandy's augment barrage ignores shields.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Helena has 2 CL MGMs and 1 DD mount.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Barrage or MGM spammers like Mogador, Harbin, or Tashkent(s).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "stroke" : "yellow",
+          "id" : "alert-triangle",
+          "type" : "Icon"
+        }, {
+          "text" : " Things that may be good in general but are less so against Katsuragi.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Triple 155mm Kai or any other slow gun.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "CA guns have low shells per second.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "CBs (and basically all CAs) have poor shield-breaking capabilities, and their tankiness is not needed.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Hindenburg's guns ignore shields.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Z52's barrages pass through shields, and she only has 1 MGM.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Tempesta submarine frigates can also help break one shield cycle. Summon them a few seconds before you will pass the 30% HP difference since Katsuragi last had shields. Just put cheap gear, no need to spend core data on all the 12-pounders and Round Shots.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\poverty_tempesta_subs.webp",
+        "alt" : "Tempesta example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1734929687524,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "mid-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Mid-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "A fleet like this should win in under 10 minutes with half tech and mid cats. Fritz is not using double BF109G because that would make her too fast. To keep Fritz before AvP, do not exceed 50 CV RLD. Enterprise will desync eventually but not much we can do about it. Scylla has been unavailable for a while now, so pick a substitute from above if you don't have her. Since Scylla's torpedos are too hard to sync for 10 minutes, we opt for the fastest torps to spam more barrage.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\capricorn_midCV.webp",
+        "alt" : "Mid-End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1734929687472,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "mid-end-bb",
+      "additionalIds" : [ ],
+      "title" : "Mid-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "None. Even the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./challengemode/january#high-end-bb",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "High-End BB",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " fleet will take over 6 minutes with half tech and mid cats.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "High-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Should clear in 4 to 6 minutes with high tech, bad cats, and no subs. For this specific gear and oaths, Nakhimov syncs with Soyuz at 56 CV RLD and 17 BB RLD, or subtract an equal amount of RLD from both CVs and BBs. Don't forget to decrease your CV tech to use cats with CV RLD. Flandre gun was chosen to keep Helena sync. You may also use ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Triple_406mm_(Mle_1938_Prototype)#Type_0-0",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Champagne gun",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " with 45 CV RLD and 17 BB RLD. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwyfGt0OzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLTJqamQvMWUyNS8xOTNkLzFkZC8xZGRcMTBsNG0sMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8amk0OzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLTJqamQvMWUyNS8yamsxLzFkZC9salwxMGw0bSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxkbTszLzEyNS8wLzAvNC8wLDAsMCwwLDAvMC0yb2J0LzAvMC8wLzBcMCwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHwwfDB8MHx0OXIvMzAvMi80dGgtMC8xdmYtMi85ZC0yfHU5My8zMC8yLzR0aC0wLzlkLTIvMXZmLTJ8MXw1LTAsMCwwLDAsMCwxNywwLDAsMF80LTAsMCwwLDAsMCwxNywwLDAsMF8xMC0wLDAsMCwwLDAsMTcsMCwwLDBfMTMtMCwwLDAsMCwwLDE2LDAsMCwwXzYtMCwwLDAsMCwwLDQ0LDAsMCwwXzctMCwwLDAsMCwwLDI4LDAsMCwwXzMtMCwwLDAsMCwwLDE2LDAsMCwwXzE4LTAsMCwwLDAsMCwxOSwwLDAsMF8yLTAsMCwwLDAsMCwyNiwwLDAsMF8xLTAsMCwwLDAsMCwyNywwLDAsMF84LTAsMCwwLDAsMCwwLDAsMCwwXzE3LTAsMCwwLDAsMCwwLDAsMCwwXzE5LTAsMCwwLDAsMCwwLDAsMCwwXzEyLTAsMCwwLDAsMCwwLDAsMCwwXzIyLTAsMCwwLDAsMCwwLDAsMCwwMHx1bmRlZmluZWR8ZXh0cmVtZV85MDAwNTg%3D",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator Link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\capricorn_highCV.webp",
+        "alt" : "High-End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1734929687370,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "High-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "There's not much else to explain at this point. As usual for CM, block Bismarck behind Soyuz and/or Alsace so that they stay synced.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\capricorn_highBB.webp",
+        "alt" : "High-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1734929722302,
+        "type" : "Image"
+      } ]
+    } ],
+    "lastModifiedTime" : 1734930253773,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "January Challenge",
+      "pageMeta" : {
+        "title" : [ "January Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "january",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Mid-End CV",
+        "id" : "mid-end-cv",
+        "customAnchorId" : "mid-end-cv"
+      }, {
+        "title" : "Mid-End BB",
+        "id" : "mid-end-bb",
+        "customAnchorId" : "mid-end-bb"
+      }, {
+        "title" : "High-End CV",
+        "id" : "high-end-cv",
+        "customAnchorId" : "high-end-cv"
+      }, {
+        "title" : "High-End BB",
+        "id" : "high-end-bb",
+        "customAnchorId" : "high-end-bb"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

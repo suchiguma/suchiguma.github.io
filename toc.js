@@ -121,6 +121,37 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Challenge Mode",
+    "pageTitle" : "January Challenge",
+    "pageMeta" : {
+      "title" : [ "January Challenge" ]
+    },
+    "dirName" : "challengemode",
+    "fileName" : "january",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Strategy",
+      "id" : "strategy",
+      "customAnchorId" : "strategy"
+    }, {
+      "title" : "Mid-End CV",
+      "id" : "mid-end-cv",
+      "customAnchorId" : "mid-end-cv"
+    }, {
+      "title" : "Mid-End BB",
+      "id" : "mid-end-bb",
+      "customAnchorId" : "mid-end-bb"
+    }, {
+      "title" : "High-End CV",
+      "id" : "high-end-cv",
+      "customAnchorId" : "high-end-cv"
+    }, {
+      "title" : "High-End BB",
+      "id" : "high-end-bb",
+      "customAnchorId" : "high-end-bb"
+    } ]
+  }, {
+    "chapterTitle" : "Challenge Mode",
     "pageTitle" : "November Challenge",
     "pageMeta" : {
       "title" : [ "November Challenge" ]
