@@ -1,6 +1,6 @@
 <znai>
   <entry>
-    <url>/./home/home-page#guides</url>
+    <url>/stage/home/home-page#guides</url>
     <fullTitle>Azur Lane Guides: Home Page, Guides [Home]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -8,7 +8,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./home/home-page#ship-tier-list</url>
+    <url>/stage/home/home-page#ship-tier-list</url>
     <fullTitle>Azur Lane Guides: Home Page, Ship Tier List [Home]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -16,7 +16,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./home/home-page#random-things</url>
+    <url>/stage/home/home-page#random-things</url>
     <fullTitle>Azur Lane Guides: Home Page, Random Things [Home]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -24,7 +24,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./home/home-page#other-people</url>
+    <url>/stage/home/home-page#other-people</url>
     <fullTitle>Azur Lane Guides: Home Page, Other People [Home]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -32,7 +32,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./home/suchiguma#who-am-i</url>
+    <url>/stage/home/suchiguma#who-am-i</url>
     <fullTitle>Azur Lane Guides: Suchiguma, Who Am I [Home]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -40,7 +40,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./home/suchiguma#my-story</url>
+    <url>/stage/home/suchiguma#my-story</url>
     <fullTitle>Azur Lane Guides: Suchiguma, My Story [Home]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -48,7 +48,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./home/contact</url>
+    <url>/stage/home/contact</url>
     <fullTitle>Azur Lane Guides: Contact,  [Home]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -56,7 +56,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./guides/chapter-15#map-walkthrough</url>
+    <url>/stage/guides/chapter-15#map-walkthrough</url>
     <fullTitle>Azur Lane Guides: Chapter 15, Map Walkthrough [Guides]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -64,7 +64,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./guides/chapter-15#general-fleet-structure</url>
+    <url>/stage/guides/chapter-15#general-fleet-structure</url>
     <fullTitle>Azur Lane Guides: Chapter 15, General Fleet Structure [Guides]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -72,7 +72,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./guides/chapter-15#gear-notes</url>
+    <url>/stage/guides/chapter-15#gear-notes</url>
     <fullTitle>Azur Lane Guides: Chapter 15, Gear Notes [Guides]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -80,7 +80,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./guides/chapter-15#misc-recommendations</url>
+    <url>/stage/guides/chapter-15#misc-recommendations</url>
     <fullTitle>Azur Lane Guides: Chapter 15, Misc. Recommendations [Guides]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -88,7 +88,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./guides/chapter-15#example-fleets</url>
+    <url>/stage/guides/chapter-15#example-fleets</url>
     <fullTitle>Azur Lane Guides: Chapter 15, Example Fleets [Guides]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -96,7 +96,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./guides/augment-modules#introduction</url>
+    <url>/stage/guides/augment-modules#introduction</url>
     <fullTitle>Azur Lane Guides: Augment Modules, Introduction [Guides]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -104,7 +104,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./guides/augment-modules#purple-augments</url>
+    <url>/stage/guides/augment-modules#purple-augments</url>
     <fullTitle>Azur Lane Guides: Augment Modules, Purple Augments [Guides]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -112,7 +112,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/challenge-mode#introduction</url>
+    <url>/stage/challengemode/challenge-mode#introduction</url>
     <fullTitle>Azur Lane Guides: Challenge Mode, Introduction [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -120,7 +120,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/challenge-mode#timing</url>
+    <url>/stage/challengemode/challenge-mode#timing</url>
     <fullTitle>Azur Lane Guides: Challenge Mode, Timing [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -128,7 +128,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/january#strategy</url>
+    <url>/stage/challengemode/january#strategy</url>
     <fullTitle>Azur Lane Guides: January Challenge, Strategy [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -136,7 +136,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/january#mid-end-cv</url>
+    <url>/stage/challengemode/january#mid-end-cv</url>
     <fullTitle>Azur Lane Guides: January Challenge, Mid-End CV [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -144,7 +144,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/january#mid-end-bb</url>
+    <url>/stage/challengemode/january#mid-end-bb</url>
     <fullTitle>Azur Lane Guides: January Challenge, Mid-End BB [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -152,7 +152,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/january#high-end-cv</url>
+    <url>/stage/challengemode/january#high-end-cv</url>
     <fullTitle>Azur Lane Guides: January Challenge, High-End CV [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -160,7 +160,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/january#high-end-bb</url>
+    <url>/stage/challengemode/january#high-end-bb</url>
     <fullTitle>Azur Lane Guides: January Challenge, High-End BB [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -168,7 +168,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/november#strategy</url>
+    <url>/stage/challengemode/november#strategy</url>
     <fullTitle>Azur Lane Guides: November Challenge, Strategy [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -176,7 +176,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/november#mid-end-bb</url>
+    <url>/stage/challengemode/november#mid-end-bb</url>
     <fullTitle>Azur Lane Guides: November Challenge, Mid-End BB [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -184,7 +184,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/november#high-end-bb-1</url>
+    <url>/stage/challengemode/november#high-end-bb-1</url>
     <fullTitle>Azur Lane Guides: November Challenge, High-End BB 1 [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -192,7 +192,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/november#high-end-bb-2</url>
+    <url>/stage/challengemode/november#high-end-bb-2</url>
     <fullTitle>Azur Lane Guides: November Challenge, High-End BB 2 [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -200,7 +200,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/november#french</url>
+    <url>/stage/challengemode/november#french</url>
     <fullTitle>Azur Lane Guides: November Challenge, French [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -208,7 +208,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/november#mid-end-cv</url>
+    <url>/stage/challengemode/november#mid-end-cv</url>
     <fullTitle>Azur Lane Guides: November Challenge, Mid-End CV [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -216,7 +216,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/november#very-high-end-cv</url>
+    <url>/stage/challengemode/november#very-high-end-cv</url>
     <fullTitle>Azur Lane Guides: November Challenge, Very High-End CV [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -224,7 +224,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/december#strategy</url>
+    <url>/stage/challengemode/december#strategy</url>
     <fullTitle>Azur Lane Guides: December Challenge, Strategy [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -232,7 +232,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/december#mid-end</url>
+    <url>/stage/challengemode/december#mid-end</url>
     <fullTitle>Azur Lane Guides: December Challenge, Mid-End [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -240,7 +240,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/december#yolo-high-end-bb</url>
+    <url>/stage/challengemode/december#yolo-high-end-bb</url>
     <fullTitle>Azur Lane Guides: December Challenge, YOLO: High-End BB [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
@@ -248,7 +248,7 @@
     </text>
   </entry>
   <entry>
-    <url>/./challengemode/december#high-end-cv</url>
+    <url>/stage/challengemode/december#high-end-cv</url>
     <fullTitle>Azur Lane Guides: December Challenge, High-End CV [Challenge Mode]</fullTitle>
     <text>
       <score>STANDARD</score>
