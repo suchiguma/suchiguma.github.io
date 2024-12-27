@@ -98,6 +98,27 @@ toc = [ {
       "id" : "example-fleets",
       "customAnchorId" : "example-fleets"
     } ]
+  }, {
+    "chapterTitle" : "Guides",
+    "pageTitle" : "Augment Modules",
+    "pageMeta" : { },
+    "dirName" : "guides",
+    "fileName" : "augment-modules",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Introduction",
+      "id" : "introduction",
+      "customAnchorId" : "introduction"
+    }, {
+      "title" : "Purple Augments",
+      "id" : "purple-augments",
+      "customAnchorId" : "purple-augments"
+    }, {
+      "title" : "Unique Augments",
+      "id" : "unique-augments",
+      "customAnchorId" : "unique-augments"
+    } ]
   } ]
 }, {
   "chapterTitle" : "Challenge Mode",
