@@ -10,7 +10,7 @@
     --znai-inversed-text-color: #ddd;
     
     --znai-table-header-background-color: #d8d8d8;
-    --znai-table-body-background-color: #ffffff;
+    --znai-table-body-background-color: #dcdcdc;
     
     --znai-color-orange: #ffa500;
     --znai-color-purered: #ff0000;
@@ -24,6 +24,11 @@
     --znai-scrollbar-width: auto;
     --znai-scrollbar-height: auto;
     --znai-toc-panel-scrollbar-color: var(--znai-color-gray);
+    
+    --znai-space-above-next-prev-navigation: 20px;
+    --znai-space-below-next-prev-navigation: 20px;
+    --znai-space-left-next-prev-navigation: 10px;
+    --znai-space-right-next-prev-navigation: 10px;
 }
 
 .toc-menu::-webkit-scrollbar {
@@ -48,5 +53,10 @@
 }
 
 .znai-table {
+    border: 0px;
+    background: #dcdcdc;
+}
+
+iframe {
     border: 0px;
 }
