@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.">
+<title>Azur Lane Guides: Home Page</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Guides</h1></header>
+<p>Chapter 15 Guide Strategies and example fleets for lethal auto Chapter 15 The Challenge Mode Guide contains strategies and multiple example fleets for each month</p>
+</article>
+
+<article>
+<header><h1>Ship Tier List</h1></header>
+<p>Rankings for End Game Azur Lane is an endgame ship tier list with separate tiers for each game mode and ratings for multiple aspects of each ship like damage by armor type survivability restrictions and buffs Unfortunately for formatting it is a Google Sheet But it is very comprehensive and updated</p>
+</article>
+
+<article>
+<header><h1>Random Things</h1></header>
+<p>YouTube Suchiguma Various endgame battle speedruns or guides Weapon Simulation Simulation of vanguard submarine weapon hit rates with full auto movement</p>
+</article>
+
+<article>
+<header><h1>Other People</h1></header>
+<p>Renhex Azur Lane Fleet Tool by umi no neko Allows compact sharing of fleets AL Calculator by MrLar Calculates precise fleet reload times eHP Chart by Mebot Calculates vanguard ship tankiness</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "guides",
+      "additionalIds" : [ ],
+      "title" : "Guides",
+      "type" : "Section",
+      "content" : [ {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "url" : "/./guides/chapter-15",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Chapter 15 Guide",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ". Strategies and example fleets for lethal auto Chapter 15.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "/./challengemode/challenge-mode",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Challenge Mode Guide",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " contains strategies and multiple example fleets for each month.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "ship-tier-list",
+      "additionalIds" : [ ],
+      "title" : "Ship Tier List",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "url" : "https://docs.google.com/spreadsheets/d/13YbPw3dM2eN6hr3YfVABIK9LVuCWnVZF0Zp2BGOZXc0/edit?gid=0#gid=0",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Rankings for End Game Azur Lane",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " is an endgame ship tier list with separate tiers for each game-mode and ratings for multiple aspects of each ship like damage by armor type, survivability, restrictions, and buffs. Unfortunately for formatting, it is a Google Sheet. But it is very comprehensive and updated.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "title" : "Dark mode example of main fleet ships sorted by Heavy Dmg.",
+        "fit" : true,
+        "anchorId" : "dark-regal",
+        "imageSrc" : "/./home\\dark_regal.png",
+        "timestamp" : 1733037517804,
+        "shapes" : [ ],
+        "width" : 1595.0,
+        "height" : 595.0,
+        "type" : "AnnotatedImage"
+      }, {
+        "title" : "Light mode example of vanguard ships sorted by W15 Mob tier.",
+        "fit" : true,
+        "anchorId" : "light-regal",
+        "imageSrc" : "/./home\\light_regal.png",
+        "timestamp" : 1733037337891,
+        "shapes" : [ ],
+        "width" : 1481.0,
+        "height" : 592.0,
+        "type" : "AnnotatedImage"
+      } ]
+    }, {
+      "id" : "random-things",
+      "additionalIds" : [ ],
+      "title" : "Random Things",
+      "type" : "Section",
+      "content" : [ {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "url" : "https://www.youtube.com/@suchiguma",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "YouTube - Suchiguma",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ". Various endgame battle speedruns or guides.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "url" : "https://docs.google.com/spreadsheets/d/1X4hafXGXiqSgaIJdcWA3La7rvZCFVJZzZ44GqyQ_Fxo/edit?usp=sharing",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Weapon Simulation",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ". Simulation of vanguard/submarine weapon hit rates with full auto movement.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "other-people",
+      "additionalIds" : [ ],
+      "title" : "Other People",
+      "type" : "Section",
+      "content" : [ {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "url" : "https://renhex.github.io/AzurLaneFleet/",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Renhex Azur Lane Fleet Tool",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " by umi no neko. Allows compact sharing of fleets.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "url" : "https://azurlane.mrlar.dev/calculator/",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "AL Calculator",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " by MrLar. Calculates precise fleet reload times.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "url" : "https://docs.google.com/spreadsheets/d/1HF6_hLEB8m_v0stp4DLGnIoDjgojvo7fjYz-cysjTMc/edit?usp=sharing",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "eHP Chart",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " by Mebot. Calculates vanguard ship tankiness.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1733699806333,
+    "tocItem" : {
+      "chapterTitle" : "Home",
+      "pageTitle" : "Home Page",
+      "pageMeta" : { },
+      "dirName" : "home",
+      "fileName" : "home-page",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Guides",
+        "id" : "guides",
+        "customAnchorId" : "guides"
+      }, {
+        "title" : "Ship Tier List",
+        "id" : "ship-tier-list",
+        "customAnchorId" : "ship-tier-list"
+      }, {
+        "title" : "Random Things",
+        "id" : "random-things",
+        "customAnchorId" : "random-things"
+      }, {
+        "title" : "Other People",
+        "id" : "other-people",
+        "customAnchorId" : "other-people"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
