@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat Elbing, the November Incarnation of Scorpio extreme challenge mode boss.">
+<title>Azur Lane Guides: November Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>read the wiki Timing precision Hard DPS check Medium Tank check Hard This is a CM that can be very annoying due to various sources of lag and RNG However do not be scared by the double Hard If you time Unicorn precisely then the Tank check is naturally solved Or if you bring tanks and Perseus then Perseus trivializes the timing precision You must either bring a vanguard heal that activates every 20s or have carriers that reload slightly faster than 20s for a screen clear Toolkits alone will not do the job The best ways to get the heal are Primary Healers Recommended Unicorn who has the benefit of doing more damage and healing than Perseus Must be timed properly 19 92s 19 93s probably works for 5 7 minutes and 19 94s 19 96s probably works for 10 minutes For a level 125 Unicorn in love BF 109G and Ryuusei is 19 95s in game with 2 RLD tech also try 3 RLD if 2 doesn t work or use HVARcat and Ju 87d with 0 RLD tech Do not bring cats with CVL RLD Passing the first few stings relies on RNG because if your vanguard is too close to the boss then they ll get hit before Unicorn heals Perseus who suffers from low damage and lower healing She struggles to keep a sandwiched Aurora alive so Eldridge is needed A Plymouth Aurora Eldridge vanguard can survive for 7 minutes which may not be enough time if your main fleet is weak Furthermore if her heal lags less than Elbing s sting then Perseus can cleanse your vanguard of venom right before Scorpion s Mist which lasts for 2s expires If your ships are moving they regain the venom by touching Scorpion s Mist Minor Healers not recommended due to how much damage the boss does Little Formidable requires &gt;90% HP so to avoid her being burnt bring at least one non concealed main fleet ship or pray with a full carrier fleet Marseillaise for a full French vanguard Boise  with a level 8 healing skill Ognevoy has a 10s heal but she desyncs after like 5 minutes due to activating 4x as much as Elbing s skill Due to a possible bug similarly to Cancer Graf Spee most vanguard ships get the 60% damage buff permanently even if they get healed Ships who gain lose or refresh another source of damageRatioBullet like Bayard or Bremerton lose the free 60% damage until the next venom mist Also damage may be tight so GLHF if you don t have Aurora Time graph for skills</p>
+</article>
+
+<article>
+<header><h1>Mid-End BB</h1></header>
+<p>This fleet and gear won in 7 25 using half tech a random gold purple submarine fleet with random torps and no synergy and the free cats level 30 Drake and level 25 Every Mid End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>High-End BB 1</h1></header>
+<p>Any oaths or tech just keep the faster black white shell BB blocked behind the slower BB who is using AFCT HSFCR High End BB example fleet 1</p>
+</article>
+
+<article>
+<header><h1>High-End BB 2</h1></header>
+<p>Same explanation as High End BB 1 But with Ognevoy instead of Unicorn the fleet has to win faster due to Ognevoy s sync drift and the lack of healing High End BB example fleet 2</p>
+</article>
+
+<article>
+<header><h1>French</h1></header>
+<p>Again any oaths or tech just keep the faster black white shell BBs blocked behind the slower BB with AFCT HSFCR Removing Aurora and Plymouth is a big loss in DPS but the extra BB may recover some of it Marseillaise is required because she heals French ships every 20s Elbing does a lot of damage so Brest is required if your battle will go longer than 5 minutes The third ship can be Le Mars for fleet buff Mogador for damage or L Audacieux for worse Mogador French example fleet</p>
+</article>
+
+<article>
+<header><h1>Mid-End CV</h1></header>
+<p>For the super lazy people who don t want to time Unicorn you can use Unicorn and Perseus together This fleet won in 9 49 with no subs half tech a single cat without flame and no HVARcat or Skyraider Mid End CV example fleet</p>
+</article>
+
+<article>
+<header><h1>Very High-End CV</h1></header>
+<p>Forgo healing and use CV screenclear to wipe the sting barrage This requires carriers to be slightly faster than 20s which is a high bar for CVs but not CVLs like Unicorn Due to the 1 5s start of battle delay if your faster CV has exactly 20 0s reload the screen clear will happen 0 5s after the boss fires the true damage barrage If your vanguard is too close to the boss due to RNG then they ll die in that 0 5s So you want CVs to reload slightly faster than 20s but not so fast that the CVs strike before the barrage appears Or just be a normal person and use the other fleets</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Scorpio",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "read the wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "purered",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "purered",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is a CM that can be very annoying due to various sources of lag and RNG. However, do not be scared by the double Hard ",
+          "type" : "SimpleText"
+        }, {
+          "stroke" : "purered",
+          "id" : "chevron-up",
+          "type" : "Icon"
+        }, {
+          "text" : ". If you time Unicorn precisely, then the Tank check is naturally solved. Or if you bring tanks and Perseus, then Perseus trivializes the timing precision.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You must either bring a vanguard heal that activates every 20s, or have carriers that reload slightly faster than 20s for a screen clear. Toolkits alone will not do the job. The best ways to get the heal are",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Primary Healers (Recommended)",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Unicorn, who has the benefit of doing more damage and healing than Perseus. Must be timed properly, 19.92s-19.93s probably works for 5-7 minutes, and 19.94s-19.96s probably works for 10 minutes. For a level 125 Unicorn in love, ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "https://azurlane.koumakan.jp/wiki/Messerschmitt_Bf_109G_(Carrier-based_Prototype)",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "text" : "BF-109G",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " and ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "https://azurlane.koumakan.jp/wiki/Aichi_B7A_Ryuusei#Type_3-0",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "text" : "Ryuusei",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " is 19.95s in-game with 2 RLD tech (also try 3 RLD if 2 doesn't work), or use ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "https://azurlane.koumakan.jp/wiki/Grumman_F6F_Hellcat_(HVAR-Mounted)",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "text" : "HVARcat",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " and ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "https://azurlane.koumakan.jp/wiki/Junkers_Ju-87_D-4",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "text" : "Ju-87d",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " with 0 RLD tech. ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Do not bring cats with CVL RLD.",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " Passing the first few stings relies on RNG, because if your vanguard is too close to the boss then they'll get hit before Unicorn heals.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Perseus, who suffers from low damage and lower healing. She struggles to keep a sandwiched Aurora alive, so Eldridge is needed. A Plymouth-Aurora-Eldridge vanguard can survive for 7 minutes, which may not be enough time if your main fleet is weak. Furthermore, if her heal lags less than Elbing's sting, then Perseus can cleanse your vanguard of venom right before Scorpion's Mist (which lasts for 2s) expires. If your ships are moving, they regain the venom by touching Scorpion's Mist.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Minor Healers (not recommended due to how much damage the boss does)",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Little Formidable requires >90% HP, so to avoid her being burnt, bring at least one non-concealed main fleet ship, or pray with a full carrier fleet.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Marseillaise for a full-French vanguard.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Boise μ with a level 8 healing skill.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Ognevoy has a 10s heal, but she desyncs after like 5 minutes due to activating 4x as much as Elbing's skill.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Due to a possible bug, similarly to Cancer (Graf Spee), most vanguard ships get the +60% damage buff permanently, even if they get healed. Ships who gain, lose, or refresh another source of damageRatioBullet, like Bayard or Bremerton, lose the free +60% damage until the next venom mist. Also, damage may be tight so GLHF if you don't have Aurora.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\scorpio_cm_time.webp",
+        "alt" : "Time graph for skills.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1731564260035,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "mid-end-bb",
+      "additionalIds" : [ ],
+      "title" : "Mid-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This fleet and gear won in 7:25 using half tech, a random gold/purple submarine fleet with random torps and no synergy, and the free cats level 30 Drake and level 25 Every.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\scorpio_midBB.webp",
+        "alt" : "Mid-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1733010581338,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-bb-1",
+      "additionalIds" : [ ],
+      "title" : "High-End BB 1",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Any oaths or tech, just keep the faster black-white shell BB blocked behind the slower BB who is using ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Admiralty_Fire_Control_Table",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "AFCT",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : "/",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/High_Performance_Fire_Control_Radar",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "HSFCR",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\scorpio_highBB1.webp",
+        "alt" : "High-End BB example fleet 1.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1733010581135,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-bb-2",
+      "additionalIds" : [ ],
+      "title" : "High-End BB 2",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Same explanation as ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./challengemode/november#high-end-bb-1",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "High-End BB 1",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". But with Ognevoy instead of Unicorn, the fleet has to win faster due to Ognevoy's sync drift and the lack of healing.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\scorpio_highBB2.webp",
+        "alt" : "High-End BB example fleet 2.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1733010581236,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "french",
+      "additionalIds" : [ ],
+      "title" : "French",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Again, any oaths or tech, just keep the faster black-white shell BBs blocked behind the slower BB with AFCT/HSFCR. Removing Aurora and Plymouth is a big loss in DPS, but the extra BB may recover some of it. Marseillaise is required because she heals French ships every 20s. Elbing does a lot of damage, so Brest is required if your battle will go longer than 5 minutes. The third ship can be Le Mars for fleet buff, Mogador for damage, or L'Audacieux for worse Mogador.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\scorpio_french.webp",
+        "alt" : "French example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1733010581035,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "mid-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Mid-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For the super lazy people who don't want to time Unicorn, you can use Unicorn and Perseus together. This fleet won in 9:49 with no subs, half tech, a single cat without flame, and no HVARcat or Skyraider.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\scorpio_midCV.webp",
+        "alt" : "Mid-End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1733010581440,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "very-high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Very High-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Forgo healing and use CV screenclear to wipe the sting barrage. This requires carriers to be slightly faster than 20s, which is a high bar for CVs but not CVLs like Unicorn. Due to the 1.5s start of battle delay, if your faster CV has exactly 20.0s reload, the screen clear will happen 0.5s after the boss fires the true damage barrage. If your vanguard is too close to the boss due to RNG, then they'll die in that 0.5s. So you want CVs to reload slightly faster than 20s but not so fast that the CVs strike before the barrage appears.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Or just be a normal person and use the other fleets.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "src" : "/./videos/lite_pUJ_2eke4sI.html",
+        "previewMarker" : "ff33ecec-b25d-48c3-a636-ed7301df4a5c",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
+    } ],
+    "lastModifiedTime" : 1733294258903,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "November Challenge",
+      "pageMeta" : {
+        "title" : [ "November Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "november",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Mid-End BB",
+        "id" : "mid-end-bb",
+        "customAnchorId" : "mid-end-bb"
+      }, {
+        "title" : "High-End BB 1",
+        "id" : "high-end-bb-1",
+        "customAnchorId" : "high-end-bb-1"
+      }, {
+        "title" : "High-End BB 2",
+        "id" : "high-end-bb-2",
+        "customAnchorId" : "high-end-bb-2"
+      }, {
+        "title" : "French",
+        "id" : "french",
+        "customAnchorId" : "french"
+      }, {
+        "title" : "Mid-End CV",
+        "id" : "mid-end-cv",
+        "customAnchorId" : "mid-end-cv"
+      }, {
+        "title" : "Very High-End CV",
+        "id" : "very-high-end-cv",
+        "customAnchorId" : "very-high-end-cv"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
