@@ -10,7 +10,7 @@ footer = {
         }, {
           "type" : "HardLineBreak"
         }, {
-          "url" : "/./home/contact",
+          "url" : "/stage/home/contact",
           "isFile" : false,
           "type" : "Link",
           "content" : [ {
