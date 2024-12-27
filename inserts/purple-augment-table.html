@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Augment Table</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <script>
+        window.onload = function () { 
+        if (window.parent && window.parent.document) {
+            try {
+                const parentBodyClasses = window.parent.document.body.className;
+                document.body.className = parentBodyClasses;
+            } catch (error) {
+            }
+        }}
+    </script>
+</head>
+<body>
+    <div style="overflow-x: auto; min-width: 600px; border: 1px solid;"><table id="table1" class="znai-table">
+        <thead>
+            <tr>
+                <th class="sorter-false">Main Hull</th>
+                <th class="sorter-false">Augment</th>
+                <th class="sorter-false">Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>DD</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Dual Swords</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Dual_Swords#Type_2-0"><img src="guides/augment_images/dual_swords_augment.webp" alt="Dual Swords Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Good for most DDs since they have low base FP stat. Use this by default if you don't know.</td></tr><tr><td>DD</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Hammer</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Hammer#Type_2-0"><img src="guides/augment_images/hammer_augment.webp" alt="Hammer Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Good for DDs that scale heavily on TRP stat, or sometimes good for reaching Level 3 Spread Slash for armor break.</td></tr><tr><td>CL</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Sword</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Sword#Type_2-0"><img src="guides/augment_images/sword_augment.webp" alt="Sword Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Slightly better defense than Crossbow due to slash. Sometimes good for reaching Level 3 Spread Slash for armor break.</td></tr><tr><td>CL</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Crossbow</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Crossbow#Type_2-0"><img src="guides/augment_images/crossbow_augment.webp" alt="Crossbow Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Slightly better offense than Sword due to FP stat. Bring this for Chapter 13 and 15.</td></tr><tr><td>CA</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Greatsword</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Greatsword#Type_2-0"><img src="guides/augment_images/greatsword_augment.webp" alt="Greatsword Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Better defense than Lance due to slash. Use this by default if you don't know.</td></tr><tr><td>CA</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Lance</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Lance#Type_2-0"><img src="guides/augment_images/lance_augment.webp" alt="Lance Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Sometimes slightly better offense than Greatsword against bosses with medium to high evasion.</td></tr><tr><td>BB</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Officer's Sword</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Officer's_Sword#Type_2-0"><img src="guides/augment_images/officers_sword_augment.webp" alt="Officer's Sword Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Good everywhere due to HIT stat, and especially good when enemy BBs shoot your BBs. Use this by default if you don't know.</td></tr><tr><td>BB</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Bowgun</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Bowgun#Type_2-0"><img src="guides/augment_images/bowgun_augment.webp" alt="Bowgun Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Good against heavy armor bosses or bosses with very low evasion.</td></tr><tr><td>CV</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Scepter</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Scepter#Type_2-0"><img src="guides/augment_images/scepter_augment.webp" alt="Scepter Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Especially good when enemies target or blind-fire your CVs. Use this by default if you don't know.</td></tr><tr><td>CV</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Hunting Bow</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Hunting_Bow#Type_2-0"><img src="guides/augment_images/hunting_bow_augment.webp" alt="Hunting Bow Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Use this in Chapter 13 and 15.</td></tr><tr><td>SS</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Dagger</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Dagger#Type_2-0"><img src="guides/augment_images/dagger_augment.webp" alt="Dagger Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Torpedo crit rate is worth more than Kunai's TRP stat.</td></tr><tr><td>SS</td><td><div style="display: flex; align-items: center; justify-items: center;"><div style="flex: 1; white-space: normal;">Kunai</div><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Kunai#Type_2-0"><img src="guides/augment_images/kunai_augment.webp" alt="Kunai Image" style="height: 32px; margin-left: 6px;"></a></div></td><td>Worse than Dagger. Don't use this.</td></tr>
+        </tbody>
+    </table></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+    <script>$(document).ready(function() {$("#table1").tablesorter({});});</script>
+</body>
+</html>
