@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat Newcastle, the February Incarnation of Aquarius extreme challenge mode boss.">
+<title>Azur Lane Guides: February Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>Read the boss skills and stats on wiki Read the common introduction and disclaimers Timing precision Hard for CVs Medium for BBs DPS check Hard Tank check Medium This month is a difficult vanguard DPS check The Jug has 120k HP 100 EVA 0 LUCK and 300 AA So your vanguard needs to do 2400 damage per second with a 1 5s starting grace period to do the first 2400 damage whenever the Jug spawns This is quite difficult because you can t rely on torpedos barrages and long reload CA guns to do damage consistently the game calls it Recurring damage so we will too Another pain point is when Newcastle goes in front of the Jug eating up your vanguard s non piercing shells Plymouth gun and Mogador gun are highly recommended Some main fleet ships with 10s attacks or long range aux guns can also help add recurring damage Examples include Ulrich Fritz Saratoga or Rupprecht But vanguard DPS isn t the whole story Killing the Jug only gives a 6s window for your main fleet to do full damage to Newcastle so your main fleet also needs to be synced Unfortunately for CVs which require rockets to be good against light armor having three tightly synced CVs means that some rockets will kill the Jug some more rockets will hit the water where the Jug was and only a few rockets will target Newcastle after the Jug dies Hence despite the enemy s low AA of 300 CVs are difficult to use CVs are still better than BBs here if used well with high investment but that will not be the main focus of this guide</p>
+</article>
+
+<article>
+<header><h1>Mid-End BB</h1></header>
+<p>This is a difficult month so the the fleet should be stronger than the usual mid This fleet has semi high vanguard DPS But because Plymouth s gun is the only piercing weapon Ulrich may or may not be needed to help chip the Jug consistently Block Soyuz behind Vanguard but note that giving Soyuz a Mk7 and Vanguard a Mk6 would not be ideal for sync so give them the same gun Also Ulrich needs to avoid the Mk6 Mk7 reload speed so that she doesn t permanently block Soyuz Mid End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>High-End CV</h1></header>
+<p>Under construction just like that fourth HQ slot next to Cat Lodge in game</p>
+</article>
+
+<article>
+<header><h1>High-End BB</h1></header>
+<p>Under construction just like that fourth HQ slot next to Cat Lodge in game</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Aquarius",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "boss skills and stats on wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "/./challengemode/challenge-mode",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "common introduction and disclaimers",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Hard for CVs ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "red",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          }, {
+            "text" : " Medium for BBs ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "red",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This month is a difficult vanguard DPS check. The Jug has 120k HP, 100 EVA, 0 LUCK, and 300 AA. So your vanguard needs to do 2400 damage per second, with a 1.5s starting grace period to do the first 2400 damage whenever the Jug spawns.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is quite difficult because you can't rely on torpedos, barrages, and long-reload CA guns to do damage consistently (the game calls it \"Recurring\" damage so we will too). Another pain point is when Newcastle goes in front of the Jug, eating up your vanguard's non-piercing shells. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Prototype_Quadruple_152mm_Main_Gun_Mount#Type_0-0",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Plymouth gun",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " and ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Twin_138.6mm_(Mle_1934)",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mogador gun",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " are highly recommended.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Some main fleet ships with 10s attacks or long-range aux guns can also help add recurring damage. Examples include Ulrich, Fritz, Saratoga, or Rupprecht.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "But vanguard DPS isn't the whole story. Killing the Jug only gives a 6s window for your main fleet to do full damage to Newcastle, so your main fleet also needs to be synced. Unfortunately for CVs, which require rockets to be good against light armor, having three tightly synced CVs means that some rockets will kill the Jug, some more rockets will hit the water where the Jug was, and only a few rockets will target Newcastle after the Jug dies. Hence, despite the enemy's low AA of 300, CVs are difficult to use. CVs are still better than BBs here if used well with high investment, but that will not be the main focus of this guide.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "mid-end-bb",
+      "additionalIds" : [ ],
+      "title" : "Mid-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is a difficult month, so the the fleet should be stronger than the usual \"mid\". This fleet has semi-high vanguard DPS. But because Plymouth's gun is the only piercing weapon, Ulrich may or may not be needed to help chip the Jug consistently. Block Soyuz behind Vanguard, but note that giving Soyuz a Mk7 and Vanguard a Mk6 would not be ideal for sync, so give them the same gun. Also, Ulrich needs to avoid the Mk6/Mk7 reload speed so that she doesn't permanently block Soyuz.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\aquarius_midBB.webp",
+        "alt" : "Mid-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1735976694278,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "High-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Under construction just like that fourth HQ slot next to Cat Lodge in game.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "High-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Under construction just like that fourth HQ slot next to Cat Lodge in game.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1735977767259,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "February Challenge",
+      "pageMeta" : {
+        "title" : [ "February Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "february",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Mid-End BB",
+        "id" : "mid-end-bb",
+        "customAnchorId" : "mid-end-bb"
+      }, {
+        "title" : "High-End CV",
+        "id" : "high-end-cv",
+        "customAnchorId" : "high-end-cv"
+      }, {
+        "title" : "High-End BB",
+        "id" : "high-end-bb",
+        "customAnchorId" : "high-end-bb"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
