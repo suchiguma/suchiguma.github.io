@@ -190,13 +190,44 @@ toc = [ {
       "id" : "mid-end-bb",
       "customAnchorId" : "mid-end-bb"
     }, {
+      "title" : "High-End BB",
+      "id" : "high-end-bb",
+      "customAnchorId" : "high-end-bb"
+    }, {
       "title" : "High-End CV",
       "id" : "high-end-cv",
       "customAnchorId" : "high-end-cv"
     }, {
+      "title" : "Brute Force CV",
+      "id" : "brute-force-cv",
+      "customAnchorId" : "brute-force-cv"
+    } ]
+  }, {
+    "chapterTitle" : "Challenge Mode",
+    "pageTitle" : "March Challenge",
+    "pageMeta" : {
+      "title" : [ "March Challenge" ]
+    },
+    "dirName" : "challengemode",
+    "fileName" : "march",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Strategy",
+      "id" : "strategy",
+      "customAnchorId" : "strategy"
+    }, {
+      "title" : "Mid-End CV",
+      "id" : "mid-end-cv",
+      "customAnchorId" : "mid-end-cv"
+    }, {
       "title" : "High-End BB",
       "id" : "high-end-bb",
       "customAnchorId" : "high-end-bb"
+    }, {
+      "title" : "High-End CV",
+      "id" : "high-end-cv",
+      "customAnchorId" : "high-end-cv"
     } ]
   }, {
     "chapterTitle" : "Challenge Mode",

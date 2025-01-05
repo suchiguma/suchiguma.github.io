@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat Duke of York and King George V, the March Incarnation of Pisces extreme challenge mode boss.">
+<title>Azur Lane Guides: March Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>Read the boss skills and stats on wiki Read the common introduction and disclaimers Timing precision Easy DPS check Easy Tank check Medium Heavy armor HP piatas Have fun you get a break until next month s hell You don t even need to read these bosses skills</p>
+</article>
+
+<article>
+<header><h1>Mid-End CV</h1></header>
+<p>Under construction just like that fourth HQ slot next to Cat Lodge</p>
+</article>
+
+<article>
+<header><h1>High-End BB</h1></header>
+<p>Under construction just like that fourth HQ slot next to Cat Lodge</p>
+</article>
+
+<article>
+<header><h1>High-End CV</h1></header>
+<p>Shinano Amagi Implacable Unzen Kazagumo someone Under construction just like that fourth HQ slot next to Cat Lodge</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Pisces",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "boss skills and stats on wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "/./challengemode/challenge-mode",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "common introduction and disclaimers",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Heavy armor HP piñatas. Have fun, you get a break until next month's hell. You don't even need to read these bosses' skills.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "mid-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Mid-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Under construction just like that fourth HQ slot next to Cat Lodge.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "High-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Under construction just like that fourth HQ slot next to Cat Lodge.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "High-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Shinano Amagi Implacable Unzen Kazagumo someone.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Under construction just like that fourth HQ slot next to Cat Lodge.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1736111633020,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "March Challenge",
+      "pageMeta" : {
+        "title" : [ "March Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "march",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Mid-End CV",
+        "id" : "mid-end-cv",
+        "customAnchorId" : "mid-end-cv"
+      }, {
+        "title" : "High-End BB",
+        "id" : "high-end-bb",
+        "customAnchorId" : "high-end-bb"
+      }, {
+        "title" : "High-End CV",
+        "id" : "high-end-cv",
+        "customAnchorId" : "high-end-cv"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
