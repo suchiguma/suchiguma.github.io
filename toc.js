@@ -239,6 +239,33 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Challenge Mode",
+    "pageTitle" : "April Challenge",
+    "pageMeta" : {
+      "title" : [ "April Challenge" ]
+    },
+    "dirName" : "challengemode",
+    "fileName" : "april",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Strategy",
+      "id" : "strategy",
+      "customAnchorId" : "strategy"
+    }, {
+      "title" : "Soyuz BB",
+      "id" : "soyuz-bb",
+      "customAnchorId" : "soyuz-bb"
+    }, {
+      "title" : "Soyuz CV",
+      "id" : "soyuz-cv",
+      "customAnchorId" : "soyuz-cv"
+    }, {
+      "title" : "High-End BB",
+      "id" : "high-end-bb",
+      "customAnchorId" : "high-end-bb"
+    } ]
+  }, {
+    "chapterTitle" : "Challenge Mode",
     "pageTitle" : "November Challenge",
     "pageMeta" : {
       "title" : [ "November Challenge" ]

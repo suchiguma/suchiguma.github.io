@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat Yukikaze, the April Incarnation of Aries extreme challenge mode boss.">
+<title>Azur Lane Guides: April Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>Read the boss skills and stats on wiki Read the common introduction and disclaimers Timing precision Super Hard DPS check Hard Tank check Medium Did you enjoy your vacation last month The devs have the perfect welcoming back gift for you This is the hardest month in Extreme Challenge but there are some key pieces *cough* soyuz *cough* that can make it easy We will cover strategies with and without Sovetsky Soyuz separately in each example fleet section Yukikaze s first ability is to block 100 hits every 20s Similarly to January s Katsuragi bring vanguard ships with high pellet count The same list there works except that shield piercers like Z52 are not disadvantaged against Yukikaze The three lifebuoys each have 10k HP 0 EVA 0 LUCK and 200 AA They spawn in fixed positions and do not move These coordinates mean that Bismarck Zwei s black hole cannot reach all lifebuoys but Sovetsky Soyuz s iceberg barrage will target Yukikaze and splash all lifebuoys enough to kill them Lifebuoy coordinates See the time graph below which shows when BBs and CVs with 20s reload time land their attacks You have a period of 1 8s between when the lifebuoys spawn and when they start healing Yukikaze Due to carriers airplane and payload travel time it is infeasible to rely on them to wipe the lifebuoys Time graph for skills</p>
+</article>
+
+<article>
+<header><h1>Soyuz BB</h1></header>
+<p>Ships don t start reloading until 1 5s into the battle which is still before the boss spawns This delay means that a Sovetsky Soyuz with exactly 20s reload time will finish reloading 1 5s after the lifebuoys spawn However this is acceptable because Soyuz s barrage insta kills the lifebuoys in the remaining 0 3s window before the lifebuoys start healing Remember that Soyuz has a reload bonus when with at least one other battleship It is crucial for your other BBs to not interfere with Soyuz s reload They must have AFCT HSFCR and be at least as fast as 20s or they must be slower than Soyuz and also not take AFCT HSFCR Yukikaze s movement cycle puts her in the middle before she summons the lifebuoys However after a few minutes her movement cycle drifts far enough so that she will summon the lifebuoys before reaching the center When Yukikaze does not return to the center in time Soyuz s barrage will miss one or two lifebuoys because the barrage is aimed at Yukikaze There is no way to sync Soyuz to both Yukikaze s movement and to the lifebuoy spawn times Hence you need to finish the battle quick enough or get lucky when Soyuz begins failing to insta kill the lifebuoys Under construction</p>
+</article>
+
+<article>
+<header><h1>Soyuz CV</h1></header>
+<p>Please read all of the Soyuz BB section first The only differences are that Soyuz does not have a reload bonus with carriers and that carriers can not significantly interfere with Soyuz s reload so it is even okay for them to be 20s and slightly faster or slightly slower than Soyuz If you use Nakhimov she will need to be around 20s to sync with Soyuz Other carriers are more free in timing but making them 20s too is still a good idea to take advantage of Soyuz s slow and small debuff Under construction</p>
+</article>
+
+<article>
+<header><h1>High-End BB</h1></header>
+<p>Due to the 1 5s start of battle delay in reloading battleships with 20s reload and without AFCT HSFCR fire too late to land more than the first volley of the first battleship Without Soyuz if your battleships reload faster than 20s then it could work for a few minutes until they fire too long before the lifebuoys spawn So it is better for non Soyuz BB fleets to have one 20s BB with AFCT and two BBs that reload between 18 8s and 19 9s without AFCT Blocking the faster BBs behind the slowest BB is also good for long sync Under construction</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Aries",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "boss skills and stats on wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "/./challengemode/challenge-mode",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "common introduction and disclaimers",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Super Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "purered",
+            "id" : "chevrons-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "purered",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Did you enjoy your vacation last month? The devs have the perfect welcoming back gift for you! This is the hardest month in Extreme Challenge, but there are some key pieces *cough* soyuz *cough* that can make it easy. We will cover strategies with and without Sovetsky Soyuz separately in each example fleet section.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Yukikaze's first ability is to block 100 hits every 20s. Similarly to ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./challengemode/january",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "January's Katsuragi",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", bring vanguard ships with high pellet count. The same list there works, except that shield-piercers like Z52 are not disadvantaged against Yukikaze.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The three lifebuoys each have 10k HP, 0 EVA, 0 LUCK, and 200 AA. They spawn in fixed positions and do not move. These coordinates mean that Bismarck Zwei's black hole cannot reach all lifebuoys, but Sovetsky Soyuz's iceberg barrage will target Yukikaze and splash all lifebuoys enough to kill them.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\aries_position.webp",
+        "alt" : "Lifebuoy coordinates.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1739853407539,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "See the time graph below, which shows when BBs and CVs with 20s reload time land their attacks. You have a period of 1.8s between when the lifebuoys spawn and when they start healing Yukikaze. Due to carriers' airplane and payload travel time, it is infeasible to rely on them to wipe the lifebuoys.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\aries_cm_time.webp",
+        "alt" : "Time graph for skills.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1739852550007,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "soyuz-bb",
+      "additionalIds" : [ ],
+      "title" : "Soyuz BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Ships don't start reloading until 1.5s into the battle, which is still before the boss spawns. This delay means that a Sovetsky Soyuz with exactly 20s reload time will finish reloading 1.5s after the lifebuoys spawn. However, this is acceptable because Soyuz's barrage insta-kills the lifebuoys in the remaining 0.3s window before the lifebuoys start healing. Remember that Soyuz has a reload bonus when with at least one other battleship.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "It is crucial for your other BBs to not interfere with Soyuz's reload. They must have ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Admiralty_Fire_Control_Table",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "AFCT",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : "/",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/High_Performance_Fire_Control_Radar",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "HSFCR",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " and be at least as fast as 20s, or they must be slower than Soyuz and also not take AFCT/HSFCR.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Yukikaze's movement cycle puts her in the middle before she summons the lifebuoys. However, after a few minutes, her movement cycle drifts far enough so that she will summon the lifebuoys before reaching the center. When Yukikaze does not return to the center in time, Soyuz's barrage will miss one or two lifebuoys because the barrage is aimed at Yukikaze. There is no way to sync Soyuz to both Yukikaze's movement and to the lifebuoy spawn times. Hence, you need to finish the battle quick enough or get lucky when Soyuz begins failing to insta-kill the lifebuoys.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Under construction.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "soyuz-cv",
+      "additionalIds" : [ ],
+      "title" : "Soyuz CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Please read all of the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./challengemode/april#soyuz-bb",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Soyuz BB",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " section first. The only differences are that Soyuz does not have a reload bonus with carriers and that carriers can not significantly interfere with Soyuz's reload, so it is even okay for them to be 20s and slightly faster or slightly slower than Soyuz. If you use Nakhimov, she will need to be around 20s to sync with Soyuz. Other carriers are more free in timing, but making them 20s too is still a good idea to take advantage of Soyuz's slow and small debuff.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Under construction.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "High-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Due to the 1.5s start-of-battle delay in reloading, battleships with 20s reload and without ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Admiralty_Fire_Control_Table",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "AFCT",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : "/",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/High_Performance_Fire_Control_Radar",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "HSFCR",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " fire too late to land more than the first volley of the first battleship. Without Soyuz, if your battleships reload faster than 20s, then it could work for a few minutes until they fire too long before the lifebuoys spawn. So it is better for non-Soyuz BB fleets to have one 20s BB with AFCT and two BBs that reload between 18.8s and 19.9s without AFCT. Blocking the faster BBs behind the slowest BB is also good for long sync.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Under construction.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1739856070483,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "April Challenge",
+      "pageMeta" : {
+        "title" : [ "April Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "april",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Soyuz BB",
+        "id" : "soyuz-bb",
+        "customAnchorId" : "soyuz-bb"
+      }, {
+        "title" : "Soyuz CV",
+        "id" : "soyuz-cv",
+        "customAnchorId" : "soyuz-cv"
+      }, {
+        "title" : "High-End BB",
+        "id" : "high-end-bb",
+        "customAnchorId" : "high-end-bb"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
