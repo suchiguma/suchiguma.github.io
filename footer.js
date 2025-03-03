@@ -5,7 +5,7 @@ footer = {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "© 2024 Suchiguma",
+          "text" : "© 2024-2025 Suchiguma",
           "type" : "SimpleText"
         }, {
           "type" : "HardLineBreak"
@@ -29,7 +29,7 @@ footer = {
             "type" : "SimpleText"
           } ]
         }, {
-          "text" : "-related images displayed here are owned by",
+          "text" : "-images displayed here are owned by",
           "type" : "SimpleText"
         }, {
           "type" : "HardLineBreak"
