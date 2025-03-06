@@ -236,6 +236,10 @@ toc = [ {
       "title" : "High-End BB",
       "id" : "high-end-bb",
       "customAnchorId" : "high-end-bb"
+    }, {
+      "title" : "WTF CV",
+      "id" : "wtf-cv",
+      "customAnchorId" : "wtf-cv"
     } ]
   }, {
     "chapterTitle" : "Challenge Mode",
