@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat Takao, the May Incarnation of Taurus extreme challenge mode boss.">
+<title>Azur Lane Guides: May Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>Read the boss skills and stats on wiki Read the common introduction and disclaimers Timing precision Medium DPS check Hard Tank check Hard This is a straightforward but somewhat difficult DPS check Takao s Steel Blade Stance henceforth SBS with 90% damage reduction lasts until you deal 20 000 damage to her Effectively this means if your fleet would have dealt 300 000 damage within 10s then 200 000 of that damage becomes 20 000 and you are left with 120 000 damage dealt to Takao Viewed from a different angle if your fleet interrupts Takao 29 times over 10 minutes then an effective 29 * 180 000 5 220 000 HP is added to Takao s base 5 230 000 HP You must have a well synced main fleet that interrupts Takao s damage reduction and hits her within 10s in every reload cycle Also your vanguard takes damage faster as the battle goes on so if you need 9 or 10 minutes for your DPS level then you will need a CB or Anchorage level tank And that s it if your account is strong then you can brute force this month If not then there are some small optimizations to augment your DPS against SBS phases Takao s 90% damage reduction is coded as her taking 90% damage from each of FP based TRP based and AVI based damage This damage reduction does not affect damage over time effects like burn and flood Effectively burns and floods do 10x as much damage while Takao is in SBS Hypothetically if you were to use TRP as your main source of damage for some reason you might want to bring Noshiro  or Tanikaze Matchless They make the boss take 40% damage from TRP based damage and 90% 40% 50% Going from 10% to 50% damage is a huge 5x increase in damage for the first 20 000 damage and a 1 4x increase for any extra damage after that But nobody will use TRP as the main damage source Fortunately FP and AVI also have some ship skills that are additive with the 90% albeit not as crazy as 40% Here is a list of recommended bonuses to consider against Takao Most burns last for 15s so you may give Mk 7 to the second or third BB to fire preferably not the first Most armor breaks give 8% to FP based damage effectively 1 8x damage to SBS Guam and gir are natural candidates for BB fleets Scylla gives 6% to AVI based damage effectively 1 6x damage to SBS Make sure her torpedo reloads slightly faster than the CVs Floods There are not many ships who inflict flooding and the good ships among them are even fewer</p>
+</article>
+
+<article>
+<header><h1>Mid-High End BB</h1></header>
+<p>Like CVs BBs are quite bad without a slow or stop But CVs have August von Parseval while BBs currently have no permanent option that s reliable So we assume you have at least one of Bismarck Zwei Eldridge Retrofit or Sovetsky Soyuz In this example Soyuz has the best gun damage and takes the UR SAP gun making her the slowest of the BBs This setup is quite convenient as we can give a single BB both SAP and AFCT to boost her damage but don t try to force AFCT with SAP if it means using worse BBs Vanguard must not be more than 1 2s faster than Soyuz Giving her the Champagne gun is right around 1 2s so it ll probably be fine but using Soyuz gun if you have it is a safe play Mid High End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>High-End BB</h1></header>
+<p>We tried to find a suitable timing for Kearsarge Whether her burns and BB debuffs are worth this aux gimping is a valid question when Alsace also has a debuff and lesser burn Since Soyuz is slowest but fires first due to AFCT put her in the top position to activate Guam s armor break The fleet would need about 9 BB BBV RLD to maintain a 20s reload for Helena If you have less then remove Helena s SG Radar High End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>Mid-End CV</h1></header>
+<p>If you use Scylla make sure her torpedoes reload slightly faster or as fast as the fastest CV In this example using 41 CV RLD after cats Fritz is 20 96s and Scylla with 13 CL RLD is 20 87s Unfortunately quad mag torpedoes would reload too fast even with 0 CL RLD and the Crossbow augment Franklin is a nice sidegrade to Enterprise and even has a flood But in a 10 minute battle she will burn herself for over 5000 HP and Takao can also blind fire Franklin if your whole main fleet is concealed So don t use Franklin unless you use Kearsarge Mid End CV example fleet</p>
+</article>
+
+<article>
+<header><h1>High-End CV</h1></header>
+<p>An example using 6 BB RLD and 48 CV RLD plus Bishamaru s staff skill Higher reload would be better to allow for the main fleet to stay within Helena s scan for more strikes The Soyuz Nakhimov Fritz main fleet is currently the best against most medium armor bosses and Takao is no exception The more La 9 s the better but try to find a tight enough sync for how long you expect the battle to take High End CV example fleet</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Taurus",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "boss skills and stats on wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "/./challengemode/challenge-mode",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "common introduction and disclaimers",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "purered",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "purered",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is a straightforward but somewhat difficult DPS check. Takao's Steel Blade Stance (henceforth SBS) with 90% damage reduction lasts until you deal 20,000 damage to her. Effectively, this means if your fleet would have dealt 300,000 damage within 10s, then 200,000 of that damage becomes 20,000 and you are left with 120,000 damage dealt to Takao. Viewed from a different angle, if your fleet interrupts Takao 29 times over 10 minutes, then an effective 29 * 180,000 = 5,220,000 HP is added to Takao's base 5,230,000 HP.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You must have a well-synced main fleet that interrupts Takao's damage reduction and hits her within 10s, in every reload cycle. Also, your vanguard takes damage faster as the battle goes on, so if you need 9 or 10 minutes for your DPS level, then you will need a CB or Anchorage-level tank. And that's it, if your account is strong then you can brute force this month. If not, then there are some small optimizations to augment your DPS against SBS phases.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Takao's 90% damage reduction is coded as her taking -90% damage from each of FP-based, TRP-based, and AVI-based damage. This damage reduction does not affect damage-over-time effects like burn and flood. Effectively, burns and floods do 10x as much damage while Takao is in SBS.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Hypothetically, if you were to use TRP as your main source of damage for some reason, you might want to bring Noshiro μ or Tanikaze/Matchless. They make the boss take +40% damage from TRP-based damage, and -90% + 40% = -50%. Going from 10% to 50% damage is a huge 5x increase in damage for the first 20,000 damage and a 1.4x increase for any extra damage after that. But nobody will use TRP as the main damage source. Fortunately, FP and AVI also have some ship skills that are additive with the -90%, albeit not as crazy as +40%.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Here is a list of recommended bonuses to consider against Takao:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Most ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "burns",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " last for 15s, so you may give Mk 7 to the second or third BB to fire, preferably not the first.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Most ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "armor breaks",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " give +8% to FP-based damage, effectively 1.8x damage to SBS. Guam and Ägir are natural candidates for BB fleets.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Scylla",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " gives +6% to AVI-based damage, effectively 1.6x damage to SBS. Make sure her torpedo reloads slightly faster than the CVs.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Floods",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ". There are not many ships who inflict flooding, and the good ships among them are even fewer.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "mid-high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "Mid-High End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Like CVs, BBs are quite bad without a slow or stop. But CVs have August von Parseval while BBs currently have no permanent option that's reliable. So we assume you have at least one of Bismarck Zwei, Eldridge Retrofit, or Sovetsky Soyuz.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In this example, Soyuz has the best gun damage and takes the UR SAP gun, making her the slowest of the BBs. This setup is quite convenient as we can give a single BB both SAP and AFCT to boost her damage, but don't try to force AFCT with SAP if it means using worse BBs. Vanguard must not be more than 1.2s faster than Soyuz. Giving her the Champagne gun is right around 1.2s, so it'll probably be fine, but using Soyuz gun if you have it is a safe play.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\taurus_midBB.webp",
+        "alt" : "Mid-High End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1744591460021,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "High-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We tried to find a suitable timing for Kearsarge. Whether her burns and BB debuffs are worth this aux gimping is a valid question when Alsace also has a debuff and lesser burn. Since Soyuz is slowest but fires first due to AFCT, put her in the top position to activate Guam's armor break. The fleet would need about 9 BB/BBV RLD to maintain a 20s reload for Helena. If you have less, then remove Helena's SG Radar.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\taurus_highBB.webp",
+        "alt" : "High End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1744591459797,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "mid-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Mid-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you use Scylla, make sure her torpedoes reload slightly faster or as fast as the fastest CV. In this example using 41 CV RLD after cats, Fritz is 20.96s, and Scylla with 13 CL RLD is 20.87s. Unfortunately, quad mag torpedoes would reload too fast even with 0 CL RLD and the Crossbow augment.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Franklin is a nice sidegrade to Enterprise and even has a flood. But in a 10 minute battle, she will burn herself for over 5000 HP, and Takao can also blind-fire Franklin if your whole main fleet is concealed. So don't use Franklin unless you use Kearsarge.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\taurus_midCV.webp",
+        "alt" : "Mid End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1744591460133,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "High-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "An example using 6 BB RLD and 48 CV RLD plus Bishamaru's staff skill. Higher reload would be better to allow for the main fleet to stay within Helena's scan for more strikes. The Soyuz Nakhimov Fritz main fleet is currently the best against most medium armor bosses, and Takao is no exception. The more La-9's the better, but try to find a tight enough sync for how long you expect the battle to take.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\taurus_highCV.webp",
+        "alt" : "High End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1744591459909,
+        "type" : "Image"
+      } ]
+    } ],
+    "lastModifiedTime" : 1744593081044,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "May Challenge",
+      "pageMeta" : {
+        "title" : [ "May Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "may",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Mid-High End BB",
+        "id" : "mid-high-end-bb",
+        "customAnchorId" : "mid-high-end-bb"
+      }, {
+        "title" : "High-End BB",
+        "id" : "high-end-bb",
+        "customAnchorId" : "high-end-bb"
+      }, {
+        "title" : "Mid-End CV",
+        "id" : "mid-end-cv",
+        "customAnchorId" : "mid-end-cv"
+      }, {
+        "title" : "High-End CV",
+        "id" : "high-end-cv",
+        "customAnchorId" : "high-end-cv"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
