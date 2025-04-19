@@ -102,6 +102,10 @@ toc = [ {
       "id" : "budget-boss",
       "customAnchorId" : "budget-boss"
     }, {
+      "title" : "Submarines",
+      "id" : "submarines",
+      "customAnchorId" : "submarines"
+    }, {
       "title" : "Ship Roles",
       "id" : "ship-roles",
       "customAnchorId" : "ship-roles"
