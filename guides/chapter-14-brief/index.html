@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="First part of the Chapter 14 guide, with example fleets for auto and explainations of ship roles.">
+<title>Azur Lane Guides: Chapter 14 Brief</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Introduction</h1></header>
+<p>If you have a strong account and don t want to learn copy your homework from this page If you want to learn or don t have a strong account then read both this page and Chapter 14 Detailed We are writing this guide almost a year later than the Chapter 15 guide because many new players seem to get stuck at various points in Chapter 14 15 and 11 3 Although Chapter 15 fleets work for 14 too there are some optimizations that enable players to get away with weaker fleets in 14 So this guide is for first time clearing Chapter 14 on auto in lethal threat level with manual enemy node selection Three star can use any of the non budget fleets because Chapter 14 isn t too difficult Auto search on safe threat for farming New Orleans can also use the exact same fleets because safe threat makes it easy even through two out of ammo mob battles Tip Stagger desync your main fleet s damage Apparently this does need to be said but at this point level 120 ships and 10 gear are the absolute minimum Attempting to bring a shiny new level 110 UR with one limit break is not a good idea Tip Fleet screenshots using Azur Lane Fleet Tool show the vanguard from bottom main tank to top off tank It s like the in game Formation screen but rotated counter clockwise The ships are also marked with 1 2 and 3 from bottom to top Correct vanguard order</p>
+</article>
+
+<article>
+<header><h1>Single Healer Mob</h1></header>
+<p>With a vanguard that is tanky enough you can bring two damage main fleet ships to clear mob waves faster or more consistently decreasing the chances of a main fleet ship being sunk Main Fleet Damage Carrier or BB BB Primary Healer Vanguard Flex Flex Tank Single healer example</p>
+</article>
+
+<article>
+<header><h1>Double Healer Mob</h1></header>
+<p>Using two healers is safer for your vanguard but not necessarily safer for your main fleet Main Fleet Secondary Healer BB Primary Healer Vanguard Flex Flex Flex Double healer example</p>
+</article>
+
+<article>
+<header><h1>Premium Boss</h1></header>
+<p>Prioritize using good ships over filling hull types However bringing some carriers is recommended for ACV and Recon map checks Main Fleet Damage Carrier or BB BB Damage Carrier Vanguard Tanky Flex Flex Tank Premium boss example</p>
+</article>
+
+<article>
+<header><h1>Budget Mob</h1></header>
+<p>Budget mob example</p>
+</article>
+
+<article>
+<header><h1>Budget Boss</h1></header>
+<p>Budget Boss example</p>
+</article>
+
+<article>
+<header><h1>Ship Roles</h1></header>
+<p>Tip Check the tier list on the home page for more substitutes and good ships Role Examples BB Deals with suicide boats and does damage These BBs are similar in performance because all are overkill for Chapter 14 Musashi makes the main fleet s damage taken more consistent Raffaello counts as half of a Secondary Healer or more Friedrich der Groe is accessible and deals with suicide boats well Bismarck Zwei handles out of ammo battles better with the Certificate of Sponsorship https azurlane koumakan jp wiki Certificate_of_Sponsorship Primary Healer Heals the fleet or at least the vanguard a lot Unicorn needs no introduction Zuihou **ONLY IF** the vanguard is mostly DDs Worse options include Klaudia Perseus Painlev Secondary Healer Focuses healing on low HP ships Or could be a second Primary Healer Aquila is strong at healing CB CA and main fleet ships and godly with Musashi Volga heals less but does more damage Zuihou heals ships with low max HP a lot Damage Carrier Does damage AoE stagger and damage uptime are good traits Any UR CV Independence Saratoga Souryuu META etc Tank Survives Good tanks also do damage ASW or buff Napoli Laffey II rainbow CBs Less tanky ships like Plymouth or Z52 can also work for mob Flex Vanguard Lots of freedom not the Eagle Union kind Damage ASW buff tank</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "introduction",
+      "additionalIds" : [ ],
+      "title" : "Introduction",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you have a strong account and don't want to learn, copy your homework from this page.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you want to learn or don't have a strong account, then read both this page and ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./guides/chapter-14-detailed",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Chapter 14 Detailed",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We are writing this guide almost a year later than the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./guides/chapter-15",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Chapter 15 guide",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " because many new players seem to get stuck at various points in Chapter 14, 15, and 11-3. Although Chapter 15 fleets work for 14 too, there are some optimizations that enable players to get away with weaker fleets in 14. So this guide is for first-time clearing Chapter 14 on auto in lethal threat level, with manual enemy node selection.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Three star can use any of the non-budget fleets because Chapter 14 isn't too difficult. Auto search on safe threat for farming New Orleans can also use the exact same fleets because safe threat makes it easy even through two out of ammo mob battles.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Tip: Stagger (desync) your main fleet's damage!",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Apparently this does need to be said, but at this point, level 120 ships and +10 gear are the absolute minimum. Attempting to bring a shiny new level 110 UR with one limit break is not a good idea.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Tip: Fleet screenshots using ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://renhex.github.io/AzurLaneFleet/",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Azur Lane Fleet Tool",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " show the vanguard from bottom (main-tank) to top (off-tank). It's like the in-game Formation screen but rotated counter-clockwise. The ships are also marked with 1, 2, and 3 from bottom to top.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\renhex_order.webp",
+        "alt" : "Correct vanguard order.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1733009598831,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "single-healer-mob",
+      "additionalIds" : [ ],
+      "title" : "Single Healer Mob",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "With a vanguard that is tanky enough, you can bring two damage main fleet ships to clear mob waves faster or more consistently, decreasing the chances of a main fleet ship being sunk.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Main Fleet",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Damage Carrier or BB",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "BB",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Primary Healer",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Vanguard",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Flex",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Flex",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Tank",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "destination" : "/./images\\chapter-14\\single_healer_mob.webp",
+        "alt" : "Single healer example.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1745083805733,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "double-healer-mob",
+      "additionalIds" : [ ],
+      "title" : "Double Healer Mob",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Using two healers is safer for your vanguard but not necessarily safer for your main fleet.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Main Fleet",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Secondary Healer",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "BB",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Primary Healer",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Vanguard",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Flex",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Flex",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Flex",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "destination" : "/./images\\chapter-14\\double_healer_mob.webp",
+        "alt" : "Double healer example.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1745083805533,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "premium-boss",
+      "additionalIds" : [ ],
+      "title" : "Premium Boss",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Prioritize using good ships over filling hull types. However, bringing some carriers is recommended for ACV and Recon map checks.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Main Fleet",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Damage Carrier or BB",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "BB",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Damage Carrier",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Vanguard",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Tanky Flex",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Flex",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Tank",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "destination" : "/./images\\chapter-14\\premium_boss.webp",
+        "alt" : "Premium boss example.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1745083805655,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "budget-mob",
+      "additionalIds" : [ ],
+      "title" : "Budget Mob",
+      "type" : "Section",
+      "content" : [ {
+        "destination" : "/./images\\chapter-14\\budget_mob.webp",
+        "alt" : "Budget mob example.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1745083805465,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "budget-boss",
+      "additionalIds" : [ ],
+      "title" : "Budget Boss",
+      "type" : "Section",
+      "content" : [ {
+        "destination" : "/./images\\chapter-14\\budget_boss.webp",
+        "alt" : "Budget Boss example.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1745083805383,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "ship-roles",
+      "additionalIds" : [ ],
+      "title" : "Ship Roles",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Tip: Check the tier list on the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./home/home-page",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "home page",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " for more substitutes and good ships.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Role"
+          }, {
+            "title" : "Examples"
+          } ],
+          "data" : [ [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "BB",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Deals with suicide boats and does damage. These BBs are similar in performance because all are overkill for Chapter 14.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Musashi makes the main fleet's damage taken more consistent.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Raffaello counts as half of a Secondary Healer or more.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Friedrich der Große is accessible and deals with suicide boats well.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Bismarck Zwei handles out-of-ammo battles better with the ",
+                  "type" : "SimpleText"
+                }, {
+                  "url" : "https://azurlane.koumakan.jp/wiki/Certificate_of_Sponsorship",
+                  "isFile" : false,
+                  "type" : "Link",
+                  "content" : [ {
+                    "text" : "Certificate of Sponsorship",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : ".",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Primary Healer",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Heals the fleet, or at least the vanguard, a lot.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Unicorn needs no introduction.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Zuihou ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "ONLY IF",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " the vanguard is mostly DDs.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Worse options include Klaudia, Perseus, Painlevé.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Secondary Healer",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Focuses healing on low-HP ships. Or could be a second Primary Healer.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Aquila is strong at healing CB/CA and main fleet ships and godly with Musashi.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Volga heals less but does more damage.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Zuihou heals ships with low max HP a lot.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Damage Carrier",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Does damage. AoE, stagger, and damage uptime are good traits.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Any UR CV.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Independence, Saratoga, Souryuu META, etc.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Tank",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Survives. Good tanks also do damage, ASW, or buff.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Napoli, Laffey II, rainbow CBs.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Less tanky ships like Plymouth or Z52 can also work for mob.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Flex Vanguard",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Lots of freedom (not the Eagle Union kind). Damage, ASW, buff, tank.",
+              "type" : "SimpleText"
+            } ]
+          } ] ] ]
+        },
+        "type" : "Table"
+      } ]
+    } ],
+    "lastModifiedTime" : 1745090408221,
+    "tocItem" : {
+      "chapterTitle" : "Guides",
+      "pageTitle" : "Chapter 14 Brief",
+      "pageMeta" : { },
+      "dirName" : "guides",
+      "fileName" : "chapter-14-brief",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Introduction",
+        "id" : "introduction",
+        "customAnchorId" : "introduction"
+      }, {
+        "title" : "Single Healer Mob",
+        "id" : "single-healer-mob",
+        "customAnchorId" : "single-healer-mob"
+      }, {
+        "title" : "Double Healer Mob",
+        "id" : "double-healer-mob",
+        "customAnchorId" : "double-healer-mob"
+      }, {
+        "title" : "Premium Boss",
+        "id" : "premium-boss",
+        "customAnchorId" : "premium-boss"
+      }, {
+        "title" : "Budget Mob",
+        "id" : "budget-mob",
+        "customAnchorId" : "budget-mob"
+      }, {
+        "title" : "Budget Boss",
+        "id" : "budget-boss",
+        "customAnchorId" : "budget-boss"
+      }, {
+        "title" : "Ship Roles",
+        "id" : "ship-roles",
+        "customAnchorId" : "ship-roles"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

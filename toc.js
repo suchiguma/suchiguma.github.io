@@ -71,6 +71,68 @@ toc = [ {
   "dirName" : "guides",
   "items" : [ {
     "chapterTitle" : "Guides",
+    "pageTitle" : "Chapter 14 Brief",
+    "pageMeta" : { },
+    "dirName" : "guides",
+    "fileName" : "chapter-14-brief",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Introduction",
+      "id" : "introduction",
+      "customAnchorId" : "introduction"
+    }, {
+      "title" : "Single Healer Mob",
+      "id" : "single-healer-mob",
+      "customAnchorId" : "single-healer-mob"
+    }, {
+      "title" : "Double Healer Mob",
+      "id" : "double-healer-mob",
+      "customAnchorId" : "double-healer-mob"
+    }, {
+      "title" : "Premium Boss",
+      "id" : "premium-boss",
+      "customAnchorId" : "premium-boss"
+    }, {
+      "title" : "Budget Mob",
+      "id" : "budget-mob",
+      "customAnchorId" : "budget-mob"
+    }, {
+      "title" : "Budget Boss",
+      "id" : "budget-boss",
+      "customAnchorId" : "budget-boss"
+    }, {
+      "title" : "Ship Roles",
+      "id" : "ship-roles",
+      "customAnchorId" : "ship-roles"
+    } ]
+  }, {
+    "chapterTitle" : "Guides",
+    "pageTitle" : "Chapter 14 Detailed",
+    "pageMeta" : { },
+    "dirName" : "guides",
+    "fileName" : "chapter-14-detailed",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Threats",
+      "id" : "threats",
+      "customAnchorId" : "threats"
+    }, {
+      "title" : "General Tips",
+      "id" : "general-tips",
+      "customAnchorId" : "general-tips"
+    }, {
+      "title" : "Map Walkthrough",
+      "id" : "map-walkthrough",
+      "customAnchorId" : "map-walkthrough"
+    }, {
+      "title" : "Misc. Recommendations",
+      "id" : "misc-recommendations",
+      "customAnchorId" : "misc-recommendations"
+    } ]
+  }, {
+    "chapterTitle" : "Guides",
     "pageTitle" : "Chapter 15",
     "pageMeta" : { },
     "dirName" : "guides",
