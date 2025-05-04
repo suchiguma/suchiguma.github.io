@@ -252,6 +252,10 @@ toc = [ {
       "id" : "strategy",
       "customAnchorId" : "strategy"
     }, {
+      "title" : "Manual",
+      "id" : "manual",
+      "customAnchorId" : "manual"
+    }, {
       "title" : "Mid-End BB",
       "id" : "mid-end-bb",
       "customAnchorId" : "mid-end-bb"
@@ -322,6 +326,10 @@ toc = [ {
       "id" : "strategy",
       "customAnchorId" : "strategy"
     }, {
+      "title" : "Manual",
+      "id" : "manual",
+      "customAnchorId" : "manual"
+    }, {
       "title" : "Soyuz BB",
       "id" : "soyuz-bb",
       "customAnchorId" : "soyuz-bb"
@@ -348,6 +356,10 @@ toc = [ {
       "title" : "Strategy",
       "id" : "strategy",
       "customAnchorId" : "strategy"
+    }, {
+      "title" : "Manual",
+      "id" : "manual",
+      "customAnchorId" : "manual"
     }, {
       "title" : "Mid-High End BB",
       "id" : "mid-high-end-bb",
@@ -379,6 +391,10 @@ toc = [ {
       "title" : "Strategy",
       "id" : "strategy",
       "customAnchorId" : "strategy"
+    }, {
+      "title" : "Manual",
+      "id" : "manual",
+      "customAnchorId" : "manual"
     }, {
       "title" : "Mid-End BB",
       "id" : "mid-end-bb",
