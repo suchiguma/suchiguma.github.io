@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat Washington and South Dakota, the June Incarnation of Gemini extreme challenge mode boss.">
+<title>Azur Lane Guides: June Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>Read the boss skills and stats on wiki Read the common introduction and disclaimers Timing precision Easy DPS check Medium Tank check Medium Heavy armor HP piatas If you sink both bosses within 8s of each other then the DPS check is quite easy Otherwise they can heal a lot making the DPS check harder but still brute force able Note This month can share the same brute force fleets as March so look there if you hope for slightly different options to copy</p>
+</article>
+
+<article>
+<header><h1>Manual</h1></header>
+<p>This section is for manual only and only months with a notable manual strategy may have a manual section At the cost of vanguard survivability you can use your vanguard to ram one boss to slow her down Keep ramming until the two bosses are stacked together Your main fleet s DPS will be greatly increased due to splash yes all kinds of torpedoes do have small splash Do not bring single target slows like Eldridge or Aegir because they can separate the bosses</p>
+</article>
+
+<article>
+<header><h1>Mid-End CV</h1></header>
+<p>The carriers reload times must be quite close and August von Parseval needs to be the second or third carrier to strike A sync within 0 06s on the calculator should be perfect for 3 minutes and then begin degrading Try to find a sync within 0 03s For no oaths and between 28 and 46 CV RLD from cats and tech this gear has a really good sync Mid End CV example fleet</p>
+</article>
+
+<article>
+<header><h1>High-End CV</h1></header>
+<p>Please consult March High End CV for Shinano Implacable Amagi CV Or March Advanced CV for Bismarck Zwei Shinano Amagi CV</p>
+</article>
+
+<article>
+<header><h1>High-End BB</h1></header>
+<p>Bismarck Zwei pulls the bosses together then the other two BBs can salvo in any order Make their guns reload faster than Bismarck s by 0 1s to 1 2s so that they keep up after Bismarck s first AFCT semi preload High End BB example fleet</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Gemini",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "boss skills and stats on wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "/./challengemode/challenge-mode",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "common introduction and disclaimers",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Heavy armor HP piñatas. If you sink both bosses within 8s of each other, then the DPS check is quite easy. Otherwise, they can heal a lot, making the DPS check harder but still brute force-able.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: This month can share the same brute-force fleets as ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./challengemode/march",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "March",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", so look there if you hope for slightly different options to copy.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "manual",
+      "additionalIds" : [ ],
+      "title" : "Manual",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This section is for manual only, and only months with a notable manual strategy may have a manual section.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "At the cost of vanguard survivability, you can use your vanguard to ram one boss to slow her down. Keep ramming until the two bosses are stacked together. Your main fleet's DPS will be greatly increased due to splash (yes, all kinds of torpedoes do have small splash). Do not bring single-target slows like Eldridge or Aegir because they can separate the bosses.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "mid-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Mid-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The carriers' reload times must be quite close, and August von Parseval needs to be the second or third carrier to strike. A sync within 0.06s on the calculator should be perfect for 3 minutes and then begin degrading. Try to find a sync within 0.03s.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For no oaths and between 28 and 46 CV RLD from cats and tech, this gear has a really good sync.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\gemini_midCV.webp",
+        "alt" : "Mid-End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1747017543615,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "High-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Please consult ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./challengemode/march#high-end-cv",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "March High-End CV",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " for Shinano, Implacable, Amagi CV. Or ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./challengemode/march#advanced-cv",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "March Advanced CV",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " for Bismarck Zwei, Shinano, Amagi CV.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "High-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Bismarck Zwei pulls the bosses together, then the other two BBs can salvo in any order. Make their guns reload faster than Bismarck's by 0.1s to 1.2s so that they keep up after Bismarck's first AFCT semi-preload.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./challengemode\\gemini_highBB.webp",
+        "alt" : "High-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1747017543499,
+        "type" : "Image"
+      } ]
+    } ],
+    "lastModifiedTime" : 1747017396048,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "June Challenge",
+      "pageMeta" : {
+        "title" : [ "June Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "june",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Manual",
+        "id" : "manual",
+        "customAnchorId" : "manual"
+      }, {
+        "title" : "Mid-End CV",
+        "id" : "mid-end-cv",
+        "customAnchorId" : "mid-end-cv"
+      }, {
+        "title" : "High-End CV",
+        "id" : "high-end-cv",
+        "customAnchorId" : "high-end-cv"
+      }, {
+        "title" : "High-End BB",
+        "id" : "high-end-bb",
+        "customAnchorId" : "high-end-bb"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
