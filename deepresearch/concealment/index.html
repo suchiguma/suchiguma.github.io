@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Describes how vanguard, submarine, and enemy concealment work in Chapters 14 and 15. Describes the effects of aim bias and its decay factors.">
+<title>Azur Lane Guides: Concealment</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Smokescreen Generation</h1></header>
+<p>Chapter 15 enemy smokescreens Every 30s two Mass Produced Kagerou Class spawn off screen The first spawn is at 2 42 for all I didnt check chapter 15 battles These Mass Produced Kagerou Class slowly move left to eventually crash into your main fleet They do not have to be killed for the battle to end They have 40 SPD with a 0 4 multiplier for 16 effective SPD After spawning each Mass Produced Kagerou Class spawns a tiny smokescreen on itself every 0 8s for 6 times After each smokescreen spawns it expands over 3s with a quadratic rate of expanstion to around 21x56 size can be smaller if your potato device skips calculation frames Then it disappears after 12s more for a total duration of 15s Enemies who touched the smokescreen get aim bias not an EVA rate buff</p>
+</article>
+
+<article>
+<header><h1>Aim Bias</h1></header>
+<p>Enemies in smoke enemies in night weather and allied vanguard subs in night weather have an aim bias represented by a bar above the unit Aim bias causes the opposing side s attacks to be aimed randomly within a square centered on the unit and the square s size depends on the fullness of the bar and other factors On this page concealment refers to aim bias of vanguard ships submarines and enemy ships not to main fleet concealment Enemies that leave the smokescreen are Exposed removing aim bias and pausing the decay Re entering the smokescreen within 3 seconds resumes aim bias but does not reset it to max If the enemy does not re enter a smokescreen within 3 seconds of being Exposed the aim bias will start at max when the enemy enters a smokescreen</p>
+</article>
+
+<article>
+<header><h1>Aim Bias Decay</h1></header>
+<p>The aim bias bar decays with a speed based on complex formulas Aim bias is measured in units and decay speeds are in units per second No Enemies In Chapter 14 when you wipe an enemy wave there are no enemies on screen But this is 0 at the beginning of the battle even though enemies haven t spawned yet Fog While battling enemy fleets that are located inside the foggy weather on a Chapter 14 sortie map all allied and enemy ships get aim bias decay speed 0 15 meaning that all ships stay concealed for longer Highest HIT stat Applies in both Chapters 14 and 15 The HIT stat of the ship with the highest HIT stat on either side friend or foe excluding support carriers will affect the rate of decay of the opposing side s aim bias Submarines are only affected by the highest HIT stat among the opposing side s DD CL and DDG V This effect is capped to 300 HIT on the highest HIT ship Radar gear Each ship equipped with a radar like gear excluding support carriers makes the enemy aim bias decay very slightly quicker Applies in both Chapters 14 and 15 Two radar like gear on one ship only counts as one This is the list of radar like gear as of May 2025 and they all add a constant 0 1 to the decay speed combinedSpeed decaySpeedRatio * maxAimBias decaySpeedFog decaySpeedHit decaySpeedRadar decaySpeedRatio 0 25 if no enemies else 0 decaySpeedFog 0 15 if foggyBattle else 0 decaySpeedHit min highestHit 100 3 decaySpeedRadar 0 1 * numberOfShipsWithRadar FuMO 25 T0 Air Radar T1 Air Radar T2 Air Radar T3 High Performance Air Radar T0 Fire Control Radar T1 Fire Control Radar T2 Fire Control Radar T3 High Standard Fire Control Radar T0 SG Radar T1 SG Radar T2 SG Radar T3 Admiralty Fire Control Table T0</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "smokescreen-generation",
+      "additionalIds" : [ ],
+      "title" : "Smokescreen Generation",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Chapter 15 enemy smokescreens.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Every 30s, two Mass-Produced Kagerou Class spawn off screen. The first spawn is at 2:42 for (all? I didnt check) chapter 15 battles.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "These Mass-Produced Kagerou Class slowly move left to eventually crash into your main fleet. They do not have to be killed for the battle to end. They have 40 SPD with a 0.4 multiplier for 16 effective SPD.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "After spawning, each Mass-Produced Kagerou Class spawns a tiny smokescreen on itself, every 0.8s, for 6 times.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "After each smokescreen spawns, it expands over 3s, with a quadratic rate of expanstion, to around 21x56 size (can be smaller if your potato device skips calculation frames). Then it disappears after 12s more, for a total duration of 15s.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Enemies who touched the smokescreen get aim bias, not an EVA rate buff.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "aim-bias",
+      "additionalIds" : [ ],
+      "title" : "Aim Bias",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Enemies in smoke, enemies in night weather, and allied vanguard/subs in night weather have an aim bias represented by a bar above the unit. Aim bias causes the opposing side's attacks to be aimed randomly within a square centered on the unit, and the square's size depends on the fullness of the bar and other factors. On this page, \"concealment\" refers to aim bias of vanguard ships, submarines, and enemy ships, not to main fleet concealment.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Enemies that leave the smokescreen are Exposed, removing aim bias and pausing the decay. Re-entering the smokescreen within 3 seconds resumes aim bias but does not reset it to max. If the enemy does not re-enter a smokescreen within 3 seconds of being Exposed, the aim bias will start at max when the enemy enters a smokescreen.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "aim-bias-decay",
+      "additionalIds" : [ ],
+      "title" : "Aim Bias Decay",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The aim bias bar decays with a speed based on complex formulas. Aim bias is measured in \"units\" and decay speeds are in units per second.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "combinedSpeed = decaySpeedRatio * maxAimBias + decaySpeedFog + decaySpeedHit + decaySpeedRadar",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "id" : "aim-bias-decay-no-enemies",
+        "additionalIds" : [ "no-enemies" ],
+        "level" : 2,
+        "title" : "No Enemies",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In Chapter 14, when you wipe an enemy wave, there are no enemies on screen.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "decaySpeedRatio = -0.25 if no enemies else 0",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "But this is 0 at the beginning of the battle even though enemies haven't spawned yet.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "aim-bias-decay-fog",
+        "additionalIds" : [ "fog" ],
+        "level" : 2,
+        "title" : "Fog",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "While battling enemy fleets that are located inside the foggy weather on a Chapter 14 sortie map, all allied and enemy ships get aim bias decay speed -0.15, meaning that all ships stay concealed for longer.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "decaySpeedFog = -0.15 if foggyBattle else 0",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "id" : "aim-bias-decay-highest-hit-stat",
+        "additionalIds" : [ "highest-hit-stat" ],
+        "level" : 2,
+        "title" : "Highest HIT stat",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Applies in both Chapters 14 and 15. The HIT stat of the ship with the highest HIT stat on either side (friend or foe, excluding support carriers) will affect the rate of decay of the opposing side's aim bias. Submarines are only affected by the highest HIT stat among the opposing side's DD, CL, and DDG(V). This effect is capped to 300 HIT on the highest-HIT ship.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "decaySpeedHit = min(highestHit / 100, 3)",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "id" : "aim-bias-decay-radar-gear",
+        "additionalIds" : [ "radar-gear" ],
+        "level" : 2,
+        "title" : "Radar gear",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Each ship equipped with a radar-like gear (excluding support carriers) makes the enemy aim bias decay ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "very slightly",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " quicker. Applies in both Chapters 14 and 15. Two radar-like gear on one ship only counts as one.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "decaySpeedRadar = 0.1 * numberOfShipsWithRadar",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is the list of \"radar-like\" gear as of May 2025, and they all add a constant 0.1 to the decay speed:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "FuMO 25 T0\nAir Radar T1\nAir Radar T2\nAir Radar T3\nHigh Performance Air Radar T0\nFire Control Radar T1\nFire Control Radar T2\nFire Control Radar T3\nHigh Standard Fire-Control Radar T0\nSG Radar T1\nSG Radar T2\nSG Radar T3\nAdmiralty Fire Control Table T0",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      } ]
+    } ],
+    "lastModifiedTime" : 1747025779267,
+    "tocItem" : {
+      "chapterTitle" : "Deep Research",
+      "pageTitle" : "Concealment",
+      "pageMeta" : { },
+      "dirName" : "deepresearch",
+      "fileName" : "concealment",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Smokescreen Generation",
+        "id" : "smokescreen-generation",
+        "customAnchorId" : "smokescreen-generation"
+      }, {
+        "title" : "Aim Bias",
+        "id" : "aim-bias",
+        "customAnchorId" : "aim-bias"
+      }, {
+        "title" : "Aim Bias Decay",
+        "id" : "aim-bias-decay",
+        "customAnchorId" : "aim-bias-decay"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

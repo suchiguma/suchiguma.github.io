@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Describes how airplane interception works, both for normal carriers and for Chapter 15 support carriers.">
+<title>Azur Lane Guides: Interception</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Interception</h1></header>
+<p>Most fighters and a few other airplanes have passive interception henceforth referred to as interception Look at the fire rate FR of an airplane in your depot or on your ship If it has a drop down that says Intercept RoF then that airplane can intercept As with other weapons carriers RLD stat affects Intercept RoF In flight the anti air effectiveness of the intercepting aircraft depends on the mother carrier s level current stats AVI and RLD and current airplane slot efficiency Technically HIT and LUCK matter too but because enemy airplanes have only 1 EVA differences in HIT and LUCK make less than a 1% difference through crit rate Note Interception works entirely independently of carriers main airstrikes and skill barrage airstrikes When an enemy airplane is doing a strafing run in PvE it s going from right to left and your interceptor is off cooldown the carrier launches the interceptor When one plane is launched it puts the carrier s interception queue in cooldown for 0 5s preventing all other intercepting planes from launching during this time In effect this means that each plane launches 0 6s after the previous if it is ready For example an Illustrious with Flapjack Focke Wulf 190 A 5 and Wyvern will launch 8 planes 3 Flapjacks 3 fw190a5 and 2 Wyverns with 0 6s between each taking 4 2s to finish After around 3s more the first Flapjack to launch will finish its ~7s cooldown Each airplane has its own cooldown and each carrier has her own interception queue cooldown Then the airplanes use their guns to shoot enemy airplanes</p>
+</article>
+
+<article>
+<header><h1>Support Carriers</h1></header>
+<p>In Chapter 15 support carriers use their levels stats AVI and RLD and fighter efficiencies Skills cats and crossfleet buffs do NOT take effect The support carriers are spawned at the flagship s normal position if you put Odin as flagship you might see airplanes appearing from thin air water but they cannot be seen interacted with or killed They launch intercepting fighters and only intercepting fighters Warning Wyvern Breguet and all other DB TBs do NOT intercept when equipped on a support carrier They only act as AVI statsticks Unlike normal carriers which check for enemy planes support carriers launch their intercepting fighters as soon as they re off cooldown For example around 8s after the start of battle an Illustrious with Flapjack Focke Wulf 190 A 5 and Wyvern will launch 3 flapjacks with 0 6s between each wait around 1s more then launch 3 fw190a5 with 0 6s between each</p>
+</article>
+
+<article>
+<header><h1>Airplane Movement</h1></header>
+<p>Note The coordinate system is 3D X is horizontal left to right Z is vertical bottom to top of your screen and Y is mostly unimportant when the airplane is first launched it is unable to attack for 1 5s It chooses targetZ as a random Z coordinate in the middle three fifths of the vanguard movement field while the airplane is alive X speed is constant and depends on the Plane Speed advertised on the equipment Z speed is equal to 0 5 in the direction from the airplane s Z coordinate to its targetZ If the targetZ has been reached then roll another random targetZ Thus airplanes zigzag vertically while flying horizontally across the screen</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "interception",
+      "additionalIds" : [ ],
+      "title" : "Interception",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Most fighters and a few other airplanes have passive interception, henceforth referred to as \"interception.\" Look at the fire rate (FR) of an airplane in your depot or on your ship. If it has a drop-down that says \"Intercept RoF,\" then that airplane can intercept.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "As with other weapons, carriers' RLD stat affects Intercept RoF. In flight, the anti-air effectiveness of the intercepting aircraft depends on the mother carrier's level, current stats (AVI and RLD), and current airplane slot efficiency. Technically, HIT and LUCK matter too, but because enemy airplanes have only 1 EVA, differences in HIT and LUCK make less than a 1% difference through crit rate.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Interception works entirely independently of carriers' main airstrikes and skill (barrage) airstrikes.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "When an enemy airplane is doing a strafing run (in PvE, it's going from right to left) and your interceptor is off cooldown, the carrier launches the interceptor. When one plane is launched, it puts the carrier's interception queue in cooldown for 0.5s, preventing all other intercepting planes from launching during this time. In effect, this means that each plane launches 0.6s after the previous if it is ready. For example, an Illustrious with Flapjack, Focke-Wulf 190 A-5, and Wyvern will launch 8 planes (3 Flapjacks, 3 fw190a5, and 2 Wyverns) with 0.6s between each, taking 4.2s to finish. After around 3s more, the first Flapjack to launch will finish its ~7s cooldown. Each airplane has its own cooldown, and each carrier has her own interception queue cooldown.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Then, the airplanes use their guns to shoot enemy airplanes.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "support-carriers",
+      "additionalIds" : [ ],
+      "title" : "Support Carriers",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In Chapter 15, support carriers use their levels, stats (AVI and RLD), and fighter efficiencies. Skills, cats, and crossfleet buffs do NOT take effect.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The support carriers are spawned at the flagship's normal position (if you put Odin as flagship, you might see airplanes appearing from thin air/water), but they cannot be seen, interacted with, or killed. They launch intercepting fighters and only intercepting fighters.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: Wyvern, Breguet, and all other DB/TBs do NOT intercept when equipped on a support carrier. They only act as AVI statsticks.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Unlike normal carriers which check for enemy planes, support carriers launch their intercepting fighters as soon as they're off cooldown. For example, around 8s after the start of battle, an Illustrious with Flapjack, Focke-Wulf 190 A-5, and Wyvern will launch 3 flapjacks with 0.6s between each, wait around 1s more, then launch 3 fw190a5 with 0.6s between each.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "airplane-movement",
+      "additionalIds" : [ ],
+      "title" : "Airplane Movement",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: The coordinate system is 3D. X is horizontal left to right, Z is vertical bottom to top of your screen, and Y is mostly unimportant.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "when the airplane is first launched, it is unable to attack for 1.5s. It chooses targetZ as a random Z coordinate in the middle three fifths of the vanguard movement field.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "while the airplane is alive,",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "X-speed is constant and depends on the Plane Speed advertised on the equipment.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Z-speed is equal to 0.5 in the direction from the airplane's Z coordinate to its targetZ.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "If the targetZ has been reached, then roll another random targetZ.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Thus, airplanes zigzag vertically while flying horizontally across the screen.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1747025204568,
+    "tocItem" : {
+      "chapterTitle" : "Deep Research",
+      "pageTitle" : "Interception",
+      "pageMeta" : { },
+      "dirName" : "deepresearch",
+      "fileName" : "interception",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Interception",
+        "id" : "interception",
+        "customAnchorId" : "interception"
+      }, {
+        "title" : "Support Carriers",
+        "id" : "support-carriers",
+        "customAnchorId" : "support-carriers"
+      }, {
+        "title" : "Airplane Movement",
+        "id" : "airplane-movement",
+        "customAnchorId" : "airplane-movement"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

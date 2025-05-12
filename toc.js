@@ -27,13 +27,13 @@ toc = [ {
       "id" : "guides",
       "customAnchorId" : "guides"
     }, {
+      "title" : "Other Content",
+      "id" : "other-content",
+      "customAnchorId" : "other-content"
+    }, {
       "title" : "Ship Tier List",
       "id" : "ship-tier-list",
       "customAnchorId" : "ship-tier-list"
-    }, {
-      "title" : "Random Things",
-      "id" : "random-things",
-      "customAnchorId" : "random-things"
     }, {
       "title" : "Other People",
       "id" : "other-people",
@@ -481,6 +481,52 @@ toc = [ {
       "title" : "High-End CV",
       "id" : "high-end-cv",
       "customAnchorId" : "high-end-cv"
+    } ]
+  } ]
+}, {
+  "chapterTitle" : "Deep Research",
+  "dirName" : "deepresearch",
+  "items" : [ {
+    "chapterTitle" : "Deep Research",
+    "pageTitle" : "Concealment",
+    "pageMeta" : { },
+    "dirName" : "deepresearch",
+    "fileName" : "concealment",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Smokescreen Generation",
+      "id" : "smokescreen-generation",
+      "customAnchorId" : "smokescreen-generation"
+    }, {
+      "title" : "Aim Bias",
+      "id" : "aim-bias",
+      "customAnchorId" : "aim-bias"
+    }, {
+      "title" : "Aim Bias Decay",
+      "id" : "aim-bias-decay",
+      "customAnchorId" : "aim-bias-decay"
+    } ]
+  }, {
+    "chapterTitle" : "Deep Research",
+    "pageTitle" : "Interception",
+    "pageMeta" : { },
+    "dirName" : "deepresearch",
+    "fileName" : "interception",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Interception",
+      "id" : "interception",
+      "customAnchorId" : "interception"
+    }, {
+      "title" : "Support Carriers",
+      "id" : "support-carriers",
+      "customAnchorId" : "support-carriers"
+    }, {
+      "title" : "Airplane Movement",
+      "id" : "airplane-movement",
+      "customAnchorId" : "airplane-movement"
     } ]
   } ]
 } ]
