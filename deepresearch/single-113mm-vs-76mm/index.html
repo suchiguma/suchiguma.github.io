@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Which gun is better for barrage ships like Z52, Trafalgar, Shimakaze, and Kazagumo? Here are some tests and explanations.">
+<title>Azur Lane Guides: Single 113mm Vs 76mm</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Introduction</h1></header>
+<p>Gold Single 113mm vs Blue Single 76mm which is better The answer isn t immediately obvious because the Blue Single 76mm reloads faster and the whole point of using one of these two guns is to shoot more Name Gold Single 113mm Blue Single 76mm Image Gold 113 images deepresearch table gold113 webp Blue 76 images deepresearch table blue76 webp **Base Reload** 0 70s 0 67s **Range** 55 50 **Cost** materials images deepresearch table electronics_24 webp Free **FP** 25 12 Damage 13 7 Armor Mod 100 50 20 100 60 20 Shell Range 50 40</p>
+</article>
+
+<article>
+<header><h1>Conclusion</h1></header>
+<p>Conclusion first in case you don t want to read First make sure the ship actually wants one of these guns As of May 2025 the most relevant of these ships are Trafalgar Z52 and Kazagumo Other somewhat notable examples include Shimakaze Nana Kawakaze Z47 and Scylla the last of whom can also use Twin 100mm Kai New player or haven t finished the priority gear lab crafts &gt; Blue 76 Don t care about minmaxing &gt; Blue 76 Need survivability and don t have Goldburn &gt; either gun Can afford to put one offensive auxiliary Goldburn or Autoloader can get you to 291 RLD &gt; Gold 113 Not enough RLD &gt; Blue 76 with a different FP aux Bonus You want to pay 120 gold plates for a 2% damage bonus to a single vanguard ship &gt; 13 Gold 113 Note RLD stat is calculated as the white plus green plus yellow number on the ship screen Skill percentage multipliers are applied after but very few ships have that The RLD is 310 in the following example Stat colors</p>
+</article>
+
+<article>
+<header><h1>Deep Mechanics</h1></header>
+<p>Vanguard guns operate at a frequency of 10 Hertz That is they attempt to fire 10 times per second A gun that reloads in 0 45s and the same gun that reloads in 0 47s are identical in reality because they are both rounded up to 0 50s Meanwhile a gun that reloads in 0 50s is unpredictable because it can go at 0 50s or 0 60s randomly depending on device lag Other factors that affect vanguard firing rate such as animation trigger time are outside the scope of this article From a pure minmaxing perspective the only advantage of the Blue 76 over Gold 113 is its reload time Everything else is worse Hence Blue 76 only has a chance to beat Gold 113 if it crosses a 10 Hertz threshold In most maxed out destroyers cases that threshold is 0 50s In the following tests we explored different reload values on the ship to see whether Blue 76 can beat Gold 113 at certain reload values</p>
+</article>
+
+<article>
+<header><h1>Tests</h1></header>
+<p>We tested the two guns using these setups on an oathed Z52 The torpedo was unequipped to reduce variance because her torpedo salvos are irrelevant to the test between the guns and barrages An oathed Z52 with 200 affinity has 245 base RLD and 10 Autoloader takes it to 280 For DD RLD tech values ranging from 0 to 27 our Z52 had 280 to 307 RLD Because Blue 76 reloads faster another option dropping the Autoloader for the All Work All Play Robot was tested Z52 setups We battled Scharnhorst META showdown using this Z52 with various settings of DD RLD tech and both guns Each gun and reload was tested several times with the central Gold 113 threshold of 290 and 291 RLD being tested 10 times each to get a more confident average The main fleet consisted of Vestal and Zuihou for healing without adding damage bias plus Chaser with double ASW planes The other vanguard ships were Jeanne and Eldridge both equipped with anti submarine weapons to reduce variance on Z52 s ASW damage Also note that Scharnhorst META is medium armor and Blue 76 is slightly favored against medium Results Graph</p>
+</article>
+
+<article>
+<header><h1>Analysis</h1></header>
+<p>Note Results may vary slightly depending on device lag Gold 113 represented by the red line has a large jump between 290 and 291 RLD At 291 and above it is clearly superior to Blue 76 Below that if Autoloader is required to reach 290 and cannot go above 290 then Blue 76 wins by replacing the Autoloader with a FP auxiliary like All Work All Play Robot Scroll up for the final conclusion Compared to a torpedo boat like Shimakaze Z52 certainly does have a stronger main gun slot that can benefit from Gold 113 s damage Against light medium and heavy bosses respectively Z52 with 10 Gold 113 has her main gun accounting for 10% 5% and 2% of her total damage respectively We did not calculate Shimakaze but her anti heavy damage is probably less than 1% main gun For torpedo ships the Gold 113 s damage advantage is suppressed leaving nearly only the range and reload difference So there is a possibility that Blue 76 is better for them at more RLD values</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "introduction",
+      "additionalIds" : [ ],
+      "title" : "Introduction",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Gold Single 113mm vs Blue Single 76mm, which is better? The answer isn't immediately obvious because the Blue Single 76mm reloads faster, and the whole point of using one of these two guns is to shoot more.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Name"
+          }, {
+            "title" : "Gold Single 113mm"
+          }, {
+            "title" : "Blue Single 76mm"
+          } ],
+          "data" : [ [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Image",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "destination" : "/./images\\deepresearch\\table\\gold113.webp",
+            "alt" : "Gold 113",
+            "title" : null,
+            "inlined" : false,
+            "timestamp" : 1748211064180,
+            "type" : "Image"
+          } ], [ {
+            "destination" : "/./images\\deepresearch\\table\\blue76.webp",
+            "alt" : "Blue 76",
+            "title" : null,
+            "inlined" : false,
+            "timestamp" : 1748211064169,
+            "type" : "Image"
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Base Reload",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.70s",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.67s",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Range",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "55",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Cost",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ], [ {
+            "destination" : "/./images\\deepresearch\\table\\electronics_24.webp",
+            "alt" : "materials",
+            "title" : null,
+            "inlined" : false,
+            "timestamp" : 1748211991340,
+            "type" : "Image"
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "\"Free\"",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "FP",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "25",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Damage",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Armor Mod",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100/50/20",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100/60/20",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Shell Range",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "40",
+              "type" : "SimpleText"
+            } ]
+          } ] ] ]
+        },
+        "type" : "Table"
+      } ]
+    }, {
+      "id" : "conclusion",
+      "additionalIds" : [ ],
+      "title" : "Conclusion",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Conclusion first in case you don't want to read.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "First, make sure the ship actually wants one of these guns.",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " As of May 2025, the most relevant of these ships are Trafalgar, Z52, and Kazagumo. Other somewhat notable examples include Shimakaze, Nana, Kawakaze, Z47, and Scylla (the last of whom can also use Twin 100mm Kai).",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "New player or haven't finished the priority gear lab crafts --> Blue 76.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Don't care about minmaxing --> Blue 76.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Need survivability and don't have ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://azurlane.koumakan.jp/wiki/Goldburn",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Goldburn",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " --> either gun.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Can afford to put one offensive auxiliary:",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Goldburn or Autoloader can get you to 291+ RLD --> Gold 113.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Not enough RLD --> Blue 76 with a different FP aux.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Bonus: You want to pay 120 gold plates for a 2% damage bonus to a single vanguard ship --> +13 Gold 113.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: RLD stat is calculated as the white plus green plus yellow number on the ship screen. Skill percentage multipliers are applied after, but very few ships have that. The RLD is 310 in the following example.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\deepresearch\\base_tech_gear.webp",
+        "alt" : "Stat colors.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1748211064165,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "deep-mechanics",
+      "additionalIds" : [ ],
+      "title" : "Deep Mechanics",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Vanguard guns operate at a frequency of 10 Hertz. That is, they attempt to fire 10 times per second. A gun that reloads in 0.45s and the same gun that reloads in 0.47s are identical in reality because they are both rounded up to 0.50s. Meanwhile, a gun that reloads in 0.50s is unpredictable, because it can go at 0.50s or 0.60s randomly depending on device lag. Other factors that affect vanguard firing rate, such as animation trigger time, are outside the scope of this article.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "From a pure minmaxing perspective, the only advantage of the Blue 76 over Gold 113 is its reload time. Everything else is worse. Hence, Blue 76 only has a chance to beat Gold 113 if it crosses a 10 Hertz threshold. In most maxed out destroyers' cases, that threshold is 0.50s. In the following tests, we explored different reload values on the ship to see whether Blue 76 can beat Gold 113 at certain reload values.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "tests",
+      "additionalIds" : [ ],
+      "title" : "Tests",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We tested the two guns using these setups on an oathed Z52. The torpedo was unequipped to reduce variance because her torpedo salvos are irrelevant to the test between the guns and barrages. An oathed Z52 with 200 affinity has 245 base RLD, and +10 Autoloader takes it to 280. For DD RLD tech values ranging from 0 to 27, our Z52 had 280 to 307 RLD. Because Blue 76 reloads faster, another option dropping the Autoloader for the All Work, All Play Robot was tested.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\deepresearch\\z52_setups.webp",
+        "alt" : "Z52 setups",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1748211605037,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We battled Scharnhorst META showdown using this Z52 with various settings of DD RLD tech and both guns. Each gun and reload was tested several times, with the central Gold 113 threshold of 290 and 291 RLD being tested 10 times each to get a more confident average.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The main fleet consisted of Vestal and Zuihou for healing without adding damage bias, plus Chaser with double ASW planes. The other vanguard ships were Jeanne and Eldridge, both equipped with anti-submarine weapons to reduce variance on Z52's ASW damage. Also note that Scharnhorst META is medium armor, and Blue 76 is slightly favored against medium.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\deepresearch\\graph_76_113.webp",
+        "alt" : "Results Graph",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1748216202195,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "analysis",
+      "additionalIds" : [ ],
+      "title" : "Analysis",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Results may vary slightly depending on device lag.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Gold 113, represented by the red line, has a large jump between 290 and 291 RLD. At 291 and above, it is clearly superior to Blue 76. Below that, if Autoloader is required to reach 290 and cannot go above 290, then Blue 76 wins by replacing the Autoloader with a FP auxiliary like All Work, All Play Robot. Scroll up for the final conclusion.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Compared to a torpedo boat like Shimakaze, Z52 certainly does have a stronger main gun slot that can benefit from Gold 113's damage. Against light, medium, and heavy bosses respectively, Z52 with +10 Gold 113 has her main gun accounting for 10%, 5%, and 2% of her total damage respectively. We did not calculate Shimakaze, but her anti-heavy damage is probably less than 1% main gun. For torpedo ships, the Gold 113's damage advantage is suppressed, leaving nearly only the range and reload difference. So there is a possibility that Blue 76 is better for them at more RLD values.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1748235013958,
+    "tocItem" : {
+      "chapterTitle" : "Deep Research",
+      "pageTitle" : "Single 113mm Vs 76mm",
+      "pageMeta" : { },
+      "dirName" : "deepresearch",
+      "fileName" : "single-113mm-vs-76mm",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Introduction",
+        "id" : "introduction",
+        "customAnchorId" : "introduction"
+      }, {
+        "title" : "Conclusion",
+        "id" : "conclusion",
+        "customAnchorId" : "conclusion"
+      }, {
+        "title" : "Deep Mechanics",
+        "id" : "deep-mechanics",
+        "customAnchorId" : "deep-mechanics"
+      }, {
+        "title" : "Tests",
+        "id" : "tests",
+        "customAnchorId" : "tests"
+      }, {
+        "title" : "Analysis",
+        "id" : "analysis",
+        "customAnchorId" : "analysis"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

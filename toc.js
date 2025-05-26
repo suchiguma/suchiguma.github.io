@@ -528,5 +528,34 @@ toc = [ {
       "id" : "airplane-movement",
       "customAnchorId" : "airplane-movement"
     } ]
+  }, {
+    "chapterTitle" : "Deep Research",
+    "pageTitle" : "Single 113mm Vs 76mm",
+    "pageMeta" : { },
+    "dirName" : "deepresearch",
+    "fileName" : "single-113mm-vs-76mm",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Introduction",
+      "id" : "introduction",
+      "customAnchorId" : "introduction"
+    }, {
+      "title" : "Conclusion",
+      "id" : "conclusion",
+      "customAnchorId" : "conclusion"
+    }, {
+      "title" : "Deep Mechanics",
+      "id" : "deep-mechanics",
+      "customAnchorId" : "deep-mechanics"
+    }, {
+      "title" : "Tests",
+      "id" : "tests",
+      "customAnchorId" : "tests"
+    }, {
+      "title" : "Analysis",
+      "id" : "analysis",
+      "customAnchorId" : "analysis"
+    } ]
   } ]
 } ]
