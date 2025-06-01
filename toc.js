@@ -408,6 +408,10 @@ toc = [ {
       "id" : "high-end-cv",
       "customAnchorId" : "high-end-cv"
     }, {
+      "title" : "Advanced CV",
+      "id" : "advanced-cv",
+      "customAnchorId" : "advanced-cv"
+    }, {
       "title" : "High-End BB",
       "id" : "high-end-bb",
       "customAnchorId" : "high-end-bb"
