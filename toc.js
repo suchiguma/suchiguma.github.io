@@ -181,33 +181,25 @@ toc = [ {
       "id" : "purple-augments",
       "customAnchorId" : "purple-augments"
     }, {
-      "title" : "DD Unique Augments",
-      "id" : "dd-unique-augments",
-      "customAnchorId" : "dd-unique-augments"
+      "title" : "S-Tier Unique Augments",
+      "id" : "s-tier-unique-augments",
+      "customAnchorId" : "s-tier-unique-augments"
     }, {
-      "title" : "CL Unique Augments",
-      "id" : "cl-unique-augments",
-      "customAnchorId" : "cl-unique-augments"
+      "title" : "A-Tier Unique Augments",
+      "id" : "a-tier-unique-augments",
+      "customAnchorId" : "a-tier-unique-augments"
     }, {
-      "title" : "CA/CB Unique Augments",
-      "id" : "ca-cb-unique-augments",
-      "customAnchorId" : "ca-cb-unique-augments"
+      "title" : "B-Tier Unique Augments",
+      "id" : "b-tier-unique-augments",
+      "customAnchorId" : "b-tier-unique-augments"
     }, {
-      "title" : "CV/CVL Unique Augments",
-      "id" : "cv-cvl-unique-augments",
-      "customAnchorId" : "cv-cvl-unique-augments"
+      "title" : "C-Tier Unique Augments",
+      "id" : "c-tier-unique-augments",
+      "customAnchorId" : "c-tier-unique-augments"
     }, {
-      "title" : "BB/BC/BBV Unique Augments",
-      "id" : "bb-bc-bbv-unique-augments",
-      "customAnchorId" : "bb-bc-bbv-unique-augments"
-    }, {
-      "title" : "SS Unique Augments",
-      "id" : "ss-unique-augments",
-      "customAnchorId" : "ss-unique-augments"
-    }, {
-      "title" : "IX/AE/AR Hull Unique Augments",
-      "id" : "ix-ae-ar-hull-unique-augments",
-      "customAnchorId" : "ix-ae-ar-hull-unique-augments"
+      "title" : "D-Tier Unique Augments",
+      "id" : "d-tier-unique-augments",
+      "customAnchorId" : "d-tier-unique-augments"
     } ]
   } ]
 }, {

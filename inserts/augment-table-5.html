@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Augment Table</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <script>
+        window.onload = function () { 
+        if (window.parent && window.parent.document) {
+            try {
+                const parentBodyClasses = window.parent.document.body.className;
+                document.body.className = parentBodyClasses;
+            } catch (error) {
+            }
+        }}
+    </script>
+    <style>
+    .tablesorter-default .header,
+    .tablesorter-default .tablesorter-header {
+        background-position: center right;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        white-space: normal;
+        padding: 2px 11px 2px 2px
+    }
+    .tablesorter-default thead .tablesorter-headerUnSorted:not(.sorter-false) {
+        background-image: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA6SURBVChTY0AG9fX1/6FMDMAIpVEUNTY2wsVhACyAzSR0xYz4rMNmMkFAtInEuxFKE/Q1CsDtDAYGAJ6mHP842xwvAAAAAElFTkSuQmCC);
+    }
+    .tablesorter-default thead .headerSortUp,
+    .tablesorter-default thead .tablesorter-headerAsc,
+    .tablesorter-default thead .tablesorter-headerSortUp {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAECAYAAAC3OK7NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVBhXY0AG9fX1/6FMDMAIpVEUNTY2wsVhACyAzSR0xYz4rEMoZmAAAKOQDoDW8la6AAAAAElFTkSuQmCC);
+        box-shadow: inset 0px -2px #888; 
+    }
+    .tablesorter-default thead .headerSortDown,
+    .tablesorter-default thead .tablesorter-headerDesc,
+    .tablesorter-default thead .tablesorter-headerSortDown {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAECAYAAAC3OK7NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAqSURBVBhXY6yvr//PgAM0NjYyQpkMYAY2xciKQADOQVaMrggD4HYGAwMAXoYOgNr59qMAAAAASUVORK5CYII=);
+        box-shadow: inset 0px -2px #888; 
+    }
+    .znai-table td, .znai-table th {
+        padding: .3em
+    }
+    .longname1, .longname2 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .longname2 {
+        font-size: 0.7em;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    body {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    </style>
+</head>
+<body>
+    <div style="overflow-x: auto; min-width: 600px; border: 1px solid;"><table id="table1" class="znai-table" style="table-layout: fixed; display: table;">
+        <colgroup>
+            <col style="width: 30%;">
+            <col style="width: 50px;">
+            <col style="width: 50px;">
+            <col style="width: 50px;">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Ship</th>
+                <th style="font-size: 0.9em;" class="sortInitialOrder-desc">Gain</th>
+                <th style="font-size: 0.8em;" class="sortInitialOrder-desc">Worth</th>
+                <th style="font-size: 0.8em;" class="sortInitialOrder-desc">New<br>SKK</th>
+                <th class="sorter-false">Notes</th>
+            </tr>
+        </thead>
+        <tbody><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Confinement_Program"><img src="../guides/augment_images/akane_shinjo_augment.webp" alt="Confinement_Program" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Akane_Shinjo">Akane Shinjo</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Confinement_Program">Confinement Program</a></div></div></div></td><td><img number="5" src="../guides/augment_images/S.webp" alt="S" style="height: 30px; display: block; margin: auto;"></td><td><img number="3" src="../guides/augment_images/B.webp" alt="B" style="height: 30px; display: block; margin: auto;"></td><td><img number="5" src="../guides/augment_images/S.webp" alt="S" style="height: 30px; display: block; margin: auto;"></td><td>Huge buff to a ship who doesn't see endgame use. More than doubles her barrage and adds a summon.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Muramasa_and_Masamune"><img src="../guides/augment_images/izumo_augment.webp" alt="Muramasa_and_Masamune" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Izumo">Izumo</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Muramasa_and_Masamune">Muramasa and Masamune</a></div></div></div></td><td><img number="4" src="../guides/augment_images/A.webp" alt="A" style="height: 30px; display: block; margin: auto;"></td><td><img number="3" src="../guides/augment_images/B.webp" alt="B" style="height: 30px; display: block; margin: auto;"></td><td><img number="5" src="../guides/augment_images/S.webp" alt="S" style="height: 30px; display: block; margin: auto;"></td><td>15% more damage, massive buffs to main gun, barrage chance goes to 100%. Very strong augment, but gold BB.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Star_Blaster"><img src="../guides/augment_images/san_diego_augment.webp" alt="Star_Blaster" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/San_Diego">San Diego</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Star_Blaster">Star Blaster</a></div></div></div></td><td><img number="5" src="../guides/augment_images/S.webp" alt="S" style="height: 30px; display: block; margin: auto;"></td><td><img number="5" src="../guides/augment_images/S.webp" alt="S" style="height: 30px; display: block; margin: auto;"></td><td><img number="4" src="../guides/augment_images/A.webp" alt="A" style="height: 30px; display: block; margin: auto;"></td><td>Huge DPS buff and more buffs overall. New players can get it before retrofit, making Sandy stronger than starter DDs.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/T3_Sakura_Tech_Pack_(Display_Sample)"><img src="../guides/augment_images/shiranui_augment.webp" alt="T3_Sakura_Tech_Pack_(Display_Sample)" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Shiranui">Shiranui</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/T3_Sakura_Tech_Pack_(Display_Sample)">T3 Sakura Tech Pack (Display Sample)</a></div></div></div></td><td><img number="5" src="../guides/augment_images/S.webp" alt="S" style="height: 30px; display: block; margin: auto;"></td><td><img number="5" src="../guides/augment_images/S.webp" alt="S" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Get your collectible depot trophy now!</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Ultra_Rainbow_Hammer"><img src="../guides/augment_images/specialized_bulin_custom_mkiii_augment.webp" alt="Ultra_Rainbow_Hammer" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Specialized_Bulin_Custom_MKIII">Specialized Bulin Custom MKIII</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Ultra_Rainbow_Hammer">Ultra Rainbow Hammer</a></div></div></div></td><td><img number="5" src="../guides/augment_images/S.webp" alt="S" style="height: 30px; display: block; margin: auto;"></td><td><img number="5" src="../guides/augment_images/S.webp" alt="S" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Doesn't cost anything...but we'll put D for new players to avoid baiting them.</td></tr></tbody>
+    </table></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+    <script>$(document).ready(function() {$("#table1").tablesorter({
+        sortReset:true,
+        sortRestart:true,
+        imgAttr:'number',
+        widthFixed:true,
+        sortList:[[2,1],[3,1],[1,1]]
+    });});</script>
+</body>
+</html>
