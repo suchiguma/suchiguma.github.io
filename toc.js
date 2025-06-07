@@ -181,9 +181,33 @@ toc = [ {
       "id" : "purple-augments",
       "customAnchorId" : "purple-augments"
     }, {
-      "title" : "Unique Augments",
-      "id" : "unique-augments",
-      "customAnchorId" : "unique-augments"
+      "title" : "DD Unique Augments",
+      "id" : "dd-unique-augments",
+      "customAnchorId" : "dd-unique-augments"
+    }, {
+      "title" : "CL Unique Augments",
+      "id" : "cl-unique-augments",
+      "customAnchorId" : "cl-unique-augments"
+    }, {
+      "title" : "CA/CB Unique Augments",
+      "id" : "ca-cb-unique-augments",
+      "customAnchorId" : "ca-cb-unique-augments"
+    }, {
+      "title" : "CV/CVL Unique Augments",
+      "id" : "cv-cvl-unique-augments",
+      "customAnchorId" : "cv-cvl-unique-augments"
+    }, {
+      "title" : "BB/BC/BBV Unique Augments",
+      "id" : "bb-bc-bbv-unique-augments",
+      "customAnchorId" : "bb-bc-bbv-unique-augments"
+    }, {
+      "title" : "SS Unique Augments",
+      "id" : "ss-unique-augments",
+      "customAnchorId" : "ss-unique-augments"
+    }, {
+      "title" : "IX/AE/AR Hull Unique Augments",
+      "id" : "ix-ae-ar-hull-unique-augments",
+      "customAnchorId" : "ix-ae-ar-hull-unique-augments"
     } ]
   } ]
 }, {

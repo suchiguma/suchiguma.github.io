@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Augment Table</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <script>
+        window.onload = function () { 
+        if (window.parent && window.parent.document) {
+            try {
+                const parentBodyClasses = window.parent.document.body.className;
+                document.body.className = parentBodyClasses;
+            } catch (error) {
+            }
+        }}
+    </script>
+    <style>
+    .tablesorter-default .header,
+    .tablesorter-default .tablesorter-header {
+        background-position: center right;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        white-space: normal;
+        padding: 2px 11px 2px 2px
+    }
+    .tablesorter-default thead .tablesorter-headerUnSorted:not(.sorter-false) {
+        background-image: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA6SURBVChTY0AG9fX1/6FMDMAIpVEUNTY2wsVhACyAzSR0xYz4rMNmMkFAtInEuxFKE/Q1CsDtDAYGAJ6mHP842xwvAAAAAElFTkSuQmCC);
+    }
+    .tablesorter-default thead .headerSortUp,
+    .tablesorter-default thead .tablesorter-headerAsc,
+    .tablesorter-default thead .tablesorter-headerSortUp {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAECAYAAAC3OK7NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVBhXY0AG9fX1/6FMDMAIpVEUNTY2wsVhACyAzSR0xYz4rEMoZmAAAKOQDoDW8la6AAAAAElFTkSuQmCC);
+        box-shadow: inset 0px -2px #888; 
+    }
+    .tablesorter-default thead .headerSortDown,
+    .tablesorter-default thead .tablesorter-headerDesc,
+    .tablesorter-default thead .tablesorter-headerSortDown {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAECAYAAAC3OK7NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAqSURBVBhXY6yvr//PgAM0NjYyQpkMYAY2xciKQADOQVaMrggD4HYGAwMAXoYOgNr59qMAAAAASUVORK5CYII=);
+        box-shadow: inset 0px -2px #888; 
+    }
+    .znai-table td, .znai-table th {
+        padding: .3em
+    }
+    .longname1, .longname2 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .longname2 {
+        font-size: 0.7em;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    body {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    </style>
+</head>
+<body>
+    <div style="overflow-x: auto; min-width: 600px; border: 1px solid;"><table id="table1" class="znai-table" style="table-layout: fixed; display: table;">
+        <colgroup>
+            <col style="width: 30%;">
+            <col style="width: 50px;">
+            <col style="width: 50px;">
+            <col style="width: 50px;">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Ship</th>
+                <th style="font-size: 0.9em;" class="sortInitialOrder-desc">Gain</th>
+                <th style="font-size: 0.8em;" class="sortInitialOrder-desc">Worth</th>
+                <th style="font-size: 0.8em;" class="sortInitialOrder-desc">New<br>SKK</th>
+                <th class="sorter-false">Notes</th>
+            </tr>
+        </thead>
+        <tbody><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Handwritten_Note"><img src="../guides/augment_images/adventure_galley_augment.webp" alt="Handwritten_Note" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Adventure_Galley">Adventure Galley</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Handwritten_Note">Handwritten Note</a></div></div></div></td><td><img number="3" src="../guides/augment_images/B.webp" alt="B" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Adds some offense and much defense, but she is still bad.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Crown_of_Flowing_Flames"><img src="../guides/augment_images/amity_augment.webp" alt="Crown_of_Flowing_Flames" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Amity">Amity</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Crown_of_Flowing_Flames">Crown of Flowing Flames</a></div></div></div></td><td><img number="3" src="../guides/augment_images/B.webp" alt="B" style="height: 30px; display: block; margin: auto;"></td><td><img number="4" src="../guides/augment_images/A.webp" alt="A" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Better debuffing, which is Amity's whole point.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Brilliant_Trinket"><img src="../guides/augment_images/dolphin_augment.webp" alt="Brilliant_Trinket" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Dolphin">Dolphin</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Brilliant_Trinket">Brilliant Trinket</a></div></div></div></td><td><img number="2" src="../guides/augment_images/C.webp" alt="C" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Although the skill text may imply the debuff only works on an enemy SS, it works on a surface enemy.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Inhuman_Heart"><img src="../guides/augment_images/fancy_augment.webp" alt="Inhuman_Heart" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Fancy">Fancy</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Inhuman_Heart">Inhuman Heart</a></div></div></div></td><td><img number="4" src="../guides/augment_images/A.webp" alt="A" style="height: 30px; display: block; margin: auto;"></td><td><img number="3" src="../guides/augment_images/B.webp" alt="B" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Huge buff to survivability to make a good ship.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Treasure_Ship's_Lantern"><img src="../guides/augment_images/ganjisawai_augment.webp" alt="Treasure_Ship's_Lantern" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Ganj-i-Sawai">Ganj-i-Sawai</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Treasure_Ship's_Lantern">Treasure Ship's Lantern</a></div></div></div></td><td><img number="3" src="../guides/augment_images/B.webp" alt="B" style="height: 30px; display: block; margin: auto;"></td><td><img number="2" src="../guides/augment_images/C.webp" alt="C" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Upgrade armor, slightly better healing, and better barrage on a decent ship.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Land's_End_Helm"><img src="../guides/augment_images/golden_hind_augment.webp" alt="Land's_End_Helm" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Golden_Hind">Golden Hind</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Land's_End_Helm">Land's End Helm</a></div></div></div></td><td><img number="3" src="../guides/augment_images/B.webp" alt="B" style="height: 30px; display: block; margin: auto;"></td><td><img number="2" src="../guides/augment_images/C.webp" alt="C" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Adds some stats and survivability.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Ghost_Ship's_Scythe"><img src="../guides/augment_images/mary_celeste_augment.webp" alt="Ghost_Ship's_Scythe" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Mary_Celeste">Mary Celeste</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Ghost_Ship's_Scythe">Ghost Ship's Scythe</a></div></div></div></td><td><img number="2" src="../guides/augment_images/C.webp" alt="C" style="height: 30px; display: block; margin: auto;"></td><td><img number="2" src="../guides/augment_images/C.webp" alt="C" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Tempesta submarine, not really good.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Special_Spirits"><img src="../guides/augment_images/portsmouth_adventure_augment.webp" alt="Special_Spirits" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Portsmouth_Adventure">Portsmouth Adventure</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Special_Spirits">Special Spirits</a></div></div></div></td><td><img number="3" src="../guides/augment_images/B.webp" alt="B" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Ok stat and support boost, but bad ship remains bad ship.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Dragon_Ornament"><img src="../guides/augment_images/princess_hime_augment.webp" alt="Dragon_Ornament" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Princess_Hime">Princess Hime</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Dragon_Ornament">Dragon Ornament</a></div></div></div></td><td><img number="2" src="../guides/augment_images/C.webp" alt="C" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Just stats.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Lance_of_the_Golden_Age"><img src="../guides/augment_images/sao_martinho_augment.webp" alt="Lance_of_the_Golden_Age" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/São_Martinho">São Martinho</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Lance_of_the_Golden_Age">Lance of the Golden Age</a></div></div></div></td><td><img number="4" src="../guides/augment_images/A.webp" alt="A" style="height: 30px; display: block; margin: auto;"></td><td><img number="2" src="../guides/augment_images/C.webp" alt="C" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Upgrade armor, removes Tempesta requirement. Overall mid gold ship.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Portable_&quot;Little_Guys&quot;"><img src="../guides/augment_images/whydah_augment.webp" alt="Portable_"Little_Guys"" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div style="flex-direction: column; min-width: 0px; white-space: normal;"><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Whydah">Whydah</a></div><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.koumakan.jp/wiki/Portable_&quot;Little_Guys&quot;">Portable "Little Guys"</a></div></div></div></td><td><img number="2" src="../guides/augment_images/C.webp" alt="C" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td><img number="1" src="../guides/augment_images/D.webp" alt="D" style="height: 30px; display: block; margin: auto;"></td><td>Bad augment, bad ship, bad.</td></tr></tbody>
+    </table></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+    <script>$(document).ready(function() {$("#table1").tablesorter({
+        sortReset:true,
+        sortRestart:true,
+        imgAttr:'number',
+        widthFixed:true,
+        sortList:[[1,1],[2,1],[3,1]]
+    });});</script>
+</body>
+</html>
