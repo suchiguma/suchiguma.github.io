@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat Admiral Graf Spee, the July Incarnation of Cancer extreme challenge mode boss.">
+<title>Azur Lane Guides: July Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>Read the boss skills and stats on wiki Read the common introduction and disclaimers Timing precision Easy DPS check Medium Tank check Hard Prevent Healing Every 27s Chelae the claw attempts to grab your vanguard If it is successful and survives for 9s Spee heals for 5% max HP There are two ways to avoid Spee s healing There is a 1 2s delay between the claw s aim and the claw s grab Using a fast vanguard greatly increases the chance of the claw missing Use BBs secondary guns to kill the claw within 9s This is quite difficult and inconsistent even with 3 BBs For example the vanguard and claw could be too far down or right for the top BB to hit it You will also need high vanguard DPS to help The claw being a real enemy increases your CV detection gauge when it is to the left of the blue detection line please turn on the Display CV Detection Line setting if you haven t already If you use one or more CVs it is highly important to use a fast vanguard or manual Tanking Warning Spee does a lot of damage to both vanguard and main fleet Spee regularly attacks a revealed ship in the main fleet Your flagship is most likely to be the target if she is revealed She can die in 4 to 6 minutes without survival gear If you don t have a strong fleet to win fast then give your BB a washing machine if the other 2 are concealed carriers or give the same to your flagship if you use multiple BBs Using 3 carriers is not safe from the above attack due to carriers naturally increasing detection from airstrikes or barrages Furthermore Spee regularly fires a burning barrage like many other CM bosses if the whole main fleet is concealed Scepter is a must and a washing machine on the carrier who is most likely to be revealed may be advisable For the vanguard bring a real main tank while keeping speed high with Beaver Badge Boilers based Boiler Cosmic Kicks and or better Cosmic Kicks</p>
+</article>
+
+<article>
+<header><h1>Manual</h1></header>
+<p>This section is for manual only and only months with a notable manual strategy may have a manual section Move your vanguard in a straight line in any direction to avoid the claw</p>
+</article>
+
+<article>
+<header><h1>High-End CV</h1></header>
+<p>Shinano Amagi Implacable for the poor players This exact gear works up to a maximum of 60 CV RLD But if you have La 9 s you really should calculate a sync for them for much more damage Calculator link High End CV example fleet</p>
+</article>
+
+<article>
+<header><h1>Top-End CV</h1></header>
+<p>Standard Soyuz Nakhimov sync This example used 37 CV RLD and 9 BB RLD You can try to add more La 9 This is expected to win in less than 5 minutes so survivability is not a big focus of the example gear Calculator link Top End CV example fleet</p>
+</article>
+
+<article>
+<header><h1>High-End BB</h1></header>
+<p>Note Any resemblance to a faction fleet is purely coincidental and we vehemently deny forcing Neptune and Warspite in Seriously use a better tank than Neptune And Warspite is a real UR BB now with her unique augment but she s still a bottom tier UR BB Lion and Alsace can store salvos so she should be the blocker with AFCT HSFCR for a long lasting sync The other two BBs should be faster by 0 1s to 1 1s and not use AFCT or HSFCR Calculator link High End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>Top-End BB</h1></header>
+<p>Same theory as above and every other BB fleet in CM use Lion to block the other BBs Eldridge for slow and survivability Slowing the boss is useful even with Bismarck Zwei because her black hole only lasts for 3s while a triple BB fleet s salvo lasts for 6 seconds Calculator link Top End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>Top-End Hybrid</h1></header>
+<p>Four salvo hybrid fleets are all the rage in META Showdown these days The carriers use faster planes with less damage in order to sync with BBs and fit four strikes in 80s Will the same be worth it in CM over slapping 4 La 9 s Find out in our next episo Calculator link Top End Hybrid example fleet</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Cancer",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "boss skills and stats on wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "/./challengemode/challenge-mode",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "common introduction and disclaimers",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "purered",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "strategy-prevent-healing",
+        "additionalIds" : [ "prevent-healing" ],
+        "level" : 2,
+        "title" : "Prevent Healing",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Every 27s, Chelae the claw attempts to grab your vanguard. If it is successful and survives for 9s, Spee heals for 5% max HP. There are two ways to avoid Spee's healing.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "There is a 1.2s delay between the claw's aim and the claw's grab. Using a fast vanguard greatly increases the chance of the claw missing.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Use BBs' secondary guns to kill the claw within 9s. This is quite difficult and inconsistent even with 3 BBs. For example, the vanguard and claw could be too far down or right for the top BB to hit it. You will also need high vanguard DPS to help.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The claw, being a real enemy, increases your CV detection gauge when it is to the left of the blue detection line (please turn on the \"Display CV Detection Line\" setting if you haven't already). If you use one or more CVs, it is highly important to use a fast vanguard or manual.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "strategy-tanking",
+        "additionalIds" : [ "tanking" ],
+        "level" : 2,
+        "title" : "Tanking",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: Spee does a lot of damage to both vanguard and main fleet.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Spee regularly attacks a revealed ship in the main fleet. Your flagship is most likely to be the target if she is revealed. She can die in 4 to 6 minutes without survival gear. If you don't have a strong fleet to win fast, then give your BB a ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Improved_Hydraulic_Rudder",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "washing machine",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " if the other 2 are concealed carriers, or give the same to your flagship if you use multiple BBs.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Using 3 carriers is not safe from the above attack due to carriers' naturally increasing detection from airstrikes or barrages. Furthermore, Spee regularly fires a burning barrage like many other CM bosses if the whole main fleet is concealed. Scepter is a must, and a washing machine on the carrier who is most likely to be revealed may be advisable.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For the vanguard, bring a real main tank while keeping speed high with ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Little_Beaver_Squadron_Tag",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Beaver Badge",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", Boilers, ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Ankimo",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "based Boiler",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Cosmic_Kicks",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Cosmic Kicks",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", and/or ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Sneaky-Stealthy_Prowler",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "better Cosmic Kicks",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "manual",
+      "additionalIds" : [ ],
+      "title" : "Manual",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This section is for manual only, and only months with a notable manual strategy may have a manual section.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Move your vanguard in a straight line in any direction to avoid the claw.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "High-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Shinano Amagi Implacable for the \"poor\" players. This exact gear works up to a maximum of 60 CV RLD. But if you have La-9(s), you really should calculate a sync for them for much more damage. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfDc3OzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLTE1ZDkvMTZkbS8xZXRpLzFkYS9saVwxMGw0bSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxrazszLzEyNS8wLzAvNC8wLDAsMCwwLDAvMC0xZTI1LzE1YmQvMWV0bC8xZGQvMWRkXDEwbDRtLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGk1OzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLTFlMjIvMTVkNi8xNWJhLzFkYS8xZGFcMTBsNG0sMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8amhpOzMvMTI1LzAvMS80LzAsMCwwLDAsMC8wLTFhMWEvNTczL3Eway8xbmEvZnVcdm5vMiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxnNTszLzEyNS8wLzAvNC8wLDAsMCwwLDAvMC1hcDcvMWMzbC9wdmkvMXBxLzFwcVx1cWhtLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGJqOzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLTJ0bjIvMWMydS9xMGkvMXBxLzJuM3FcdjQ3MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHx1OTMvMzAvMi80dGgtMC8xdmYtMnx0OXIvMzAvMi80dGgtMC8xdmYtMi85ZC0xfDF8NS0wLDAsMCwwLDAsMCwwLDAsMF80LTAsMCwwLDAsMCwwLDAsMCwwXzEwLTAsMCwwLDAsMCwwLDAsMCwwXzEzLTAsMCwwLDAsMCwwLDAsMCwwXzYtMCwwLDAsMCwwLDAsMCwwLDBfNy0wLDAsMCwwLDAsMTYsMCwwLDBfMy0wLDAsMCwwLDAsMCwwLDAsMF8xOC0wLDAsMCwwLDAsMCwwLDAsMF8yLTAsMCwwLDAsMCwwLDAsMCwwXzEtMCwwLDAsMCwwLDAsMCwwLDBfOC0wLDAsMCwwLDAsMCwwLDAsMF8xNy0wLDAsMCwwLDAsMCwwLDAsMF8xOS0wLDAsMCwwLDAsMCwwLDAsMF8xMi0wLDAsMCwwLDAsMCwwLDAsMF8yMi0wLDAsMCwwLDAsMCwwLDAsMHwwfHVuZGVmaW5lZHxleHRyZW1lXzkwMDAzMQ%3D%3D",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\challengemode\\cancer_highCV.webp",
+        "alt" : "High-End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1750021259081,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "top-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Top-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Standard Soyuz-Nakhimov sync. This example used 37 CV RLD and 9 BB RLD. You can try to add more La-9. This is expected to win in less than 5 minutes, so survivability is not a big focus of the example gear. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfGRtOzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLTJ0dnQvbG9pL2czYS9qcC9qNVwxMGI5MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxqaTQ7My8xMjUvMC8wLzYvMCwwLDAsMCwwLzAtMWUyNS8xZTI1LzJqazEvMWRkLzFkZFwxMGw0bSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxrdDszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC0yampkLzJqamQvZzNhLzFkZC9salwxMGw0bSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxrdTszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC1sM3UvMWMzbC9xMHEvMm5hMi8yY2lcdXFlaSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxsaDszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC1sM3UvMWMzbC9nM2EvMmlxLzJjaVx1cWhtLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGJqOzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLTJvMXEvMWMydS9xMGkvZnUvMm4zcVx2NDcyLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfHU5My8zMC8yLzR0aC0wLzF2Zi0yfHQ5ci8zMC8yLzR0aC0wLzF2Zi0yLzlkLTF8MXw1LTAsODcsMCwwLDAsOSwyOSwwLDBfNC0wLDkyLDAsMCwwLDE3LDI5LDAsMF8xMC0wLDg3LDAsMCw5LDE3LDI1LDAsMF8xMy0wLDU4LDEwLDAsMCwxNiwxMywwLDBfNi0wLDAsMCwwLDgwLDQ0LDIxLDAsMF83LTAsMCwwLDAsNjcsOSwyMSwwLDBfMy0wLDU2LDM1LDAsMCwxNiw3LDAsMF8xOC0wLDYyLDIyLDAsMCwxOSw3LDAsMF8yLTAsNTgsMzQsMCwwLDEzLDIyLDAsMF8xLTAsNjIsNDIsMjAsMCwxMywxNCwwLDBfOC0wLDIsNTgsMCwwLDAsMjYsMCwwXzE3LTAsMiw1OCwwLDExLDAsMjYsMCwwXzE5LTAsMCwwLDAsMCwwLDAsMCwwXzEyLTAsMCwwLDAsMCwwLDAsMCwwXzIyLTAsOSwwLDAsMCwwLDMsMCwwfDB8dW5kZWZpbmVkfGV4dHJlbWVfOTAwMDMx",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\challengemode\\cancer_topCV.webp",
+        "alt" : "Top-End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1750021259292,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "High-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Any resemblance to a faction fleet is purely coincidental, and we vehemently deny forcing Neptune and Warspite in.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Seriously, use a better tank than Neptune. And Warspite is a real UR BB now with her unique augment, but she's still a bottom tier UR BB. Lion (and Alsace) can store salvos, so she should be the blocker with AFCT/HSFCR for a long-lasting sync. The other two BBs should be faster by 0.1s to 1.1s and not use AFCT or HSFCR. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfDRhOzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLTJvczUvMTkzYS9wdmkvMTdtLzFuYVwxMGI5MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHw0OTszLzEyNS8wLzAvNC8wLDAsMCwwLDAvMC0yb3M1LzJ0cmUvcHZpL2ptL2o1XDEwYjkyLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfDQzOzMvMTI1LzEvMC80LzAsMCwwLDAsMC8wLTJvYnQvMTkzYS9wdmkvam0vajVcZHFxLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGpoMTszLzEyNS8wLzEvNC8wLDAsMCwwLDAvMC1sb2kvMWMydS9xMHEvMW5kL2Z1XGQzMiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxsaDszLzEyNS8wLzAvNC8wLDAsMCwwLDAvMC1sM3UvMWMzbC9nM2EvMmlxLzFwcVx1cWhtLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGpobjszLzEyNS8wLzAvNC8wLDAsMCwwLDAvMC1sb2kvMWMzMS9xMHEvMm4zcS8xcHFcdjQ3MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHw5cDUvMzAvMi80c3QtMC8zcC0yLzF2NS0yfDE3MmwvMzAvMi80c3QtMC8zcC0yLzF2NS0yfDF8NS0wLDg3LDAsMCwwLDMsMjksMCwwXzQtMCw5MiwwLDAsMCwxNywyOSwwLDBfMTAtMCw4NywwLDAsOSwxNywyNSwwLDBfMTMtMCw1OCwxMCwwLDAsMTYsMTMsMCwwXzYtMCwwLDAsMCw4MCw0NCwyMSwwLDBfNy0wLDAsMCwwLDY3LDksMjEsMCwwXzMtMCw1NiwzNSwwLDAsMTYsNywwLDBfMTgtMCw2MiwyMiwwLDAsMTksNywwLDBfMi0wLDU4LDM0LDAsMCwxMywyMiwwLDBfMS0wLDYyLDQyLDIwLDAsMTMsMTQsMCwwXzgtMCwyLDU4LDAsMCwwLDI2LDAsMF8xNy0wLDIsNTgsMCwxMSwwLDI2LDAsMF8xOS0wLDAsMCwwLDAsMCwwLDAsMF8xMi0wLDAsMCwwLDAsMCwwLDAsMF8yMi0wLDksMCwwLDAsMCwzLDAsMHwwfHVuZGVmaW5lZHxleHRyZW1lXzkwMDAzMQ%3D%3D",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\challengemode\\cancer_highBB.webp",
+        "alt" : "High-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1750021258974,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "top-end-bb",
+      "additionalIds" : [ ],
+      "title" : "Top-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Same theory as above (and every other BB fleet in CM) - use Lion to block the other BBs. Eldridge for slow and survivability. Slowing the boss is useful even with Bismarck Zwei, because her black hole only lasts for 3s while a triple BB fleet's salvo lasts for 6+ seconds. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfDRhOzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLTJ0dnQvbG9pL2czYS8zZzkvajVcMTBiOTIsMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8aWg7My8xMjUvMC8wLzYvMCwwLDAsMCwwLzAtMm9zNS9sb2kvZzNhL2pwL2o1XDEwYjkyLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfDQ5OzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLTJqYjkvMTkzYS9wdmkvam0vajVcMTBiOTIsMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8czszLzEyNS8xLzAvNi8wLDAsMCwwLDAvMC0ybzFxLzFjMzEvcTBxLzJjaS8xcHFcdXFlaSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxsaDszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC1sM3UvMWMzbC9nM2EvMmlxLzJpcVx1cWhtLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGpobjszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC1sb2wvMWMzMS9xMHEvZnUvdWFcdjQ3MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHx0OWg5LzMwLzIvfHQ5Z2IvMzAvMi98MXw1LTAsODcsMCwwLDAsOSwyOSwwLDBfNC0wLDkyLDAsMCwwLDE3LDI5LDAsMF8xMC0wLDg3LDAsMCw5LDE3LDI1LDAsMF8xMy0wLDU4LDEwLDAsMCwxNiwxMywwLDBfNi0wLDAsMCwwLDgwLDQ0LDIxLDAsMF83LTAsMCwwLDAsNjcsMjEsMjEsMCwwXzMtMCw1NiwzNSwwLDAsMTYsNywwLDBfMTgtMCw2MiwyMiwwLDAsMTksNywwLDBfMi0wLDU4LDM0LDAsMCwxMywyMiwwLDBfMS0wLDYyLDQyLDIwLDAsMTMsMTQsMCwwXzgtMCwyLDU4LDAsMCwwLDI2LDAsMF8xNy0wLDIsNTgsMCwxMSwwLDI2LDAsMF8xOS0wLDAsMCwwLDAsMCwwLDAsMF8xMi0wLDAsMCwwLDAsMCwwLDAsMF8yMi0wLDksMCwwLDAsMCwzLDAsMHwwfHVuZGVmaW5lZHxleHRyZW1lXzkwMDAzMQ%3D%3D",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\challengemode\\cancer_topBB.webp",
+        "alt" : "Top-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1750021259186,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "top-end-hybrid",
+      "additionalIds" : [ ],
+      "title" : "Top-End Hybrid",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Four-salvo hybrid fleets are all the rage in META Showdown these days. The carriers use faster planes with less damage in order to sync with BBs and fit four strikes in 80s. Will the same be worth it in CM over slapping 4 La-9's? Find out in our next episo.... ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfDRhOzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLTJ0dnQvbG9pL2czYS8zZzkvajVcMTBiOTIsMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8amk0OzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLTFlMjUvMWUyNS8xNWQ5LzFkZC9salwxMGw0bSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxkbTszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC0yb3M1L2xvaS9nM2EvanAvajVcMTBiOTIsMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8a3U7My8xMjUvMC8wLzYvMCwwLDAsMCwwLzAtbDN1LzFjM2wvcTBxLzJuYTUvMXBxXDAsMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8bGg7My8xMjUvMC8wLzYvMCwwLDAsMCwwLzAtbDN1LzFjM2wvZzNhLzJpcS8xcHFcdXFobSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxqaG47My8xMjUvMC8wLzYvMCwwLDAsMCwwLzAtbG9sLzFjMzEvcTBxL2Z1LzJuM3FcdjQ3MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHx0OWg5LzMwLzIvfHQ5Z2IvMzAvMi98MXw1LTAsODcsMCwwLDAsOSwyOSwwLDBfNC0wLDkyLDAsMCwwLDE3LDI5LDAsMF8xMC0wLDg3LDAsMCw5LDE3LDI1LDAsMF8xMy0wLDU4LDEwLDAsMCwxNiwxMywwLDBfNi0wLDAsMCwwLDgwLDQ0LDIxLDAsMF83LTAsMCwwLDAsNjcsMjEsMjEsMCwwXzMtMCw1NiwzNSwwLDAsMTYsNywwLDBfMTgtMCw2MiwyMiwwLDAsMTksNywwLDBfMi0wLDU4LDM0LDAsMCwxMywyMiwwLDBfMS0wLDYyLDQyLDIwLDAsMTMsMTQsMCwwXzgtMCwyLDU4LDAsMCwwLDI2LDAsMF8xNy0wLDIsNTgsMCwxMSwwLDI2LDAsMF8xOS0wLDAsMCwwLDAsMCwwLDAsMF8xMi0wLDAsMCwwLDAsMCwwLDAsMF8yMi0wLDksMCwwLDAsMCwzLDAsMHwwfHVuZGVmaW5lZHxleHRyZW1lXzkwMDAzMQ%3D%3D",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\challengemode\\cancer_topHybrid.webp",
+        "alt" : "Top-End Hybrid example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1750021259400,
+        "type" : "Image"
+      } ]
+    } ],
+    "lastModifiedTime" : 1750020602120,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "July Challenge",
+      "pageMeta" : {
+        "title" : [ "July Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "july",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Manual",
+        "id" : "manual",
+        "customAnchorId" : "manual"
+      }, {
+        "title" : "High-End CV",
+        "id" : "high-end-cv",
+        "customAnchorId" : "high-end-cv"
+      }, {
+        "title" : "Top-End CV",
+        "id" : "top-end-cv",
+        "customAnchorId" : "top-end-cv"
+      }, {
+        "title" : "High-End BB",
+        "id" : "high-end-bb",
+        "customAnchorId" : "high-end-bb"
+      }, {
+        "title" : "Top-End BB",
+        "id" : "top-end-bb",
+        "customAnchorId" : "top-end-bb"
+      }, {
+        "title" : "Top-End Hybrid",
+        "id" : "top-end-hybrid",
+        "customAnchorId" : "top-end-hybrid"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
