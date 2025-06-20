@@ -181,6 +181,10 @@ toc = [ {
       "id" : "purple-augments",
       "customAnchorId" : "purple-augments"
     }, {
+      "title" : "Untiered Unique Augments",
+      "id" : "untiered-unique-augments",
+      "customAnchorId" : "untiered-unique-augments"
+    }, {
       "title" : "S-Tier Unique Augments",
       "id" : "s-tier-unique-augments",
       "customAnchorId" : "s-tier-unique-augments"
