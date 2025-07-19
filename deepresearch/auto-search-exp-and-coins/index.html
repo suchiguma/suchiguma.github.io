@@ -1,0 +1,5124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Which campaign chapter and stage has the best experience and coins per oil efficiency to farm? These tables show the efficiency of each stage, including spawn blocking and fleet sizes.">
+<title>Azur Lane Guides: Auto Search Exp And Coins</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Recommendations</h1></header>
+<p>This page is not just another exp oil or coin oil efficiency chart In fact it accounts for the boss being blocked by mobs as well as the distribution of Small Medium or Large enemy fleets that auto search will encounter When choosing a stage to farm consider the resources you want between coins ship experience and cognitive chips You should not choose a stage to farm based on its gear blueprint drop New Players If you are a new player you should probably be using one fleet to battle not two fleets Put ships in the second fleet but don t invest resources in it or use it to battle Your job is to rush to Chapter 9 Before Chapter 9 there is no efficient farming spot Choose the highest stage you can farm because that gives the most ship experience See a real new player guide this page is probably not useful for you yet Chapter 9 and 10 Once you have access to Chapter 9 and either one or two fleets these are some good stages to farm Read the rest of this page if you want to get details or to make your own decisions Tip Get to 11 1 as soon as possible because the efficiency spikes for 11 1 and beyond For one fleet 9 2 leaning to exp and 10 3 leaning to coins provide the best coins and exp overall For two fleets the higher the better but avoid 10 2 and 10 4 Chapter 11 and Beyond Unless stated otherwise exp coins and chips in this section refer to their per oil efficiency Chapter 12 and higher sometimes drop cognitive chips or augment experience stones from clearing rewards Higher chapters drop more and stages within the same chapter average the same drops per sortie while costing different oil Warning Some Chapter 13 stages have very lucrative coin and chip drops but if you need to bring max level ships to carry the exp will be much lower than stated in the tables 12 4 has respectable coins and exp and you can drag pretty low level ships through It s like the default stage to farm so the following stages are all compared to 12 4 11 1 has the highest exp of all stages 9% more exp but zero chips and 19% fewer coins We recommend to move to Chapter 12 as soon as possible 12 1 has 3% more exp and 7% more chips but 10% fewer coins It is extremely easy to level weak ships 13 1 has 1% less exp and coins but offers 82% more chips But note that farming is a tiny part of chip income 13 4 has 12% more coins and 52% more chips Watch its difficulty especially with two out of ammo mob battles 14 4 has 15% more coins and 91% more chips but is much harder than 13 4 14 1 15 1 and low cost 13 1 may enable chip farmers to level every ship to 120 a few months earlier after several years of grinding 14 1 and 15 1 give 130% and 156% more chips than 12 4 respectively If you know 13 1 then you know</p>
+</article>
+
+<article>
+<header><h1>Assumptions</h1></header>
+<p>We simulated the auto search algorithm and enemy spawns for each campaign stage 100 000 times using one fleet Chapters 1 to 15 and 100 000 times using two fleets Chapters 9 to 15 The server decides what when and where enemies spawn We made several reasonable assumptions and the simulated results were close enough to empirical results for a few stages chosen for verification Assumptions For Two Fleets the player set Roles for the mob fleet to Escorts and the boss fleet to Flagships For One Fleet the player set Roles for his her primary fleet to All Enemies and the throwaway statpadding fleet to Standby Submarines are not summoned in battle so their oil cost is zero The data found in the client matches what the server uses as parameters for generating enemies Fleets spawn in any valid non blocked tile with equal probability This includes player fleets normal enemies elite enemies and the boss The auto search pathfinding algorithm is done in the client so we did not need to make an assumption See Coin Details for further assumptions about clearing rewards and per battle drops For Chapter 8 and below there is no oil cap so we assumed 67 oil per battle for a typical max limit broken new player fleet</p>
+</article>
+
+<article>
+<header><h1>Explanations</h1></header>
+<p>When the enemy boss fleet spawns your Flagships or All Enemies fleet will go fight it But what happens if all paths to the boss are blocked by an enemy mob fleet Your fleet will take the path with the fewest enemy fleets Notably if you are using mob and boss fleet roles your boss fleet will fight the extra enemy mobs plus the enemy boss Note Extra mobs that block the boss have several mostly negative effects on efficiency Your boss fleet may lose too much HP before the boss battle causing a lower rank like A or B or even outright losing the battle Lower mob exp oil You pay more oil per sortie for the same amount of mob fleet experience Higher boss exp oil This is the only good effect but requires that your boss fleet ships all need experience and that every battle is still S rank Significantly lower coins oil You pay more oil per sortie but the clearing rewards don t increase</p>
+</article>
+
+<article>
+<header><h1>Two Fleets</h1></header>
+<p>Ship experience and coins per oil efficiency when using TWO fleets Perfect Oil one sortie s oil cost that the game or wiki pages advertise It is equal to 10 MobOilCap * MobCount BossOilCap * BossCount Actual Oil one sortie s average simulated oil cost when using auto search Coins Oil average coins per sortie divided by Actual Oil including clearing rewards and per battle rewards Retire Coins Oil same as Coins Oil but also includes coins from retiring all ship drops and disassembling all of their equipment Total Exp Oil average ship experience per sortie divided by Actual Oil calculated with 6 ships worth of experience per battle Bonuses like MVP flagship S A B rank or high morale are not included For example if your flagship gets MVP multiply the exp oil by 8 6 Mob Exp Oil how much of the Total Exp Oil went to the mob fleet Boss Exp Oil how much of the Total Exp Oil went to the boss fleet</p>
+</article>
+
+<article>
+<header><h1>One Fleet</h1></header>
+<p>Ship experience and coins per oil efficiency when using ONE fleet See Two Fleets for what the columns mean Because you are using one fleet there are no Mob and Boss Exp Oil columns only a Total</p>
+</article>
+
+<article>
+<header><h1>Extra Tables</h1></header>
+<p>We put these tables out of the way at the bottom because they are not important to the average reader The enemy counts and sizes are already included in the important experience and coin efficiency tables above Curious readers may check out these tables at their convenience In one sortie what are the chances you need to fight this many mobs when you are using TWO fleets Stage 5 Mobs 6 Mobs 7 Mobs 8 Mobs 9 Mobs 9 1 14 533% 43 393% 36 332% 5 742% 9 2 23 424% 31 260% 23 545% 13 074% 8 697% 9 3 39 101% 52 332% 8 567% 9 4 63 963% 32 651% 3 386% 10 1 90 803% 9 197% 10 2 50 511% 43 675% 5 814% 10 3 87 725% 12 275% 10 4 53 838% 34 052% 10 960% 1 150% 11 1 100 000% 11 2 95 129% 4 871% 11 3 99 000% 1 000% 11 4 98 270% 1 730% 12 1 98 058% 1 942% 12 2 100 000% 12 3 98 858% 1 142% 12 4 97 426% 2 574% 13 1 100 000% 13 2 100 000% 13 3 99 848% 0 152% 13 4 100 000% 14 1 100 000% 14 2 100 000% 14 3 100 000% 14 4 100 000% 15 1 100 000% 15 2 97 626% 2 374% 15 3 100 000% 15 4 100 000% In one sortie what are the chances you need to fight this many mobs when you are using ONE fleet Stage 1 Mobs 2 Mobs 3 Mobs 4 Mobs 5 Mobs 6 Mobs 7 Mobs 8 Mobs 9 Mobs 1 1 100 000% 1 2 100 000% 1 3 100 000% 1 4 100 000% 2 1 42 373% 57 627% 2 2 54 507% 45 493% 2 3 65 505% 34 495% 2 4 38 472% 61 528% 3 1 94 283% 5 717% 3 2 25 715% 49 335% 24 950% 3 3 62 021% 37 979% 3 4 50 678% 49 322% 4 1 97 789% 2 211% 4 2 95 025% 4 975% 4 3 100 000% 4 4 53 045% 39 743% 7 212% 5 1 95 994% 4 006% 5 2 99 755% 0 245% 5 3 92 392% 7 608% 5 4 79 539% 20 443% 0 018% 6 1 92 232% 7 768% 6 2 59 233% 37 806% 2 961% 6 3 86 134% 13 866% 6 4 95 544% 4 456% 7 1 19 872% 16 546% 63 582% 7 2 100 000% 7 3 55 123% 27 309% 14 673% 2 894% 0 001% 7 4 71 539% 21 687% 6 774% 8 1 62 900% 35 178% 1 921% 0 001% 8 2 66 389% 28 546% 4 984% 0 081% 8 3 78 277% 20 540% 1 183% 8 4 69 079% 29 133% 1 787% 0 001% 9 1 55 256% 32 273% 12 471% 9 2 98 295% 1 693% 0 012% 9 3 62 831% 29 950% 7 219% 9 4 66 138% 30 575% 3 287% 10 1 92 188% 7 812% 10 2 67 944% 27 401% 4 655% 10 3 99 065% 0 935% 10 4 54 669% 33 020% 11 153% 1 158% 11 1 100 000% 11 2 95 191% 4 809% 11 3 98 970% 1 030% 11 4 98 340% 1 660% 12 1 98 031% 1 969% 12 2 100 000% 12 3 98 874% 1 126% 12 4 97 479% 2 521% 13 1 100 000% 13 2 100 000% 13 3 99 836% 0 164% 13 4 99 999% 0 001% 14 1 100 000% 14 2 99 998% 0 002% 14 3 100 000% 14 4 100 000% 15 1 100 000% 15 2 97 633% 2 367% 15 3 100 000% 15 4 100 000% How common are small medium and large enemy fleets when you are using TWO fleets Stage Total Mobs Small Mobs Medium Mobs Large Mobs 9 1 6 3328 5 44% 53 49% 41 07% 9 2 6 5236 4 91% 52 62% 42 47% 9 3 5 6947 4 53% 37 54% 57 93% 9 4 5 3942 4 00% 35 58% 60 42% 10 1 6 092 4 32% 75 52% 20 16% 10 2 6 553 3 95% 74 71% 21 35% 10 3 6 1227 4 82% 48 11% 47 07% 10 4 6 5942 3 35% 49 15% 47 50% 11 1 6 6 47% 63 80% 29 73% 11 2 6 0487 4 99% 67 85% 27 16% 11 3 6 01 4 17% 48 97% 46 86% 11 4 6 0173 2 47% 50 61% 46 92% 12 1 6 0194 5 87% 64 20% 29 93% 12 2 6 4 23% 68 97% 26 80% 12 3 6 0114 3 67% 49 18% 47 15% 12 4 6 0257 2 45% 49 99% 47 56% 13 1 6 4 16% 56 10% 39 73% 13 2 6 3 35% 60 36% 36 29% 13 3 6 0015 2 55% 42 53% 54 92% 13 4 7 1 94% 35 29% 62 76% 14 1 6 12 89% 53 05% 34 05% 14 2 6 6 38% 50 05% 43 58% 14 3 6 3 50% 28 88% 67 62% 14 4 7 4 05% 30 35% 65 60% 15 1 6 2 03% 25 60% 72 37% 15 2 6 0237 1 52% 26 15% 72 33% 15 3 5 1 98% 28 28% 69 75% 15 4 6 0 99% 16 40% 82 62% How common are small medium and large enemy fleets when you are using ONE fleet Stage Total Mobs Small Mobs Medium Mobs Large Mobs 1 1 1 100 00% 0 00% 0 00% 1 2 2 50 07% 49 93% 0 00% 1 3 2 54 71% 45 29% 0 00% 1 4 3 34 38% 39 49% 26 13% 2 1 2 5763 31 64% 48 12% 20 24% 2 2 3 4549 32 91% 42 28% 24 82% 2 3 3 3449 29 96% 42 04% 28 00% 2 4 3 6153 28 12% 37 73% 34 15% 3 1 3 0572 30 79% 41 44% 27 77% 3 2 3 9924 30 42% 42 82% 26 76% 3 3 3 3798 36 65% 35 32% 28 03% 3 4 3 4932 21 78% 39 85% 38 37% 4 1 3 0221 29 73% 38 58% 31 69% 4 2 3 0497 26 99% 38 46% 34 56% 4 3 3 21 70% 36 52% 41 78% 4 4 4 5417 20 12% 37 23% 42 65% 5 1 4 0401 18 75% 47 88% 33 37% 5 2 4 0024 17 34% 48 19% 34 47% 5 3 4 0761 16 06% 42 66% 41 28% 5 4 4 2048 14 81% 42 28% 42 91% 6 1 4 0777 13 41% 47 10% 39 49% 6 2 4 4373 11 91% 48 07% 40 02% 6 3 4 1387 11 03% 42 30% 46 67% 6 4 5 0446 9 53% 41 18% 49 29% 7 1 6 4371 10 74% 49 97% 39 29% 7 2 5 8 02% 51 39% 40 59% 7 3 5 6534 5 77% 38 80% 55 44% 7 4 5 3524 6 33% 37 25% 56 43% 8 1 4 3902 9 34% 53 29% 37 37% 8 2 4 3876 8 08% 54 13% 37 80% 8 3 4 2291 7 21% 40 63% 52 16% 8 4 4 3271 7 58% 38 54% 53 88% 9 1 5 5721 4 89% 54 53% 40 58% 9 2 5 0172 5 19% 52 09% 42 72% 9 3 5 4439 4 77% 37 93% 57 30% 9 4 5 3715 4 01% 35 72% 60 27% 10 1 6 0781 4 33% 75 39% 20 28% 10 2 6 3671 3 81% 75 43% 20 76% 10 3 6 0094 4 90% 47 92% 47 18% 10 4 6 588 3 31% 49 32% 47 38% 11 1 6 6 47% 63 85% 29 68% 11 2 6 0481 4 97% 67 83% 27 21% 11 3 6 0103 4 17% 48 96% 46 86% 11 4 6 0166 2 50% 50 53% 46 97% 12 1 6 0197 5 93% 64 22% 29 85% 12 2 6 4 26% 69 01% 26 74% 12 3 6 0113 3 67% 49 10% 47 23% 12 4 6 0252 2 47% 50 10% 47 43% 13 1 6 4 23% 56 04% 39 73% 13 2 6 3 36% 60 34% 36 30% 13 3 6 0016 2 56% 42 41% 55 03% 13 4 7 0 1 96% 35 28% 62 77% 14 1 6 12 93% 52 97% 34 10% 14 2 6 0 6 50% 50 05% 43 45% 14 3 6 3 51% 28 77% 67 72% 14 4 7 4 06% 30 32% 65 61% 15 1 6 2 02% 25 57% 72 41% 15 2 6 0237 1 52% 26 11% 72 37% 15 3 5 2 39% 32 09% 65 52% 15 4 6 1 26% 18 42% 80 33%</p>
+</article>
+
+<article>
+<header><h1>Coin Details</h1></header>
+<p>Chapter 9 and higher have Clearing Rewards that provide coins gear enhancement plates dorm food cognitive chips and augment module experience after each successful sortie More oil spent equals more coins from clearing rewards up to the oil cap All results for Chapter 9 on this page assume your fleets are expensive enough to reach oil cap The clearing reward coin count for each stage is taken from this CN wiki source but we do not condone their data collection methods Data collected by EN players are close enough to these numbers Each battle drops some coins and has a chance to drop a ship The averages are copied from the same CN wiki source We assumed that for stages with multiple bosses the non final bosses have the same drop rates as event elite enemies We further assumed that the average coins per retired ship including gear is 20 coins The coins per ship actually depends on the probability distribution of different ships in each stage but a blanket assumption of 20 coins should be close enough to truth Again data collected by EN players are close enough to these numbers</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "recommendations",
+      "additionalIds" : [ ],
+      "title" : "Recommendations",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This page is not just another exp/oil or coin/oil efficiency chart. In fact, it accounts for the boss being blocked by mobs as well as the distribution of Small, Medium, or Large enemy fleets that auto-search will encounter. When choosing a stage to farm, consider the resources you want, between coins, ship experience, and cognitive chips. You should not choose a stage to farm based on its gear blueprint drop.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "recommendations-new-players",
+        "additionalIds" : [ "new-players" ],
+        "level" : 2,
+        "title" : "New Players",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you are a new player, you should probably be using one fleet to battle, not two fleets. Put ships in the second fleet, but don't invest resources in it or use it to battle. Your job is to rush to Chapter 9. Before Chapter 9, there is no efficient farming spot. Choose the highest stage you can farm because that gives the most ship experience. See a real new player guide, ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "this page is probably not useful for you yet",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "recommendations-chapter-9-and-10",
+        "additionalIds" : [ "chapter-9-and-10" ],
+        "level" : 2,
+        "title" : "Chapter 9 and 10",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Once you have access to Chapter 9+ and either one or two fleets, these are some good stages to farm. Read the rest of this page if you want to get details or to make your own decisions.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Tip: Get to 11-1 as soon as possible, because the efficiency spikes for 11-1 and beyond.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For one fleet, 9-2 (leaning to exp) and 10-3 (leaning to coins) provide the best coins and exp overall. For two fleets, the higher the better, but avoid 10-2 and 10-4.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "recommendations-chapter-11-and-beyond",
+        "additionalIds" : [ "chapter-11-and-beyond" ],
+        "level" : 2,
+        "title" : "Chapter 11 and Beyond",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Unless stated otherwise, exp, coins, and chips in this section refer to their per-oil efficiency. Chapter 12 and higher sometimes drop cognitive chips or augment experience stones from clearing rewards. Higher chapters drop more, and stages within the same chapter average the same drops per sortie while costing different oil.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: Some Chapter 13+ stages have very lucrative coin and chip drops, but if you need to bring max-level ships to carry, the exp will be much lower than stated in the tables.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-4 has respectable coins and exp, and you can drag pretty low level ships through. It's like the default stage to farm, so the following stages are all compared to 12-4.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-1 has the highest exp of all stages, 9% more exp but zero chips and 19% fewer coins. We recommend to move to Chapter 12+ as soon as possible.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-1 has 3% more exp and 7% more chips but 10% fewer coins. It is extremely easy to level weak ships.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-1 has 1% less exp and coins but offers 82% more chips. But note that farming is a tiny part of chip income.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-4 has 12% more coins and 52% more chips. Watch its difficulty, especially with two out-of-ammo mob battles.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-4 has 15% more coins and 91% more chips but is much harder than 13-4.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-1, 15-1, and low-cost 13-1 may enable chip farmers to level every ship to 120 a few months earlier, after several years of grinding. 14-1 and 15-1 give 130% and 156% more chips than 12-4, respectively. If you know 13-1 then you know.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "assumptions",
+      "additionalIds" : [ ],
+      "title" : "Assumptions",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We simulated the auto search algorithm and enemy spawns for each campaign stage 100,000 times using one fleet (Chapters 1 to 15) and 100,000 times using two fleets (Chapters 9 to 15). The server decides what, when, and where enemies spawn. We made several reasonable assumptions, and the simulated results were close enough to empirical results for a few stages chosen for verification. Assumptions:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "For ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "/./deepresearch/auto-search-exp-and-coins#two-fleets",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Two Fleets",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", the player set Roles for the mob fleet to Escorts and the boss fleet to Flagships.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "For ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "/./deepresearch/auto-search-exp-and-coins#one-fleet",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "One Fleet",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ", the player set Roles for his/her primary fleet to All Enemies and the throwaway/statpadding fleet to Standby.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Submarines are not summoned in battle, so their oil cost is zero.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The data found in the client matches what the server uses as parameters for generating enemies.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Fleets spawn in any valid non-blocked tile with equal probability. This includes player fleets, normal enemies, elite enemies, and the boss.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The auto search pathfinding algorithm is done in the client, so we did not need to make an assumption.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "See ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "/./deepresearch/auto-search-exp-and-coins#coin-details",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Coin Details",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " for further assumptions about clearing rewards and per-battle drops.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "attentionType" : "warning",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "For Chapter 8 and below, there is no oil cap, so we assumed 67 oil per battle for a typical max limit broken new player fleet.",
+            "type" : "SimpleText"
+          } ]
+        } ],
+        "type" : "AttentionBlock"
+      } ]
+    }, {
+      "id" : "explanations",
+      "additionalIds" : [ ],
+      "title" : "Explanations",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "When the enemy boss fleet spawns, your \"Flagships\" or \"All Enemies\" fleet will go fight it. But what happens if all paths to the boss are blocked by an enemy mob fleet? Your fleet will take the path with the fewest enemy fleets. Notably, if you are using mob and boss fleet roles, your boss fleet will fight the extra enemy mobs plus the enemy boss.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Extra mobs that block the boss have several mostly negative effects on efficiency.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Your boss fleet may lose too much HP before the boss battle, causing a lower rank like A or B, or even outright losing the battle.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Lower mob exp/oil. You pay more oil per sortie for the same amount of mob fleet experience.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Higher boss exp/oil. This is the only good effect but requires that your boss fleet ships all need experience and that every battle is still S-rank.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Significantly lower coins/oil",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ". You pay more oil per sortie, but the clearing rewards don't increase.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "two-fleets",
+      "additionalIds" : [ ],
+      "title" : "Two Fleets",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Ship experience and coins per oil efficiency when using TWO fleets.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Perfect Oil",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": one sortie's oil cost that the game or wiki pages advertise. It is equal to 10 + MobOilCap * MobCount + BossOilCap * BossCount.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Actual Oil",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": one sortie's average simulated oil cost when using auto-search.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Coins/Oil",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": average coins per sortie divided by Actual Oil, including clearing rewards and per-battle rewards.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Retire Coins/Oil",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": same as Coins/Oil but also includes coins from retiring all ship drops and disassembling all of their equipment.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Total Exp/Oil",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": average ship experience per sortie divided by Actual Oil, calculated with 6 ships' worth of experience per battle. Bonuses like MVP, flagship, S/A/B rank, or high morale are not included. For example, if your flagship gets MVP, multiply the exp/oil by 8/6.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Mob Exp/Oil",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": how much of the Total Exp/Oil went to the mob fleet.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Boss Exp/Oil",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ": how much of the Total Exp/Oil went to the boss fleet.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "src" : "/./inserts/auto-search/auto-search-table-2-eff.html",
+        "previewMarker" : "auto-search-exp-and-coins-pm1",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
+    }, {
+      "id" : "one-fleet",
+      "additionalIds" : [ ],
+      "title" : "One Fleet",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Ship experience and coins per oil efficiency when using ONE fleet.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "See ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./deepresearch/auto-search-exp-and-coins#two-fleets",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Two Fleets",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " for what the columns mean. Because you are using one fleet, there are no Mob and Boss Exp/Oil columns, only a Total.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "src" : "/./inserts/auto-search/auto-search-table-1-eff.html",
+        "previewMarker" : "auto-search-exp-and-coins-pm2",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
+    }, {
+      "id" : "extra-tables",
+      "additionalIds" : [ ],
+      "title" : "Extra Tables",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We put these tables out of the way at the bottom because they are not important to the average reader. The enemy counts and sizes are already included in the important experience and coin efficiency tables above. Curious readers may check out these tables at their convenience.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In one sortie, what are the chances you need to fight this many mobs when you are using TWO fleets?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Stage",
+            "align" : "center"
+          }, {
+            "title" : "5 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "6 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "7 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "8 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "9 Mobs",
+            "align" : "right"
+          } ],
+          "data" : [ [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14.533%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "43.393%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "36.332%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.742%",
+              "type" : "SimpleText"
+            } ]
+          } ], null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "23.424%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "31.260%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "23.545%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13.074%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8.697%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "39.101%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "52.332%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8.567%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "63.963%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "32.651%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.386%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "90.803%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9.197%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50.511%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "43.675%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.814%",
+              "type" : "SimpleText"
+            } ]
+          } ], null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "87.725%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12.275%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "53.838%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "34.052%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10.960%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.150%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "95.129%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.871%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "99.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "98.270%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.730%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "98.058%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.942%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "98.858%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.142%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "97.426%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.574%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "99.848%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.152%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "97.626%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.374%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ] ]
+        },
+        "title" : "Number of Mobs Fought - Two Fleets",
+        "collapsed" : true,
+        "anchorId" : "extra-tables-number-of-mobs-fought---two-fleets",
+        "type" : "Table"
+      }, {
+        "html" : "<br/>",
+        "isInlined" : false,
+        "type" : "EmbeddedHtml"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In one sortie, what are the chances you need to fight this many mobs when you are using ONE fleet?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Stage",
+            "align" : "center"
+          }, {
+            "title" : "1 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "2 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "3 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "4 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "5 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "6 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "7 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "8 Mobs",
+            "align" : "right"
+          }, {
+            "title" : "9 Mobs",
+            "align" : "right"
+          } ],
+          "data" : [ [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.373%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "57.627%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "54.507%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "45.493%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "65.505%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "34.495%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "38.472%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "61.528%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "94.283%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.717%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "25.715%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.335%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "24.950%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "62.021%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "37.979%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50.678%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.322%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "97.789%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.211%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "95.025%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.975%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "53.045%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "39.743%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7.212%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "95.994%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.006%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "99.755%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.245%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "92.392%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7.608%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "79.539%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "20.443%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.018%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "92.232%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7.768%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "59.233%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "37.806%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.961%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "86.134%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13.866%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "95.544%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.456%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "19.872%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "16.546%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "63.582%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "55.123%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "27.309%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14.673%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.894%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.001%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "71.539%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "21.687%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.774%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "62.900%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "35.178%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.921%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.001%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "66.389%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "28.546%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.984%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.081%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "78.277%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "20.540%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.183%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "69.079%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "29.133%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.787%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.001%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "55.256%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "32.273%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12.471%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "98.295%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.693%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.012%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "62.831%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "29.950%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7.219%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "66.138%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "30.575%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.287%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "92.188%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7.812%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "67.944%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "27.401%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.655%",
+              "type" : "SimpleText"
+            } ]
+          } ], null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "99.065%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.935%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "54.669%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "33.020%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11.153%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.158%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "95.191%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.809%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "98.970%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.030%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "98.340%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.660%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "98.031%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.969%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "98.874%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.126%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "97.479%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.521%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "99.836%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.164%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "99.999%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.001%",
+              "type" : "SimpleText"
+            } ]
+          } ], null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "99.998%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.002%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-1",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-2",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "97.633%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.367%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-3",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-4",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null, null, null, [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.000%",
+              "type" : "SimpleText"
+            } ]
+          } ], null, null, null ] ]
+        },
+        "title" : "Number of Mobs Fought - One Fleet",
+        "collapsed" : true,
+        "anchorId" : "extra-tables-number-of-mobs-fought---one-fleet",
+        "type" : "Table"
+      }, {
+        "html" : "<br/>",
+        "isInlined" : false,
+        "type" : "EmbeddedHtml"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "How common are small, medium, and large enemy fleets when you are using TWO fleets?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Stage",
+            "align" : "center"
+          }, {
+            "title" : "Total Mobs",
+            "align" : "left"
+          }, {
+            "title" : "Small Mobs",
+            "align" : "right"
+          }, {
+            "title" : "Medium Mobs",
+            "align" : "right"
+          }, {
+            "title" : "Large Mobs",
+            "align" : "right"
+          } ],
+          "data" : [ [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.3328",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.44%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "53.49%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "41.07%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.5236",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.91%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "52.62%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.47%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.6947",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.53%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "37.54%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "57.93%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.3942",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.00%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "35.58%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "60.42%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.092",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.32%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "75.52%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "20.16%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.553",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.95%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "74.71%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "21.35%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.1227",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.82%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "48.11%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.07%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.5942",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.35%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.15%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.50%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.47%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "63.80%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "29.73%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0487",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.99%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "67.85%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "27.16%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.01",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.17%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "48.97%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "46.86%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0173",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.47%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50.61%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "46.92%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0194",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.87%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "64.20%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "29.93%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.23%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "68.97%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "26.80%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0114",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.67%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.18%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.15%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0257",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.45%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.99%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.56%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.16%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "56.10%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "39.73%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.35%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "60.36%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "36.29%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0015",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.55%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.53%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "54.92%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.94%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "35.29%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "62.76%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12.89%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "53.05%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "34.05%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.38%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50.05%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "43.58%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.50%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "28.88%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "67.62%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.05%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "30.35%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "65.60%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.03%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "25.60%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "72.37%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0237",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.52%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "26.15%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "72.33%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.98%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "28.28%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "69.75%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.99%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "16.40%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "82.62%",
+              "type" : "SimpleText"
+            } ]
+          } ] ] ]
+        },
+        "title" : "Mob Sizes Fought - Two Fleets",
+        "collapsed" : true,
+        "anchorId" : "extra-tables-mob-sizes-fought---two-fleets",
+        "type" : "Table"
+      }, {
+        "html" : "<br/>",
+        "isInlined" : false,
+        "type" : "EmbeddedHtml"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "How common are small, medium, and large enemy fleets when you are using ONE fleet?",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Stage",
+            "align" : "center"
+          }, {
+            "title" : "Total Mobs",
+            "align" : "left"
+          }, {
+            "title" : "Small Mobs",
+            "align" : "right"
+          }, {
+            "title" : "Medium Mobs",
+            "align" : "right"
+          }, {
+            "title" : "Large Mobs",
+            "align" : "right"
+          } ],
+          "data" : [ [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "100.00%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.00%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.00%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50.07%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.93%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.00%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "54.71%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "45.29%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.00%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "34.38%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "39.49%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "26.13%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.5763",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "31.64%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "48.12%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "20.24%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.4549",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "32.91%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.28%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "24.82%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.3449",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "29.96%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.04%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "28.00%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.6153",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "28.12%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "37.73%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "34.15%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.0572",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "30.79%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "41.44%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "27.77%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.9924",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "30.42%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.82%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "26.76%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.3798",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "36.65%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "35.32%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "28.03%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.4932",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "21.78%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "39.85%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "38.37%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.0221",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "29.73%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "38.58%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "31.69%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.0497",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "26.99%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "38.46%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "34.56%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "21.70%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "36.52%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "41.78%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.5417",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "20.12%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "37.23%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.65%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.0401",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "18.75%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.88%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "33.37%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.0024",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "17.34%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "48.19%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "34.47%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.0761",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "16.06%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.66%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "41.28%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.2048",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14.81%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.28%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.91%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.0777",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13.41%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.10%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "39.49%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.4373",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11.91%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "48.07%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "40.02%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.1387",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11.03%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.30%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "46.67%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.0446",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9.53%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "41.18%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.29%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.4371",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10.74%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.97%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "39.29%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8.02%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "51.39%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "40.59%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.6534",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.77%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "38.80%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "55.44%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.3524",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.33%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "37.25%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "56.43%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.3902",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9.34%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "53.29%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "37.37%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.3876",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8.08%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "54.13%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "37.80%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.2291",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7.21%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "40.63%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "52.16%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "8-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.3271",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7.58%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "38.54%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "53.88%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.5721",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.89%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "54.53%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "40.58%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.0172",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.19%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "52.09%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.72%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.4439",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.77%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "37.93%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "57.30%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "9-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.3715",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.01%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "35.72%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "60.27%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0781",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.33%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "75.39%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "20.28%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.3671",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.81%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "75.43%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "20.76%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0094",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.90%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.92%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.18%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "10-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.588",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.31%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.32%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.38%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.47%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "63.85%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "29.68%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0481",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.97%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "67.83%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "27.21%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0103",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.17%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "48.96%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "46.86%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "11-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0166",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.50%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50.53%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "46.97%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0197",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5.93%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "64.22%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "29.85%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.26%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "69.01%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "26.74%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0113",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.67%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "49.10%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.23%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0252",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.47%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50.10%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "47.43%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.23%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "56.04%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "39.73%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.36%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "60.34%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "36.30%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0016",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.56%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "42.41%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "55.03%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7.0",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.96%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "35.28%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "62.77%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "12.93%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "52.97%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "34.10%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.50%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "50.05%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "43.45%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "3.51%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "28.77%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "67.72%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "14-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "7",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "4.06%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "30.32%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "65.61%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.02%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "25.57%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "72.41%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6.0237",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.52%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "26.11%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "72.37%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "5",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.39%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "32.09%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "65.52%",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "15-4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "6",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.26%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "18.42%",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "80.33%",
+              "type" : "SimpleText"
+            } ]
+          } ] ] ]
+        },
+        "title" : "Mob Sizes Fought - One Fleet",
+        "collapsed" : true,
+        "anchorId" : "extra-tables-mob-sizes-fought---one-fleet",
+        "type" : "Table"
+      } ]
+    }, {
+      "id" : "coin-details",
+      "additionalIds" : [ ],
+      "title" : "Coin Details",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Chapter 9 and higher have Clearing Rewards that provide coins, gear enhancement plates, dorm food, cognitive chips, and augment module experience after each successful sortie. More oil spent equals more coins from clearing rewards, up to the oil cap. All results for Chapter 9+ on this page assume your fleets are expensive enough to reach oil cap. The clearing reward coin count for each stage is taken from this ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://wiki.biligame.com/blhx/%E5%87%BA%E5%87%BB%E5%B8%B8%E5%8E%BB%E5%85%B3%E5%8D%A1%E6%94%B6%E7%9B%8A%E5%88%86%E6%9E%90",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "CN wiki source",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", but we do not condone their data collection methods. Data collected by EN players are close enough to these numbers.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Each battle drops some coins and has a chance to drop a ship. The averages are copied from the same CN wiki source. We assumed that for stages with multiple bosses, the non-final bosses have the same drop rates as event elite enemies. We further assumed that the average coins per retired ship, including gear, is 20 coins. The coins per ship actually depends on the probability distribution of different ships in each stage, but a blanket assumption of 20 coins should be close enough to truth. Again, data collected by EN players are close enough to these numbers.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1752892920566,
+    "tocItem" : {
+      "chapterTitle" : "Deep Research",
+      "pageTitle" : "Auto Search Exp And Coins",
+      "pageMeta" : { },
+      "dirName" : "deepresearch",
+      "fileName" : "auto-search-exp-and-coins",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Recommendations",
+        "id" : "recommendations",
+        "customAnchorId" : "recommendations"
+      }, {
+        "title" : "Assumptions",
+        "id" : "assumptions",
+        "customAnchorId" : "assumptions"
+      }, {
+        "title" : "Explanations",
+        "id" : "explanations",
+        "customAnchorId" : "explanations"
+      }, {
+        "title" : "Two Fleets",
+        "id" : "two-fleets",
+        "customAnchorId" : "two-fleets"
+      }, {
+        "title" : "One Fleet",
+        "id" : "one-fleet",
+        "customAnchorId" : "one-fleet"
+      }, {
+        "title" : "Extra Tables",
+        "id" : "extra-tables",
+        "customAnchorId" : "extra-tables"
+      }, {
+        "title" : "Coin Details",
+        "id" : "coin-details",
+        "customAnchorId" : "coin-details"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

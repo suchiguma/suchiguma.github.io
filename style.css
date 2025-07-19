@@ -8,6 +8,8 @@
     --znai-toc-page-title-color: #111;
     --znai-toc-panel-background-color: #d9d9d9;
     --znai-inversed-text-color: #ddd;
+    --znai-link-color: #0068c9;
+    --znai-link-decoration: none;
     
     --znai-table-header-background-color: #d8d8d8;
     --znai-table-body-background-color: #dcdcdc;
@@ -50,6 +52,7 @@
     
     --znai-table-text-color: var(--znai-regular-text-color);
     --znai-table-header-background-color: #272f33;
+    --znai-link-color: #73bbff;
 }
 
 .znai-table {

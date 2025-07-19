@@ -620,5 +620,42 @@ toc = [ {
       "id" : "analysis",
       "customAnchorId" : "analysis"
     } ]
+  }, {
+    "chapterTitle" : "Deep Research",
+    "pageTitle" : "Auto Search Exp And Coins",
+    "pageMeta" : { },
+    "dirName" : "deepresearch",
+    "fileName" : "auto-search-exp-and-coins",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Recommendations",
+      "id" : "recommendations",
+      "customAnchorId" : "recommendations"
+    }, {
+      "title" : "Assumptions",
+      "id" : "assumptions",
+      "customAnchorId" : "assumptions"
+    }, {
+      "title" : "Explanations",
+      "id" : "explanations",
+      "customAnchorId" : "explanations"
+    }, {
+      "title" : "Two Fleets",
+      "id" : "two-fleets",
+      "customAnchorId" : "two-fleets"
+    }, {
+      "title" : "One Fleet",
+      "id" : "one-fleet",
+      "customAnchorId" : "one-fleet"
+    }, {
+      "title" : "Extra Tables",
+      "id" : "extra-tables",
+      "customAnchorId" : "extra-tables"
+    }, {
+      "title" : "Coin Details",
+      "id" : "coin-details",
+      "customAnchorId" : "coin-details"
+    } ]
   } ]
 } ]
