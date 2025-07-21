@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat San Diego, the August Incarnation of Leo extreme challenge mode boss.">
+<title>Azur Lane Guides: August Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Strategy</h1></header>
+<p>Read the boss skills and stats on wiki Read the common introduction and disclaimers Timing precision Easy DPS check Hard Tank check Easy Although San Diego s boss skill description says every 18s it is actually approximately 17 15s 19 2s 18 15s then repeat Set a margin and call them 17s 19s and 18s for safety This slight 1 second difference is important because if your main fleet is between 17 and 18s it may be caught by San Diego s 17s cycle which could desync your whole main fleet Teleport San Diego always teleports to the same position which happens to be close enough to activate Friedrich der Groe s proximity barrage giving her consistent damage every boss cycle This interaction increases FdG s viability by a lot in this battle taking her from the bottom tier of rainbow BBs to somewhere in the middle of rainbow BBs The teleport destination is just over 65 units from the flagship so the flagship s secondary guns can also do a bit of damage After teleporting the boss stays still for 2s then starts zooming around and gets 20% eva rate So it s not good for your main fleet to fire after the teleport because she will dodge a lot of damage with both speed and evasion If BBs fire just before the teleport then 1 out of 3 volleys may hit the water when the boss teleports If CVs launch airstrikes just before the teleport then a lot of damage is lost because the teleport destination is too close for rocket fighters to aim at most of the time The special stage gives 20% EVA RATE not 20% EVA as claimed by the game Also it lasts for 8s not 5s This bug doesn t change the strategies but it is always interesting to note bugs and it makes the battle slightly harder than the boss skill descriptions would imply Reload Nerf Say your ship s weapon has a reload progress going from 0% to 100% If San Diego sings when your ship is at 100% nothing happens Otherwise 15% 20% or 30% is subtracted from the reload progress depending on its type Reload progress cannot go below 0% So if your ship fires just before San Diego sings her reload progress will go from like 1% to 0% which is effectively no loss in reload time and DPS This changes the balance of power between the HE guns Note Vanguard DDG missiles are not part of the torpedo gun or airstrike manual queues so they are not affected For the purposes of this strategy discussion we will assume you are using three BBs add 30% reload time because they are easiest to understand and use in this battle There are several brackets of interest which your BBs reload times can fall in 13 9s 17s BBs fire once per boss cycle They eat a reload nerf of less than 30% but 1 out of 3 volleys may miss during the teleport 17s 22 5s The usual best HE guns fall in this bracket but reload times are unpredictable The BBs will desync from each other and some damage is lost due to firing while the special stage is active The reload nerf is around the full 30% 22 5s 26 9s BBs fire once per two boss cycles They eat a reload nerf of over 30% and 1 out of 3 volleys may miss during the teleport Warning We do not recommend using gold plates on fast HE guns just for this battle They are currently barely used anywhere else</p>
+</article>
+
+<article>
+<header><h1>Mid-End BB</h1></header>
+<p>With the fast gun setup the BBs need to have reload times between 13 9s and 17s in order to maintain one salvo for every one of San Diego s cycles Don t have all three BBs at the upper end of the allowed range If you do then BB jamming could cause the last BB to fall behind after several salvos With the slow Kearsarge gun setup the BBs need to have reload times between 22 5s and 26 92s in order to maintain one salvo for every two of San Diego s cycles Ignore the BBs usual 0 2s absolute cooldown Again don t have all three BBs at the upper end of the allowed range because of jamming Mid End fast BB example fleet Mid End slow BB example fleet</p>
+</article>
+
+<article>
+<header><h1>Top-End BB</h1></header>
+<p>Same theory as Mid End BB just with better ships and gear Use either Trafalgar or Aurora for eva rate Top End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>Top-End CV</h1></header>
+<p>CVs are harder to use so only one top end example CV fleet is provided In our experience Yorktown II is extremely notably weaker in this battle because of her reliance on Kearsarge and Implacable So this is a non standard Soyuz Nakhimov sync Soyuz Nakhimov is stronger than Yorkii Kearsarge Implacable in general too not just here BBs get delayed by 30% while CVs get delayed by 15% This example uses 9 BB RLD and 21 CV RLD 1 tech 18 cat talents 2 Bishamaru skill Soyuz is 19 59 * 1 3 0 2 absolute cooldown yielding 25 67s Nakhimov is 22 27 * 1 15 25 61s Calculator link Top End CV example fleet</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Leo",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "boss skills and stats on wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "/./challengemode/challenge-mode",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "common introduction and disclaimers",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "purered",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Although San Diego's boss skill description says every 18s, it is actually approximately 17.15s, 19.2s, 18.15s, then repeat. Set a margin and call them 17s, 19s, and 18s for safety. This slight 1 second difference is important because if your main fleet is between 17 and 18s, it may be caught by San Diego's 17s cycle, which could desync your whole main fleet.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "strategy-teleport",
+        "additionalIds" : [ "teleport" ],
+        "level" : 2,
+        "title" : "Teleport",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "San Diego always teleports to the same position, which happens to be close enough to activate Friedrich der Große's proximity barrage, giving her consistent damage every boss cycle. This interaction increases FdG's viability by a lot in this battle, taking her from the bottom tier of rainbow BBs to somewhere in the middle of rainbow BBs. The teleport destination is just over 65 units from the flagship, so the flagship's secondary guns can also do a bit of damage.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "After teleporting, the boss stays still for 2s, then starts zooming around and gets +20% eva rate. ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "So it's not good for your main fleet to fire after the teleport",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", because she will dodge a lot of damage with both speed and evasion. If BBs fire just before the teleport, then 1 out of 3 volleys may hit the water when the boss teleports. If CVs launch airstrikes just before the teleport, then a lot of damage is lost because the teleport destination is too close for rocket fighters to aim at most of the time.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The \"special stage\" gives +20% EVA RATE, not +20% EVA as claimed by the game. Also, it lasts for 8s, not 5s. This bug doesn't change the strategies, but it is always interesting to note bugs, and it makes the battle slightly harder than the boss skill descriptions would imply.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "strategy-reload-nerf",
+        "additionalIds" : [ "reload-nerf" ],
+        "level" : 2,
+        "title" : "Reload Nerf",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Say your ship's weapon has a reload progress going from 0% to 100%. If San Diego sings when your ship is at 100%, nothing happens. Otherwise, 15%, 20%, or 30% is subtracted from the reload progress depending on its type. Reload progress cannot go below 0%. So if your ship fires just before San Diego sings, her reload progress will go from like 1% to 0%, which is effectively no loss in reload time and DPS. This changes the balance of power between the HE guns.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Vanguard DDG missiles are not part of the torpedo, gun, or airstrike manual queues, so they are not affected.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For the purposes of this strategy discussion, we will assume you are using three BBs (add 30% reload time) because they are easiest to understand and use in this battle. There are several brackets of interest which your BBs' reload times can fall in.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "13.9s - 17s. BBs fire once per boss cycle. They eat a reload nerf of less than 30%, but 1 out of 3 volleys may miss during the teleport.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "17s - 22.5s. The usual best HE guns fall in this bracket, but reload times are unpredictable. The BBs will desync from each other, and some damage is lost due to firing while the special stage is active. The reload nerf is around the full 30%.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "22.5s - 26.9s. BBs fire once per two boss cycles. They eat a reload nerf of over 30%, and 1 out of 3 volleys may miss during the teleport.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: We do not recommend using gold plates on fast HE guns just for this battle. They are currently barely used anywhere else.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "mid-end-bb",
+      "additionalIds" : [ ],
+      "title" : "Mid-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "With the fast gun setup, the BBs need to have reload times between 13.9s and 17s in order to maintain one salvo for every one of San Diego's cycles. Don't have all three BBs at the upper end of the allowed range. If you do, then BB jamming could cause the last BB to fall behind after several salvos.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "With the slow Kearsarge gun setup, the BBs need to have reload times between 22.5s and 26.92s in order to maintain one salvo for every two of San Diego's cycles. Ignore the BBs' usual 0.2s absolute cooldown. Again, don't have all three BBs at the upper end of the allowed range because of jamming.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\challengemode\\leo_midBB_fast.webp",
+        "alt" : "Mid-End fast BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1753073993264,
+        "type" : "Image"
+      }, {
+        "destination" : "/./images\\challengemode\\leo_midBB_slow.webp",
+        "alt" : "Mid-End slow BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1753073993369,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "top-end-bb",
+      "additionalIds" : [ ],
+      "title" : "Top-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Same theory as ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./challengemode/august#mid-end-bb",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Mid-End BB",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", just with better ships and gear. Use either Trafalgar or Aurora for eva rate.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\challengemode\\leo_topBB.webp",
+        "alt" : "Top-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1753073993475,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "top-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Top-End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "CVs are harder to use, so only one top-end example CV fleet is provided. In our experience, Yorktown II is extremely notably weaker in this battle because of her reliance on Kearsarge and Implacable. So this is a non-standard Soyuz-Nakhimov sync. Soyuz Nakhimov is stronger than Yorkii Kearsarge Implacable in general too, not just here. BBs get delayed by 30% while CVs get delayed by 15%. This example uses 9 BB RLD and 21 CV RLD (1 tech + 18 cat talents + 2 Bishamaru skill). Soyuz is 19.59 * 1.3 + 0.2 absolute cooldown, yielding 25.67s. Nakhimov is 22.27 * 1.15 = 25.61s. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfGRtOzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLW5xdC9sb2kvZzNhL2pwL2o1XDEwYjkyLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGppNDszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC1oMWQvaXJlLzE1ZDkvMWRkLzFkZFwxMGw0bSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxrdDszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC1oMWQvaXJoL2czYS8xZGQvMWRkXDEwbDRtLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGt1OzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLXVibC8xYzNsL3EwcS8ybmEyLzJjaVx1cWhtLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfDNtOzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLWxvbC8xYzNsL3EwcS8xbmEvMmNpXHY0NzIsMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8N3U7My8xMjUvMS8wLzQvMCwwLDAsMCwwLzAtMm8xdC8ydHAxL3EwcS8zN2UvMmlxXHVxaG0sMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8dDloOS8zMC8yL3x0OXIvMzAvMi80dmQtMC80dGgtMC8xdmYtMi9rMS0xLzlkLTJ8MXw1LTIyNiw0MiwwLDIwLDAsOSwxNSwxLDBfNC0yMjYsMTAwLDAsMjAsMCwxOCwzMCwyOSwwXzEwLTIxNiw5NSwwLDE3LDksMTgsMjcsMSwwXzEzLTEyMCw2MCwxNCwxNSwwLDE2LDEzLDQsMF82LTgzLDAsMCw3LDgyLDQ1LDIyLDAsNDlfNy03OSwwLDAsNyw2OSwxLDExLDAsMF8zLTEzMSw1NywzNywxNSwwLDE2LDgsNCwwXzE4LTEyMCw2MywyNCwxNSwwLDE5LDcsNCwwXzItOTYsNjIsMzYsNDMsMCwyNywyNyw1LDIyXzEtMjY3LDY0LDQ1LDQwLDAsMjcsMTYsMzgsMzRfOC02OCwyLDY4LDAsMCwwLDI3LDMxLDBfMTctNjgsMiw2OCwwLDExLDAsMjcsMzEsMF8xOS00OSwwLDAsMTUsMCwwLDAsMCwwXzEyLTUxLDAsMCwxNSwwLDAsMCwwLDBfMjItMTIsMTAsMCwwLDAsMCwzLDMsMHwwfHVuZGVmaW5lZHxleHRyZW1lXzkwMDAzNw%3D%3D",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "destination" : "/./images\\challengemode\\leo_topCV.webp",
+        "alt" : "Top-End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1753073993581,
+        "type" : "Image"
+      } ]
+    } ],
+    "lastModifiedTime" : 1753074298897,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "August Challenge",
+      "pageMeta" : {
+        "title" : [ "August Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "august",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Mid-End BB",
+        "id" : "mid-end-bb",
+        "customAnchorId" : "mid-end-bb"
+      }, {
+        "title" : "Top-End BB",
+        "id" : "top-end-bb",
+        "customAnchorId" : "top-end-bb"
+      }, {
+        "title" : "Top-End CV",
+        "id" : "top-end-cv",
+        "customAnchorId" : "top-end-cv"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
