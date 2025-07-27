@@ -230,9 +230,9 @@ toc = [ {
       "id" : "overall-recommendation",
       "customAnchorId" : "overall-recommendation"
     }, {
-      "title" : "Detailed Analyses",
-      "id" : "detailed-analyses",
-      "customAnchorId" : "detailed-analyses"
+      "title" : "Seasons",
+      "id" : "seasons",
+      "customAnchorId" : "seasons"
     } ]
   } ]
 }, {
