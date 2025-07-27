@@ -17,6 +17,17 @@ footer = {
             "text" : "Contact",
             "type" : "SimpleText"
           } ]
+        }, {
+          "text" : " · ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./home/contact#privacy-policy",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Privacy",
+            "type" : "SimpleText"
+          } ]
         } ]
       } ]
     }, {
