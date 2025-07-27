@@ -64,7 +64,11 @@ toc = [ {
     "fileName" : "contact",
     "fileExtension" : "md",
     "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ ]
+    "pageSectionIdTitles" : [ {
+      "title" : "Privacy Policy",
+      "id" : "privacy-policy",
+      "customAnchorId" : "privacy-policy"
+    } ]
   } ]
 }, {
   "chapterTitle" : "Guides",
