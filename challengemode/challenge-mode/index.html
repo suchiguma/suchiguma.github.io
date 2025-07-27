@@ -84,7 +84,7 @@
 })()</script>
 <div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
     <div></div>
-</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+</div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Introduction</h1></header>
 <p>Each month s page will have strategies and several example fleets Although we try to be detailed in strategies and provide multiple example fleets we do not know what ships or gear you have Treat the example fleets as examples and consider your own better upgrades or close substitutes Warning Do not treat examples as requirements New Jersey s presence in an example fleet is not an endorsement for using UR bulins on her We assume Hard Augur difficulty but the same strategies usually work for lower difficulties with worse fleets and gear We also assume auto battle only because most of the difficult CM gimmicks are nullified by proper manualing Always check boss stats and skills on Extreme Challenge wiki or in game but sometimes the game says a wrong number Tip Fleet screenshots using Azur Lane Fleet Tool show the vanguard from bottom main tank to top off tank It s like the in game Formation screen but rotated counter clockwise The ships are also marked with 1 2 and 3 from bottom to top Correct vanguard order</p>
@@ -95,15 +95,108 @@
 <p>Most CM s are exercises in reading and timing Oaths or exact gear levels 10 to 13 are not required unless for timing However many example fleets are timing sensitive and you often won t have the exact ships oaths gear cat RLD and RLD tech to copy them correctly Then you will need to calculate your own fleet timing To the best of our knowledge this online calculator henceforth referred to as the calculator is the only one that is precise enough for these CM timing calculations We highly recommend not being scared by it and learning how to use it on desktop If an example fleet requires 50 CV RLD with oath that means you need oathed CVs and have CV reload from tech cats 50 Alternatively it would also probably work without oaths and with CV tech cats 57 or 58 Due to how the game code loop works some boss skills boss movement patterns or ship skills can be delayed by 0 0s to 0 1s every time This is more noticeable in long battles like the game mode this guide is for Some strategies attempt to account for this delay but sometimes it can t be fixed</p>
 </article>
 </section>
+<section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<a href="/./home/home-page/">Home Page</a>
+</article>
+
+<article>
+<a href="/./home/suchiguma/">Suchiguma</a>
+</article>
+
+<article>
+<a href="/./home/contact/">Contact</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-brief/">Chapter 14 Brief</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-detailed/">Chapter 14 Detailed</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-15/">Chapter 15</a>
+</article>
+
+<article>
+<a href="/./guides/augment-modules/">Augment Modules</a>
+</article>
+
+<article>
+<a href="/./miniguides/research-focus/">Research Focus</a>
+</article>
+
+<article>
+<a href="/./challengemode/challenge-mode/">Challenge Mode</a>
+</article>
+
+<article>
+<a href="/./challengemode/january/">January Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/february/">February Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/march/">March Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/april/">April Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/may/">May Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/june/">June Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/july/">July Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/august/">August Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/november/">November Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/december/">December Challenge</a>
+</article>
+
+<article>
+<a href="/./deepresearch/concealment/">Concealment</a>
+</article>
+
+<article>
+<a href="/./deepresearch/interception/">Interception</a>
+</article>
+
+<article>
+<a href="/./deepresearch/single-113mm-vs-76mm/">Single 113mm Vs 76mm</a>
+</article>
+
+<article>
+<a href="/./deepresearch/auto-search-exp-and-coins/">Auto Search Exp And Coins</a>
+</article>
+</section>
 </div>
 <script type="text/javascript" src="/./footer.js"></script>
 <script type="text/javascript" src="/./toc.js"></script>
 <script type="text/javascript" src="/./assets.js"></script>
-<script type="text/javascript" src="/./static/main.js"></script>
-<script>
+<script type="module" src="/./static/main.js"></script>
+<script type="module">
 document.getElementById('znai').innerHTML = '';
 /*<!--*/
-ReactDOM.render(React.createElement(Documentation, {
+window.ReactDOM.render(React.createElement(Documentation, {
   "docMeta" : {
     "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
     "id" : ".",
@@ -171,6 +264,7 @@ ReactDOM.render(React.createElement(Documentation, {
           "type" : "SimpleText"
         } ]
       }, {
+        "fit" : true,
         "destination" : "/./images\\renhex_order.webp",
         "alt" : "Correct vanguard order.",
         "title" : null,
