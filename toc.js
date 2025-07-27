@@ -211,6 +211,31 @@ toc = [ {
     } ]
   } ]
 }, {
+  "chapterTitle" : "Mini-Guides",
+  "dirName" : "miniguides",
+  "items" : [ {
+    "chapterTitle" : "Mini-Guides",
+    "pageTitle" : "Research Focus",
+    "pageMeta" : { },
+    "dirName" : "miniguides",
+    "fileName" : "research-focus",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Introduction",
+      "id" : "introduction",
+      "customAnchorId" : "introduction"
+    }, {
+      "title" : "Overall Recommendation",
+      "id" : "overall-recommendation",
+      "customAnchorId" : "overall-recommendation"
+    }, {
+      "title" : "Detailed Analyses",
+      "id" : "detailed-analyses",
+      "customAnchorId" : "detailed-analyses"
+    } ]
+  } ]
+}, {
   "chapterTitle" : "Challenge Mode",
   "dirName" : "challengemode",
   "items" : [ {

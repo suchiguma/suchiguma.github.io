@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Makes a recommendation to new players for how to set their Research Focus. Lists the pros and cons of focusing on each research season.">
+<title>Azur Lane Guides: Research Focus</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="37473a17-3102-4a4a-9ff8-fc3a79f35e01"></script>
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Introduction</h1></header>
+<p>Originally created by cheeky1467 with help and editing from elp Reprinted with permission Latest Season PR8 This mini guide is intended to provide the most complete information for new players to select their research focus although older players may learn something new too We list the advantages and disadvantages of focusing on each season to help you make an informed decision Alternatively you may follow the overall recommendation directly See ECGC s Research Guide for other aspects of research The advice in our mini guide overrides the Research Focus section We also strongly recommend analyzing all Combat Data Packs and recommend implementing the PR Catch up Min Maxing section on that guide into your gameplay</p>
+</article>
+
+<article>
+<header><h1>Overall Recommendation</h1></header>
+<p>Select PR DR 7 or PR DR 8 as your Research Focus Season 7 s gold ships and gear are stronger while Season 8 has more flexible rainbows and provides the best long term value However one of Season 7 s rainbow ships has great reliance on Sovetsky Soyuz so if you will not be able to obtain and max Soyuz within the next 5 or so months then Season 8 may provide better value</p>
+</article>
+
+<article>
+<header><h1>Detailed Analyses</h1></header>
+<p>PR DR 1 3 Focus Pros None Cons Everything Are you drunk There is no reason to focus on these seasons PR DR 4 Focus Pros 4 of 5 ships and most of the gear are still strong and decently relevant The tech requirements for some of the ships aren t that bad Neutral The Season has catch up and coining for all ships which makes it faster to complete but also somewhat redundant to focus on Cons The season is retired and all the gear can be crafted in the gear lab albeit some of it is expensive So it s kind of a waste of time long term All the ships have been powercrept to some degree and half of the good gear has as well TLDR Solid gear and ships especially if you re new but there s no need to focus on PR4 because all the ships can be coined and the gear can be crafted in the Gear Lab which means in the long term you re kind of just wasting time if you do PR4 research focus PR DR 5 Focus Pros Plymouth is a strong ship and still a relevant entity The Quad 152mm is the best CL gun and the Harbin Gun is a good transitional DD gun Neutral The season has a catch up and the PRs have coining which makes it faster to complete but also somewhat redundant to focus on Cons The PRs and Brest have either been powercrept or have alternatives The rest of the gear is mid The season is expected to be retired soon in January February 2026 Somewhat hard tech point requirements TLDR The main and only real reason to focus on PR5 is for Plymouth and her gun but she s gonna be coinable soon Brest is somewhat redundant in 2025 and the rest of the gear isn t too much to write home about PR DR 6 Focus Pros The Season has Catchup which means the season is finished quicker Shimanto is really good for campaign The Hindenburg gun is the best CA gun against mobs and medium heavy bosses Cons Hindenburg and Kearsarge are somewhat niche The gear aside from the Hindenburg gun is mid Flandre and Felix are solid but not that remarkable Has high tech point requirements TLDR PR6 is the last season you really want to focus on out of PR6 7 and 8 The 2 DRs while situationally good are somewhat niche in their use cases and the best ship of the season Shimanto you can just finish by doing catch up PR DR 7 Focus Pros The La 9 is the highest damage plane against medium armor 40% better than the BF 109G and the highest damage fighter against heavy 50% better than the FW 190 A 6 Nahkimov is among the strongest ships in the game currently Napoli is the tankiest vanguard ship in the game currently not that useful though VIT 2 Mode Change is one of the best TBs for single target bossing but the Saiun Ju 87 D 4 and Ryusei are all alternatives Cons Nakhimov strongly prefers to be paired with Soyuz Has high tech point requirements and no catch up Halford is bad and Daisen is mid TLDR You want to focus on PR7 for Nahkimov and La 9s which really dominate against medium armor The caveat however is that Nahkimov really needs Soyuz to stand on top Napoli is the tankiest vanguard in the game currently but she s lacking damage and utility making her a bit redundant for current content The Vit 2 mode change is really nice to have but with the Saiun Ju 87d and Ryuuseis it s not necessary to have PR DR 8 Focus Pros Mecklenburg is one of the best BBs in the game Gouden Leeuw is a really strong campaign ship The Mecklenburg gun* is the best BB gun against heavy armor bosses and 2nd best against medium armor Cons The PRs are all really mediocre The rest of the gear is also really mediocre Has high tech point requirements and no catch up * Although the Mecklenburg gun is only ~7% more damage per salvo than the Champagne gun against medium armor and ~15% more against heavy armor the faster reload is very beneficial in META Showdown TLDR You want to focus on PR8 mainly for Mecklenburg She s one of the strongest BBs in the game currently particularly for heavy armor and she isn t as reliant on Bismarck Zwei in the way that Nahkimov is reliant on Soyuz The gun is also now the best ~20 second AP BB gun but it is a smaller upgrade compared to the Champagne gun than the La 9 is to the BF 109G Gouden Leeuw will be very useful in campaign if you re lacking ships like Guam and Laffey 2 but if you already have a lot of the good AA ships for later campaign stages her value drops by a decent bit The gold ships and gear are noticeably worse overall compared to previous seasons</p>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="text/javascript" src="/./static/main.js"></script>
+<script>
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Originally created by cheeky1467 with help and editing from elp. Reprinted with permission.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Latest Season: PR8",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "id" : "introduction",
+      "additionalIds" : [ ],
+      "title" : "Introduction",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This mini-guide is intended to provide the most complete information for new players to select their research focus, although older players may learn something new too. We list the advantages and disadvantages of focusing on each season to help you make an informed decision. Alternatively, you may follow the overall recommendation directly.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "See ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlaneecgc.com/research/",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "ECGC's Research Guide",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " for other aspects of research. The advice in our mini-guide overrides the Research Focus section. We also strongly recommend analyzing all Combat Data Packs and recommend implementing the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlaneecgc.com/research/#catch-up_min_max",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "PR Catch-up Min-Maxing",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " section on that guide into your gameplay.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "title" : "Research Focus is not Catch-Up! They are in the same screen.",
+        "imageSrc" : "/./images\\miniguides\\research_focus.webp",
+        "timestamp" : 1753636369305,
+        "shapes" : [ ],
+        "anchorId" : "introduction-research-focus-is-not-catch-up-they-are-in-the-same-screen",
+        "type" : "AnnotatedImage"
+      } ]
+    }, {
+      "id" : "overall-recommendation",
+      "additionalIds" : [ ],
+      "title" : "Overall Recommendation",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Select PR/DR 7 or PR/DR 8 as your Research Focus. Season 7's gold ships and gear are stronger, while Season 8 has more flexible rainbows and provides the best long-term value. However, one of Season 7's rainbow ships has great reliance on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Sovetsky_Soyuz",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Sovetsky Soyuz",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", so if you will not be able to obtain and max Soyuz within the next 5 or so months, then Season 8 may provide better value.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "detailed-analyses",
+      "additionalIds" : [ ],
+      "title" : "Detailed Analyses",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "detailed-analyses-pr-dr-1-3-focus",
+        "additionalIds" : [ "pr-dr-1-3-focus" ],
+        "level" : 2,
+        "title" : "PR/DR 1-3 Focus",
+        "type" : "SubHeading"
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Pros",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "None.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Cons",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Everything.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Are you drunk? There is no reason to focus on these seasons.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "id" : "detailed-analyses-pr-dr-4-focus",
+        "additionalIds" : [ "pr-dr-4-focus" ],
+        "level" : 2,
+        "title" : "PR/DR 4 Focus",
+        "type" : "SubHeading"
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Pros",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "4 of 5 ships and most of the gear are still strong and decently relevant.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The tech requirements for some of the ships aren't that bad.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Neutral",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The Season has catch-up and coining for all ships, which makes it faster to complete, but also somewhat redundant to focus on.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Cons",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The season is \"retired\", and all the gear can be crafted in the gear lab (albeit some of it is expensive).",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "So it's kind of a waste of time long term.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "All the ships have been powercrept to some degree, and half of the good gear has as well.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "TLDR: Solid gear and ships, especially if you're new, but there's no need to focus on PR4 because all the ships can be coined and the gear can be crafted in the Gear Lab, which means in the long term, you're kind of just wasting time if you do PR4 research focus.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "detailed-analyses-pr-dr-5-focus",
+        "additionalIds" : [ "pr-dr-5-focus" ],
+        "level" : 2,
+        "title" : "PR/DR 5 Focus",
+        "type" : "SubHeading"
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Pros",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Plymouth is a strong ship and still a relevant entity.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The Quad 152mm is the best CL gun, and the Harbin Gun is a good transitional DD gun.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Neutral",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The season has a catch-up, and the PRs have coining, which makes it faster to complete, but also somewhat redundant to focus on.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Cons",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The PRs and Brest have either been powercrept or have alternatives.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The rest of the gear is mid.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The season is expected to be \"retired\" soon in January/February 2026.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Somewhat hard tech point requirements.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "TLDR: The main and only real reason to focus on PR5 is for Plymouth and her gun, but she's gonna be coinable soon. Brest is somewhat redundant in 2025, and the rest of the gear isn't too much to write home about.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "detailed-analyses-pr-dr-6-focus",
+        "additionalIds" : [ "pr-dr-6-focus" ],
+        "level" : 2,
+        "title" : "PR/DR 6 Focus",
+        "type" : "SubHeading"
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Pros",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The Season has Catchup, which means the season is finished quicker.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Shimanto is really good for campaign.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The Hindenburg gun is the best CA gun against mobs and medium/heavy bosses.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Cons",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Hindenburg and Kearsarge are somewhat niche.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The gear, aside from the Hindenburg gun, is mid.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Flandre and Felix are solid but not that remarkable.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Has high tech point requirements.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "TLDR: PR6 is the last season you really want to focus on out of PR6, 7, and 8. The 2 DRs, while situationally good, are somewhat niche in their use cases, and the best ship of the season, Shimanto, you can just finish by doing catch-up.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "detailed-analyses-pr-dr-7-focus",
+        "additionalIds" : [ "pr-dr-7-focus" ],
+        "level" : 2,
+        "title" : "PR/DR 7 Focus",
+        "type" : "SubHeading"
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Pros",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The La-9 is the highest damage plane against medium armor (40% better than the BF-109G) and the highest damage fighter against heavy (50% better than the FW-190 A-6).",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Nahkimov is among the strongest ships in the game currently.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Napoli is the tankiest vanguard ship in the game (currently not that useful though).",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "VIT-2 (Mode Change) is one of the best TBs for single-target bossing, but the Saiun, Ju-87 D-4, and Ryusei are all alternatives.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Cons",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Nakhimov strongly prefers to be paired with Soyuz.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Has high tech point requirements and no catch-up.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Halford is bad, and Daisen is mid.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "TLDR: You want to focus on PR7 for Nahkimov and La-9s, which really dominate against medium armor. The caveat, however, is that Nahkimov really needs Soyuz to stand on top. Napoli is the tankiest vanguard in the game currently, but she's lacking damage and utility, making her a bit redundant for current content. The Vit-2 mode change is really nice to have, but with the Saiun, Ju-87d, and Ryuuseis, it's not necessary to have.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "detailed-analyses-pr-dr-8-focus",
+        "additionalIds" : [ "pr-dr-8-focus" ],
+        "level" : 2,
+        "title" : "PR/DR 8 Focus",
+        "type" : "SubHeading"
+      }, {
+        "columns" : [ {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Pros",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Mecklenburg is one of the best BBs in the game.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Gouden Leeuw is a really strong campaign ship.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The Mecklenburg gun* is the best BB gun against heavy armor bosses and 2nd best against medium armor.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Cons",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "-",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The PRs are all really mediocre.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The rest of the gear is also really mediocre.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Has high tech point requirements and no catch-up.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ],
+        "config" : { },
+        "type" : "Columns"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "* Although the Mecklenburg gun is only ~7% more damage per salvo than the Champagne gun against medium armor and ~15% more against heavy armor, the faster reload is very beneficial in META Showdown.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "TLDR: You want to focus on PR8 mainly for Mecklenburg. She's one of the strongest BBs in the game currently, particularly for heavy armor, and she isn't as reliant on Bismarck Zwei in the way that Nahkimov is reliant on Soyuz. The gun is also now the best ~20 second AP BB gun, but it is a smaller upgrade compared to the Champagne gun than the La-9 is to the BF-109G. Gouden Leeuw will be very useful in campaign if you're lacking ships like Guam and Laffey 2, but if you already have a lot of the good AA ships for later campaign stages, her value drops by a decent bit. The gold ships and gear are noticeably worse overall compared to previous seasons.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1753641226057,
+    "tocItem" : {
+      "chapterTitle" : "Mini-Guides",
+      "pageTitle" : "Research Focus",
+      "pageMeta" : { },
+      "dirName" : "miniguides",
+      "fileName" : "research-focus",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Introduction",
+        "id" : "introduction",
+        "customAnchorId" : "introduction"
+      }, {
+        "title" : "Overall Recommendation",
+        "id" : "overall-recommendation",
+        "customAnchorId" : "overall-recommendation"
+      }, {
+        "title" : "Detailed Analyses",
+        "id" : "detailed-analyses",
+        "customAnchorId" : "detailed-analyses"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
