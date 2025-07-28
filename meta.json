@@ -1,4 +1,5 @@
 {
+  "hidePresentationTrigger" : true,
   "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
   "id" : ".",
   "title" : "Azur Lane Guides",

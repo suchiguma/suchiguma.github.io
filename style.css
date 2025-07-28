@@ -59,6 +59,10 @@
     border: 0px;
 }
 
+.znai-read-more {
+    border-left: 2px solid var(--znai-regular-text-color);
+}
+
 iframe {
     border: 0px;
 }
