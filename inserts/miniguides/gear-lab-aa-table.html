@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear Lab Table</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        window.onload = function () { 
+        if (window.parent && window.parent.document) {
+            try {
+                const parentBodyClasses = window.parent.document.body.className;
+                document.body.className = parentBodyClasses;
+            } catch (error) {
+            }
+        }}
+    </script>
+    <style>
+    .tablesorter-default .header,
+    .tablesorter-default .tablesorter-header {
+        background-position: center right;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        white-space: normal;
+        padding: 2px 11px 2px 2px
+    }
+    .tablesorter-default thead .tablesorter-headerUnSorted:not(.sorter-false) {
+        background-image: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA6SURBVChTY0AG9fX1/6FMDMAIpVEUNTY2wsVhACyAzSR0xYz4rMNmMkFAtInEuxFKE/Q1CsDtDAYGAJ6mHP842xwvAAAAAElFTkSuQmCC);
+    }
+    .tablesorter-default thead .headerSortUp,
+    .tablesorter-default thead .tablesorter-headerAsc,
+    .tablesorter-default thead .tablesorter-headerSortUp {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAECAYAAAC3OK7NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAArSURBVBhXY0AG9fX1/6FMDMAIpVEUNTY2wsVhACyAzSR0xYz4rEMoZmAAAKOQDoDW8la6AAAAAElFTkSuQmCC);
+        box-shadow: inset 0px -2px #888; 
+    }
+    .tablesorter-default thead .headerSortDown,
+    .tablesorter-default thead .tablesorter-headerDesc,
+    .tablesorter-default thead .tablesorter-headerSortDown {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAECAYAAAC3OK7NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAqSURBVBhXY6yvr//PgAM0NjYyQpkMYAY2xciKQADOQVaMrggD4HYGAwMAXoYOgNr59qMAAAAASUVORK5CYII=);
+        box-shadow: inset 0px -2px #888; 
+    }
+    .znai-table td, .znai-table th {
+        padding: .3em
+    }
+    .longname1, .longname2 {
+        overflow: hidden;
+        word-wrap: break-word;
+        display: block;
+        max-height: 4.5em;
+    }
+    .longname2 {
+        font-size: 0.9em;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    body {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    </style>
+</head>
+<body>
+    <div style="overflow-x: auto; min-width: 600px; border: 1px solid;"><table id="table1" class="znai-table" style="table-layout: fixed; display: table;">
+        <colgroup>
+            <col style="width: 25%;">
+            <col style="width: 60px;">
+            <col style="width: 50px;">
+            <col style="width: 50px;">
+            <col style="width: 50px;">
+            <col style="width: 50px;">
+            <col style="width: 50px;">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th class="sorter-false">Gear</th>
+                <th class="sorter-false">Next Best</th>
+                <th class="sorter-value-parser" style="font-size: 0.9em;">Gain</th>
+                <th class="sorter-value-parser" style="font-size: 0.7em;">Worth<br>Cam-<br>paign</th>
+                <th class="sorter-value-parser" style="font-size: 0.8em;">Worth<br>ST</th>
+                <th class="sorter-value-parser" style="font-size: 0.8em;">New<br>Player</th>
+                <th style="font-size: 0.8em;" class="sorter-false">Quan-<br>tity</th>
+                <th class="sorter-false">Notes</th>
+            </tr>
+        </thead>
+        <tbody><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/16480"><img src="/images/equips/16480.webp" title="Twin 76mm RF Mk 37 Gun Mount" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/16480">Twin 76mm RF Mk 37 Gun Mount</a></div></div></td><td><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/26600"><img src="/images/equips/26600.webp" title="Twin 40mm Bofors STAAG" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/95160"><img src="/images/equips/95160.webp" title="Prototype Twin 90mm Model 1939 High Angle Gun" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a></td><td data-value="70">
+    <img src="/images/ranks/S.webp" alt="S" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="70">
+    <img src="/images/ranks/S.webp" alt="S" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="70">
+    <img src="/images/ranks/S.webp" alt="S" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="60">
+    <img src="/images/ranks/A.webp" alt="A" style="height: 30px; display: block; margin: auto;">
+</td>
+<td>1-6</td><td></td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/90620"><img src="/images/equips/90620.webp" title="Twin 57mm/L60 Bofors Mle 1951 AA Gun Mount" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/90620">Twin 57mm/L60 Bofors Mle 1951 AA Gun Mount</a></div></div></td><td><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/95160"><img src="/images/equips/95160.webp" title="Prototype Twin 90mm Model 1939 High Angle Gun" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a></td><td data-value="70">
+    <img src="/images/ranks/S.webp" alt="S" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="60">
+    <img src="/images/ranks/A.webp" alt="A" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="40">
+    <img src="/images/ranks/C.webp" alt="C" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="30">
+    <img src="/images/ranks/D.webp" alt="D" style="height: 30px; display: block; margin: auto;">
+</td>
+<td>0</td><td>Worse than the 76mm(AA Gun) overall.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/26640"><img src="/images/equips/26640.webp" title="Twin 134mm AA Gun Mount" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/26640">Twin 134mm AA Gun Mount</a></div></div></td><td></td><td data-value="40">
+    <img src="/images/ranks/C.webp" alt="C" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="30">
+    <img src="/images/ranks/D.webp" alt="D" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="40">
+    <img src="/images/ranks/C.webp" alt="C" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="30">
+    <img src="/images/ranks/D.webp" alt="D" style="height: 30px; display: block; margin: auto;">
+</td>
+<td>1-6</td><td>FP Statstick, usually for vanguards only. Used on main fleets when you somehow hit 100% hit rate.</td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/26660"><img src="/images/equips/26660.webp" title="Sextuple 40mm Bofors AA Gun Mount" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div class="longname1"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/26660">Sextuple 40mm Bofors AA Gun Mount</a></div></div></td><td><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/26540"><img src="/images/equips/26540.webp" title="Twin 113mm AA Gun Mount" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a></td><td data-value="40">
+    <img src="/images/ranks/C.webp" alt="C" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="60">
+    <img src="/images/ranks/A.webp" alt="A" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="30">
+    <img src="/images/ranks/D.webp" alt="D" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="60">
+    <img src="/images/ranks/A.webp" alt="A" style="height: 30px; display: block; margin: auto;">
+</td>
+<td>0-2</td><td></td></tr><tr><td><div style="display: flex; align-items: center; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/95160"><img src="/images/equips/95160.webp" title="Prototype Twin 90mm Model 1939 High Angle Gun" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a><div class="longname2"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/95160">Prototype Twin 90mm Model 1939 High Angle Gun</a></div></div></td><td><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/16440"><img src="/images/equips/16440.webp" title="Quadruple 40mm Bofors AA Gun Mount" style="height: 40px; margin-right: 6px; vertical-align: middle;"></a></td><td data-value="60">
+    <img src="/images/ranks/A.webp" alt="A" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="50">
+    <img src="/images/ranks/B.webp" alt="B" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="30">
+    <img src="/images/ranks/D.webp" alt="D" style="height: 30px; display: block; margin: auto;">
+</td>
+<td data-value="40">
+    <img src="/images/ranks/C.webp" alt="C" style="height: 30px; display: block; margin: auto;">
+</td>
+<td>0-2</td><td></td></tr></tbody>
+    </table></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+    <script>$(document).ready(function() {
+        $.tablesorter.addParser({
+            id: 'value-parser',
+            is: function () { return false; }, // Disable auto-detection
+            format: function (s, table, cell) {
+                return $(cell).attr('data-value') || s;
+            },
+            type: 'text'
+        });
+        
+        $("#table1").tablesorter({
+            sortReset:true,
+            sortRestart:true,
+            widthFixed:true,
+            sortList:[[5,1]],
+            sortInitialOrder:'desc'
+        });
+    });</script>
+</body>
+</html>

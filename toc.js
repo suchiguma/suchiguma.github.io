@@ -234,6 +234,31 @@ toc = [ {
       "id" : "season-focuses",
       "customAnchorId" : "season-focuses"
     } ]
+  }, {
+    "chapterTitle" : "Mini-Guides",
+    "pageTitle" : "Gear Lab",
+    "pageMeta" : { },
+    "dirName" : "miniguides",
+    "fileName" : "gear-lab",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Main Fleet Gear",
+      "id" : "main-fleet-gear",
+      "customAnchorId" : "main-fleet-gear"
+    }, {
+      "title" : "Vanguard Gear",
+      "id" : "vanguard-gear",
+      "customAnchorId" : "vanguard-gear"
+    }, {
+      "title" : "AA Guns",
+      "id" : "aa-guns",
+      "customAnchorId" : "aa-guns"
+    }, {
+      "title" : "Other Gear",
+      "id" : "other-gear",
+      "customAnchorId" : "other-gear"
+    } ]
   } ]
 }, {
   "chapterTitle" : "Challenge Mode",
