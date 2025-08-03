@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Comprehensive strategies and example fleets for how to beat Helena, the September Incarnation of Virgo extreme challenge mode boss.">
+<title>Azur Lane Guides: September Challenge</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="37473a17-3102-4a4a-9ff8-fc3a79f35e01"></script>
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<p>Read the boss skills and stats on wiki Read the common introduction and disclaimers Timing precision Medium DPS check Hard Tank check Easy</p>
+</article>
+
+<article>
+<header><h1>Strategy</h1></header>
+<p>If your fleets main damage is FP try to do TRP DDG missiles damage during the 6s Threat Detection window If your fleets main damage is AVI try to have carriers strike outside the 6s so that the vanguards FP or TRP damage during the 6s wins If your fleets main damage is TRP its time to reconsider your life choices In any case your main fleet attacks should be close to a 20s reload cycle If the battle lasts for long enough and your ships are reloading too fast or too slow then theyll fall into the 6s window or fall out of it Time graph for skills CVs SG Radar is required and it is required to not be on Helena if you use Helena CVs should be synced tightly and be 20 0s to 20 4s preferably closer to the 20 4s end of the range As there should be no AVI damage during the 6s period the boss Helena should pick FP or TRP to guard against so she will take full damage from the airstrikes The 20 0s is so that they will hit after the Threat Detection period blue bar from 9 44 to 9 38 in the picture above by launching after 9 38 5 and having rockets hit after 9 36 5 The 20 4s is so that over the course of 10 minutes your CVs won t be so slow as to hit the 6s window near the end of the battle Slower is better because there is the 10s of 40% EVA RATE continuing for 4s after Threat Detection ends If the CVs are close to 20 0s then more airstrikes early in the battle will be hitting that 4s period Use Sirius Aurora and or Trafalgar if there s a BB V They will massively buff your CVs and are better than your Helena because of the boss Helena s 40% EVA RATE BBs Barring some shenanigans like giving up one of your main fleet slots for a CV you will need strong TRP damage every 20s This effectively means bringing one or two DDGs You want the DDG missiles to always hit during the 6s window so the missiles should be 19 9s to 20 1s recall that both SY 1 have 0 3s volley time and can be subjected to animation trigger time the calculator handles that but the in game display does not Bringing only one DDG may be inconsistent because your vanguard also does FP damage and missiles can get unlucky with that 40% EVA RATE so bring two DDGs if you have them BBs must be slower or faster than 20s by enough As usual in Challenge Mode give the slowest BB AFCT HSFCR and the other two will catch up after a few salvos They won t overtake the slow BB unless each reload is more than 1 2s faster than the slow BB s reload or unless they have higher salvo capacity like Alsace or Lion This will sync the 3 BBs minimizing the number of salvos in which a BB fires inside the 6s window to trigger FP protection</p>
+</article>
+
+<article>
+<header><h1>Manual</h1></header>
+<p>This section is for manual only and only months with a notable manual strategy may have a manual section With CVs it is easy just dump airstrikes outside the 10s window of 40% EVA RATE With BBs you probably should still time the DDG missiles but you can supplement the TRP damage by launching manual torpedoes at the right time You can also hold the BB salvos so that they don t hit during the 10s of 40% EVA RATE</p>
+</article>
+
+<article>
+<header><h1>High-End BB</h1></header>
+<p>This is a 2023 strategy who uses UvH these days Bisz is the slowest BB in this example fleet so give her AFCT and the other two will catch up to Bisz after a few salvos Note that Ulrich must be the flagship so that she doesn t grief the whole fleet by firing all the time This setup took 6 to 7 minutes It starts slow like 20 bars of HP in the first 2 minutes but once the BBs leave the 6s window the boss HP will decrease much faster Calculator link High End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>Top-End BB</h1></header>
+<p>DD reload needs to be zero so that the missiles aren t too fast If they re oathed then try using fewer oxytorps or goldburns Again it starts slow but once the BBs leave the 6s window the boss HP will decrease much faster Calculator link Top End BB example fleet</p>
+</article>
+
+<article>
+<header><h1>Mid-High End CV</h1></header>
+<p>Oaths are exactly as shown and tech plus cats should give 40 to 47 CV RLD to put this fleet in the 20 0s to 20 4s range Took over 9 minutes with half tech and cats This is a rare moment in the Challenge Mode guides where we mixed oaths As always but especially here you will have to calculate your own fleet sync if you can t copy this exactly Hopefully you have better anti light ships to enable the other fleets below Calculator link Mid High End CV example fleet</p>
+</article>
+
+<article>
+<header><h1>High End CV</h1></header>
+<p>Requires 52 to 60 CV RLD if oathed Took 5 minutes but we don t remember whether it was with max tech or half tech Yorkii and Implacable should be tightly synced and 20 0s to 20 4s But as a high end fleet it should win much faster than in 10 minutes so 20 7s may be acceptable too Enterprise is better than a Kearsarge who does 20% main gun damage Put more survivability if youll take longer than 5 minutes Yorkii needs Helena as the third Eagle Union ship Calculator link High End CV example fleet</p>
+</article>
+</section>
+<section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<a href="/./home/home-page/">Home Page</a>
+</article>
+
+<article>
+<a href="/./home/suchiguma/">Suchiguma</a>
+</article>
+
+<article>
+<a href="/./home/contact/">Contact</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-brief/">Chapter 14 Brief</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-detailed/">Chapter 14 Detailed</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-15/">Chapter 15</a>
+</article>
+
+<article>
+<a href="/./guides/augment-modules/">Augment Modules</a>
+</article>
+
+<article>
+<a href="/./miniguides/research-focus/">Research Focus</a>
+</article>
+
+<article>
+<a href="/./miniguides/gear-lab/">Gear Lab</a>
+</article>
+
+<article>
+<a href="/./challengemode/challenge-mode/">Challenge Mode</a>
+</article>
+
+<article>
+<a href="/./challengemode/january/">January Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/february/">February Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/march/">March Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/april/">April Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/may/">May Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/june/">June Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/july/">July Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/august/">August Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/september/">September Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/november/">November Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/december/">December Challenge</a>
+</article>
+
+<article>
+<a href="/./deepresearch/concealment/">Concealment</a>
+</article>
+
+<article>
+<a href="/./deepresearch/interception/">Interception</a>
+</article>
+
+<article>
+<a href="/./deepresearch/single-113mm-vs-76mm/">Single 113mm Vs 76mm</a>
+</article>
+
+<article>
+<a href="/./deepresearch/auto-search-exp-and-coins/">Auto Search Exp And Coins</a>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="module" src="/./static/main.js"></script>
+<script type="module">
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+window.ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "hidePresentationTrigger" : true,
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "bulletMarker" : "*",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "https://azurlane.koumakan.jp/wiki/Extreme_Challenge#Virgo",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "boss skills and stats on wiki",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "id" : "info",
+            "type" : "Icon"
+          }, {
+            "text" : " Read the  ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "/./challengemode/challenge-mode",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "common introduction and disclaimers",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "stroke" : "red",
+            "id" : "clock",
+            "type" : "Icon"
+          }, {
+            "text" : " Timing precision: Medium ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "orange",
+            "id" : "minus",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "yellow",
+            "stroke" : "yellow",
+            "id" : "zap",
+            "type" : "Icon"
+          }, {
+            "text" : " DPS check: Hard ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "purered",
+            "id" : "chevron-up",
+            "type" : "Icon"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "fill" : "blue",
+            "stroke" : "blue",
+            "id" : "shield",
+            "type" : "Icon"
+          }, {
+            "text" : " Tank check: Easy ",
+            "type" : "SimpleText"
+          }, {
+            "stroke" : "puregreen",
+            "id" : "chevron-down",
+            "type" : "Icon"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "strategy",
+      "additionalIds" : [ ],
+      "title" : "Strategy",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If your fleet’s main damage is FP, try to do TRP (DDG missiles) damage during the 6s Threat Detection window. If your fleet’s main damage is AVI, try to have carriers strike outside the 6s so that the vanguard’s FP or TRP damage during the 6s wins. If your fleet’s main damage is TRP, it’s time to reconsider your life choices. In any case, your main fleet attacks should be close to a 20s reload cycle. If the battle lasts for long enough, and your ships are reloading too fast or too slow, then they’ll fall into the 6s window or fall out of it.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\challengemode\\virgo_cm_time.webp",
+        "alt" : "Time graph for skills.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1754257003749,
+        "type" : "Image"
+      }, {
+        "id" : "strategy-cvs",
+        "additionalIds" : [ "cvs" ],
+        "level" : 2,
+        "title" : "CVs",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "SG Radar is required, and it is required to not be on Helena if you use Helena. CVs should be synced tightly and be 20.0s to 20.4s, preferably closer to the 20.4s end of the range. As there should be no AVI damage during the 6s period, the boss Helena should pick FP or TRP to guard against, so she will take full damage from the airstrikes.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The 20.0s is so that they will hit after the Threat Detection period (blue bar from 9:44 to 9:38 in the picture above) by launching after 9:38.5 and having rockets hit after 9:36.5.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "The 20.4s is so that over the course of 10 minutes, your CVs won't be so slow as to hit the 6s window near the end of the battle.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Slower is better because there is the 10s of +40% EVA RATE (continuing for 4s after Threat Detection ends). If the CVs are close to 20.0s, then more airstrikes early in the battle will be hitting that 4s period.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Use Sirius, Aurora, and/or Trafalgar if there's a BB(V). They will massively buff your CVs and are better than your Helena because of the boss Helena's +40% EVA RATE.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "strategy-bbs",
+        "additionalIds" : [ "bbs" ],
+        "level" : 2,
+        "title" : "BBs",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Barring some shenanigans like giving up one of your main fleet slots for a CV, you will need strong TRP damage every 20s. This effectively means bringing one or two DDGs. You want the DDG missiles to always hit during the 6s window, so the missiles should be 19.9s to 20.1s (recall that both SY-1 have 0.3s volley time and can be subjected to animation trigger time - the calculator handles that, but the in-game display does not). Bringing only one DDG may be inconsistent because your vanguard also does FP damage and missiles can get unlucky with that +40% EVA RATE, so bring two DDGs if you have them.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "BBs must be slower or faster than 20s by enough. As usual in Challenge Mode, give the slowest BB AFCT/HSFCR, and the other two will catch up after a few salvos. They won't overtake the slow BB unless each reload is more than 1.2s faster than the slow BB's reload or unless they have higher salvo capacity like Alsace or Lion. This will sync the 3 BBs, minimizing the number of salvos in which a BB fires inside the 6s window to trigger FP protection.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "manual",
+      "additionalIds" : [ ],
+      "title" : "Manual",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This section is for manual only, and only months with a notable manual strategy may have a manual section.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "With CVs it is easy, just dump airstrikes outside the 10s window of +40% EVA RATE. With BBs, you probably should still time the DDG missiles, but you can supplement the TRP damage by launching manual torpedoes at the right time. You can also hold the BB salvos so that they don't hit during the 10s of +40% EVA RATE.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "high-end-bb",
+      "additionalIds" : [ ],
+      "title" : "High-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is a 2023 strategy (who uses UvH these days?). Bisz is the slowest BB in this example fleet, so give her AFCT, and the other two will catch up to Bisz after a few salvos. Note that Ulrich must be the flagship so that she doesn't grief the whole fleet by firing all the time.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This setup took 6 to 7 minutes. It starts slow, like 20 bars of HP in the first 2 minutes, but once the BBs leave the 6s window, the boss HP will decrease much faster. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfGdoOzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLWU0Ni8xOWMyL3B2aC9qcC9qNVwxMGI5MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxpaDszLzEyNS8wLzAvNi8xLDAsMCwwLDAvMC0xYmV1L2xvaC9nM2EvM2c5L2o1XDEwYjkyLGU0OS8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8NDk7My8xMjUvMC8wLzYvMCwwLDAsMCwwLzAtZTBlL3ZmcS9wdmkvanAvajVcMTBiOTIsMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8N3Q7My8xMjUvMS8wLzQvMCwwLDAsMCwwLzAtMmoxcS8ydG9hL3B2aS8zN2UvMml0XHVxaG0sMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8M207My8xMjUvMC8wLzQvMCwwLDAsMCwwLzAtMm80dS8xYzMxL3EwcS91YS8yY2lcdjQ3MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHw3djszLzEyNS8xLzAvNC8wLDAsMCwwLDAvMC0ydHJlLzJ0cDEvcHZpLzM3ZS8ybHVcdXFobSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHx0OWg5LzMwLzIvfHQ5Z2IvMzAvMi98MXw1LTIyNiw0MiwwLDIwLDAsOSwxNSwxLDBfNC0yMjYsMTAwLDAsMjAsMCwxOCwzMCwyOSwwXzEwLTIxNiw5NSwwLDE3LDksMTgsMjcsMSwwXzEzLTEyMCw2MCwxNCwxNSwwLDE2LDEzLDQsMF82LTgzLDAsMCw3LDgyLDQ1LDIyLDAsNDlfNy03OSwwLDAsNyw2OSw0MiwyMiwwLDBfMy0xMzEsNTcsMzcsMTUsMCwxNiw4LDQsMF8xOC0xMjAsNjMsMjQsMTUsMCwxOSw3LDQsMF8yLTk2LDYyLDM2LDQzLDAsMjcsMjcsNSwyMl8xLTI2Nyw2NCw0NSw0MCwwLDExLDE2LDM4LDM0XzgtNjgsMiw2OCwwLDAsMCwyNywzMSwwXzE3LTY4LDIsNjgsMCwxMSwwLDI3LDMxLDBfMTktNDksMCwwLDE1LDAsMCwwLDAsMF8xMi01MSwwLDAsMTUsMCwwLDAsMCwwXzIyLTEyLDEwLDAsMCwwLDAsMywzLDB8MHx1bmRlZmluZWR8ZXh0cmVtZV85MDAwNDA%3D",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\challengemode\\virgo_highBB.webp",
+        "alt" : "High-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1754257003862,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "top-end-bb",
+      "additionalIds" : [ ],
+      "title" : "Top-End BB",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "DD reload needs to be zero so that the missiles aren't too fast. If they're oathed, then try using fewer oxytorps or goldburns. Again, it starts slow, but once the BBs leave the 6s window, the boss HP will decrease much faster. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfDRhOzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLWU0OS9sb2kvZzNkLzNnOS9qNVwxMGI5MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxpaDszLzEyNS8wLzAvNi8xLDAsMCwwLDAvMC0xYmV1L2xvaS9nM2EvanAvajVcMTBiOTIsbnF0LzAvMC8wLzBcMCwwLzAvMC8wLzBcMHw0OTszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC1lNDkvbG9pL2czZC9qcC9qNVwxMGI5MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHw3dDszLzEyNS8xLzAvNC8wLDAsMCwwLDAvMC0ybzF0LzJ0cDEvcHZpLzM3ZS8ybmEyXHVxaG0sMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8N3U7My8xMjUvMS8wLzQvMCwwLDAsMCwwLzAtdWJsLzJ0b2QvZzNhLzJpdC8yaXRcdXFobSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHwzbTszLzEyNS8wLzAvNC8wLDAsMCwwLDAvMC1sb2wvMWMzbC9xMHEvMW5hLzJjaVx2NDcyLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfHQ5aDkvMzAvMi98dDlnYi8zMC8yL3wxfDUtMjI2LDQyLDAsMjAsMCw5LDE1LDEsMF80LTIyNiwxMDAsMCwyMCwwLDE4LDMwLDI5LDBfMTAtMjE2LDk1LDAsMTcsOSwxOCwyNywxLDBfMTMtMTIwLDYwLDE0LDE1LDAsMTYsMTMsNCwwXzYtODMsMCwwLDcsODIsNDUsMjIsMCw0OV83LTc5LDAsMCw3LDY5LDQyLDIyLDAsMF8zLTEzMSw1NywzNywxNSwwLDE2LDgsNCwwXzE4LTEyMCw2MywyNCwxNSwwLDE5LDcsNCwwXzItOTYsNjIsMzYsNDMsMCwyNywyNyw1LDIyXzEtMjY3LDY0LDQ1LDQwLDAsMCwxNiwzOCwzNF84LTY4LDIsNjgsMCwwLDAsMjcsMzEsMF8xNy02OCwyLDY4LDAsMTEsMCwyNywzMSwwXzE5LTQ5LDAsMCwxNSwwLDAsMCwwLDBfMTItNTEsMCwwLDE1LDAsMCwwLDAsMF8yMi0xMiwxMCwwLDAsMCwwLDMsMywwfDB8dW5kZWZpbmVkfGV4dHJlbWVfOTAwMDQw",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\challengemode\\virgo_topBB.webp",
+        "alt" : "Top-End BB example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1754257004198,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "mid-high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "Mid-High End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Oaths are exactly as shown, and tech plus cats should give 40 to 47 CV RLD to put this fleet in the 20.0s to 20.4s range. Took over 9 minutes with half tech and cats. This is a rare moment in the Challenge Mode guides where we mixed oaths. As always but especially here, you will have to calculate your own fleet sync if you can't copy this exactly. Hopefully you have better anti-light ships to enable the other fleets below. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfGpoajszLzEyNS8wLzEvNi8wLDAsMCwwLDAvMC0xZTI1LzE2ZHAvMTVkOS8xZGQvbGlcMTBsNG0sMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8amhsOzMvMTI1LzAvMS80LzAsMCwwLDAsMC8wLTFlMjUvaW1lLzE1YmQvMWRkL2xpXDEwbDRtLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfDc3OzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLTFlMjIvaW1lLzFldGwvMWRhL2xpXDEwbDRtLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGJqOzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLTJ0cmUvMWMzMS9xMGkvMW5kLzJjaVx2NDcyLDAvMC8wLzAvMFwwLDAvMC8wLzAvMFwwfGc1OzMvMTI1LzAvMC80LzAsMCwwLDAsMC8wLWFwNy8xYzNsL3B2aS8yaXEvMmNpXHVxaG0sMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8M207My8xMjUvMC8wLzQvMCwwLDAsMCwwLzAtbG9pLzFjMzEvcTBxLzFuYS8xZ2VcdjQ3MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHx0OXIvMzAvMi80dGgtMC8xdmYtMi85ZC0xfHU5My8zMC8yLzR0aC0wLzF2Zi0yfDF8NS0wLDg3LDAsMCwwLDksMjksMCwwXzQtMCw5MiwwLDAsMCwxNywyOSwwLDBfMTAtMCw4NywwLDAsOSwxNywyNSwwLDBfMTMtMCw1OCwxMCwwLDAsMTYsMTMsMCwwXzYtMCwwLDAsMCw4MCw0NCwyMSwwLDBfNy0wLDAsMCwwLDY3LDEyLDIxLDAsMF8zLTAsNTYsMzUsMCwwLDE2LDcsMCwwXzE4LTAsNjIsMjIsMCwwLDE5LDcsMCwwXzItMCw1OCwzNCwwLDAsMTMsMjIsMCwwXzEtMCw2Miw0MiwyMCwwLDEzLDE0LDAsMF84LTAsMiw1OCwwLDAsMCwyNiwwLDBfMTctMCwyLDU4LDAsMTEsMCwyNiwwLDBfMTktMCwwLDAsMCwwLDAsMCwwLDBfMTItMCwwLDAsMCwwLDAsMCwwLDBfMjItMCw5LDAsMCwwLDAsMywwLDB8MHx1bmRlZmluZWR8ZXh0cmVtZV85MDAwNzM%3D",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\challengemode\\virgo_midCV.webp",
+        "alt" : "Mid-High End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1754257004087,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "high-end-cv",
+      "additionalIds" : [ ],
+      "title" : "High End CV",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Requires 52 to 60 CV RLD if oathed. Took ~5 minutes, but we don't remember whether it was with max tech or half tech.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Yorkii and Implacable should be tightly synced and 20.0s to 20.4s. But as a high end fleet, it should win much faster than in 10 minutes, so 20.7s may be acceptable too. Enterprise is better than a Kearsarge who does 20% main gun damage. Put more survivability if you’ll take longer than 5 minutes. Yorkii needs Helena as the third Eagle Union ship. ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/s/MHwzfGh1OzMvMTI1LzAvMC82LzAsMCwwLDAsMC8wLTFlMjUvMTZkcC9oMWQvMWRkLzFkZFwxMGw0bSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxpNTszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC1oMWQvaDFhLzE1ZDkvMWRkLzNyZlwxMGw0bSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHwyZDszLzEyNS8wLzAvNi8wLDAsMCwwLDAvMC1oMWQvaXJoLzE1YmQvMWRkLzFkZFwxMGw0bSwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHxiajszLzEyNS8wLzAvNC8wLDAsMCwwLDAvMC0ybzF0LzFjMzEvcTBpL3VhLzJuYTJcdjQ3MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHwzbTszLzEyNS8wLzAvNC8wLDAsMCwwLDAvMC1sb2wvMWMzbC9xMHEvdWEvMWdlXHY0NzIsMC8wLzAvMC8wXDAsMC8wLzAvMC8wXDB8MTE7My8xMjUvMS8wLzQvMCwwLDAsMCwwLzAtbG9sLzJqMXEvcTBxL3VhLzJuNnVcdjQ3MiwwLzAvMC8wLzBcMCwwLzAvMC8wLzBcMHx0OXIvMzAvMi80dGgtMC8xdmYtMi85ZC0xfHU5My8zMC8yLzR0aC0wLzF2Zi0yfDF8NS0wLDg3LDAsMCwwLDksMjksMCwwXzQtMCw5MiwwLDAsMCwxNywyOSwwLDBfMTAtMCw4NywwLDAsOSwxNywyNSwwLDBfMTMtMCw1OCwxMCwwLDAsMTYsMTMsMCwwXzYtMCwwLDAsMCw4MCw0NCwyMSwwLDBfNy0wLDAsMCwwLDY3LDI0LDIxLDAsMF8zLTAsNTYsMzUsMCwwLDE2LDcsMCwwXzE4LTAsNjIsMjIsMCwwLDE5LDcsMCwwXzItMCw1OCwzNCwwLDAsMTMsMjIsMCwwXzEtMCw2Miw0MiwyMCwwLDEzLDE0LDAsMF84LTAsMiw1OCwwLDAsMCwyNiwwLDBfMTctMCwyLDU4LDAsMTEsMCwyNiwwLDBfMTktMCwwLDAsMCwwLDAsMCwwLDBfMTItMCwwLDAsMCwwLDAsMCwwLDBfMjItMCw5LDAsMCwwLDAsMywwLDB8MHx1bmRlZmluZWR8ZXh0cmVtZV85MDAwNDA%3D",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Calculator link",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\challengemode\\virgo_highCV.webp",
+        "alt" : "High End CV example fleet.",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1754257003975,
+        "type" : "Image"
+      } ]
+    } ],
+    "lastModifiedTime" : 1754257214475,
+    "tocItem" : {
+      "chapterTitle" : "Challenge Mode",
+      "pageTitle" : "September Challenge",
+      "pageMeta" : {
+        "title" : [ "September Challenge" ]
+      },
+      "dirName" : "challengemode",
+      "fileName" : "september",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Strategy",
+        "id" : "strategy",
+        "customAnchorId" : "strategy"
+      }, {
+        "title" : "Manual",
+        "id" : "manual",
+        "customAnchorId" : "manual"
+      }, {
+        "title" : "High-End BB",
+        "id" : "high-end-bb",
+        "customAnchorId" : "high-end-bb"
+      }, {
+        "title" : "Top-End BB",
+        "id" : "top-end-bb",
+        "customAnchorId" : "top-end-bb"
+      }, {
+        "title" : "Mid-High End CV",
+        "id" : "mid-high-end-cv",
+        "customAnchorId" : "mid-high-end-cv"
+      }, {
+        "title" : "High End CV",
+        "id" : "high-end-cv",
+        "customAnchorId" : "high-end-cv"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
