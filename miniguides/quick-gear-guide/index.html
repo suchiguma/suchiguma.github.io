@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="A simple reference for what gear to equip in each slot for BB main guns and CV airplanes for the most commonly encountered enemy types.">
+<title>Azur Lane Guides: Quick Gear Guide</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="37473a17-3102-4a4a-9ff8-fc3a79f35e01"></script>
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<header><h1>Introduction</h1></header>
+<p>Created by elp this is a collection of simple references to choose the best gear for a gear slot All comparisons within rows assume equal enhancement levels unless stated otherwise As usual the use case or enemy content is separated into two groups Barring PvP all other relevant gamemodes fall under these two categories For example a dual boss is still considered as ST Boss because the same gear works Boss or ST Single target boss battles where we care about pure damage output to one boss L M H refer to the boss s armor type Campaign May be further split into mob and boss but campaign boss battles can be treated as long mob battles Stagger uptime and splash are important factors Warning These tables list the gear that are usually the best Use your own judgment for when certain gear may be optimal in a specific situation like fast HE guns against San Diego CM For more details consult the ECGC equipment guide It can be overwhelming with its text descriptions separation by gear type and gear that most players shouldn t obtain which is why this Quick Gear Guide tm was created in the first place</p>
+</article>
+
+<article>
+<header><h1>BB Main Gun</h1></header>
+<p>Guns in the same cell are ordered from fastest to slowest not necessarily from best to worst We do not account for timing requirements for syncing</p>
+</article>
+
+<article>
+<header><h1>CV Airplanes</h1></header>
+<p>Airplanes in the same cell are ordered from fastest to slowest not necessarily from best to worst We do not account for timing requirements for syncing and we do not consider individual ship skills such as the torpedo buff of Amagi CV</p>
+</article>
+</section>
+<section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<a href="/./home/home-page/">Home Page</a>
+</article>
+
+<article>
+<a href="/./home/suchiguma/">Suchiguma</a>
+</article>
+
+<article>
+<a href="/./home/contact/">Contact</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-brief/">Chapter 14 Brief</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-detailed/">Chapter 14 Detailed</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-15/">Chapter 15</a>
+</article>
+
+<article>
+<a href="/./guides/augment-modules/">Augment Modules</a>
+</article>
+
+<article>
+<a href="/./miniguides/research-focus/">Research Focus</a>
+</article>
+
+<article>
+<a href="/./miniguides/gear-lab/">Gear Lab</a>
+</article>
+
+<article>
+<a href="/./miniguides/quick-gear-guide/">Quick Gear Guide</a>
+</article>
+
+<article>
+<a href="/./challengemode/challenge-mode/">Challenge Mode</a>
+</article>
+
+<article>
+<a href="/./challengemode/january/">January Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/february/">February Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/march/">March Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/april/">April Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/may/">May Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/june/">June Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/july/">July Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/august/">August Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/september/">September Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/november/">November Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/december/">December Challenge</a>
+</article>
+
+<article>
+<a href="/./deepresearch/concealment/">Concealment</a>
+</article>
+
+<article>
+<a href="/./deepresearch/interception/">Interception</a>
+</article>
+
+<article>
+<a href="/./deepresearch/single-113mm-vs-76mm/">Single 113mm Vs 76mm</a>
+</article>
+
+<article>
+<a href="/./deepresearch/auto-search-exp-and-coins/">Auto Search Exp And Coins</a>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="module" src="/./static/main.js"></script>
+<script type="module">
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+window.ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "hidePresentationTrigger" : true,
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "id" : "introduction",
+      "additionalIds" : [ ],
+      "title" : "Introduction",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Created by elp, this is a collection of simple references to choose the best gear for a gear slot.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "All comparisons (within rows) assume equal enhancement levels unless stated otherwise. As usual, the use case or enemy content is separated into two groups. Barring PvP, all other relevant gamemodes fall under these two categories. For example, a dual-boss is still considered as ST Boss because the same gear works.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "\"Boss\" or \"ST\" - Single-target boss battles where we care about pure damage output to one boss. L/M/H refer to the boss's armor type.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "\"Campaign\" - May be further split into mob and boss, but campaign boss battles can be treated as long mob battles. Stagger, uptime, and splash are important factors.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: These tables list the gear that are usually the best. Use your own judgment for when certain gear may be optimal in a specific situation, like ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./challengemode/august#mid-end-bb",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "fast HE guns against San Diego CM",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For more details, consult the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlaneecgc.com/equipment/",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "ECGC equipment guide",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ". It can be overwhelming with its text descriptions, separation by gear type, and gear that most players shouldn't obtain, which is why this Quick Gear Guide:tm: was created in the first place.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "bb-main-gun",
+      "additionalIds" : [ ],
+      "title" : "BB Main Gun",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Guns in the same cell are ordered from fastest to slowest, not necessarily from best to worst. We do not account for timing requirements for syncing.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "src" : "/./inserts/miniguides/quick-gear-bb-guns.html",
+        "previewMarker" : "quick-gear-guide-pm1",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
+    }, {
+      "id" : "cv-airplanes",
+      "additionalIds" : [ ],
+      "title" : "CV Airplanes",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Airplanes in the same cell are ordered from fastest to slowest, not necessarily from best to worst. We do not account for timing requirements for syncing, and we do not consider individual ship skills such as the torpedo buff of Amagi (CV).",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "src" : "/./inserts/miniguides/quick-gear-cv-planes.html",
+        "previewMarker" : "quick-gear-guide-pm2",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
+    } ],
+    "lastModifiedTime" : 1754765950756,
+    "tocItem" : {
+      "chapterTitle" : "Mini-Guides",
+      "pageTitle" : "Quick Gear Guide",
+      "pageMeta" : { },
+      "dirName" : "miniguides",
+      "fileName" : "quick-gear-guide",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Introduction",
+        "id" : "introduction",
+        "customAnchorId" : "introduction"
+      }, {
+        "title" : "BB Main Gun",
+        "id" : "bb-main-gun",
+        "customAnchorId" : "bb-main-gun"
+      }, {
+        "title" : "CV Airplanes",
+        "id" : "cv-airplanes",
+        "customAnchorId" : "cv-airplanes"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

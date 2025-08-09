@@ -259,6 +259,27 @@ toc = [ {
       "id" : "other-gear",
       "customAnchorId" : "other-gear"
     } ]
+  }, {
+    "chapterTitle" : "Mini-Guides",
+    "pageTitle" : "Quick Gear Guide",
+    "pageMeta" : { },
+    "dirName" : "miniguides",
+    "fileName" : "quick-gear-guide",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Introduction",
+      "id" : "introduction",
+      "customAnchorId" : "introduction"
+    }, {
+      "title" : "BB Main Gun",
+      "id" : "bb-main-gun",
+      "customAnchorId" : "bb-main-gun"
+    }, {
+      "title" : "CV Airplanes",
+      "id" : "cv-airplanes",
+      "customAnchorId" : "cv-airplanes"
+    } ]
   } ]
 }, {
   "chapterTitle" : "Challenge Mode",
