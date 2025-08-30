@@ -272,13 +272,21 @@ toc = [ {
       "id" : "introduction",
       "customAnchorId" : "introduction"
     }, {
-      "title" : "BB Main Gun",
-      "id" : "bb-main-gun",
-      "customAnchorId" : "bb-main-gun"
+      "title" : "Main Fleet Weapons",
+      "id" : "main-fleet-weapons",
+      "customAnchorId" : "main-fleet-weapons"
     }, {
-      "title" : "CV Airplanes",
-      "id" : "cv-airplanes",
-      "customAnchorId" : "cv-airplanes"
+      "title" : "Main Fleet Auxes",
+      "id" : "main-fleet-auxes",
+      "customAnchorId" : "main-fleet-auxes"
+    }, {
+      "title" : "Vanguard Weapons",
+      "id" : "vanguard-weapons",
+      "customAnchorId" : "vanguard-weapons"
+    }, {
+      "title" : "Vanguard Auxes",
+      "id" : "vanguard-auxes",
+      "customAnchorId" : "vanguard-auxes"
     } ]
   } ]
 }, {

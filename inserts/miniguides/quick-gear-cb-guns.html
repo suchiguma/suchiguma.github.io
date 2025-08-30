@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="darkreader-lock">
+    <title>BB Guns Reference</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        window.onload = function () { 
+        if (window.parent && window.parent.document) {
+            try {
+                const parentBodyClasses = window.parent.document.body.className;
+                document.body.className = parentBodyClasses;
+            } catch (error) {
+            }
+        }}
+    </script>
+    <style>
+    .znai-table td, .znai-table th {
+        padding: .3em
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    body {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+    td:nth-child(1) {
+        text-align: center;
+    }
+    </style>
+</head>
+<body style="text-align: center;">
+<div style="overflow-x: auto; min-width: 600px; border: 1px solid; display: inline-block; text-align: left;">
+<table id="table1" class="znai-table" style="table-layout: auto; display: table;">
+    <thead>
+        <tr style="text-align: center;">
+            <th style="white-space: nowrap;">Use Case</th>
+            <th>Best</th>
+            <th>2nd Best</th>
+            <th>3rd Best</th>
+            <th>4th Best</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Light Boss</td>
+            <td><div style="display: flex; flex-direction: column; align-items: flex-start; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/44420"><img src="/images/equips/44420.webp" style="height: 2rem; padding-left: 0.5rem; padding-right: 0.5rem; margin-right: 0.5rem; vertical-align: middle;"><span>Gouden Leeuw Gun</span></a><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/33120"><img src="/images/equips/33120.webp" style="height: 2rem; padding-left: 0.5rem; padding-right: 0.5rem; margin-right: 0.5rem; vertical-align: middle;"><span>Unzen Gun</span></a></div></td>
+            <td><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/33100"><img src="/images/equips/33100.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"><span>Azuma Gun</span></a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mob<br>Medium Boss<br>Heavy Boss</td>
+            <td><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/13180"><img src="/images/equips/13180.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"><span>Guam Gun</span></a></td>
+            <td><div style="display: flex; flex-direction: column; align-items: flex-start; justify-items: center;"><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/44400"><img src="/images/equips/44400.webp" style="height: 2rem; padding-left: 0.5rem; padding-right: 0.5rem; margin-right: 0.5rem; vertical-align: middle;"><span>Agir Gun</span></a><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/85520"><img src="/images/equips/85520.webp" style="height: 2rem; padding-left: 0.5rem; padding-right: 0.5rem; margin-right: 0.5rem; vertical-align: middle;"><span>Kronshtadt Gun</span></a></div></td>
+            <td><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/43160"><img src="/images/equips/43160.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"><span>Hindenburg Gun</span></a></td>
+            <td><a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/43140"><img src="/images/equips/43140.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"><span>Triple 283mm</span></a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
