@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
-<meta name="description" content="A simple reference for what gear to equip in each slot for BB main guns and CV airplanes for the most commonly encountered enemy types.">
+<meta name="description" content="A simple reference for what gear to equip in each slot for the most commonly encountered enemy types. Covers main fleet and vanguard weapons and auxiliaries.">
 <title>Azur Lane Guides: Quick Gear Guide</title>
 <link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
 <link rel="stylesheet" type="text/css" href="/./static/main.css">
@@ -87,17 +87,22 @@
 </div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Introduction</h1></header>
-<p>Created by elp this is a collection of simple references to choose the best gear for a gear slot All comparisons within rows assume equal enhancement levels unless stated otherwise As usual the use case or enemy content is separated into two groups Barring PvP all other relevant gamemodes fall under these two categories For example a dual boss is still considered as ST Boss because the same gear works Boss or ST Single target boss battles where we care about pure damage output to one boss Campaign May be further split into mob and boss but campaign boss battles can just be treated as long mob battles Stagger uptime and splash are important factors Warning These tables list the gear that are usually the best Use your own judgment for when certain gear may be optimal in a specific situation like fast HE guns against San Diego CM Also gear that is too far off the progression path like 13 Monarch Gun may not be shown For more details consult the ECGC equipment guide It can be overwhelming with its text descriptions separation by gear type and gear that most players shouldn t obtain which is why this Quick Gear Guide tm was created in the first place</p>
+<p>Created by elp this is a collection of simple references to choose the best gear for a gear slot FOR PVE All comparisons within rows assume equal enhancement levels unless stated otherwise As usual the use case or enemy content is separated into two groups Barring PvP all other relevant gamemodes fall under these two categories For example a dual boss is still considered as ST Boss because the same gear works Boss or ST Single target boss battles where we care about pure damage output to one boss Campaign May be further split into mob and boss but campaign boss battles can just be treated as long mob battles Stagger uptime and splash are important factors Disclaimers Warning These tables list the gear that are usually the best Use your own judgment for when certain gear may be optimal in a specific situation like fast HE guns against San Diego CM Most ships in the game will follow this general template but some ships have skills that may change what gear they equip Some of them will be easy to recognize while others will not be if you have questions about whether a ship breaks the mold ask in Discord #gameplay help This is not strictly a crafting guide and as such don t take it that any piece listed in this guide is safe to craft Conversely several pieces of gear have been deliberately omitted from this guide which while they might be better than some of the options that are listed though obviously not best in slot for anything are only marginal improvements over some of the pieces that are listed while being much more expensive to obtain This is not strictly a crafting guide and as such don t treat all pieces listed in this guide as safe to craft Conversely several pieces of gear have been deliberately omitted from this guide While they might be better than some of the options that are listed though not best in slot they are only marginal improvements over some of the pieces that are listed while being much more expensive to obtain like 13 Monarch Gun For more details consult the ECGC equipment guide It can be overwhelming with its text descriptions separation by gear type and gear that most players shouldn t obtain which is why this Quick Gear Guide tm was created in the first place</p>
 </article>
 
 <article>
-<header><h1>BB Main Gun</h1></header>
-<p>Guns in the same cell are ordered from fastest to slowest not necessarily from best to worst We do not account for timing requirements for syncing</p>
+<header><h1>Main Fleet Weapons</h1></header>
+<p>BB Main Gun Guns in the same cell are ordered from fastest to slowest not necessarily from best to worst We do not account for timing requirements for syncing CV Airplanes Airplanes in the same cell are ordered from fastest to slowest not necessarily from best to worst We do not account for timing requirements for syncing and we do not consider individual ship skills such as the torpedo buff of Amagi CV Amagi s damage buff to TBs means that for IJN carriers in the same fleet and herself TBs are preferred over DBs in campaign and converging TBs do more damage against Medium Armor than BF 109G s</p>
 </article>
 
 <article>
-<header><h1>CV Airplanes</h1></header>
-<p>Airplanes in the same cell are ordered from fastest to slowest not necessarily from best to worst We do not account for timing requirements for syncing and we do not consider individual ship skills such as the torpedo buff of Amagi CV</p>
+<header><h1>Vanguard Weapons</h1></header>
+<p>Vanguard aux guns should refer to the DD CL guns sections where appropriate DD Guns Some ships strongly prefer the fastest Barrage Spam guns to even the rainbow damage guns against all kinds of enemies and armor types As of September 2025 the most relevant of these ships are Trafalgar Z52 and Kazagumo Other somewhat notable examples include Shimakaze Lenja Nana Kawakaze Z47 and Scylla the last of whom can also use Twin 100mm Kai CL Guns CLs who can equip DD guns should refer to the DD Guns section for what gun they should equip CA Guns CB Guns Surface Torpedoes Some ships prefer fast reloading torpedoes to activate skills</p>
+</article>
+
+<article>
+<header><h1>Vanguard Auxes</h1></header>
+<p>Cruiser Auxes DD Auxes</p>
 </article>
 </section>
 <section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
@@ -232,7 +237,16 @@ window.ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Created by elp, this is a collection of simple references to choose the best gear for a gear slot.",
+          "text" : "Created by elp, this is a collection of simple references to choose the best gear for a gear slot ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "FOR PVE",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
           "type" : "SimpleText"
         } ]
       }, {
@@ -265,6 +279,12 @@ window.ReactDOM.render(React.createElement(Documentation, {
           } ]
         } ]
       }, {
+        "id" : "introduction-disclaimers",
+        "additionalIds" : [ "disclaimers" ],
+        "level" : 2,
+        "title" : "Disclaimers",
+        "type" : "SubHeading"
+      }, {
         "type" : "Paragraph",
         "content" : [ {
           "text" : "Warning: These tables list the gear that are usually the best. Use your own judgment for when certain gear may be optimal in a specific situation, like ",
@@ -278,7 +298,36 @@ window.ReactDOM.render(React.createElement(Documentation, {
             "type" : "SimpleText"
           } ]
         }, {
-          "text" : ". Also, gear that is too far off the progression path, like ",
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Most ships in the game will follow this general template, but some ships have skills that may change what gear they equip. Some of them will be easy to recognize, while others will not be; if you have questions about whether a ship breaks the mold, ask in ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://discord.gg/azurlane",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Discord #gameplay-help",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is not strictly a crafting guide, and as such, don't take it that any piece listed in this guide is safe to craft. Conversely, several pieces of gear have been deliberately omitted from this guide, which, while they might be better than some of the options that are listed(though obviously not best in slot for anything), are only marginal improvements over some of the pieces that are listed, while being much more expensive to obtain.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is not strictly a crafting guide, and as such, don't treat all pieces listed in this guide as safe to craft. Conversely, several pieces of gear have been deliberately omitted from this guide. While they might be better than some of the options that are listed (though not best in slot), they are only marginal improvements over some of the pieces that are listed while being much more expensive to obtain, like ",
           "type" : "SimpleText"
         }, {
           "url" : "https://azurlane.mrlar.dev/db/equips/id/24160?level=13",
@@ -289,7 +338,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
             "type" : "SimpleText"
           } ]
         }, {
-          "text" : ", may not be shown.",
+          "text" : ".",
           "type" : "SimpleText"
         } ]
       }, {
@@ -311,11 +360,17 @@ window.ReactDOM.render(React.createElement(Documentation, {
         } ]
       } ]
     }, {
-      "id" : "bb-main-gun",
+      "id" : "main-fleet-weapons",
       "additionalIds" : [ ],
-      "title" : "BB Main Gun",
+      "title" : "Main Fleet Weapons",
       "type" : "Section",
       "content" : [ {
+        "id" : "main-fleet-weapons-bb-main-gun",
+        "additionalIds" : [ "bb-main-gun" ],
+        "level" : 2,
+        "title" : "BB Main Gun",
+        "type" : "SubHeading"
+      }, {
         "type" : "Paragraph",
         "content" : [ {
           "text" : "Guns in the same cell are ordered from fastest to slowest, not necessarily from best to worst. We do not account for timing requirements for syncing.",
@@ -326,16 +381,16 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "previewMarker" : "quick-gear-guide-pm1",
         "fit" : true,
         "type" : "Iframe"
-      } ]
-    }, {
-      "id" : "cv-airplanes",
-      "additionalIds" : [ ],
-      "title" : "CV Airplanes",
-      "type" : "Section",
-      "content" : [ {
+      }, {
+        "id" : "main-fleet-weapons-cv-airplanes",
+        "additionalIds" : [ "cv-airplanes" ],
+        "level" : 2,
+        "title" : "CV Airplanes",
+        "type" : "SubHeading"
+      }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Airplanes in the same cell are ordered from fastest to slowest, not necessarily from best to worst. We do not account for timing requirements for syncing, and we do not consider individual ship skills such as the torpedo buff of Amagi (CV).",
+          "text" : "Airplanes in the same cell are ordered from fastest to slowest, not necessarily from best to worst. We do not account for timing requirements for syncing, and we do not consider individual ship skills such as the torpedo buff of Amagi (CV). Amagi's damage buff to TBs means that for IJN carriers in the same fleet and herself, TBs are preferred over DBs in campaign, and converging TBs do more damage against Medium Armor than BF-109G's.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -344,8 +399,132 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "fit" : true,
         "type" : "Iframe"
       } ]
+    }, {
+      "id" : "main-fleet-auxes",
+      "additionalIds" : [ ],
+      "title" : "Main Fleet Auxes",
+      "type" : "Section",
+      "content" : [ {
+        "src" : "/./inserts/miniguides/quick-gear-main-aux.html",
+        "previewMarker" : "quick-gear-guide-pm3",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
+    }, {
+      "id" : "vanguard-weapons",
+      "additionalIds" : [ ],
+      "title" : "Vanguard Weapons",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Vanguard aux guns should refer to the DD/CL guns sections where appropriate.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "vanguard-weapons-dd-guns",
+        "additionalIds" : [ "dd-guns" ],
+        "level" : 2,
+        "title" : "DD Guns",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Some ships strongly prefer the fastest \"Barrage Spam\" guns to even the rainbow damage guns against all kinds of enemies and armor types. As of September 2025, the most relevant of these ships are Trafalgar, Z52, and Kazagumo. Other somewhat notable examples include Shimakaze, Lenja, Nana, Kawakaze, Z47, and Scylla (the last of whom can also use Twin 100mm Kai).",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "src" : "/./inserts/miniguides/quick-gear-dd-guns.html",
+        "previewMarker" : "quick-gear-guide-pm4",
+        "fit" : true,
+        "type" : "Iframe"
+      }, {
+        "id" : "vanguard-weapons-cl-guns",
+        "additionalIds" : [ "cl-guns" ],
+        "level" : 2,
+        "title" : "CL Guns",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "CLs who can equip DD guns should refer to the DD Guns section for what gun they should equip.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "src" : "/./inserts/miniguides/quick-gear-cl-guns.html",
+        "previewMarker" : "quick-gear-guide-pm5",
+        "fit" : true,
+        "type" : "Iframe"
+      }, {
+        "id" : "vanguard-weapons-ca-guns",
+        "additionalIds" : [ "ca-guns" ],
+        "level" : 2,
+        "title" : "CA Guns",
+        "type" : "SubHeading"
+      }, {
+        "src" : "/./inserts/miniguides/quick-gear-ca-guns.html",
+        "previewMarker" : "quick-gear-guide-pm6",
+        "fit" : true,
+        "type" : "Iframe"
+      }, {
+        "id" : "vanguard-weapons-cb-guns",
+        "additionalIds" : [ "cb-guns" ],
+        "level" : 2,
+        "title" : "CB Guns",
+        "type" : "SubHeading"
+      }, {
+        "src" : "/./inserts/miniguides/quick-gear-cb-guns.html",
+        "previewMarker" : "quick-gear-guide-pm7",
+        "fit" : true,
+        "type" : "Iframe"
+      }, {
+        "id" : "vanguard-weapons-surface-torpedoes",
+        "additionalIds" : [ "surface-torpedoes" ],
+        "level" : 2,
+        "title" : "Surface Torpedoes",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Some ships prefer fast-reloading torpedoes to activate skills.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "src" : "/./inserts/miniguides/quick-gear-torps.html",
+        "previewMarker" : "quick-gear-guide-pm8",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
+    }, {
+      "id" : "vanguard-auxes",
+      "additionalIds" : [ ],
+      "title" : "Vanguard Auxes",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "vanguard-auxes-cruiser-auxes",
+        "additionalIds" : [ "cruiser-auxes" ],
+        "level" : 2,
+        "title" : "Cruiser Auxes",
+        "type" : "SubHeading"
+      }, {
+        "src" : "/./inserts/miniguides/quick-gear-cruiser-aux.html",
+        "previewMarker" : "quick-gear-guide-pm9",
+        "fit" : true,
+        "type" : "Iframe"
+      }, {
+        "id" : "vanguard-auxes-dd-auxes",
+        "additionalIds" : [ "dd-auxes" ],
+        "level" : 2,
+        "title" : "DD Auxes",
+        "type" : "SubHeading"
+      }, {
+        "src" : "/./inserts/miniguides/quick-gear-dd-aux.html",
+        "previewMarker" : "quick-gear-guide-pm10",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
     } ],
-    "lastModifiedTime" : 1756449387855,
+    "lastModifiedTime" : 1756519609848,
     "tocItem" : {
       "chapterTitle" : "Mini-Guides",
       "pageTitle" : "Quick Gear Guide",
@@ -359,13 +538,21 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "id" : "introduction",
         "customAnchorId" : "introduction"
       }, {
-        "title" : "BB Main Gun",
-        "id" : "bb-main-gun",
-        "customAnchorId" : "bb-main-gun"
+        "title" : "Main Fleet Weapons",
+        "id" : "main-fleet-weapons",
+        "customAnchorId" : "main-fleet-weapons"
       }, {
-        "title" : "CV Airplanes",
-        "id" : "cv-airplanes",
-        "customAnchorId" : "cv-airplanes"
+        "title" : "Main Fleet Auxes",
+        "id" : "main-fleet-auxes",
+        "customAnchorId" : "main-fleet-auxes"
+      }, {
+        "title" : "Vanguard Weapons",
+        "id" : "vanguard-weapons",
+        "customAnchorId" : "vanguard-weapons"
+      }, {
+        "title" : "Vanguard Auxes",
+        "id" : "vanguard-auxes",
+        "customAnchorId" : "vanguard-auxes"
       } ]
     }
   }
