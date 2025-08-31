@@ -215,6 +215,35 @@ toc = [ {
   "dirName" : "miniguides",
   "items" : [ {
     "chapterTitle" : "Mini-Guides",
+    "pageTitle" : "Quick Gear Guide",
+    "pageMeta" : { },
+    "dirName" : "miniguides",
+    "fileName" : "quick-gear-guide",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Introduction",
+      "id" : "introduction",
+      "customAnchorId" : "introduction"
+    }, {
+      "title" : "Main Fleet Weapons",
+      "id" : "main-fleet-weapons",
+      "customAnchorId" : "main-fleet-weapons"
+    }, {
+      "title" : "Main Fleet Auxes",
+      "id" : "main-fleet-auxes",
+      "customAnchorId" : "main-fleet-auxes"
+    }, {
+      "title" : "Vanguard Weapons",
+      "id" : "vanguard-weapons",
+      "customAnchorId" : "vanguard-weapons"
+    }, {
+      "title" : "Vanguard Auxes",
+      "id" : "vanguard-auxes",
+      "customAnchorId" : "vanguard-auxes"
+    } ]
+  }, {
+    "chapterTitle" : "Mini-Guides",
     "pageTitle" : "Research Focus",
     "pageMeta" : { },
     "dirName" : "miniguides",
@@ -258,35 +287,6 @@ toc = [ {
       "title" : "Other Gear",
       "id" : "other-gear",
       "customAnchorId" : "other-gear"
-    } ]
-  }, {
-    "chapterTitle" : "Mini-Guides",
-    "pageTitle" : "Quick Gear Guide",
-    "pageMeta" : { },
-    "dirName" : "miniguides",
-    "fileName" : "quick-gear-guide",
-    "fileExtension" : "md",
-    "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ {
-      "title" : "Introduction",
-      "id" : "introduction",
-      "customAnchorId" : "introduction"
-    }, {
-      "title" : "Main Fleet Weapons",
-      "id" : "main-fleet-weapons",
-      "customAnchorId" : "main-fleet-weapons"
-    }, {
-      "title" : "Main Fleet Auxes",
-      "id" : "main-fleet-auxes",
-      "customAnchorId" : "main-fleet-auxes"
-    }, {
-      "title" : "Vanguard Weapons",
-      "id" : "vanguard-weapons",
-      "customAnchorId" : "vanguard-weapons"
-    }, {
-      "title" : "Vanguard Auxes",
-      "id" : "vanguard-auxes",
-      "customAnchorId" : "vanguard-auxes"
     } ]
   } ]
 }, {
@@ -696,6 +696,72 @@ toc = [ {
   "dirName" : "deepresearch",
   "items" : [ {
     "chapterTitle" : "Deep Research",
+    "pageTitle" : "Auto Search Exp And Coins",
+    "pageMeta" : { },
+    "dirName" : "deepresearch",
+    "fileName" : "auto-search-exp-and-coins",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Recommendations",
+      "id" : "recommendations",
+      "customAnchorId" : "recommendations"
+    }, {
+      "title" : "Assumptions",
+      "id" : "assumptions",
+      "customAnchorId" : "assumptions"
+    }, {
+      "title" : "Explanations",
+      "id" : "explanations",
+      "customAnchorId" : "explanations"
+    }, {
+      "title" : "Two Fleets",
+      "id" : "two-fleets",
+      "customAnchorId" : "two-fleets"
+    }, {
+      "title" : "One Fleet",
+      "id" : "one-fleet",
+      "customAnchorId" : "one-fleet"
+    }, {
+      "title" : "Extra Tables",
+      "id" : "extra-tables",
+      "customAnchorId" : "extra-tables"
+    }, {
+      "title" : "Coin Details",
+      "id" : "coin-details",
+      "customAnchorId" : "coin-details"
+    } ]
+  }, {
+    "chapterTitle" : "Deep Research",
+    "pageTitle" : "Single 113mm Vs 76mm",
+    "pageMeta" : { },
+    "dirName" : "deepresearch",
+    "fileName" : "single-113mm-vs-76mm",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Introduction",
+      "id" : "introduction",
+      "customAnchorId" : "introduction"
+    }, {
+      "title" : "Conclusion",
+      "id" : "conclusion",
+      "customAnchorId" : "conclusion"
+    }, {
+      "title" : "Deep Mechanics",
+      "id" : "deep-mechanics",
+      "customAnchorId" : "deep-mechanics"
+    }, {
+      "title" : "Tests",
+      "id" : "tests",
+      "customAnchorId" : "tests"
+    }, {
+      "title" : "Analysis",
+      "id" : "analysis",
+      "customAnchorId" : "analysis"
+    } ]
+  }, {
+    "chapterTitle" : "Deep Research",
     "pageTitle" : "Concealment",
     "pageMeta" : { },
     "dirName" : "deepresearch",
@@ -735,72 +801,6 @@ toc = [ {
       "title" : "Airplane Movement",
       "id" : "airplane-movement",
       "customAnchorId" : "airplane-movement"
-    } ]
-  }, {
-    "chapterTitle" : "Deep Research",
-    "pageTitle" : "Single 113mm Vs 76mm",
-    "pageMeta" : { },
-    "dirName" : "deepresearch",
-    "fileName" : "single-113mm-vs-76mm",
-    "fileExtension" : "md",
-    "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ {
-      "title" : "Introduction",
-      "id" : "introduction",
-      "customAnchorId" : "introduction"
-    }, {
-      "title" : "Conclusion",
-      "id" : "conclusion",
-      "customAnchorId" : "conclusion"
-    }, {
-      "title" : "Deep Mechanics",
-      "id" : "deep-mechanics",
-      "customAnchorId" : "deep-mechanics"
-    }, {
-      "title" : "Tests",
-      "id" : "tests",
-      "customAnchorId" : "tests"
-    }, {
-      "title" : "Analysis",
-      "id" : "analysis",
-      "customAnchorId" : "analysis"
-    } ]
-  }, {
-    "chapterTitle" : "Deep Research",
-    "pageTitle" : "Auto Search Exp And Coins",
-    "pageMeta" : { },
-    "dirName" : "deepresearch",
-    "fileName" : "auto-search-exp-and-coins",
-    "fileExtension" : "md",
-    "viewOnRelativePath" : null,
-    "pageSectionIdTitles" : [ {
-      "title" : "Recommendations",
-      "id" : "recommendations",
-      "customAnchorId" : "recommendations"
-    }, {
-      "title" : "Assumptions",
-      "id" : "assumptions",
-      "customAnchorId" : "assumptions"
-    }, {
-      "title" : "Explanations",
-      "id" : "explanations",
-      "customAnchorId" : "explanations"
-    }, {
-      "title" : "Two Fleets",
-      "id" : "two-fleets",
-      "customAnchorId" : "two-fleets"
-    }, {
-      "title" : "One Fleet",
-      "id" : "one-fleet",
-      "customAnchorId" : "one-fleet"
-    }, {
-      "title" : "Extra Tables",
-      "id" : "extra-tables",
-      "customAnchorId" : "extra-tables"
-    }, {
-      "title" : "Coin Details",
-      "id" : "coin-details",
-      "customAnchorId" : "coin-details"
     } ]
   } ]
 } ]
