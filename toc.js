@@ -241,6 +241,10 @@ toc = [ {
       "title" : "Vanguard Auxes",
       "id" : "vanguard-auxes",
       "customAnchorId" : "vanguard-auxes"
+    }, {
+      "title" : "Submarines",
+      "id" : "submarines",
+      "customAnchorId" : "submarines"
     } ]
   }, {
     "chapterTitle" : "Mini-Guides",
