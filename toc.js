@@ -626,6 +626,41 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Challenge Mode",
+    "pageTitle" : "October Challenge",
+    "pageMeta" : {
+      "title" : [ "October Challenge" ]
+    },
+    "dirName" : "challengemode",
+    "fileName" : "october",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Strategy",
+      "id" : "strategy",
+      "customAnchorId" : "strategy"
+    }, {
+      "title" : "Manual",
+      "id" : "manual",
+      "customAnchorId" : "manual"
+    }, {
+      "title" : "Mid-End BB",
+      "id" : "mid-end-bb",
+      "customAnchorId" : "mid-end-bb"
+    }, {
+      "title" : "Top-End BB",
+      "id" : "top-end-bb",
+      "customAnchorId" : "top-end-bb"
+    }, {
+      "title" : "High-End CV",
+      "id" : "high-end-cv",
+      "customAnchorId" : "high-end-cv"
+    }, {
+      "title" : "More Fleets",
+      "id" : "more-fleets",
+      "customAnchorId" : "more-fleets"
+    } ]
+  }, {
+    "chapterTitle" : "Challenge Mode",
     "pageTitle" : "November Challenge",
     "pageMeta" : {
       "title" : [ "November Challenge" ]
