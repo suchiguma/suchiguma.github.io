@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="darkreader-lock">
+    <title>Submarine Calculator</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        window.onload = function () { 
+        if (window.parent && window.parent.document) {
+            try {
+                const parentBodyClasses = window.parent.document.body.className;
+                document.body.className = parentBodyClasses;
+            } catch (error) {
+            }
+        }}
+    </script>
+    <style>
+.znai-table td, .znai-table th {
+    padding: .3em
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.input-group {
+    margin-top: 0.5rem;
+    width: 15rem;
+    padding: 0.2rem;
+}
+.input-box {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    border: 1px solid;
+    padding: 0.2rem;
+}
+input {
+    background-color: var(--znai-toc-title-background-color);
+    color: var(--znai-regular-text-color);
+    width: 2.5rem;
+    margin-left: 0.5rem;
+    text-align: right;
+}
+input[type="radio"] {
+    width: 1rem;
+}
+input[type="checkbox"] {
+    height: 1rem;
+    align-self: center;
+}
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+td:nth-child(n+2) {
+    font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+    .gear-name {
+        display: none;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="container znai-main-panel" style="overflow-x: auto; display: flex; flex-direction: row; text-align: left; flex-wrap: wrap; gap: 1rem; align-items: flex-start;">
+        <div style="flex: 0 1 auto;">
+            <div class="input-group">
+                <div class="input-row"><label for="shipSelect"><strong>Preset Ship:</strong></label>
+                <select id="shipSelect" style="max-width: 8rem;"></select></div>
+            </div>
+
+            <div class="input-box">
+                <span style="align-self: center;"><strong>Final Reload = </strong><strong id="finalRld"></strong></span>
+                <div class="input-row">
+                    <span>Affinity:</span>
+                    <div><label for="love">100</label><input type="radio" name="affinity" id="love" checked onclick="updateOath()" /></div>
+                    <div><label for="oath">200</label><input type="radio" name="affinity" id="oath" onclick="updateOath()" /></div>
+                </div>
+                <div class="input-row"><label for="baseRld">Base:</label><input id="baseRld" placeholder="100" /></div>
+                <div class="input-row"><label for="addRld">Add (gear/cats):</label><input id="addRld" placeholder="0" /></div>
+                <div class="input-row"><label for="percentRld">Extra% (skills):</label><input id="percentRld" placeholder="0" /></div>
+            </div>
+
+            <div class="input-box">
+                <span style="align-self: center;"><strong>Oxygen</strong></span>
+                <div class="input-row"><label for="baseOxy">Base:</label><input id="baseOxy" placeholder="200" /></div>
+                <div class="input-row"><label for="addOxy">Add (skills/aug):</label><input id="addOxy" placeholder="0" /></div>
+                <div class="input-row"><label for="opsiOxy">OpSi (Steel+Edel):</label><input type="checkbox" id="opsiOxy"  onclick="updateOpsiOxyState()" /></div>
+            </div>
+
+            <div class="input-box">
+                <span style="color: red; align-self: center;">Probably don't change these.</span>
+                <div class="input-row"><label for="mounts">Mounts:</label><input id="mounts" placeholder="4" /></div>
+                <div class="input-row"><label for="attackDuration">Attack Duration:</label><input id="attackDuration" placeholder="5" /></div>
+                <div class="input-row"><label for="triggerDuration">Trigger Duration:</label><input id="triggerDuration" placeholder="0.2" style="width: 4rem" /></div>
+            </div>
+        </div>
+
+        <table class="znai-table" style="table-layout: auto; width: auto; border-collapse: collapse; flex: 0 0 auto;">
+            <thead>
+                <tr>
+                    <th>Gear</th>
+                    <th>Salvos</th>
+                    <th>Margin</th>
+                    <th>RLD for next</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="bidderSnorkel">
+                    <td>
+                        <a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/25300"><img src="/images/equips/25300.webp" style="height: 3rem; vertical-align: middle;"></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/3120"><img src="/images/equips/3120.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"></a>
+                        <span class="gear-name">Bidder + Snorkel</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="g7eSnorkel">
+                    <td>
+                        <a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/45440"><img src="/images/equips/45440.webp" style="height: 3rem; vertical-align: middle;"></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/3120"><img src="/images/equips/3120.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"></a>
+                        <span class="gear-name">G7e + Snorkel</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="t95Snorkel">
+                    <td>
+                        <a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/35580"><img src="/images/equips/35580.webp" style="height: 3rem; vertical-align: middle;"></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/3120"><img src="/images/equips/3120.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"></a>
+                        <span class="gear-name">Type 95 Kai + Snorkel</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="bidder">
+                    <td>
+                        <a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/25300"><img src="/images/equips/25300.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"></a>
+                        <span class="gear-name">Bidder</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="g7e">
+                    <td>
+                        <a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/45440"><img src="/images/equips/45440.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"></a>
+                        <span class="gear-name">G7e</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="t95">
+                    <td>
+                        <a target="_blank" rel="noopener noreferrer" href="https://azurlane.mrlar.dev/db/equips/id/35580"><img src="/images/equips/35580.webp" style="height: 3rem; margin-right: 0.5rem; vertical-align: middle;"></a>
+                        <span class="gear-name">Type 95 Kai</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+const torpData = {
+    "bidder": {
+        "auto_aftercast": 0.5,
+        "delay": 0.6,
+        "torps": 3,
+        "reload_max": 3280
+    },
+    "g7e": {
+        "auto_aftercast": 0.5,
+        "delay": 0.7,
+        "torps": 2,
+        "reload_max": 2000
+    },
+    "t95": {
+        "auto_aftercast": 0.5,
+        "delay": 0.7,
+        "torps": 2,
+        "reload_max": 2276
+    }
+}
+const stats = ["baseOxy", "addOxy", "baseRld", "addRld", "percentRld", "mounts", "attackDuration", "triggerDuration"];
+var opsiOxy = false;
+var oathed = false;
+var shipData = {
+    "Manual": {
+        "baseOxy": 268,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 106,
+        "oathRld": 112
+    }
+};
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('sub_ship_data.json').then(res => {
+        if (!res.ok) {
+            return null;
+        }
+        return res.json();
+    })
+    .then(data => {
+        if (data != null) shipData = data;
+        const shipSelect = document.getElementById("shipSelect");
+        for (const name in shipData) {
+            const option = document.createElement("option");
+            option.value = name;
+            option.textContent = name;
+            shipSelect.appendChild(option);
+        }
+        updateInputs("Manual");
+        updateTable();
+    })
+});
+
+function updateBaseRld(ship) {
+    var r = oathed ? shipData[ship]["oathRld"] : shipData[ship]["loveRld"];
+    if (r === undefined) r = 0;
+    document.getElementById("baseRld").value = r;
+    updateTable();
+}
+
+function updateInputs(ship) {
+    stats.forEach((stat) => {
+        if ("mounts" === stat) {
+            document.getElementById(stat).value = 4;
+        } else if ("baseRld" === stat) {
+            updateBaseRld(ship);
+        } else {
+            if (stat === "triggerDuration") console.log(stat, shipData[ship][stat]);
+            document.getElementById(stat).value = shipData[ship][stat] === undefined ? 0 : shipData[ship][stat];
+        }
+    });
+}
+
+function toNextTenth(n) {
+    return Math.ceil((n - 1e-9) * 10) / 10;
+}
+
+function calcSalvosAndTime(t, curRld, timeLimit, mounts, volleyTime) {
+    const reloadTime = t.reload_max / 6 / Math.sqrt((curRld + 100) * 3.14);
+    const cycleTime = toNextTenth(volleyTime + reloadTime);
+    
+    const fullSalvos = Math.floor(timeLimit / cycleTime);
+    const partialSalvos = Math.min(1, Math.floor((timeLimit % cycleTime) / volleyTime + 1) / mounts);
+    
+    const timeLeft = timeLimit - fullSalvos * cycleTime - (partialSalvos * mounts - 1) * volleyTime
+    return [fullSalvos + partialSalvos, timeLeft];
+}
+
+function updateTable() {
+    const baseOxy = parseInt(document.getElementById("baseOxy").value || "200");
+    const addOxy = parseFloat(document.getElementById("addOxy").value || "0");
+    const baseRld = parseInt(document.getElementById("baseRld").value || "100");
+    const addRld = parseInt(document.getElementById("addRld").value || "100");
+    const percentRld = parseFloat(document.getElementById("percentRld").value || "0");
+    const mounts = parseInt(document.getElementById("mounts").value || "4");
+    const attackDuration = parseFloat(document.getElementById("attackDuration").value || "5");
+    const triggerDuration = parseFloat(document.getElementById("triggerDuration").value || "0.2");
+    var invalid = isNaN(baseOxy) || isNaN(addOxy) || isNaN(baseRld) || isNaN(addRld) || isNaN(percentRld) || isNaN(mounts) || isNaN(attackDuration) || isNaN(triggerDuration);
+    const curRld = (baseRld + addRld) * (1 + percentRld / 100);
+    document.getElementById("finalRld").textContent = curRld.toFixed(2);
+    for (const snorkel of [true, false]) {
+        for (const torpName in torpData) {
+            const timeLimit = (baseOxy + addOxy + (snorkel ? 85 : 0) + (opsiOxy ? 20 : 0)) / 10 + attackDuration - 0.1;
+            const row = document.getElementById(torpName + (snorkel ? "Snorkel" : ""));
+            if (invalid || timeLimit < 0) {
+                row.cells[1].textContent = "err";
+                row.cells[2].textContent = "err";
+                row.cells[3].textContent = "err";
+            } else {
+                const t = torpData[torpName];
+                const randomTriggerDelay = triggerDuration < 0.2 ? 0.2 : (triggerDuration < 0.3 ? 0.3 : 0.4);
+                const volleyTime = randomTriggerDelay + t.delay * t.torps;
+                const [salvos, timeLeft] = calcSalvosAndTime(t, curRld, timeLimit, mounts, volleyTime);
+                row.cells[1].textContent = parseFloat(salvos.toFixed(2));
+                row.cells[1].style.color = salvos * t.torps < 5.99 ? "red" : salvos * t.torps > 6.01 ? "green" : "";
+                row.cells[2].textContent = timeLeft.toFixed(2) + "s";
+                
+                const targetSalvos = Math.floor(salvos) + 1;
+                const targetReloadTime = (timeLimit - (mounts - 1) * volleyTime) / Math.floor(salvos) - volleyTime;
+                const rldNeeded = (t.reload_max / targetReloadTime / 6)**2 / 3.14 - 100;
+                var realRldNeeded = rldNeeded;
+                for (let i = 0; i < 10; i++) {
+                    realRldNeeded = Math.floor(rldNeeded + i);
+                    const [salvos, timeLeft] = calcSalvosAndTime(t, realRldNeeded, timeLimit, mounts, volleyTime);
+                    if (salvos >= targetSalvos) break;
+                }
+                
+                row.cells[3].textContent = `${realRldNeeded} for ${targetSalvos}`;
+            }
+        }
+    }
+}
+
+// Event listeners
+document.getElementById("shipSelect").addEventListener("change", (e) => {
+    updateInputs(e.target.value);
+    updateTable();
+});
+
+stats.forEach((s) => {
+    document.getElementById(s).addEventListener("input", updateTable);
+});
+
+function updateOpsiOxyState() {
+    opsiOxy = document.getElementById("opsiOxy").checked;
+    updateTable();
+}
+
+function updateOath() {
+    oathed = document.getElementById("oath").checked;
+    const ship = document.getElementById("shipSelect").value;
+    updateBaseRld(ship);
+}
+
+// Initialize with the default ship ("Manual")
+updateInputs("Manual");
+updateTable();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="The correct submarine reload calculator or table for how much extra RLD stat your submarine needs to launch enough salvos when the enemy is always in range.">
+<title>Azur Lane Guides: Submarine Calculator</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="37473a17-3102-4a4a-9ff8-fc3a79f35e01"></script>
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<p>This is the submarine reload tool featuring the correct formula unlike this widely recommended user page on the wiki A similarly structured table with the correct values is provided here so you may see the differences Salvo Calculator Reload Breakpoints Table Simulation Formula and Theory Disclaimers and Assumptions In a real battle the enemy can be out of range even if the submarine is ready to fire That means the next reload often gets delayed for Bidder G7e Hence do not assume she will fire that many salvos by meeting the minimum RLD requirement Assume the submarine equips the same torpedo in both slots The calculator does not make accommodations for weird or poverty cases like gear below 10 non 100 or 200 affinity purple oxygen non maxed skills or low level submarines Device specific processing speed or lag may shift volley times by 0 1s or more The calculator and table optimistically use the lowest delays caused by animation time we have observed across multiple devices See Torpedo Mount Cycle for these thresholds</p>
+</article>
+
+<article>
+<header><h1>Salvo Reload Calculator</h1></header>
+<p>Usage instructions are below the calculator This calculator shows numbers for six gear loadouts Salvos How many salvos For example 1 75 salvos of Bidders * 4 mounts * 3 torpedoes 21 torpedoes total Margin How much time is left over after completing that many salvos Lower margin means less likely to complete that many salvos RLD for next The Final Reload stat needed to complete the next full salvo The general workflow is Select the Preset Ship Select the affinity For &lt;100 or oathed and &lt;200 you re out of luck and should type in the Base RLD manually Base reload assumes level 125 But Level 120 is close enough usually only a difference of 1 or 2 Type it manually if you care Add your cat talents and gear like Oxytorps Skill percentages should be covered by the Preset but there are exceptions like a non full wolfpack Base and Add Oxygen should be covered by the Preset Do not add Snorkel oxygen Checking the OpSi box will add 20 oxygen If you use one but not the other cat in Operation Siren uncheck the box and type the value in Add Warning The non Snorkel loadouts do NOT assume that Oxytorp is used in place of it You need to manually add 10 RLD for 10 or 13 RLD for 13 Oxytorp in the Add gear cats box</p>
+</article>
+
+<article>
+<header><h1>Reload Breakpoints</h1></header>
+<p>Compare this table to the wiki user page though we excluded Mark 16 because it s irrelevant The most important difference is that our formula is correct discrepancies may occur due to device specific lag while theirs is not For a real example it says Albacore needs 154 RLD for Bidder without Snorkel but our Albacore tested in game with a 10 Oxytorp and single Edelweiss 20 RLD fired the full 24 torpedoes outside of Operation Siren total 126 RLD Don t bother submitting feedback because that author hates us and automatically disparages any proof or work if he suspects it was from us</p>
+</article>
+
+<article>
+<header><h1>Simulation</h1></header>
+<p>The Subaquatic Secrets Verified SSV Google Sheet contains simulated torpedo counts and hit rates against moving bosses The simulation includes random movement animation trigger time weapon queues and all that stuff Sample videos are linked in the sheet This sheet can provide some context on how important targeting range is The submarine in the top position suffers a lot with Bidder or G7e Barely meeting the minimum reload requirement is almost never good enough</p>
+</article>
+
+<article>
+<header><h1>Theory</h1></header>
+<p>Basic definitions is 2 for G7e and Type 95 Kai or 3 for Bidder is 0 7s for G7e and Type 95 Kai or 0 6s for Bidder Volley fire 1 mount of torpedoes Salvo fire 1 volley from all mounts All max limit broken subs in game currently have 2 torpedo slots x 2 torpedo mounts 4 mounts Submarine Lifecycle After you press the button to summon subs each sub behaves in the following way unless her skills do something special like surface and dive again Spawn at a fixed coordinate off screen and swim to the attacking coordinate which depends on Pressure Resistant Hull the specific sub and the battle field Begin consuming oxygen using skills firing torpedoes and randomly moving within a box centered on her attacking coordinate When oxygen reaches zero the submarine surfaces She can use both torpedoes and guns After seconds have passed she begins retreating She can no longer fire weapons but can finish a volley that began before the retreat There is a delay of 1 weapon cycle or 0 1s between when the sub starts consuming oxygen and when her weapons can first look for targets Thus the total time a sub has to begin volleys is Note Most submarines have an of 5s The exceptions are already included in the calculator s Preset Ships Torpedo Mount Cycle Pretend the submarine only has 1 mount equipped with Bidder This is what the mount does Find valid target in range Begin an animation on the sub s chibi sprite After seconds fires the weapon Repeat times wait seconds then fire 1 torpedo Take to reload the next salvo Reloading a mount takes You can find the on ALDB or wiki for example 21 81s for Bidder We care about the which is the time from the beginning of Step 1 to the end of Step 4 However this is where the game can randomly and inconsistently apply an extra delay The length of the delay is correlated to the device and the sub s but it is not consistent According to our observations trigger duration random trigger delay Bidder volley time G7e T95K volley time 0 067 0 2 0 3 2 0 2 1 1 6 1 7 0 167 0 2 0 4 2 0 2 2 1 6 1 8 0 200 0 3 0 4 2 1 2 2 1 7 1 8 0 333 0 4 2 2 1 8 The game only attempts to find valid targets in range 10 times per second So for one mount the time between beginning a salvo and beginning the next salvo is calculated as Multiple Mounts Now what happens when the submarine has 4 torpedo mounts If all of them are ready to fire the first one fires first While the first one is firing for the others cannot Each mount tracks its own reload progress While the second mount is firing the third and fourth mounts are blocked from firing But the first mount is already on its reload cycle So in the end the multiple mounts do not affect each others salvo times past the first salvo assuming they are all derived from the same equipment But the mount count is indeed important in determining partial salvos The submarine could begin retreating while she s firing her second mount That means she will finish her second mount but not fire her third and fourth mounts in the last salvo In the following example of I 404 with Bidders Snorkel and 162 RLD she begins retreating at time represented by the purple line Notice that the time between the first yellow torpedo line and the thirteenth torpedo is the just over 21s and this also holds between the fourth and sixteenth seventh and nineteenth and so on I 404 Torpedo Time Graph Required Reload Formula Putting it all together we want to calculate the needed to fully complete salvos within the In the following equations we ignore the inequalities and round_to_next_tenth s and we just add RLD one by one at the end until the inequality holds true Behold the final* equation This spits out a reload stat that is lowballed by up to 10 RLD so it may not be the final answer We then need to plug it into the complete salvo formula with the rounding to tenths part and increase the reload one by one until the number of complete salvos ticks up to Reload Equation torpedo_count delay torpedo_count attack_duration total_time total_oxygen 10 attack_duration 0 1 attack_duration trigger_duration torpedo_count delay reload_time reload_time base_weapon_reload_time * 200 100 reload_stat ^0 5 base_weapon_reload_time volley_time trigger_duration volley_time round_to_next_tenth trigger_duration torpedo_count * delay volley_time random_trigger_delay torpedo_count * delay cycle_time round_to_next_tenth volley_time reload_time volley_time cycle_time cycle_time reload_stat target_salvos total_time total_time time_from_first_salvo_start_to_last_salvo_start time_from_last_salvo_start_to_last_mount total_time cycle_time * target_salvos 1 volley_time * mounts 1 total_time volley_time target_reload_time * target_salvos 1 volley_time * mounts 1 total_time volley_time * target_salvos 1 target_reload_time * target_salvos 1 volley_time * mounts 1 total_time volley_time * target_salvos mounts 2 target_reload_time * target_salvos 1 total_time volley_time * target_salvos mounts 2 target_reload_time * target_salvos 1 total_time volley_time * target_salvos mounts 2 target_salvos 1 target_reload_time target_reload_time total_time volley_time * target_salvos mounts 2 target_salvos 1 target_reload_time base_weapon_reload_time * 200 100 reload_stat ^0 5 target_reload_time base_weapon_reload_time ^2 200 100 reload_stat 200 target_reload_time base_weapon_reload_time ^2 100 reload_stat reload_stat 200 * base_weapon_reload_time target_reload_time ^2 100 reload_stat 200 * base_weapon_reload_time total_time volley_time * target_salvos mounts 2 target_salvos 1 ^2 100 reload_stat 200 * base_weapon_reload_time * target_salvos 1 total_time volley_time * target_salvos mounts 2 ^2 100 reload_stat 200 * base_weapon_reload_time * target_salvos 1 total_time random_trigger_delay torpedo_count * delay * target_salvos mounts 2 ^2 100 reload_stat 200 * base_weapon_reload_time * target_salvos 1 total_oxygen 10 attack_duration 0 1 random_trigger_delay torpedo_count * delay * target_salvos mounts 2 ^2 100 target_salvos</p>
+</article>
+</section>
+<section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<a href="/./home/home-page/">Home Page</a>
+</article>
+
+<article>
+<a href="/./home/suchiguma/">Suchiguma</a>
+</article>
+
+<article>
+<a href="/./home/contact/">Contact</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-brief/">Chapter 14 Brief</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-detailed/">Chapter 14 Detailed</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-15/">Chapter 15</a>
+</article>
+
+<article>
+<a href="/./guides/augment-modules/">Augment Modules</a>
+</article>
+
+<article>
+<a href="/./miniguides/quick-gear-guide/">Quick Gear Guide</a>
+</article>
+
+<article>
+<a href="/./miniguides/research-focus/">Research Focus</a>
+</article>
+
+<article>
+<a href="/./miniguides/gear-lab/">Gear Lab</a>
+</article>
+
+<article>
+<a href="/./challengemode/challenge-mode/">Challenge Mode</a>
+</article>
+
+<article>
+<a href="/./challengemode/january/">January Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/february/">February Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/march/">March Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/april/">April Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/may/">May Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/june/">June Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/july/">July Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/august/">August Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/september/">September Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/october/">October Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/november/">November Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/december/">December Challenge</a>
+</article>
+
+<article>
+<a href="/./deepresearch/auto-search-exp-and-coins/">Auto Search Exp And Coins</a>
+</article>
+
+<article>
+<a href="/./deepresearch/single-113mm-vs-76mm/">Single 113mm Vs 76mm</a>
+</article>
+
+<article>
+<a href="/./deepresearch/submarine-calculator/">Submarine Calculator</a>
+</article>
+
+<article>
+<a href="/./deepresearch/concealment/">Concealment</a>
+</article>
+
+<article>
+<a href="/./deepresearch/interception/">Interception</a>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="module" src="/./static/main.js"></script>
+<script type="module">
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+window.ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "hidePresentationTrigger" : true,
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "This is the submarine reload tool featuring the ",
+        "type" : "SimpleText"
+      }, {
+        "type" : "Emphasis",
+        "content" : [ {
+          "text" : "correct",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : " formula, unlike ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://azurlane.koumakan.jp/wiki/User:Riceist/SubReload",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "this widely-recommended user page",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : " on the wiki. A similarly-structured table with the correct values is provided here so you may see the differences.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "delimiter" : ".",
+      "startNumber" : 1,
+      "type" : "OrderedList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "url" : "/./deepresearch/submarine-calculator#salvo-reload-calculator",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Salvo Calculator",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "url" : "/./deepresearch/submarine-calculator#reload-breakpoints",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Reload Breakpoints Table",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "url" : "/./deepresearch/submarine-calculator#simulation",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Simulation",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "url" : "/./deepresearch/submarine-calculator#theory",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Formula and Theory",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Disclaimers and Assumptions",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "bulletMarker" : "-",
+      "tight" : true,
+      "type" : "BulletList",
+      "content" : [ {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "In a real battle, the enemy can be out of range even if the submarine is ready to fire. That means the next reload often gets delayed for Bidder/G7e. ",
+            "type" : "SimpleText"
+          }, {
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "Hence, do not assume she will fire that many salvos by meeting the minimum RLD requirement.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "Assume the submarine equips the same torpedo in both slots.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The calculator does not make accommodations for weird or poverty cases like gear below +10, non-100 or 200 affinity, purple oxygen, non-maxed skills, or low level submarines.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "Device-specific processing speed or lag may shift volley times by 0.1s or more.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "ListItem",
+        "content" : [ {
+          "type" : "Paragraph",
+          "content" : [ {
+            "text" : "The calculator and table optimistically use the lowest delays caused by animation time we have observed across multiple devices. See ",
+            "type" : "SimpleText"
+          }, {
+            "url" : "/./deepresearch/submarine-calculator#torpedo-mount-cycle",
+            "isFile" : false,
+            "type" : "Link",
+            "content" : [ {
+              "text" : "Torpedo Mount Cycle",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : " for these thresholds.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "salvo-reload-calculator",
+      "additionalIds" : [ ],
+      "title" : "Salvo Reload Calculator",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Usage instructions are below the calculator.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "src" : "/./inserts/submarine-calculator.html",
+        "previewMarker" : "submarine-calculator-pm1",
+        "fit" : true,
+        "type" : "Iframe"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This calculator shows numbers for six gear loadouts.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Salvos: How many salvos. For example, 1.75 salvos of Bidders * 4 mounts * 3 torpedoes = 21 torpedoes total.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Margin: How much time is left over after completing that many salvos. Lower margin means less likely to complete that many salvos.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "RLD for next: The Final Reload stat needed to complete the next full salvo.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The general workflow is:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Select the Preset Ship.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Select the affinity. For <100 or oathed and <200, you're out of luck and should type in the Base RLD manually.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Base reload assumes level 125. But Level 120 is close enough, usually only a difference of 1 or 2. Type it manually if you care.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Add your cat talents and gear like Oxytorps.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Skill percentages should be covered by the Preset, but there are exceptions like a non-full wolfpack.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Base and Add Oxygen should be covered by the Preset. ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Do not add Snorkel oxygen.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Checking the OpSi box will add 20 oxygen. If you use one but not the other cat in Operation Siren, uncheck the box and type the value in Add.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: The non-Snorkel loadouts do NOT assume that Oxytorp is used in place of it. You need to manually add 10 RLD for +10 or 13 RLD for +13 Oxytorp in the \"Add (gear/cats)\" box.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "reload-breakpoints",
+      "additionalIds" : [ ],
+      "title" : "Reload Breakpoints",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Compare this table to the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/User:Riceist/SubReload",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "wiki user page",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", though we excluded Mark 16 because it's irrelevant. The most important difference is that our formula is correct (discrepancies may occur due to device-specific lag) while theirs is not. For a real example, it says Albacore needs 154 RLD for Bidder without Snorkel, but our Albacore tested in game with a +10 Oxytorp and single Edelweiss 20 RLD fired the full 24 torpedoes outside of Operation Siren (total 126 RLD). Don't bother submitting feedback because that author hates us and automatically disparages any proof or work if he suspects it was from us.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "src" : "/./inserts/submarine-breakpoints.html",
+        "previewMarker" : "submarine-calculator-pm2",
+        "fit" : true,
+        "type" : "Iframe"
+      } ]
+    }, {
+      "id" : "simulation",
+      "additionalIds" : [ ],
+      "title" : "Simulation",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://docs.google.com/spreadsheets/d/15IhFOhJqNmTauW4cxS1BlC75ErL4M_kSy9W2DzTdzpA/edit?gid=683587378#gid=683587378",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Subaquatic Secrets Verified (SSV)",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " Google Sheet contains simulated torpedo counts and hit rates against moving bosses. The simulation includes random movement, animation trigger time, weapon queues, and all that stuff. Sample videos are linked in the sheet.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This sheet can provide some context on how important targeting range is. The submarine in the top position suffers a lot with Bidder or G7e. Barely meeting the minimum reload requirement is almost never good enough.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "theory",
+      "additionalIds" : [ ],
+      "title" : "Theory",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Basic definitions:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "torpedo_count",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " is 2 for G7e and Type 95 Kai or 3 for Bidder.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "code" : "delay",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " is 0.7s for G7e and Type 95 Kai or 0.6s for Bidder.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Volley = fire 1 mount of ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "torpedo_count",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " torpedoes.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Salvo = fire 1 volley from all mounts. All max limit broken subs in game currently have 2 torpedo slots x 2 torpedo mounts = 4 mounts.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "theory-submarine-lifecycle",
+        "additionalIds" : [ "submarine-lifecycle" ],
+        "level" : 2,
+        "title" : "Submarine Lifecycle",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "After you press the button to summon subs, each sub behaves in the following way unless her skills do something special like surface and dive again.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Spawn at a fixed coordinate off-screen and swim to the attacking coordinate, which depends on Pressure-Resistant Hull, the specific sub, and the battle field.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Begin consuming oxygen, using skills, firing torpedoes, and randomly moving within a box centered on her attacking coordinate.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "When oxygen reaches zero, the submarine surfaces. She can use both torpedoes and guns.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "After ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "attack_duration",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " seconds have passed, she begins retreating. She can no longer fire weapons but can finish a volley that began before the retreat.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "There is a delay of 1 weapon cycle, or 0.1s, between when the sub starts consuming oxygen and when her weapons can first look for targets. Thus, the total time a sub has to ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "Emphasis",
+          "content" : [ {
+            "text" : "begin",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " volleys is",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "total_time = total_oxygen / 10 + attack_duration - 0.1",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: Most submarines have an ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "attack_duration",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " of 5s. The exceptions are already included in the calculator's Preset Ships.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "theory-torpedo-mount-cycle",
+        "additionalIds" : [ "torpedo-mount-cycle" ],
+        "level" : 2,
+        "title" : "Torpedo Mount Cycle",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Pretend the submarine only has 1 mount equipped with Bidder. This is what the mount does.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Find valid target in range.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Begin an animation on the sub's chibi sprite.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "After ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "trigger_duration",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " seconds, fires the weapon.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Repeat ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "torpedo_count",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " times: wait ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "delay",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " seconds, then fire 1 torpedo.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Take ",
+              "type" : "SimpleText"
+            }, {
+              "code" : "reload_time",
+              "type" : "InlinedCode"
+            }, {
+              "text" : " to reload the next salvo.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Reloading a mount takes",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "reload_time = base_weapon_reload_time * (200 / (100 + reload_stat))^0.5",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You can find the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "base_weapon_reload_time",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " on ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/db/equips/id/25300",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "ALDB",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " or ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.koumakan.jp/wiki/Submarine-mounted_Mark_20S_%22Bidder%22_Torpedo#",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "wiki",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", for example 21.81s for Bidder.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "We care about the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "volley_time",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", which is the time from the beginning of Step 1 to the end of Step 4. However, this is where the game can randomly and inconsistently apply an extra delay. The length of the delay is correlated to the device and the sub's ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "trigger_duration",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", but it is not consistent.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "volley_time = round_to_next_tenth(trigger_duration + torpedo_count * delay)\nvolley_time = random_trigger_delay + torpedo_count * delay",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "According to our observations,",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "trigger duration"
+          }, {
+            "title" : "random trigger delay"
+          }, {
+            "title" : "Bidder volley time"
+          }, {
+            "title" : "G7e/T95K volley time"
+          } ],
+          "data" : [ [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.067",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.2~0.3",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.0~2.1",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.6~1.7",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.167",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.2~0.4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.0~2.2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.6~1.8",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.200",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.3~0.4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.1~2.2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.7~1.8",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.333",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "0.4",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2.2",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "1.8",
+              "type" : "SimpleText"
+            } ]
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The game only attempts to find valid targets in range 10 times per second. So for one mount, the time between beginning a salvo and beginning the next salvo is calculated as",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "cycle_time = round_to_next_tenth(volley_time + reload_time)",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "id" : "theory-multiple-mounts",
+        "additionalIds" : [ "multiple-mounts" ],
+        "level" : 2,
+        "title" : "Multiple Mounts",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Now what happens when the submarine has 4 torpedo mounts? If all of them are ready to fire, the first one fires first. While the first one is firing for ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "volley_time",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", the others cannot.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Each mount tracks its own reload progress. While the second mount is firing, the third and fourth mounts are blocked from firing. But the first mount is already on its reload cycle.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "So in the end, the multiple mounts do not affect each others' salvo times past the first salvo assuming they are all derived from the same equipment. But the mount count is indeed important in determining partial salvos. The submarine could begin retreating while she's firing her second mount. That means she will finish her second mount but not fire her third and fourth mounts in the last salvo.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In the following example of I-404 with Bidders, Snorkel, and 162 RLD, she begins retreating at time represented by the purple line. Notice that the time between the first yellow torpedo line and the thirteenth torpedo is the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "cycle_time",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ", just over 21s, and this ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "cycle_time",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " also holds between the fourth and sixteenth, seventh and nineteenth, and so on.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\deepresearch\\i-404_bidder_snorkel_time.webp",
+        "alt" : "I-404 Torpedo Time Graph",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1759624920461,
+        "type" : "Image"
+      }, {
+        "id" : "theory-required-reload-formula",
+        "additionalIds" : [ "required-reload-formula" ],
+        "level" : 2,
+        "title" : "Required Reload Formula",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Putting it all together, we want to calculate the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "reload_stat",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " needed to fully complete ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "target_salvos",
+          "type" : "InlinedCode"
+        }, {
+          "text" : " salvos within the ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "total_time",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ". In the following equations, we ignore the inequalities and round_to_next_tenth's, and we just add RLD one by one at the end until the inequality holds true.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "lang" : "",
+        "snippet" : "total_time = time_from_first_salvo_start_to_last_salvo_start + time_from_last_salvo_start_to_last_mount\ntotal_time = cycle_time * (target_salvos - 1) + volley_time * (mounts - 1)\ntotal_time = (volley_time + target_reload_time) * (target_salvos - 1) + volley_time * (mounts - 1)\ntotal_time = volley_time * (target_salvos - 1) + target_reload_time * (target_salvos - 1) + volley_time * (mounts - 1)\ntotal_time = volley_time * (target_salvos + mounts - 2) + target_reload_time * (target_salvos - 1)\ntotal_time - volley_time * (target_salvos + mounts - 2) = target_reload_time * (target_salvos - 1)\n(total_time - volley_time * (target_salvos + mounts - 2)) / (target_salvos - 1) = target_reload_time\ntarget_reload_time = (total_time - volley_time * (target_salvos + mounts - 2)) / (target_salvos - 1)\n\ntarget_reload_time = base_weapon_reload_time * (200 / (100 + reload_stat))^0.5\n(target_reload_time / base_weapon_reload_time)^2 = 200 / (100 + reload_stat)\n200 / (target_reload_time / base_weapon_reload_time)^2 = 100 + reload_stat\nreload_stat = 200 * (base_weapon_reload_time / target_reload_time)^2 - 100\nreload_stat = 200 * (base_weapon_reload_time / ((total_time - volley_time * (target_salvos + mounts - 2)) / (target_salvos - 1)))^2 - 100\nreload_stat = 200 * (base_weapon_reload_time * (target_salvos - 1) / (total_time - volley_time * (target_salvos + mounts - 2)))^2 - 100\nreload_stat = 200 * (base_weapon_reload_time * (target_salvos - 1) / (total_time - (random_trigger_delay + torpedo_count * delay) * (target_salvos + mounts - 2)))^2 - 100\nreload_stat = 200 * (base_weapon_reload_time * (target_salvos - 1) / (total_oxygen / 10 + attack_duration - 0.1 - (random_trigger_delay + torpedo_count * delay) * (target_salvos + mounts - 2)))^2 - 100",
+        "lineNumber" : "",
+        "type" : "Snippet"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Behold, the final* equation. This spits out a reload stat that is lowballed by up to 10 RLD, so it may not be the final answer. We then need to plug it into the complete salvo formula with the rounding-to-tenths part, and increase the reload one by one until the number of complete salvos ticks up to ",
+          "type" : "SimpleText"
+        }, {
+          "code" : "target_salvos",
+          "type" : "InlinedCode"
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\deepresearch\\submarine_reload_formula.webp",
+        "alt" : "Reload Equation",
+        "title" : null,
+        "inlined" : false,
+        "timestamp" : 1759733005781,
+        "type" : "Image"
+      } ]
+    } ],
+    "lastModifiedTime" : 1759733997882,
+    "tocItem" : {
+      "chapterTitle" : "Deep Research",
+      "pageTitle" : "Submarine Calculator",
+      "pageMeta" : { },
+      "dirName" : "deepresearch",
+      "fileName" : "submarine-calculator",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Salvo Reload Calculator",
+        "id" : "salvo-reload-calculator",
+        "customAnchorId" : "salvo-reload-calculator"
+      }, {
+        "title" : "Reload Breakpoints",
+        "id" : "reload-breakpoints",
+        "customAnchorId" : "reload-breakpoints"
+      }, {
+        "title" : "Simulation",
+        "id" : "simulation",
+        "customAnchorId" : "simulation"
+      }, {
+        "title" : "Theory",
+        "id" : "theory",
+        "customAnchorId" : "theory"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

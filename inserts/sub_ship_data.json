@@ -1,0 +1,371 @@
+{
+    "Manual": {
+        "baseOxy": 200,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 106,
+        "oathRld": 112
+    },
+    "Albacore": {
+        "baseOxy": 243,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 96,
+        "oathRld": 102
+    },
+    "Albacore \u03bc": {
+        "baseOxy": 243,
+        "addOxy": 20,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 93,
+        "oathRld": 98
+    },
+    "Ami Futami": {
+        "baseOxy": 248,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 4,
+        "triggerDuration": 0.2,
+        "loveRld": 118,
+        "oathRld": 124
+    },
+    "Archerfish": {
+        "baseOxy": 243,
+        "addOxy": 20,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 96,
+        "oathRld": 102
+    },
+    "Bluegill": {
+        "baseOxy": 243,
+        "addOxy": 40,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 88,
+        "oathRld": 93
+    },
+    "Cavalla": {
+        "baseOxy": 243,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 94,
+        "oathRld": 100
+    },
+    "Dace": {
+        "baseOxy": 243,
+        "addOxy": 40,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 91,
+        "oathRld": 96
+    },
+    "Flasher": {
+        "baseOxy": 243,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 96,
+        "oathRld": 102
+    },
+    "Herring": {
+        "baseOxy": 243,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 4.6,
+        "triggerDuration": 0.2,
+        "loveRld": 93,
+        "oathRld": 98
+    },
+    "Homura": {
+        "baseOxy": 208,
+        "addOxy": 60,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 96,
+        "oathRld": 102
+    },
+    "I-13": {
+        "baseOxy": 198,
+        "addOxy": 40,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 110,
+        "oathRld": 116
+    },
+    "I-168": {
+        "baseOxy": 195,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 117,
+        "oathRld": 123
+    },
+    "I-19": {
+        "baseOxy": 200,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.0667,
+        "loveRld": 112,
+        "oathRld": 118
+    },
+    "I-25": {
+        "baseOxy": 218,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 71,
+        "oathRld": 75
+    },
+    "I-26": {
+        "baseOxy": 218,
+        "addOxy": 40,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.0667,
+        "loveRld": 110,
+        "oathRld": 117
+    },
+    "I-404": {
+        "baseOxy": 268,
+        "addOxy": 60,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 115,
+        "oathRld": 122
+    },
+    "I-56": {
+        "baseOxy": 248,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 63,
+        "oathRld": 67
+    },
+    "I-58": {
+        "baseOxy": 268,
+        "addOxy": 20,
+        "percentRld": 0,
+        "attackDuration": 4,
+        "triggerDuration": 0.1667,
+        "loveRld": 80,
+        "oathRld": 85
+    },
+    "Leonardo da Vinci": {
+        "baseOxy": 232,
+        "addOxy": 20,
+        "percentRld": 0,
+        "attackDuration": 6,
+        "triggerDuration": 0.1667,
+        "loveRld": 101,
+        "oathRld": 107
+    },
+    "Maggiore Baracca": {
+        "baseOxy": 232,
+        "addOxy": 20,
+        "percentRld": 0,
+        "attackDuration": 6,
+        "triggerDuration": 0.2,
+        "loveRld": 101,
+        "oathRld": 107
+    },
+    "Mami Futami": {
+        "baseOxy": 248,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 4,
+        "triggerDuration": 0.2,
+        "loveRld": 118,
+        "oathRld": 124
+    },
+    "Minato Aqua": {
+        "baseOxy": 268,
+        "addOxy": -60,
+        "percentRld": 0,
+        "attackDuration": 1,
+        "triggerDuration": 0.2,
+        "loveRld": 109,
+        "oathRld": 115
+    },
+    "Nautilus": {
+        "baseOxy": 263,
+        "addOxy": 30,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 93,
+        "oathRld": 98
+    },
+    "Surcouf": {
+        "baseOxy": 180,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 18,
+        "triggerDuration": 0.3333,
+        "loveRld": 77,
+        "oathRld": 81
+    },
+    "Torricelli": {
+        "baseOxy": 208,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 6,
+        "triggerDuration": 0.1667,
+        "loveRld": 85,
+        "oathRld": 90
+    },
+    "U-101": {
+        "baseOxy": 190,
+        "addOxy": 0,
+        "percentRld": 18,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 112,
+        "oathRld": 118
+    },
+    "U-110": {
+        "baseOxy": 208,
+        "addOxy": 0,
+        "percentRld": 18,
+        "attackDuration": 4,
+        "triggerDuration": 0.2,
+        "loveRld": 83,
+        "oathRld": 88
+    },
+    "U-1206": {
+        "baseOxy": 198,
+        "addOxy": -10,
+        "percentRld": 18,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 86,
+        "oathRld": 91
+    },
+    "U-31": {
+        "baseOxy": 188,
+        "addOxy": 0,
+        "percentRld": 18,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 88,
+        "oathRld": 93
+    },
+    "U-37": {
+        "baseOxy": 218,
+        "addOxy": 20,
+        "percentRld": 18,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 112,
+        "oathRld": 118
+    },
+    "U-410": {
+        "baseOxy": 188,
+        "addOxy": 0,
+        "percentRld": 18,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 85,
+        "oathRld": 90
+    },
+    "U-47": {
+        "baseOxy": 193,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 112,
+        "oathRld": 118
+    },
+    "U-522": {
+        "baseOxy": 228,
+        "addOxy": 20,
+        "percentRld": 18,
+        "attackDuration": 4,
+        "triggerDuration": 0.1667,
+        "loveRld": 85,
+        "oathRld": 90
+    },
+    "U-552": {
+        "baseOxy": 188,
+        "addOxy": 100,
+        "percentRld": 0,
+        "attackDuration": 1,
+        "triggerDuration": 0.2,
+        "loveRld": 112,
+        "oathRld": 118
+    },
+    "U-556": {
+        "baseOxy": 188,
+        "addOxy": 0,
+        "percentRld": 18,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 85,
+        "oathRld": 90
+    },
+    "U-556 META": {
+        "baseOxy": 208,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 116,
+        "oathRld": 123
+    },
+    "U-557": {
+        "baseOxy": 188,
+        "addOxy": 20,
+        "percentRld": 18,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 85,
+        "oathRld": 90
+    },
+    "U-73": {
+        "baseOxy": 188,
+        "addOxy": 0,
+        "percentRld": 18,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 85,
+        "oathRld": 90
+    },
+    "U-81": {
+        "baseOxy": 188,
+        "addOxy": 0,
+        "percentRld": 21,
+        "attackDuration": 5,
+        "triggerDuration": 0.1667,
+        "loveRld": 110,
+        "oathRld": 117
+    },
+    "U-96": {
+        "baseOxy": 188,
+        "addOxy": 0,
+        "percentRld": 18,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 110,
+        "oathRld": 117
+    }
+}
