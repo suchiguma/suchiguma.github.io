@@ -250,7 +250,7 @@ function updateInputs(ship) {
             document.getElementById(stat).value = 4;
         } else if ("baseRld" === stat) {
             updateBaseRld(ship);
-        } else {
+        } else if (stat !== "addRld") {
             if (stat === "triggerDuration") console.log(stat, shipData[ship][stat]);
             document.getElementById(stat).value = shipData[ship][stat] === undefined ? 0 : shipData[ship][stat];
         }
@@ -276,7 +276,7 @@ function updateTable() {
     const baseOxy = parseInt(document.getElementById("baseOxy").value || "200");
     const addOxy = parseFloat(document.getElementById("addOxy").value || "0");
     const baseRld = parseInt(document.getElementById("baseRld").value || "100");
-    const addRld = parseInt(document.getElementById("addRld").value || "100");
+    const addRld = parseInt(document.getElementById("addRld").value || "0");
     const percentRld = parseFloat(document.getElementById("percentRld").value || "0");
     const mounts = parseInt(document.getElementById("mounts").value || "4");
     const attackDuration = parseFloat(document.getElementById("attackDuration").value || "5");
@@ -294,7 +294,7 @@ function updateTable() {
                 row.cells[3].textContent = "err";
             } else {
                 const t = torpData[torpName];
-                const randomTriggerDelay = triggerDuration < 0.2 ? 0.2 : (triggerDuration < 0.3 ? 0.3 : 0.4);
+                const randomTriggerDelay = triggerDuration < 0.15 ? 0.3 : 0.4;
                 const volleyTime = randomTriggerDelay + t.delay * t.torps;
                 const [salvos, timeLeft] = calcSalvosAndTime(t, curRld, timeLimit, mounts, volleyTime);
                 row.cells[1].textContent = parseFloat(salvos.toFixed(2));
@@ -305,7 +305,7 @@ function updateTable() {
                 const targetReloadTime = (timeLimit - (mounts - 1) * volleyTime) / Math.floor(salvos) - volleyTime;
                 const rldNeeded = (t.reload_max / targetReloadTime / 6)**2 / 3.14 - 100;
                 var realRldNeeded = rldNeeded;
-                for (let i = 0; i < 10; i++) {
+                for (let i = 0; i < 100; i++) {
                     realRldNeeded = Math.floor(rldNeeded + i);
                     const [salvos, timeLeft] = calcSalvosAndTime(t, realRldNeeded, timeLimit, mounts, volleyTime);
                     if (salvos >= targetSalvos) break;

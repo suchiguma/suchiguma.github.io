@@ -86,12 +86,12 @@
     <div></div>
 </div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
-<p>This is the submarine reload tool featuring the correct formula unlike this widely recommended user page on the wiki A similarly structured table with the correct values is provided here so you may see the differences Salvo Calculator Reload Breakpoints Table Simulation Formula and Theory Disclaimers and Assumptions In a real battle the enemy can be out of range even if the submarine is ready to fire That means the next reload often gets delayed for Bidder G7e Hence do not assume she will fire that many salvos by meeting the minimum RLD requirement Assume the submarine equips the same torpedo in both slots The calculator does not make accommodations for weird or poverty cases like gear below 10 non 100 or 200 affinity purple oxygen non maxed skills or low level submarines Device specific processing speed or lag may shift volley times by 0 1s or more The calculator and table optimistically use the lowest delays caused by animation time we have observed across multiple devices See Torpedo Mount Cycle for these thresholds</p>
+<p>This is the submarine reload tool featuring the correct formula unlike this widely recommended user page on the wiki A similarly structured table with the correct values is provided here so you may see the differences Salvo Calculator Reload Breakpoints Table Simulation Formula and Theory Disclaimers and Assumptions In a real battle the enemy can be out of range even if the submarine is ready to fire That means the next reload often gets delayed for Bidder G7e Hence do not assume she will fire that many salvos by meeting the minimum RLD requirement Assume the submarine equips the same torpedo in both slots The calculator does not make accommodations for weird or poverty cases like gear below 10 non 100 or 200 affinity purple oxygen non maxed skills or low level submarines Device specific processing speed or lag may shift volley times by 0 1s or more The calculator pessimistically uses the longest delays caused by animation time we have observed across multiple devices while the table shows the RLD range from shortest to longest delay See Torpedo Mount Cycle for these thresholds</p>
 </article>
 
 <article>
 <header><h1>Salvo Reload Calculator</h1></header>
-<p>Usage instructions are below the calculator This calculator shows numbers for six gear loadouts Salvos How many salvos For example 1 75 salvos of Bidders * 4 mounts * 3 torpedoes 21 torpedoes total Margin How much time is left over after completing that many salvos Lower margin means less likely to complete that many salvos RLD for next The Final Reload stat needed to complete the next full salvo The general workflow is Select the Preset Ship Select the affinity For &lt;100 or oathed and &lt;200 you re out of luck and should type in the Base RLD manually Base reload assumes level 125 But Level 120 is close enough usually only a difference of 1 or 2 Type it manually if you care Add your cat talents and gear like Oxytorps Skill percentages should be covered by the Preset but there are exceptions like a non full wolfpack Base and Add Oxygen should be covered by the Preset Do not add Snorkel oxygen Checking the OpSi box will add 20 oxygen If you use one but not the other cat in Operation Siren uncheck the box and type the value in Add Warning The non Snorkel loadouts do NOT assume that Oxytorp is used in place of it You need to manually add 10 RLD for 10 or 13 RLD for 13 Oxytorp in the Add gear cats box</p>
+<p>Usage instructions are below the calculator The general workflow is Select the Preset Ship Select the affinity For &lt;100 or oathed and &lt;200 you re out of luck and should type in the Base RLD manually Base reload assumes level 125 But Level 120 is close enough usually only a difference of 1 or 2 Type it manually if you care Add your cat talents and gear like Oxytorps Skill percentages should be covered by the Preset but there are exceptions like a non full wolfpack Base and Add Oxygen should be covered by the Preset Do not add Snorkel oxygen Checking the OpSi box will add 20 oxygen If you use one but not the other cat in Operation Siren uncheck the box and type the value in Add Warning The non Snorkel loadouts do NOT assume that Oxytorp is used in place of it You need to manually add 10 RLD for 10 or 13 RLD for 13 Oxytorp in the Add gear cats box This calculator shows numbers for six gear loadouts Salvos How many salvos For example 1 75 salvos of Bidders * 4 mounts * 3 torpedoes 21 torpedoes total Margin How much time is left over after completing that many salvos Lower margin means less likely to complete that many salvos RLD for next The Final Reload stat needed to complete the next full salvo</p>
 </article>
 
 <article>
@@ -106,7 +106,7 @@
 
 <article>
 <header><h1>Theory</h1></header>
-<p>Basic definitions is 2 for G7e and Type 95 Kai or 3 for Bidder is 0 7s for G7e and Type 95 Kai or 0 6s for Bidder Volley fire 1 mount of torpedoes Salvo fire 1 volley from all mounts All max limit broken subs in game currently have 2 torpedo slots x 2 torpedo mounts 4 mounts Submarine Lifecycle After you press the button to summon subs each sub behaves in the following way unless her skills do something special like surface and dive again Spawn at a fixed coordinate off screen and swim to the attacking coordinate which depends on Pressure Resistant Hull the specific sub and the battle field Begin consuming oxygen using skills firing torpedoes and randomly moving within a box centered on her attacking coordinate When oxygen reaches zero the submarine surfaces She can use both torpedoes and guns After seconds have passed she begins retreating She can no longer fire weapons but can finish a volley that began before the retreat There is a delay of 1 weapon cycle or 0 1s between when the sub starts consuming oxygen and when her weapons can first look for targets Thus the total time a sub has to begin volleys is Note Most submarines have an of 5s The exceptions are already included in the calculator s Preset Ships Torpedo Mount Cycle Pretend the submarine only has 1 mount equipped with Bidder This is what the mount does Find valid target in range Begin an animation on the sub s chibi sprite After seconds fires the weapon Repeat times wait seconds then fire 1 torpedo Take to reload the next salvo Reloading a mount takes You can find the on ALDB or wiki for example 21 81s for Bidder We care about the which is the time from the beginning of Step 1 to the end of Step 4 However this is where the game can randomly and inconsistently apply an extra delay The length of the delay is correlated to the device and the sub s but it is not consistent According to our observations trigger duration random trigger delay Bidder volley time G7e T95K volley time 0 067 0 2 0 3 2 0 2 1 1 6 1 7 0 167 0 2 0 4 2 0 2 2 1 6 1 8 0 200 0 3 0 4 2 1 2 2 1 7 1 8 0 333 0 4 2 2 1 8 The game only attempts to find valid targets in range 10 times per second So for one mount the time between beginning a salvo and beginning the next salvo is calculated as Multiple Mounts Now what happens when the submarine has 4 torpedo mounts If all of them are ready to fire the first one fires first While the first one is firing for the others cannot Each mount tracks its own reload progress While the second mount is firing the third and fourth mounts are blocked from firing But the first mount is already on its reload cycle So in the end the multiple mounts do not affect each others salvo times past the first salvo assuming they are all derived from the same equipment But the mount count is indeed important in determining partial salvos The submarine could begin retreating while she s firing her second mount That means she will finish her second mount but not fire her third and fourth mounts in the last salvo In the following example of I 404 with Bidders Snorkel and 162 RLD she begins retreating at time represented by the purple line Notice that the time between the first yellow torpedo line and the thirteenth torpedo is the just over 21s and this also holds between the fourth and sixteenth seventh and nineteenth and so on I 404 Torpedo Time Graph Required Reload Formula Putting it all together we want to calculate the needed to fully complete salvos within the In the following equations we ignore the inequalities and round_to_next_tenth s and we just add RLD one by one at the end until the inequality holds true Behold the final* equation This spits out a reload stat that is lowballed by up to 10 RLD so it may not be the final answer We then need to plug it into the complete salvo formula with the rounding to tenths part and increase the reload one by one until the number of complete salvos ticks up to Reload Equation torpedo_count delay torpedo_count attack_duration total_time total_oxygen 10 attack_duration 0 1 attack_duration trigger_duration torpedo_count delay reload_time reload_time base_weapon_reload_time * 200 100 reload_stat ^0 5 base_weapon_reload_time volley_time trigger_duration volley_time round_to_next_tenth trigger_duration torpedo_count * delay volley_time random_trigger_delay torpedo_count * delay cycle_time round_to_next_tenth volley_time reload_time volley_time cycle_time cycle_time reload_stat target_salvos total_time total_time time_from_first_salvo_start_to_last_salvo_start time_from_last_salvo_start_to_last_mount total_time cycle_time * target_salvos 1 volley_time * mounts 1 total_time volley_time target_reload_time * target_salvos 1 volley_time * mounts 1 total_time volley_time * target_salvos 1 target_reload_time * target_salvos 1 volley_time * mounts 1 total_time volley_time * target_salvos mounts 2 target_reload_time * target_salvos 1 total_time volley_time * target_salvos mounts 2 target_reload_time * target_salvos 1 total_time volley_time * target_salvos mounts 2 target_salvos 1 target_reload_time target_reload_time total_time volley_time * target_salvos mounts 2 target_salvos 1 target_reload_time base_weapon_reload_time * 200 100 reload_stat ^0 5 target_reload_time base_weapon_reload_time ^2 200 100 reload_stat 200 target_reload_time base_weapon_reload_time ^2 100 reload_stat reload_stat 200 * base_weapon_reload_time target_reload_time ^2 100 reload_stat 200 * base_weapon_reload_time total_time volley_time * target_salvos mounts 2 target_salvos 1 ^2 100 reload_stat 200 * base_weapon_reload_time * target_salvos 1 total_time volley_time * target_salvos mounts 2 ^2 100 reload_stat 200 * base_weapon_reload_time * target_salvos 1 total_time random_trigger_delay torpedo_count * delay * target_salvos mounts 2 ^2 100 reload_stat 200 * base_weapon_reload_time * target_salvos 1 total_oxygen 10 attack_duration 0 1 random_trigger_delay torpedo_count * delay * target_salvos mounts 2 ^2 100 target_salvos</p>
+<p>Basic definitions is 2 for G7e and Type 95 Kai or 3 for Bidder is 0 7s for G7e and Type 95 Kai or 0 6s for Bidder Volley fire 1 mount of torpedoes Salvo fire 1 volley from all mounts All max limit broken subs in game currently have 2 torpedo slots x 2 torpedo mounts 4 mounts Submarine Lifecycle After you press the button to summon subs each sub behaves in the following way unless her skills do something special like surface and dive again Spawn at a fixed coordinate off screen and swim to the attacking coordinate which depends on Pressure Resistant Hull the specific sub and the battle field Begin consuming oxygen using skills firing torpedoes and randomly moving within a box centered on her attacking coordinate When oxygen reaches zero the submarine surfaces She can use both torpedoes and guns After seconds have passed she begins retreating She can no longer fire weapons but can finish a volley that began before the retreat There is a delay of 1 weapon cycle or 0 1s between when the sub starts consuming oxygen and when her weapons can first look for targets Thus the total time a sub has to begin volleys is Note Most submarines have an of 5s The exceptions are already included in the calculator s Preset Ships Torpedo Mount Cycle Pretend the submarine only has 1 mount equipped with Bidder This is what the mount does Find valid target in range Begin an animation on the sub s chibi sprite After seconds fires the weapon Repeat times wait seconds then fire 1 torpedo Take to reload the next salvo Reloading a mount takes You can find the on ALDB or wiki for example 21 81s for Bidder We care about the which is the time from the beginning of Step 1 to the end of Step 4 However this is where the game can randomly and inconsistently apply an extra delay The length of the delay is correlated to the device and the sub s but it is not consistent According to our observations trigger duration random trigger delay Bidder volley time G7e T95K volley time 0 067 0 20 3 2 02 1 1 61 7 0 167 0 20 4 2 02 2 1 61 8 0 200 0 30 4 2 12 2 1 71 8 0 333 0 4 2 2 1 8 The game only attempts to find valid targets in range 10 times per second So for one mount the time between beginning a salvo and beginning the next salvo is calculated as Multiple Mounts Now what happens when the submarine has 4 torpedo mounts If all of them are ready to fire the first one fires first While the first one is firing for the others cannot Each mount tracks its own reload progress While the second mount is firing the third and fourth mounts are blocked from firing But the first mount is already on its reload cycle So in the end the multiple mounts do not affect each others salvo times past the first salvo assuming they are all derived from the same equipment But the mount count is indeed important in determining partial salvos The submarine could begin retreating while she s firing her second mount That means she will finish her second mount but not fire her third and fourth mounts in the last salvo In the following example of I 404 with Bidders Snorkel and 162 RLD she begins retreating at time represented by the purple line Notice that the time between the first yellow torpedo line and the thirteenth torpedo is the just over 21s and this also holds between the fourth and sixteenth seventh and nineteenth and so on I 404 Torpedo Time Graph Required Reload Formula Putting it all together we want to calculate the needed to fully complete salvos within the In the following equations we ignore the inequalities and round_to_next_tenth s and we just add RLD one by one at the end until the inequality holds true Behold the final* equation This spits out a reload stat that is lowballed by up to 10 RLD so it may not be the final answer We then need to plug it into the complete salvo formula with the rounding to tenths part and increase the reload one by one until the number of complete salvos ticks up to Reload Equation torpedo_count delay torpedo_count attack_duration total_time total_oxygen 10 attack_duration 0 1 attack_duration trigger_duration torpedo_count delay reload_time reload_time base_weapon_reload_time * 200 100 reload_stat ^0 5 base_weapon_reload_time volley_time trigger_duration volley_time round_to_next_tenth trigger_duration torpedo_count * delay volley_time random_trigger_delay torpedo_count * delay cycle_time round_to_next_tenth volley_time reload_time volley_time cycle_time cycle_time reload_stat target_salvos total_time total_time time_from_first_salvo_start_to_last_salvo_start time_from_last_salvo_start_to_last_mount total_time cycle_time * target_salvos 1 volley_time * mounts 1 total_time volley_time target_reload_time * target_salvos 1 volley_time * mounts 1 total_time volley_time * target_salvos 1 target_reload_time * target_salvos 1 volley_time * mounts 1 total_time volley_time * target_salvos mounts 2 target_reload_time * target_salvos 1 total_time volley_time * target_salvos mounts 2 target_reload_time * target_salvos 1 target_reload_time total_time volley_time * target_salvos mounts 2 target_salvos 1 target_reload_time base_weapon_reload_time * 200 100 reload_stat ^0 5 target_reload_time base_weapon_reload_time ^2 200 100 reload_stat 200 target_reload_time base_weapon_reload_time ^2 100 reload_stat reload_stat 200 * base_weapon_reload_time target_reload_time ^2 100 reload_stat 200 * base_weapon_reload_time total_time volley_time * target_salvos mounts 2 target_salvos 1 ^2 100 reload_stat 200 * base_weapon_reload_time * target_salvos 1 total_time volley_time * target_salvos mounts 2 ^2 100 reload_stat 200 * base_weapon_reload_time * target_salvos 1 total_time random_trigger_delay torpedo_count * delay * target_salvos mounts 2 ^2 100 reload_stat 200 * base_weapon_reload_time * target_salvos 1 total_oxygen 10 attack_duration 0 1 random_trigger_delay torpedo_count * delay * target_salvos mounts 2 ^2 100 target_salvos</p>
 </article>
 </section>
 <section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
@@ -385,7 +385,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "content" : [ {
           "type" : "Paragraph",
           "content" : [ {
-            "text" : "The calculator and table optimistically use the lowest delays caused by animation time we have observed across multiple devices. See ",
+            "text" : "The calculator pessimistically uses the longest delays caused by animation time we have observed across multiple devices, while the table shows the RLD range from shortest to longest delay. See ",
             "type" : "SimpleText"
           }, {
             "url" : "/./deepresearch/submarine-calculator#torpedo-mount-cycle",
@@ -417,44 +417,6 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "previewMarker" : "submarine-calculator-pm1",
         "fit" : true,
         "type" : "Iframe"
-      }, {
-        "type" : "Paragraph",
-        "content" : [ {
-          "text" : "This calculator shows numbers for six gear loadouts.",
-          "type" : "SimpleText"
-        } ]
-      }, {
-        "bulletMarker" : "-",
-        "tight" : true,
-        "type" : "BulletList",
-        "content" : [ {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "Salvos: How many salvos. For example, 1.75 salvos of Bidders * 4 mounts * 3 torpedoes = 21 torpedoes total.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "Margin: How much time is left over after completing that many salvos. Lower margin means less likely to complete that many salvos.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        }, {
-          "type" : "ListItem",
-          "content" : [ {
-            "type" : "Paragraph",
-            "content" : [ {
-              "text" : "RLD for next: The Final Reload stat needed to complete the next full salvo.",
-              "type" : "SimpleText"
-            } ]
-          } ]
-        } ]
       }, {
         "type" : "Paragraph",
         "content" : [ {
@@ -540,6 +502,44 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "content" : [ {
           "text" : "Warning: The non-Snorkel loadouts do NOT assume that Oxytorp is used in place of it. You need to manually add 10 RLD for +10 or 13 RLD for +13 Oxytorp in the \"Add (gear/cats)\" box.",
           "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This calculator shows numbers for six gear loadouts.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Salvos: How many salvos. For example, 1.75 salvos of Bidders * 4 mounts * 3 torpedoes = 21 torpedoes total.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Margin: How much time is left over after completing that many salvos. Lower margin means less likely to complete that many salvos.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "RLD for next: The Final Reload stat needed to complete the next full salvo.",
+              "type" : "SimpleText"
+            } ]
+          } ]
         } ]
       } ]
     }, {
@@ -934,19 +934,19 @@ window.ReactDOM.render(React.createElement(Documentation, {
           } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "0.2~0.3",
+              "text" : "0.2–0.3",
               "type" : "SimpleText"
             } ]
           } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "2.0~2.1",
+              "text" : "2.0–2.1",
               "type" : "SimpleText"
             } ]
           } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "1.6~1.7",
+              "text" : "1.6–1.7",
               "type" : "SimpleText"
             } ]
           } ] ], [ [ {
@@ -958,19 +958,19 @@ window.ReactDOM.render(React.createElement(Documentation, {
           } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "0.2~0.4",
+              "text" : "0.2–0.4",
               "type" : "SimpleText"
             } ]
           } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "2.0~2.2",
+              "text" : "2.0–2.2",
               "type" : "SimpleText"
             } ]
           } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "1.6~1.8",
+              "text" : "1.6–1.8",
               "type" : "SimpleText"
             } ]
           } ] ], [ [ {
@@ -982,19 +982,19 @@ window.ReactDOM.render(React.createElement(Documentation, {
           } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "0.3~0.4",
+              "text" : "0.3–0.4",
               "type" : "SimpleText"
             } ]
           } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "2.1~2.2",
+              "text" : "2.1–2.2",
               "type" : "SimpleText"
             } ]
           } ], [ {
             "type" : "Paragraph",
             "content" : [ {
-              "text" : "1.7~1.8",
+              "text" : "1.7–1.8",
               "type" : "SimpleText"
             } ]
           } ] ], [ [ {
@@ -1123,7 +1123,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
         } ]
       }, {
         "lang" : "",
-        "snippet" : "total_time = time_from_first_salvo_start_to_last_salvo_start + time_from_last_salvo_start_to_last_mount\ntotal_time = cycle_time * (target_salvos - 1) + volley_time * (mounts - 1)\ntotal_time = (volley_time + target_reload_time) * (target_salvos - 1) + volley_time * (mounts - 1)\ntotal_time = volley_time * (target_salvos - 1) + target_reload_time * (target_salvos - 1) + volley_time * (mounts - 1)\ntotal_time = volley_time * (target_salvos + mounts - 2) + target_reload_time * (target_salvos - 1)\ntotal_time - volley_time * (target_salvos + mounts - 2) = target_reload_time * (target_salvos - 1)\n(total_time - volley_time * (target_salvos + mounts - 2)) / (target_salvos - 1) = target_reload_time\ntarget_reload_time = (total_time - volley_time * (target_salvos + mounts - 2)) / (target_salvos - 1)\n\ntarget_reload_time = base_weapon_reload_time * (200 / (100 + reload_stat))^0.5\n(target_reload_time / base_weapon_reload_time)^2 = 200 / (100 + reload_stat)\n200 / (target_reload_time / base_weapon_reload_time)^2 = 100 + reload_stat\nreload_stat = 200 * (base_weapon_reload_time / target_reload_time)^2 - 100\nreload_stat = 200 * (base_weapon_reload_time / ((total_time - volley_time * (target_salvos + mounts - 2)) / (target_salvos - 1)))^2 - 100\nreload_stat = 200 * (base_weapon_reload_time * (target_salvos - 1) / (total_time - volley_time * (target_salvos + mounts - 2)))^2 - 100\nreload_stat = 200 * (base_weapon_reload_time * (target_salvos - 1) / (total_time - (random_trigger_delay + torpedo_count * delay) * (target_salvos + mounts - 2)))^2 - 100\nreload_stat = 200 * (base_weapon_reload_time * (target_salvos - 1) / (total_oxygen / 10 + attack_duration - 0.1 - (random_trigger_delay + torpedo_count * delay) * (target_salvos + mounts - 2)))^2 - 100",
+        "snippet" : "total_time = time_from_first_salvo_start_to_last_salvo_start + time_from_last_salvo_start_to_last_mount\ntotal_time = cycle_time * (target_salvos - 1) + volley_time * (mounts - 1)\ntotal_time = (volley_time + target_reload_time) * (target_salvos - 1) + volley_time * (mounts - 1)\ntotal_time = volley_time * (target_salvos - 1) + target_reload_time * (target_salvos - 1) + volley_time * (mounts - 1)\ntotal_time = volley_time * (target_salvos + mounts - 2) + target_reload_time * (target_salvos - 1)\ntotal_time - volley_time * (target_salvos + mounts - 2) = target_reload_time * (target_salvos - 1)\ntarget_reload_time = (total_time - volley_time * (target_salvos + mounts - 2)) / (target_salvos - 1)\n\ntarget_reload_time = base_weapon_reload_time * (200 / (100 + reload_stat))^0.5\n(target_reload_time / base_weapon_reload_time)^2 = 200 / (100 + reload_stat)\n200 / (target_reload_time / base_weapon_reload_time)^2 = 100 + reload_stat\nreload_stat = 200 * (base_weapon_reload_time / target_reload_time)^2 - 100\nreload_stat = 200 * (base_weapon_reload_time / ((total_time - volley_time * (target_salvos + mounts - 2)) / (target_salvos - 1)))^2 - 100\nreload_stat = 200 * (base_weapon_reload_time * (target_salvos - 1) / (total_time - volley_time * (target_salvos + mounts - 2)))^2 - 100\nreload_stat = 200 * (base_weapon_reload_time * (target_salvos - 1) / (total_time - (random_trigger_delay + torpedo_count * delay) * (target_salvos + mounts - 2)))^2 - 100\nreload_stat = 200 * (base_weapon_reload_time * (target_salvos - 1) / (total_oxygen / 10 + attack_duration - 0.1 - (random_trigger_delay + torpedo_count * delay) * (target_salvos + mounts - 2)))^2 - 100",
         "lineNumber" : "",
         "type" : "Snippet"
       }, {
@@ -1148,7 +1148,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "type" : "Image"
       } ]
     } ],
-    "lastModifiedTime" : 1759733997882,
+    "lastModifiedTime" : 1759817036330,
     "tocItem" : {
       "chapterTitle" : "Deep Research",
       "pageTitle" : "Submarine Calculator",
