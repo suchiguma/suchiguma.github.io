@@ -801,6 +801,31 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Deep Research",
+    "pageTitle" : "Submarine Calculator",
+    "pageMeta" : { },
+    "dirName" : "deepresearch",
+    "fileName" : "submarine-calculator",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Salvo Reload Calculator",
+      "id" : "salvo-reload-calculator",
+      "customAnchorId" : "salvo-reload-calculator"
+    }, {
+      "title" : "Reload Breakpoints",
+      "id" : "reload-breakpoints",
+      "customAnchorId" : "reload-breakpoints"
+    }, {
+      "title" : "Simulation",
+      "id" : "simulation",
+      "customAnchorId" : "simulation"
+    }, {
+      "title" : "Theory",
+      "id" : "theory",
+      "customAnchorId" : "theory"
+    } ]
+  }, {
+    "chapterTitle" : "Deep Research",
     "pageTitle" : "Concealment",
     "pageMeta" : { },
     "dirName" : "deepresearch",

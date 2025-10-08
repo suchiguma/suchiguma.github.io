@@ -91,12 +91,12 @@
 
 <article>
 <header><h1>Salvo Reload Calculator</h1></header>
-<p>Usage instructions are below the calculator The general workflow is Select the Preset Ship Select the affinity For &lt;100 or oathed and &lt;200 you re out of luck and should type in the Base RLD manually Base reload assumes level 125 But Level 120 is close enough usually only a difference of 1 or 2 Type it manually if you care Add your cat talents and gear like Oxytorps Skill percentages should be covered by the Preset but there are exceptions like a non full wolfpack Base and Add Oxygen should be covered by the Preset Do not add Snorkel oxygen Checking the OpSi box will add 20 oxygen If you use one but not the other cat in Operation Siren uncheck the box and type the value in Add Warning The non Snorkel loadouts do NOT assume that Oxytorp is used in place of it You need to manually add 10 RLD for 10 or 13 RLD for 13 Oxytorp in the Add gear cats box This calculator shows numbers for six gear loadouts Salvos How many salvos For example 1 75 salvos of Bidders * 4 mounts * 3 torpedoes 21 torpedoes total Margin How much time is left over after completing that many salvos Lower margin means less likely to complete that many salvos RLD for next The Final Reload stat needed to complete the next full salvo</p>
+<p>Usage instructions are below the calculator This is the best submarine reload calculator on the market and it s free For damage estimations to learn the effects of oxytorps tech and cats on damage consult AL Calculator by MrLar For reload times of non submarines also use that calculator The general workflow is Select the Preset Ship Select the affinity For &lt;100 or oathed and &lt;200 you re out of luck and should type in the Base RLD manually Base reload assumes level 125 But Level 120 is close enough usually only a difference of 1 or 2 Type it manually if you care Add your cat talents and gear like Oxytorps Skill percentages should be covered by the Preset but there are exceptions like a non full wolfpack Base and Add Oxygen should be covered by the Preset Do not add Snorkel oxygen Checking the OpSi box will add 20 oxygen If you use one but not the other cat in Operation Siren uncheck the box and type the value in Add Warning The non Snorkel loadouts do NOT assume that Oxytorp is used in place of it You need to manually add 10 RLD for 10 or 13 RLD for 13 Oxytorp in the Add gear cats box This calculator shows numbers for six gear loadouts Salvos How many salvos For example 1 75 salvos of Bidders * 4 mounts * 3 torpedoes 21 torpedoes total Margin How much time is left over after completing that many salvos Lower margin means less likely to complete that many salvos RLD for next The Final Reload stat needed to complete the next full salvo</p>
 </article>
 
 <article>
 <header><h1>Reload Breakpoints</h1></header>
-<p>Compare this table to the wiki user page though we excluded Mark 16 because it s irrelevant The most important difference is that our formula is correct discrepancies may occur due to device specific lag while theirs is not For a real example it says Albacore needs 154 RLD for Bidder without Snorkel but our Albacore tested in game with a 10 Oxytorp and single Edelweiss 20 RLD fired the full 24 torpedoes outside of Operation Siren total 126 RLD Don t bother submitting feedback because that author hates us and automatically disparages any proof or work if he suspects it was from us</p>
+<p>Color shows how much extra RLD from cats and oaths is needed to reach the upper threshold starting from a base of Level 125 Love affinity Gear is assumed to be Snorkel Hull or 10 Oxytorp Hull for Bidder G7e or 10 Oxytorp Snorkel or 10 Oxytorp Oxytorp for Type 95 Kai Percent reload skills are already considered Green 0 Yellow 1 to 20 Orange 21 to 40 Red 41 to max Purple impossible even with max RLD cats 200 affinity and 13 Oxytorps Compare this table to the wiki user page though we excluded Mark 16 because it s irrelevant The most important difference is that our formula is correct discrepancies may occur due to device specific lag while theirs is not For a real example it says Albacore needs 154 RLD for Bidder without Snorkel but our Albacore tested in game with a 10 Oxytorp and single Edelweiss 20 RLD fired the full 24 torpedoes outside of Operation Siren total 126 RLD Don t bother submitting feedback because that author hates us and automatically disparages any proof or work if he suspects it was from us</p>
 </article>
 
 <article>
@@ -385,7 +385,13 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "content" : [ {
           "type" : "Paragraph",
           "content" : [ {
-            "text" : "The calculator pessimistically uses the longest delays caused by animation time we have observed across multiple devices, while the table shows the RLD range from shortest to longest delay. See ",
+            "type" : "StrongEmphasis",
+            "content" : [ {
+              "text" : "The calculator pessimistically uses the longest delays caused by animation time we have observed across multiple devices, while the table shows the RLD range from shortest to longest delay.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "text" : " See ",
             "type" : "SimpleText"
           }, {
             "url" : "/./deepresearch/submarine-calculator#torpedo-mount-cycle",
@@ -409,7 +415,18 @@ window.ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Usage instructions are below the calculator.",
+          "text" : "Usage instructions are below the calculator. This is the best submarine reload calculator on the market (and it's free!). For damage estimations to learn the effects of oxytorps, tech, and cats on damage, consult ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlane.mrlar.dev/calculator/",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "AL Calculator",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " by MrLar. For reload times of non-submarines, also use that calculator.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -550,6 +567,87 @@ window.ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
+          "text" : "Color shows how much extra RLD from cats and oaths is needed to reach the upper threshold, starting from a base of Level 125, Love affinity. Gear is assumed to be Snorkel/Hull or +10 Oxytorp/Hull for Bidder/G7e, or +10 Oxytorp/Snorkel or +10 Oxytorp/Oxytorp for Type 95 Kai. Percent reload skills are already considered.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "subgreen",
+              "id" : "check",
+              "type" : "Icon"
+            }, {
+              "text" : " Green = 0",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "subyellow",
+              "id" : "check",
+              "type" : "Icon"
+            }, {
+              "text" : " Yellow = 1 to 20",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "suborange",
+              "id" : "alert-triangle",
+              "type" : "Icon"
+            }, {
+              "text" : " Orange = 21 to 40",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "subred",
+              "id" : "alert-triangle",
+              "type" : "Icon"
+            }, {
+              "text" : " Red = 41 to max",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "subpurple",
+              "id" : "slash",
+              "type" : "Icon"
+            }, {
+              "text" : " Purple = impossible even with max RLD cats, 200 affinity, and +13 Oxytorps.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "src" : "/./inserts/submarine-breakpoints.html",
+        "previewMarker" : "submarine-calculator-pm2",
+        "fit" : true,
+        "type" : "Iframe"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
           "text" : "Compare this table to the ",
           "type" : "SimpleText"
         }, {
@@ -564,11 +662,6 @@ window.ReactDOM.render(React.createElement(Documentation, {
           "text" : ", though we excluded Mark 16 because it's irrelevant. The most important difference is that our formula is correct (discrepancies may occur due to device-specific lag) while theirs is not. For a real example, it says Albacore needs 154 RLD for Bidder without Snorkel, but our Albacore tested in game with a +10 Oxytorp and single Edelweiss 20 RLD fired the full 24 torpedoes outside of Operation Siren (total 126 RLD). Don't bother submitting feedback because that author hates us and automatically disparages any proof or work if he suspects it was from us.",
           "type" : "SimpleText"
         } ]
-      }, {
-        "src" : "/./inserts/submarine-breakpoints.html",
-        "previewMarker" : "submarine-calculator-pm2",
-        "fit" : true,
-        "type" : "Iframe"
       } ]
     }, {
       "id" : "simulation",
@@ -1148,7 +1241,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "type" : "Image"
       } ]
     } ],
-    "lastModifiedTime" : 1759817036330,
+    "lastModifiedTime" : 1759903767089,
     "tocItem" : {
       "chapterTitle" : "Deep Research",
       "pageTitle" : "Submarine Calculator",

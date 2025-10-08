@@ -251,7 +251,6 @@ function updateInputs(ship) {
         } else if ("baseRld" === stat) {
             updateBaseRld(ship);
         } else if (stat !== "addRld") {
-            if (stat === "triggerDuration") console.log(stat, shipData[ship][stat]);
             document.getElementById(stat).value = shipData[ship][stat] === undefined ? 0 : shipData[ship][stat];
         }
     });
