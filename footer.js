@@ -28,6 +28,17 @@ footer = {
             "text" : "Privacy",
             "type" : "SimpleText"
           } ]
+        }, {
+          "text" : " · ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://ko-fi.com/suchiguma",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Donate",
+            "type" : "SimpleText"
+          } ]
         } ]
       } ]
     }, {

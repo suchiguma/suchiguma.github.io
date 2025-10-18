@@ -69,6 +69,15 @@ toc = [ {
       "id" : "privacy-policy",
       "customAnchorId" : "privacy-policy"
     } ]
+  }, {
+    "chapterTitle" : "Home",
+    "pageTitle" : "Donate",
+    "pageMeta" : { },
+    "dirName" : "home",
+    "fileName" : "donate",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ ]
   } ]
 }, {
   "chapterTitle" : "Guides",
