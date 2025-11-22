@@ -239,9 +239,9 @@ toc = [ {
       "id" : "main-fleet-weapons",
       "customAnchorId" : "main-fleet-weapons"
     }, {
-      "title" : "Main Fleet Auxes",
-      "id" : "main-fleet-auxes",
-      "customAnchorId" : "main-fleet-auxes"
+      "title" : "Main Fleet Others",
+      "id" : "main-fleet-others",
+      "customAnchorId" : "main-fleet-others"
     }, {
       "title" : "Vanguard Weapons",
       "id" : "vanguard-weapons",
