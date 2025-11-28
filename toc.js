@@ -755,14 +755,6 @@ toc = [ {
       "id" : "recommendations",
       "customAnchorId" : "recommendations"
     }, {
-      "title" : "Assumptions",
-      "id" : "assumptions",
-      "customAnchorId" : "assumptions"
-    }, {
-      "title" : "Explanations",
-      "id" : "explanations",
-      "customAnchorId" : "explanations"
-    }, {
       "title" : "Two Fleets",
       "id" : "two-fleets",
       "customAnchorId" : "two-fleets"
@@ -770,6 +762,14 @@ toc = [ {
       "title" : "One Fleet",
       "id" : "one-fleet",
       "customAnchorId" : "one-fleet"
+    }, {
+      "title" : "Assumptions",
+      "id" : "assumptions",
+      "customAnchorId" : "assumptions"
+    }, {
+      "title" : "Explanations",
+      "id" : "explanations",
+      "customAnchorId" : "explanations"
     }, {
       "title" : "Extra Tables",
       "id" : "extra-tables",
