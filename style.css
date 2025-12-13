@@ -73,3 +73,7 @@
 iframe {
     border: 0px;
 }
+
+span.znai-icon {
+    flex-shrink: 0;
+}
