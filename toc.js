@@ -84,7 +84,7 @@ toc = [ {
   "dirName" : "guides",
   "items" : [ {
     "chapterTitle" : "Guides",
-    "pageTitle" : "Progression Guide",
+    "pageTitle" : "Chapters 1 to 13 Progression",
     "pageMeta" : { },
     "dirName" : "guides",
     "fileName" : "progression-guide",
