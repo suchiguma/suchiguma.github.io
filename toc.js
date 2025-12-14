@@ -84,6 +84,47 @@ toc = [ {
   "dirName" : "guides",
   "items" : [ {
     "chapterTitle" : "Guides",
+    "pageTitle" : "Progression Guide",
+    "pageMeta" : { },
+    "dirName" : "guides",
+    "fileName" : "progression-guide",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Investing in New Ships",
+      "id" : "investing-in-new-ships",
+      "customAnchorId" : "investing-in-new-ships"
+    }, {
+      "title" : "Faction Fleets Suck",
+      "id" : "faction-fleets-suck",
+      "customAnchorId" : "faction-fleets-suck"
+    }, {
+      "title" : "Check Your Gear",
+      "id" : "check-your-gear",
+      "customAnchorId" : "check-your-gear"
+    }, {
+      "title" : "Commander Level Farming",
+      "id" : "commander-level-farming",
+      "customAnchorId" : "commander-level-farming"
+    }, {
+      "title" : "Shipyard Farming",
+      "id" : "shipyard-farming",
+      "customAnchorId" : "shipyard-farming"
+    }, {
+      "title" : "Definitions",
+      "id" : "definitions",
+      "customAnchorId" : "definitions"
+    }, {
+      "title" : "Chapters 1 to 12",
+      "id" : "chapters-1-to-12",
+      "customAnchorId" : "chapters-1-to-12"
+    }, {
+      "title" : "Chapter 13",
+      "id" : "chapter-13",
+      "customAnchorId" : "chapter-13"
+    } ]
+  }, {
+    "chapterTitle" : "Guides",
     "pageTitle" : "Chapter 14 Brief",
     "pageMeta" : { },
     "dirName" : "guides",
