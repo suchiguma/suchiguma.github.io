@@ -77,3 +77,7 @@ iframe {
 span.znai-icon {
     flex-shrink: 0;
 }
+
+div.paragraph.content-block {
+    display: block;
+}

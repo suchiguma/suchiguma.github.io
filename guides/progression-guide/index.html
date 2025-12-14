@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="A progression guide for new and returning players, including how to farm ship levels, farm player levels, choose and enhance gear, and manage resources. Also covers fleet compositions by position and role for clearing Chapters 1 through 13.">
+<meta name="description" content="A progression guide for new and returning players, including how to farm ship levels, farm player levels, choose and enhance gear, and manage resources. Also covers fleet compositions by position and role for clearing Chapters 1 through 13.">
+<title>Azur Lane Guides: Progression Guide</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="37473a17-3102-4a4a-9ff8-fc3a79f35e01"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="37473a17-3102-4a4a-9ff8-fc3a79f35e01"></script>
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<p>Written by cheeky1467 If you are a new player i e you have not reached Chapter 9 in the campaign yet read the newbie tips and follow the starter fleet there but allow for one or two good SRs as per the guidelines in this fleet guide</p>
+</article>
+
+<article>
+<header><h1>Investing in New Ships</h1></header>
+<p>Choosing Ships Most new players will think the best fleets early on are to spam as many SRs and URs as they can this is wrong for several reasons Higher rarity does not automatically mean better for anything in this game Limit Breaks for ships are mandatory A max limit broken MLB Common is better than a 0 limit break UR and a good chunk of SRs at MLB are better than even a 2 limit break UR SR and UR Bulins are pretty heavily time gated so there are a limited number of SRs and URs you can MLB in a given amount of time You want to be picky with which SRs and URs you choose to limit break especially URs Excluding one time sources you can get up to 2 5 UR Bulins a month and between 6 and 10 SR Bulins a month For all of the above reasons combined with a new player s lack of resources it is recommended to stick to the one starter fleet until Chapter 9 at least unless you get significant upgrades early on that you can afford to MLB Consult veteran players in places like the Azur Lane Official Discord server s #gameplay help channel if you are unsure of who to invest in or if you should invest in a character even after reading everything here There is NO SHAME in doing this In this guide there will be recommendations on how good your ships should be at a minimum for certain content in reference to how they are ranked in the End Game Tier List You can invest in weaker ships and clear using them especially early game when you are lacking resources and options However it will take a non insignificant additional amount of time effort and resources to do so Ship Levels USE EXP DATA PACKS SPARINGLY EXP packs are a rare resource for new players Their best use is for boosting ships whose levels are too low to be farmed with How to level up a new ship for your fleet Use EXP packs and or the dorm to get the ship to a level where she won t die while farming the map of your choice preferably one with an oil cap If necessary use ships who are already leveled to carry or babysit her to make sure she doesn t die Hence don t put 6 low level ships in your fleet at once Level advantage is significant For every level your ship is above the enemy she takes 2% less damage and deals 2% more damage This stacks up to 50% at a difference of 25 levels The inverse is also true if your ship is underleveled she performs that much worse You can and should awaken any ship you use to 120 Be very picky on who you uncap to 125 because Cognitive Arrays are a heavily time gated resource The difference between level 120 and 125 is also not significant for most content up to and including Chapter 13</p>
+</article>
+
+<article>
+<header><h1>Faction Fleets Suck</h1></header>
+<p>Synergy should be treated as a bonus when building a fleet and not a requirement in a fleet Buffs in 95% of cases do not turn a bad ship into a good one Warning FACTION FLEETS SUCK There is no inherent bonus for using ships of the same faction together Most faction buffers are bad ships and their buffs don t turn bad ships into good ones Some factions will struggle to even field one fleet in the early game as there are limited options fewer that are easily obtainable and even fewer that are good All factions have at least one major hole in their capabilities that make building a good fleet even more difficult</p>
+</article>
+
+<article>
+<header><h1>Check Your Gear</h1></header>
+<p>Warning Gear is just as important as ship selection You can fail to clear a stage solely if a fleet is not geared correctly You DO NOT need best in slot gear to clear Chapters 1 to 13 DO NOT farm for gear prints from maps The drop rates are too low and cost too much oil for it to be worth the effort You should always be looking to make upgrades to your gear whenever possible and practical and you should enhance the gear you are using Any gear that will not last beyond early game i e anything not listed in the Quick Gear Guide should not be enhanced past 6 DO NOT randomly enhance gear past 10 Gold Plates are VERY time gated Purple augment modules are NOT a priority they are only a minor boost to your ships performance Some unique gold augments can be a significant boost to a ship s performance consult Augment Module Guide on which ones to craft Note that a good augment module does not make a bad ship worth using</p>
+</article>
+
+<article>
+<header><h1>Commander Level Farming</h1></header>
+<p>If you are below commander level 70 and do not mind spending some money consider buying the level 70 commander pack It also gives a lot of EXP packs and solid purple gear Grinding is the only other way to increase your commander level If you are below Chapter 9 try farming map SP5 of Passionate Polaris in the War Archives It is one of the few maps you have access to before Chapter 9 that has an oil cap Operation Siren unlocks at commander level 60 costs no oil to do but gives commander XP However most stages might be too hard for a new player If you cannot do any of the above options you will have to repeatedly grind the highest map in the main campaign you have access to</p>
+</article>
+
+<article>
+<header><h1>Shipyard Farming</h1></header>
+<p>Avoid Prioritizing farming XP for PR ships before Chapter 12 Waiting until you get to Chapter 12 to unlock a ship will be faster than trying to grind XP before then Chapter 12 is the best spot to farm in the game it is better to prioritize getting there first before you make farming XP for a PR ships a focus Any XP you grind while pushing the main campaign should be a bonus or secondary focus at best Furthermore PR ships are useless without development levels the equivalent to limit breaks for regular ships and getting blueprints for them will take a few months and hundreds of thousands of coins Before you get to Chapter 12 you really don t have the income to sustain that expenditure</p>
+</article>
+
+<article>
+<header><h1>Definitions</h1></header>
+<p>Mob Fleet The fleet that will fight all enemies except the boss Boss Fleet The fleet that will in most cases fight only the boss ACV Airspace Control Value UR Ultra Rare or Rainbow SR Super Rare or Gold BB Battleship but BB is usually shorthand for BB or BC CV Aircraft Carrier but CV is usually shorhand for CV or CVL Desync The act of making sure your BBs and CVs do not fire their main guns or launch air strikes at similar times This is beneficial against waves of enemy mobs for two main reasons Firstly desync ensures that damage is not wasted on the empty ocean by overkilling mobs Secondly it prevents enemies from living for excessive periods of time and causing your fleet to take more damage than is necessary Wave Clearing Clearing multiple enemies on the battlefield or a wave of enemies with one salvo or airstrike</p>
+</article>
+
+<article>
+<header><h1>Chapters 1 to 12</h1></header>
+<p>Notable Threats Suicide Boats Bombing Ship Some suicide boats in 10 1 10 2 and Chapter 11 have increased damage and triple the HP of other suicide boats Train In the 10 1 boss battle you will encounter 5 enhanced suicide boats coming at you at once in a line down the middle of the screen Walls In various other battles in Chapters 10 and 11 vertical walls of 3 enhanced suicide boats come at once Enemy BBs Chapters 9 through 11 In these chapters enemy BBs appearing mostly in mob fleets can inflict severe burns on your ships The burns can cripple their HP if not outright sink them in just a few seconds It is highly recommended to run Fire Extinguishers on your mob fleet s BB to counter these burns Make note the 10 3 boss fight will also have 2 BCs spawn alongside the boss Torpedoes Various DD and CL bosses especially in Chapters 10 and 11 launch many torpedoes which can do significant damage to your vanguards You might find it beneficial to equip Torpedo Bulges on your cruisers DDs cannot equip them to help them live Planes Chapter 12 While nothing compared to what you ll see in later chapters Chapter 12 is where the number of planes really starts to ramp up This isn t worth worrying about too much but keeping an eye on your AA in Chapter 12 would not be a bad idea What to do if you lose Pay attention to what kills your fleet so that you can make adjustments accordingly If the main fleet dies it is either from enemy aircraft get better AA suicide boats use a BB in the flagship position with a good aux gun or fires inflicted by enemy BBss equip fire extinguishers If the vanguard ships die they re just taking too much damage because they re underleveled they re not using appropriate defensive gear or the fleet is taking to long to kill enemies Sometimes the best defense is a good offense Killing enemies quicker means your fleet has to tank less damage in the first place Ship levels skill levels gear and gear enhancement levels can all greatly improve the offensive and defensive capabilities of your fleet significantly so invest in all of them when it is possible and practical Early game you can brute force through stages by overleveling your ships and abusing the level advantage mechanic Around Chapter 9 the debuff from fighting without ammo becomes too much for your fleet to kill the boss This is when you should consider leveling up good ships for a 2nd fleet according to the method in Ship Levels Mob Fleet As mentioned by newbie tips up to at least Chapter 9 the one fleet is both the mob fleet and the boss fleet After you raise two fleets the mob fleet becomes responsible for all battles except the boss while the boss fleet fights only the boss This section applies to the one fleet configuration too BBs shoot suicide boats with their aux guns and the flagship center position provides the best arcs of fire for said aux guns You lose the battle if your flagship dies and BBs tend to be tankier than CVs You can use a CV but you re just making your life more difficult There is no practical difference between a BC and BB for gameplay besides their hull classification which is only relevant for Hard Mode hull type requirements BBVs are similar to BBs but they trade their aux guns for planes meaning they have very poor defense capabilities against suicide boats It is not recommended to use a BBV as your flagship in the main campaign Most players will start with Pennsylvania as their BB She should be replaced before you get to Chapter 12 Consult sources such as ALO #gameplay help channel if you should replace her at this time and whether the replacement is worth the investment Her replacement should be rated at least C tier in the End Game Tier List for Chapter 14 mobbing Some permanent options to replace Penn that are relatively easy to get are Alabama Maryland Retrofit and Nelson Retrofit Unicorn is the best healer in the game after her retrofit and you can get her from the guild shop right after you finish the tutorial Her retrofit should be the first one you do She gains the ability to heal the main fleet and gains a preloaded airstrike heal She will be in your mob fleet permanently when you are pushing content Outside of personal preference there is no need to consider any other ship to replace her Can be either a BB or CV but a good CV is usually preferred over a good BB because CVs can contribute to ACV and Reconnaissance values in Campaign The higher your ACV value the more damage your CVs deal and the less damage your own fleet takes from enemy aircraft It also affects evasion and accuracy of the whole fleet ACV scales with the total Aviation stat and airplanes of all fleets you bring to the sortie The higher your Reconnaissance value the less likely you are to get ambushed If you get your recon value high enough you will not get ambushed at all Reconnaissance scales with the total Aviation and Evasion stat of the best fleet you bring to the sortie When CVs launch airstrikes they clear all enemy bullets and torpedoes currently on screen But a good BB is better than a bad CV You will likely start with Long Island but she should be replaced before you get to Chapter 12 Consult sources such as ALO #gameplay help channel if you should replace her at this time and whether the replacement is worth the investment At minimum her replacement should be ranked at least B tier Some good permanent options are Saratoga and Independence retrofit Of the 3 positions in the vanguard the leftmost or main tank position takes the most damage so you want your tankiest vanguard ship as the Main Tank A tank s main job is to not die so the requirements for a main tank can vary depending on the content For the main campaign we have Portland as the benchmark for how tanky a main tank should be for consistency Portland will typically be your starter tank You will want to replace her after you get to Chapter 12 Replacements should be at least as tanky as her rated 3 or more for self survival and be rated at least C tier for Chapter 14 Mobbing in the End Game Tier List Prinz Eugen is not recommended because she is not that much better than Portland and the cost of using her is significantly higher due to being an SR The middle position in the vanguard is the one that takes the least amount of damage and where you want to put your squishiest ship The rightmost or off tank position takes the 2nd least amount of damage The middle and off tank positions are interchangeable aside from the amount of damage they take Your starter DD Z23 Laffey Javelin and Helena will be your typical beginner middle and off tank Helena will not be replaced for a long while She is one of the most powerful albeit a bit inconsistent debuffers for bosses in the game The starter DDs are considered relatively weak and would be the first ship in the vanguard you replace Replacements for the starters should be rated at least C tier for Chapter 14 Mobbing Good permanent options to consider for the second fleet or replace the starters with are Kazagumo Tashkent &gt; Glowworm Retrofit Boss Fleet This boss fleet section only applies to the boss fleet of the two fleet configuration Everything said for the mob fleet flagship also applies to the boss fleet flagship The ship should be rated at least C tier for Chapter 14 Bossing Some good permanent options are Alabama Maryland Retrofit and Nelson Retrofit Everything said for mob fleet off flags applies to the boss fleet off flags Healers are NOT needed for the boss fleet Some good permanent options are Enterprise Saratoga Retrofit and Independence Retrofit Everything said for mob fleet main tanks applies to boss fleet main tanks The ship should be at least as tanky as Portland rated 3 or more for self survival and rated at least C tier for Chapter 14 Bossing Everything said for mob fleet Middle Off Tanks applies to boss fleet Middle Off Tanks Debuffers tend to be more suited for the boss fleet however for the main campaign it is unnecessary to use ships who are focused on increasing damage against a single boss as campaign boss fights still have plenty of mob waves in addition to the boss itself The ship s should be rated at least C tier for Chapter 14 Bossing</p>
+</article>
+
+<article>
+<header><h1>Chapter 13</h1></header>
+<p>Important Notes Chapter 13 is a non negligible step up in difficulty from Chapter 13 ship gear and level requirements will be more stringent Ships should be at least level 115 with 120 being preferable All skills should be maxed all ships should be at 100 affinity and all gear should be enhanced to 10 Properly desyncing staggering your main fleet ships attacks becomes more important from now on You will also have to start building your fleets to counter the specific gimmick s of the stage which in this case is aircraft The main threat in this chapter is enemy aircraft There are no suicide boats in Chapter 13 except in cargo fleets which appear very infrequently Note There is no rush to clear Chapter 13 Chapter 12 is overall the best farming spot in the game and where you will spend most of your time anyway Clearing Chapter 13 and beyond is mainly for the fun of a challenge and or getting the exclusive map drop ships Chapter 13 Mob Fleet The lack of suicide boats allows you to run a CV as your flagship in Chapter 13 without much penalty and the abundance of enemy aircraft makes it preferable An additional CV will also improve your Airspace Control and Reconnaissance Values This is not to say you can t run a BB you can do so and have great success but this places a greater requirement on the rest of your fleet for AA thus also making the requirements more stringent The ship should be rated at least C tier for Chapter 15 Mobbing Unicorn is so good Were you expecting more explanation What was said previously about off flagships in the mob fleet also applies here Like with the Flagship position a CV is very strongly preferred for the off flag for the same reasons The maximum number of BBs you should use in the mob fleet is one The ship s should be rated at least C tier for Chapter 15 Mobbing Chapter 13 Boss Fleet Unlike with the mob fleet a BB is still strongly preferred for the boss fleet s flagship CVs have their damage reduced significantly against enemies with high AA stat and enemies in Chapter 13 have high AA stat BBs in addition to being generally tankier than CVs also tend to be faster than CVs making it easier to desync your main fleet Gearing BBs and getting better gear for BBs is usually easier Pre boss mobs start to become more powerful they can potentially cripple or outright kill your fleet before you even make it to the boss and more numerous in Chapter 13 boss fleets Clearing them efficiently and quickly is much more important than it was before At least one of your off flagships should be a CV with fighters for AA desyncing and wave clearing The ship s should be rated at least C tier for Chapter 15 Bossing All that has been said for the boss fleet vanguards main tank middle off tank applies here It is highly recommended that at least one of your vanguards for the boss fleet be considered an AA carry rated at least 3 for AA in the End Game Tier List except for Isuzu The ship s should be rated at least C tier for Chapter 15 Bossing A very good permanent option for fulfilling the role of AA Carry would be San Diego Retrofit</p>
+</article>
+</section>
+<section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<a href="/./home/home-page/">Home Page</a>
+</article>
+
+<article>
+<a href="/./home/suchiguma/">Suchiguma</a>
+</article>
+
+<article>
+<a href="/./home/contact/">Contact</a>
+</article>
+
+<article>
+<a href="/./home/donate/">Donate</a>
+</article>
+
+<article>
+<a href="/./guides/progression-guide/">Progression Guide</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-brief/">Chapter 14 Brief</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-detailed/">Chapter 14 Detailed</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-15/">Chapter 15</a>
+</article>
+
+<article>
+<a href="/./guides/augment-modules/">Augment Modules</a>
+</article>
+
+<article>
+<a href="/./miniguides/quick-gear-guide/">Quick Gear Guide</a>
+</article>
+
+<article>
+<a href="/./miniguides/research-focus/">Research Focus</a>
+</article>
+
+<article>
+<a href="/./miniguides/gear-lab/">Gear Lab</a>
+</article>
+
+<article>
+<a href="/./challengemode/challenge-mode/">Challenge Mode</a>
+</article>
+
+<article>
+<a href="/./challengemode/january/">January Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/february/">February Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/march/">March Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/april/">April Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/may/">May Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/june/">June Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/july/">July Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/august/">August Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/september/">September Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/october/">October Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/november/">November Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/december/">December Challenge</a>
+</article>
+
+<article>
+<a href="/./deepresearch/auto-search-exp-and-coins/">Auto Search Exp And Coins</a>
+</article>
+
+<article>
+<a href="/./deepresearch/single-113mm-vs-76mm/">Single 113mm Vs 76mm</a>
+</article>
+
+<article>
+<a href="/./deepresearch/submarine-calculator/">Submarine Calculator</a>
+</article>
+
+<article>
+<a href="/./deepresearch/concealment/">Concealment</a>
+</article>
+
+<article>
+<a href="/./deepresearch/interception/">Interception</a>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="module" src="/./static/main.js"></script>
+<script type="module">
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+window.ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "hidePresentationTrigger" : true,
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Written by cheeky1467.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "attentionType" : "recommendation",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you are a new player (i.e. you have not reached Chapter 9 in the campaign yet): read the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "https://azurlaneecgc.com/newbie_tips/",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "newbie tips",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " and follow the starter fleet there, but allow for one or two good SRs as per the guidelines in this fleet guide.",
+          "type" : "SimpleText"
+        } ]
+      } ],
+      "type" : "AttentionBlock"
+    }, {
+      "id" : "investing-in-new-ships",
+      "additionalIds" : [ ],
+      "title" : "Investing in New Ships",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "investing-in-new-ships-choosing-ships",
+        "additionalIds" : [ "choosing-ships" ],
+        "level" : 2,
+        "title" : "Choosing Ships",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Most new players will think the best fleets early on are to spam as many SRs and URs as they can; this is wrong for several reasons.",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "stroke" : "red",
+                  "id" : "alert-octagon",
+                  "type" : "Icon"
+                }, {
+                  "text" : " Higher rarity does not automatically mean better for anything in this game.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "fill" : "yellow",
+                  "stroke" : "black",
+                  "id" : "star",
+                  "type" : "Icon"
+                }, {
+                  "text" : " ",
+                  "type" : "SimpleText"
+                }, {
+                  "type" : "StrongEmphasis",
+                  "content" : [ {
+                    "text" : "Limit Breaks for ships are mandatory.",
+                    "type" : "SimpleText"
+                  } ]
+                }, {
+                  "text" : " A max limit broken (MLB) Common is better than a 0 limit break UR, and a good chunk of SRs at MLB are better than even a 2 limit break UR.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "stroke" : "blue",
+                  "id" : "watch",
+                  "type" : "Icon"
+                }, {
+                  "text" : " SR and UR Bulins are pretty heavily time-gated, so there are a limited number of SRs and URs you can MLB in a given amount of time. You want to be picky with which SRs and URs you choose to limit break, especially URs. Excluding one-time sources, you can get up to 2.5 UR Bulins a month and between 6 and 10 SR Bulins a month.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "For all of the above reasons combined with a new player's lack of resources, it is recommended to stick to the one starter fleet until Chapter 9 at least, unless you get ",
+              "type" : "SimpleText"
+            }, {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "significant",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " upgrades early on that you can afford to MLB.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Consult veteran players in places like the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://discord.gg/azurlane",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Azur Lane Official Discord",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " server's #gameplay-help channel if you are unsure of who to invest in or if you should invest in a character even after reading everything here. There is NO SHAME in doing this.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "In this guide, there will be recommendations on how good your ships should be at a minimum for certain content in reference to how they are ranked in the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "https://docs.google.com/spreadsheets/d/13YbPw3dM2eN6hr3YfVABIK9LVuCWnVZF0Zp2BGOZXc0/edit?gid=0#gid=0",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "End Game Tier List",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ". You can invest in weaker ships and clear using them, especially early game when you are lacking resources and options. However, it will take a non-insignificant additional amount of time, effort, and resources to do so.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "investing-in-new-ships-ship-levels",
+        "additionalIds" : [ "ship-levels" ],
+        "level" : 2,
+        "title" : "Ship Levels",
+        "type" : "SubHeading"
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "USE EXP DATA PACKS SPARINGLY. EXP packs are a rare resource for new players. Their best use is for boosting ships whose levels are too low to be farmed with.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "How to level up a new ship for your fleet:",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Use EXP packs and/or the dorm to get the ship to a level where she won't die while farming the map of your choice (preferably one with an oil cap).",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "If necessary, use ships who are already leveled to carry or babysit her to make sure she doesn't die.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Hence, don't put 6 low level ships in your fleet at once.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Level advantage is significant.",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " For every level your ship is above the enemy, she takes 2% less damage and deals 2% more damage. This stacks up to 50% at a difference of 25 levels. The inverse is also true; if your ship is underleveled, she performs that much worse.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "You can and should awaken any ship you use to 120.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Be very picky on who you uncap to 125 because Cognitive Arrays are a heavily time-gated resource. The difference between level 120 and 125 is also not significant for most content, up to and including Chapter 13.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "faction-fleets-suck",
+      "additionalIds" : [ ],
+      "title" : "Faction Fleets Suck",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Synergy should be treated as a bonus when building a fleet and not a requirement in a fleet. Buffs in 95% of cases do not turn a bad ship into a good one.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: FACTION FLEETS SUCK",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "There is no inherent bonus for using ships of the same faction together.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Most faction buffers are bad ships, and their buffs don't turn bad ships into good ones.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Some factions will struggle to even field one fleet in the early game as there are limited options, fewer that are easily obtainable, and even fewer that are good.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "All factions have at least one major hole in their capabilities that make building a good fleet even more difficult.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "check-your-gear",
+      "additionalIds" : [ ],
+      "title" : "Check Your Gear",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Warning: Gear is just as important as ship selection. You can fail to clear a stage solely if a fleet is not geared correctly.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "red",
+              "id" : "slash",
+              "type" : "Icon"
+            }, {
+              "text" : " You DO NOT need best-in-slot gear to clear Chapters 1 to 13.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "red",
+              "id" : "slash",
+              "type" : "Icon"
+            }, {
+              "text" : " DO NOT farm for gear prints from maps. The drop rates are too low and cost too much oil for it to be worth the effort.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "green",
+              "id" : "check",
+              "type" : "Icon"
+            }, {
+              "text" : " You should always be looking to make upgrades to your gear whenever possible and practical, and you should enhance the gear you are using.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "red",
+              "id" : "slash",
+              "type" : "Icon"
+            }, {
+              "text" : " Any gear that will not last beyond early game (i.e. anything not listed in the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "/./miniguides/quick-gear-guide",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Quick Gear Guide",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : ") should not be enhanced past +6.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "red",
+              "id" : "slash",
+              "type" : "Icon"
+            }, {
+              "text" : " DO NOT randomly enhance gear past +10. Gold Plates are VERY time-gated.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "red",
+              "id" : "slash",
+              "type" : "Icon"
+            }, {
+              "text" : " Purple augment modules are NOT a priority, they are only a minor boost to your ships' performance.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "green",
+              "id" : "check",
+              "type" : "Icon"
+            }, {
+              "text" : " Some unique (gold) augments can be a significant boost to a ship's performance, consult ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "/./guides/augment-modules",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Augment Module Guide",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " on which ones to craft. Note that a good augment module does not make a bad ship worth using.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "commander-level-farming",
+      "additionalIds" : [ ],
+      "title" : "Commander Level Farming",
+      "type" : "Section",
+      "content" : [ {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "gray",
+              "id" : "credit-card",
+              "type" : "Icon"
+            }, {
+              "text" : " If you are below commander level 70 and do not mind spending some money, consider buying the level 70 commander pack. It also gives a lot of EXP packs and solid purple gear.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "black",
+              "id" : "database",
+              "type" : "Icon"
+            }, {
+              "text" : " Grinding is the only other way to increase your commander level.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "green",
+              "id" : "music",
+              "type" : "Icon"
+            }, {
+              "text" : " If you are below Chapter 9, try farming map SP5 of Passionate Polaris in the War Archives. It is one of the few maps you have access to before Chapter 9 that has an oil cap.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "orange",
+              "id" : "anchor",
+              "type" : "Icon"
+            }, {
+              "text" : " Operation Siren unlocks at commander level 60, costs no oil to do, but gives commander XP. However, most stages might be too hard for a new player.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "stroke" : "blue",
+              "id" : "repeat",
+              "type" : "Icon"
+            }, {
+              "text" : " If you cannot do any of the above options, you will have to repeatedly grind the highest map in the main campaign you have access to.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "shipyard-farming",
+      "additionalIds" : [ ],
+      "title" : "Shipyard Farming",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Avoid: Prioritizing farming XP for PR ships before Chapter 12.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Waiting until you get to Chapter 12 to unlock a ship will be faster than trying to grind XP before then. Chapter 12 is the best spot to farm in the game, it is better to prioritize getting there first before you make farming XP for a PR ships a focus. Any XP you grind while pushing the main campaign should be a bonus or secondary focus at best.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Furthermore, PR ships are useless without development levels (the equivalent to limit breaks for regular ships), and getting blueprints for them will take a few months and hundreds of thousands of coins. Before you get to Chapter 12, you really don't have the income to sustain that expenditure.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "definitions",
+      "additionalIds" : [ ],
+      "title" : "Definitions",
+      "type" : "Section",
+      "content" : [ {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Mob Fleet: The fleet that will fight all enemies except the boss.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Boss Fleet: The fleet that will, in most cases, fight only the boss.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "ACV: Airspace Control Value",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "UR: Ultra Rare or Rainbow",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "SR: Super Rare or Gold",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "BB: Battleship, but BB is usually shorthand for BB or BC.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "CV: Aircraft Carrier, but CV is usually shorhand for CV or CVL.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Desync: The act of making sure your BBs and CVs do not fire their main guns or launch air strikes at similar times. This is beneficial against waves of enemy mobs for two main reasons. Firstly, desync ensures that damage is not wasted on the empty ocean by overkilling mobs. Secondly, it prevents enemies from living for excessive periods of time and causing your fleet to take more damage than is necessary.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Wave Clearing: Clearing multiple enemies on the battlefield (or a wave of enemies) with one salvo or airstrike.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "chapters-1-to-12",
+      "additionalIds" : [ ],
+      "title" : "Chapters 1 to 12",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "chapters-1-to-12-notable-threats",
+        "additionalIds" : [ "notable-threats" ],
+        "level" : 2,
+        "title" : "Notable Threats",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "*",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Suicide Boats (Bombing Ship)",
+              "type" : "SimpleText"
+            } ]
+          }, {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "stroke" : "yellow",
+                  "id" : "alert-triangle",
+                  "type" : "Icon"
+                }, {
+                  "text" : " Some suicide boats in 10-1, 10-2, and Chapter 11 have increased damage and triple the HP of other suicide boats.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "stroke" : "red",
+                  "id" : "more-horizontal",
+                  "type" : "Icon"
+                }, {
+                  "text" : " Train: In the 10-1 boss battle, you will encounter 5 enhanced suicide boats coming at you at once, in a line down the middle of the screen.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "stroke" : "red",
+                  "id" : "more-vertical",
+                  "type" : "Icon"
+                }, {
+                  "text" : " Walls: In various other battles in Chapters 10 and 11, vertical walls of 3 enhanced suicide boats come at once.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Enemy BBs (Chapters 9 through 11): In these chapters, enemy BBs (appearing mostly in mob fleets) can inflict severe burns on your ships. The burns can cripple their HP if not outright sink them in just a few seconds. It is highly recommended to run Fire Extinguishers on your mob fleet's BB to counter these burns. Make note, the 10-3 boss fight will also have 2 BCs spawn alongside the boss.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Torpedoes: Various DD and CL bosses, especially in Chapters 10 and 11, launch many torpedoes which can do significant damage to your vanguards. You might find it beneficial to equip Torpedo Bulges on your cruisers (DDs cannot equip them) to help them live.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Planes (Chapter 12): While nothing compared to what you'll see in later chapters, Chapter 12 is where the number of planes really starts to ramp up. This isn't worth worrying about too much, but keeping an eye on your AA in Chapter 12 would not be a bad idea.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "chapters-1-to-12-what-to-do-if-you-lose",
+        "additionalIds" : [ "what-to-do-if-you-lose" ],
+        "level" : 2,
+        "title" : "What to do if you lose",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Pay attention to what kills your fleet",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " so that you can make adjustments accordingly. If the main fleet dies, it is either from enemy aircraft (get better AA), suicide boats (use a BB in the flagship position with a good aux gun), or fires inflicted by enemy BBss (equip fire extinguishers). If the vanguard ships die, they're just taking too much damage because they're underleveled, they're not using appropriate defensive gear, or the fleet is taking to long to kill enemies.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Sometimes the best defense is a good offense. Killing enemies quicker means your fleet has to tank less damage in the first place. Ship levels, skill levels, gear, and gear enhancement levels can all greatly improve the offensive and defensive capabilities of your fleet significantly, so invest in all of them when it is possible and practical. Early game, you can brute force through stages by overleveling your ships and abusing the level advantage mechanic.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Around Chapter 9, the debuff from fighting without ammo becomes too much for your fleet to kill the boss. This is when you should consider leveling up good ships for a 2nd fleet according to the method in ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./guides/progression-guide#ship-levels",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Ship Levels",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "chapters-1-to-12-mob-fleet",
+        "additionalIds" : [ "mob-fleet" ],
+        "level" : 2,
+        "title" : "Mob Fleet",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "As mentioned by newbie tips, up to at least Chapter 9, the one fleet is both the mob fleet and the boss fleet. After you raise two fleets, the mob fleet becomes responsible for all battles except the boss, while the boss fleet fights only the boss. This section applies to the one fleet configuration too.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "title" : "Flagship (BB/BC)",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "BBs shoot suicide boats with their aux guns, and the flagship (center) position provides the best arcs of fire for said aux guns.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "You lose the battle if your flagship dies, and BBs tend to be tankier than CVs.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "You can use a CV, but you're just making your life more difficult.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "There is no practical difference between a BC and BB for gameplay besides their hull classification, which is only relevant for Hard Mode hull type requirements.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "BBVs are similar to BBs, but they trade their aux guns for planes meaning they have very poor defense capabilities against suicide boats. It is not recommended to use a BBV as your flagship in the main campaign.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Most players will start with Pennsylvania as their BB. She should be replaced before you get to Chapter 12.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Consult sources such as ",
+                "type" : "SimpleText"
+              }, {
+                "url" : "https://discord.gg/azurlane",
+                "isFile" : false,
+                "type" : "Link",
+                "content" : [ {
+                  "text" : "ALO",
+                  "type" : "SimpleText"
+                } ]
+              }, {
+                "text" : " #gameplay-help channel if you should replace her at this time, and whether the replacement is worth the investment. Her replacement should be rated at least C tier in the ",
+                "type" : "SimpleText"
+              }, {
+                "url" : "https://docs.google.com/spreadsheets/d/13YbPw3dM2eN6hr3YfVABIK9LVuCWnVZF0Zp2BGOZXc0/edit?gid=0#gid=0",
+                "isFile" : false,
+                "type" : "Link",
+                "content" : [ {
+                  "text" : "End Game Tier List",
+                  "type" : "SimpleText"
+                } ]
+              }, {
+                "text" : " for Chapter 14 mobbing.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Some permanent options to replace Penn that are relatively easy to get are Alabama, Maryland Retrofit, and Nelson Retrofit.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Primary Healer (a.k.a. Unicorn)",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Unicorn is the best healer in the game after her retrofit, and you can get her from the guild shop right after you finish the tutorial.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Her retrofit should be the first one you do. She gains the ability to heal the main fleet and gains a preloaded airstrike/heal.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "She will be in your mob fleet permanently when you are pushing content.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Outside of personal preference, there is no need to consider any other ship to replace her.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Off-Flag",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Can be either a BB or CV, but a good CV is usually preferred over a good BB because CVs can contribute to ACV and Reconnaissance values in Campaign.",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "bulletMarker" : "*",
+              "tight" : true,
+              "type" : "BulletList",
+              "content" : [ {
+                "type" : "ListItem",
+                "content" : [ {
+                  "type" : "Paragraph",
+                  "content" : [ {
+                    "text" : "The higher your ACV value, the more damage your CVs deal and the less damage your own fleet takes from enemy aircraft. It also affects evasion and accuracy of the whole fleet.",
+                    "type" : "SimpleText"
+                  } ]
+                } ]
+              }, {
+                "type" : "ListItem",
+                "content" : [ {
+                  "type" : "Paragraph",
+                  "content" : [ {
+                    "url" : "https://azurlane.koumakan.jp/wiki/Combat#Airspace_Control",
+                    "isFile" : false,
+                    "type" : "Link",
+                    "content" : [ {
+                      "text" : "ACV",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " scales with the total Aviation stat and airplanes of all fleets you bring to the sortie.",
+                    "type" : "SimpleText"
+                  } ]
+                } ]
+              }, {
+                "type" : "ListItem",
+                "content" : [ {
+                  "type" : "Paragraph",
+                  "content" : [ {
+                    "text" : "The higher your Reconnaissance value, the less likely you are to get ambushed. If you get your recon value high enough, you will not get ambushed at all.",
+                    "type" : "SimpleText"
+                  } ]
+                } ]
+              }, {
+                "type" : "ListItem",
+                "content" : [ {
+                  "type" : "Paragraph",
+                  "content" : [ {
+                    "url" : "https://azurlane.koumakan.jp/wiki/Combat#Encounters",
+                    "isFile" : false,
+                    "type" : "Link",
+                    "content" : [ {
+                      "text" : "Reconnaissance",
+                      "type" : "SimpleText"
+                    } ]
+                  }, {
+                    "text" : " scales with the total Aviation and Evasion stat of the best fleet you bring to the sortie.",
+                    "type" : "SimpleText"
+                  } ]
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "When CVs launch airstrikes, they clear all enemy bullets and torpedoes currently on screen.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "But a good BB is better than a bad CV.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "You will likely start with Long Island, but she should be replaced before you get to Chapter 12.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Consult sources such as ",
+                "type" : "SimpleText"
+              }, {
+                "url" : "https://discord.gg/azurlane",
+                "isFile" : false,
+                "type" : "Link",
+                "content" : [ {
+                  "text" : "ALO",
+                  "type" : "SimpleText"
+                } ]
+              }, {
+                "text" : " #gameplay-help channel if you should replace her at this time, and whether the replacement is worth the investment. At minimum, her replacement should be ranked at least B tier.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Some good, permanent options are Saratoga and Independence retrofit.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Main Tank",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Of the 3 positions in the vanguard, the ",
+                "type" : "SimpleText"
+              }, {
+                "type" : "StrongEmphasis",
+                "content" : [ {
+                  "text" : "leftmost",
+                  "type" : "SimpleText"
+                } ]
+              }, {
+                "text" : " or main tank position takes the most damage, so you want your tankiest vanguard ship as the Main Tank.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "A tank's main job is to not die, so the requirements for a main tank can vary depending on the content. For the main campaign, we have Portland as the benchmark for how tanky a main tank should be for consistency.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Portland will typically be your starter tank. You will want to replace her after you get to Chapter 12.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Replacements should be at least as tanky as her (rated 3 or more for self-survival) and be rated at least C tier for Chapter 14 Mobbing in the ",
+                "type" : "SimpleText"
+              }, {
+                "url" : "https://docs.google.com/spreadsheets/d/13YbPw3dM2eN6hr3YfVABIK9LVuCWnVZF0Zp2BGOZXc0/edit?gid=0#gid=0",
+                "isFile" : false,
+                "type" : "Link",
+                "content" : [ {
+                  "text" : "End Game Tier List",
+                  "type" : "SimpleText"
+                } ]
+              }, {
+                "text" : ".",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Prinz Eugen is not recommended because she is not that much better than Portland, and the cost of using her is significantly higher due to being an SR.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Middle and Off-Tank",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The middle position in the vanguard is the one that takes the least amount of damage and where you want to put your squishiest ship.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The rightmost or off-tank position takes the 2nd least amount of damage.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The middle and off-tank positions are interchangeable aside from the amount of damage they take.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Your starter DD (Z23/Laffey/Javelin) and Helena will be your typical beginner middle and off-tank.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Helena will not be replaced for a long while. She is one of the most powerful (albeit a bit inconsistent) debuffers for bosses in the game.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The starter DDs are considered relatively weak and would be the first ship in the vanguard you replace.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Replacements for the starters should be rated at least C tier for Chapter 14 Mobbing.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Good permanent options to consider for the second fleet or replace the starters with are Kazagumo/Tashkent > Glowworm Retrofit.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "id" : "chapters-1-to-12-boss-fleet",
+        "additionalIds" : [ "boss-fleet" ],
+        "level" : 2,
+        "title" : "Boss Fleet",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This boss fleet section only applies to the boss fleet of the two-fleet configuration.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "title" : "Flagship (BB)",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Everything said for the mob fleet flagship also applies to the boss fleet flagship.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The ship should be rated at least C tier for Chapter 14 Bossing.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Some good permanent options are Alabama, Maryland Retrofit, and Nelson Retrofit.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Off-Flags",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Everything said for mob fleet off-flags applies to the boss fleet off-flags.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Healers are NOT needed for the boss fleet.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Some good permanent options are Enterprise, Saratoga Retrofit, and Independence Retrofit.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Main Tank",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Everything said for mob-fleet main-tanks applies to boss fleet main tanks.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The ship should be at least as tanky as Portland (rated 3 or more for self-survival) and rated at least C tier for Chapter 14 Bossing.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        }, {
+          "title" : "Middle and Off-Tank",
+          "content" : [ {
+            "bulletMarker" : "*",
+            "tight" : true,
+            "type" : "BulletList",
+            "content" : [ {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Everything said for mob fleet Middle/Off Tanks applies to boss fleet Middle/Off Tanks.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "Debuffers tend to be more suited for the boss fleet; however, for the main campaign, it is unnecessary to use ships who are focused on increasing damage against a single boss, as campaign boss fights still have plenty of mob waves in addition to the boss itself.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            }, {
+              "type" : "ListItem",
+              "content" : [ {
+                "type" : "Paragraph",
+                "content" : [ {
+                  "text" : "The ship(s) should be rated at least C tier for Chapter 14 Bossing.",
+                  "type" : "SimpleText"
+                } ]
+              } ]
+            } ]
+          } ],
+          "type" : "ReadMore"
+        } ],
+        "type" : "ReadMore"
+      } ]
+    }, {
+      "id" : "chapter-13",
+      "additionalIds" : [ ],
+      "title" : "Chapter 13",
+      "type" : "Section",
+      "content" : [ {
+        "id" : "chapter-13-important-notes",
+        "additionalIds" : [ "important-notes" ],
+        "level" : 2,
+        "title" : "Important Notes",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Chapter 13 is a non-negligible step up in difficulty from Chapter 13; ship, gear, and level requirements will be more stringent. Ships should be at least level 115, with 120 being preferable. All skills should be maxed, all ships should be at 100 affinity, and all gear should be enhanced to +10. Properly desyncing/staggering your main fleet ships' attacks becomes more important from now on.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "You will also have to start building your fleets to counter the specific gimmick(s) of the stage, which in this case is aircraft. The main threat in this chapter is enemy aircraft. There are no suicide boats in Chapter 13 except in cargo fleets, which appear very infrequently.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Note: There is no rush to clear Chapter 13. Chapter 12 is overall the best farming spot in the game and where you will spend most of your time anyway. Clearing Chapter 13 and beyond is mainly for the fun of a challenge and/or getting the exclusive map drop ships.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "chapter-13-chapter-13-mob-fleet",
+        "additionalIds" : [ "chapter-13-mob-fleet" ],
+        "level" : 2,
+        "title" : "Chapter 13 Mob Fleet",
+        "type" : "SubHeading"
+      }, {
+        "title" : "Flagship (CV)",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The lack of suicide boats allows you to run a CV as your flagship in Chapter 13 without much penalty, and the abundance of enemy aircraft makes it preferable.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "An additional CV will also improve your Airspace Control and Reconnaissance Values.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "This is not to say you can't run a BB; you can do so and have great success, but this places a greater requirement on the rest of your fleet for AA, thus also making the requirements more stringent.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The ship should be rated at least C tier for Chapter 15 Mobbing.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Healer (Unicorn)",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Unicorn is so good!",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Were you expecting more explanation?",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Off-Flag",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "What was said previously about off-flagships in the mob fleet also applies here.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Like with the Flagship position, a CV is very strongly preferred for the off-flag for the same reasons.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The maximum number of BBs you should use in the mob fleet is one.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The ship(s) should be rated at least C tier for Chapter 15 Mobbing.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Vanguard",
+        "content" : [ ],
+        "type" : "ReadMore"
+      }, {
+        "id" : "chapter-13-chapter-13-boss-fleet",
+        "additionalIds" : [ "chapter-13-boss-fleet" ],
+        "level" : 2,
+        "title" : "Chapter 13 Boss Fleet",
+        "type" : "SubHeading"
+      }, {
+        "title" : "Flagship (BB)",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Unlike with the mob fleet, a BB is still strongly preferred for the boss fleet's flagship.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "CVs have their damage reduced significantly against enemies with high AA stat, and enemies in Chapter 13 have high AA stat.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "BBs, in addition to being generally tankier than CVs, also tend to be faster than CVs, making it easier to desync your main fleet.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Gearing BBs and getting better gear for BBs is usually easier.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "Pre-boss mobs start to become more powerful (they can potentially cripple or outright kill your fleet before you even make it to the boss) and more numerous in Chapter 13 boss fleets. Clearing them efficiently and quickly is much more important than it was before.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Off-Flag",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "At least one of your off-flagships should be a CV (with fighters) for AA, desyncing, and wave clearing.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The ship(s) should be rated at least C tier for Chapter 15 Bossing.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      }, {
+        "title" : "Vanguard",
+        "content" : [ {
+          "bulletMarker" : "*",
+          "tight" : true,
+          "type" : "BulletList",
+          "content" : [ {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "All that has been said for the boss fleet vanguards (main tank, middle, off tank) applies here.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "It is highly recommended that at least one of your vanguards for the boss fleet be considered an AA carry (rated at least 3 for AA in the ",
+                "type" : "SimpleText"
+              }, {
+                "url" : "https://docs.google.com/spreadsheets/d/13YbPw3dM2eN6hr3YfVABIK9LVuCWnVZF0Zp2BGOZXc0/edit?gid=0#gid=0",
+                "isFile" : false,
+                "type" : "Link",
+                "content" : [ {
+                  "text" : "End Game Tier List",
+                  "type" : "SimpleText"
+                } ]
+              }, {
+                "text" : ", except for Isuzu).",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "The ship(s) should be rated at least C tier for Chapter 15 Bossing.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          }, {
+            "type" : "ListItem",
+            "content" : [ {
+              "type" : "Paragraph",
+              "content" : [ {
+                "text" : "A very good permanent option for fulfilling the role of AA Carry would be San Diego Retrofit.",
+                "type" : "SimpleText"
+              } ]
+            } ]
+          } ]
+        } ],
+        "type" : "ReadMore"
+      } ]
+    } ],
+    "lastModifiedTime" : 1765692590277,
+    "tocItem" : {
+      "chapterTitle" : "Guides",
+      "pageTitle" : "Progression Guide",
+      "pageMeta" : { },
+      "dirName" : "guides",
+      "fileName" : "progression-guide",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Investing in New Ships",
+        "id" : "investing-in-new-ships",
+        "customAnchorId" : "investing-in-new-ships"
+      }, {
+        "title" : "Faction Fleets Suck",
+        "id" : "faction-fleets-suck",
+        "customAnchorId" : "faction-fleets-suck"
+      }, {
+        "title" : "Check Your Gear",
+        "id" : "check-your-gear",
+        "customAnchorId" : "check-your-gear"
+      }, {
+        "title" : "Commander Level Farming",
+        "id" : "commander-level-farming",
+        "customAnchorId" : "commander-level-farming"
+      }, {
+        "title" : "Shipyard Farming",
+        "id" : "shipyard-farming",
+        "customAnchorId" : "shipyard-farming"
+      }, {
+        "title" : "Definitions",
+        "id" : "definitions",
+        "customAnchorId" : "definitions"
+      }, {
+        "title" : "Chapters 1 to 12",
+        "id" : "chapters-1-to-12",
+        "customAnchorId" : "chapters-1-to-12"
+      }, {
+        "title" : "Chapter 13",
+        "id" : "chapter-13",
+        "customAnchorId" : "chapter-13"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>
