@@ -95,10 +95,6 @@ toc = [ {
       "id" : "investing-in-new-ships",
       "customAnchorId" : "investing-in-new-ships"
     }, {
-      "title" : "Faction Fleets Suck",
-      "id" : "faction-fleets-suck",
-      "customAnchorId" : "faction-fleets-suck"
-    }, {
       "title" : "Check Your Gear",
       "id" : "check-your-gear",
       "customAnchorId" : "check-your-gear"
@@ -114,6 +110,10 @@ toc = [ {
       "title" : "Definitions",
       "id" : "definitions",
       "customAnchorId" : "definitions"
+    }, {
+      "title" : "Clearing Maps",
+      "id" : "clearing-maps",
+      "customAnchorId" : "clearing-maps"
     }, {
       "title" : "Chapters 1 to 12",
       "id" : "chapters-1-to-12",
