@@ -5,7 +5,7 @@ footer = {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "© 2024-2025 Suchiguma",
+          "text" : "© 2024-2026 Suchiguma",
           "type" : "SimpleText"
         }, {
           "type" : "HardLineBreak"
