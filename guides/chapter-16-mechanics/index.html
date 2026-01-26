@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="First part of the Chapter 16 guide, explaining the map mechanics, threats, and support fleets.">
+<title>Azur Lane Guides: Chapter 16 Mechanics</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="37473a17-3102-4a4a-9ff8-fc3a79f35e01"></script>
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<p>Chapter 16 Mechanics this page details the mechanics how to sortie and the support fleets Chapter 16 Fleets discusses good ships and gear to use in the two surface fleets Note 16 3 and 16 4 are currently bugged to have much fewer enemy airplanes making them easier The devs have acknowledged the bug but have yet to fix it This guide is for first time clearing Chapter 16 on auto in lethal threat level with manual enemy node selection Low oil Fujinami farming on safe threat is not covered If you have reached Chapter 16 we assume you know how to copy fleets stagger main fleets use ship positions correctly and understand abbreviations or nicknames search ALDB if you don t know a nickname Most knowledge from the Chapter 14 and 15 guides like lethal vs safe or submarine timing apply here too A message about requirements</p>
+</article>
+
+<article>
+<header><h1>16-1 and 16-2</h1></header>
+<p>This is Chapter 14 but really easy relative to the chapter number The difficulty is like 14 4 &lt; 16 1 &lt; 16 2 &lt; Hard 14 4 Similarly to Chapter 14 the night battle mechanic applies to 16 1 and 16 2 so all ships are concealed at first There are enemy submarines in the whole chapter in Reconnaissance DD Fleets Chapter 16 s Bombing Ships suicide boats and submarines are also much tankier than those in Chapter 15 and slightly tankier than those in Chapter 14 Hard Fortunately the shielded Kagerou production suicide boats only have 6 000 HP in 16 1 and 16 2 Read Chapter 14 Detailed if you need a refresher Sub Support Mechanics New to Chapter 16 upon entering the sortie before the first battle you have the option of paying 10 oil to sortie your submarine support fleet Your sub support fleet fights a one off battle against the boss who is Atago or Maya both medium armor You get slightly better buffs to ally concealment and debuffs to enemy concealment for the rest of the sortie if your subs take away 30% 60% or 100% of the boss s HP Furthermore in every battle your support submarine fleet fires one salvo preload of torpedoes according to their equipped torpedoes and stats not skills gear skills or oxygen Finally if you sink the boss then you need to fight one fewer mob node before the boss node spawns Sinking the boss is difficult for several reasons The absence of cats is a large loss of RLD and the battle ends as soon as your last ship retreats so any final torpedoes that are en route may not hit The boss also moves and there are three waves of top and bottom mobs spaced 8s apart that distract your subs and waste their torpedo volleys I 404 being distracted Support sub battle Here are some findings about the best support subs Flasher s slow combined with Type 95 Kai not necessarily her own is potent at catching the short reversals in the boss s movement Despite being able to finish three salvos of Type 95 Kai with double oxytorps I 404 should bring an Improved Snorkel to delay her retreat so that all the torpedoes and bombs can land Subs with early barrages like Flasher Archerfish U 522 and several other wolves da Vinci and Baracca can sink one or two side mobs without wasting equipped torpedoes Wolfpack really struggles with the lack of cat RLD meaning most of them are stuck with Bidders and cannot use rainbow G7e or Type 95 Kai Check the Submarine Calculator without adding cat RLD Tempesta frigates can deal with the side mobs quickly but are otherwise garbage as they deal less damage than well built subs and don t contribute torpedoes or shells in the surface fleets battles Example support sub fleet Example support sub fleet Recommendation Whether you have a chance to sink the boss or not put your strongest sub fleet and gear on support and fill in your standard sub fleet with the leftovers Even if you don t sink the boss your support subs fire torpedoes for free in every battle These maps are also pretty easy so you could save oil by not summoning the standard sub fleet</p>
+</article>
+
+<article>
+<header><h1>16-3 and 16-4</h1></header>
+<p>This is Chapter 15 jacked up with levels stats and BBs that delete your main fleet Just clearing it to the boss is easier than Chapter 15 was on release but three starring Chapter 16 is more difficult due to the BBs lack of ammo node and battle length Air Support Mechanics For setting up your allied air support refer to the Chapter 15 Guide In 16 3 and 16 4 there will also be enemy air support or there would be if it weren t bugged Destroying air bases makes the support less frequent but does not remove it entirely 16 3 Every 7 9 or 11 seconds depending on the number of remaining air bases send 5 planes total stack of 80 planes 16 4 Every 3 5 6 or 7 seconds depending on the number of remaining air bases send 5 planes total stack of 80 planes Chapter 15 Every 7 seconds only if Special Aviation Fleet s are on the map with everything else being the same except slightly lower HIT stat and level If you move your fleet close enough to make an air base visible you can use your support fleet s bombing command to destroy the air base Of course due to the bug bombing the air bases is currently useless But you can take this path to bomb them as soon as possible actually due to laziness the pathing image is omitted until the devs fix the air bases Bombing two visible air bases Bombing two visible air bases Fog Mechanics Each fleet can have one of nine visibility levels determining how far each fleet can see Visibility level has two effects When the combined visibility level reaches nine for 16 3 or ten for 16 4 the boss node spawns but may be blocked by mob nodes If the total number of visible tiles is greater than 14% or 50% of the stage s total tiles then all enemy surface ships in battle gain 10% or 5% EVA respectively instead of 15% EVA technically it s 15% of tiles for 16 3 but 14% and 15% are both 10 out of 66 tiles The first effect is especially important for farming Fujinami before Clearing Mode releases To save oil and time you want 1701 AVI see below on both surface fleets so the boss spawns after four mobs The second effect is insignificant so unless you really need it for a three star run we don t recommend spending time moving fleets away from the edges of the map to hit a threshold The initial visibility level for each fleet is one by default but increases to two or three if the fleet s AVI stat is at least 801 or 1701 respectively according to the AVI number in the fleet formation screen except that your max tech always counts e g displaying 1680 AVI is fine if you decreased your AVI tech by 21 for some flexing reason If a ship sinks mid sortie and drops the fleet s AVI below the thresholds the visibility level is NOT lost Defeating an enemy node grants one more visibility level to the fleet that won Tip The Destiny cat talent gives 10 AVI to all ships in the fleet including non carriers so it s worth 60 AVI The cat Every gives 16 AVI to everyone Meanwhile most carrier focused talents like ACE and Carrier Officer don t even buff CVL AVI AVI stat on fleet formation screen AVI stat on fleet formation screen Enemy Types All enemy mob fleets bring AA ships airplanes from off screen standard Bombing Ships that can ram your vanguard for half their HP or chunk the main fleet and BB BCs that shell and burn the closest revealed target at least 75 units away from them The BB BCs whether in shipgirl or production form blind fire igniting shells every few seconds if all of your main fleet ships are concealed If there are revealed ships expect them to be targeted every few seconds for 3000 potential damage per enemy BB The shipgirl and mass produced BCs are all medium armor but the Command BBs are heavy armor and send airplanes in addition to shells Reconnaissance Fleets DDs include torpedo salvos that can do half of your vanguard s HP in a few seconds if unlucky standard submarines with 3 2k HP and 58 EVA and 0 LUCK and one or two Command BBs These are quite easy when you have ammo as long as you have decent ASW AA and healing for both main and vanguard The Command BBs only spawn in the middle lane so give your flagship BB some defense to tank the hits because she will always be targeted When you re out of ammo you might leak more airplanes more Bombing Ships and some subs Enemies will stay alive for longer giving them more opportunities to ram your vanguard or face torp One ship taking 2 x 950 damage One ship taking 2 x 950 damage Main Fleets BBs include torpedo salvos that can do half of your vanguard s HP in a few seconds if unlucky one Command BB and several shipgirl and production BCs It is impossible to avoid the BB BC salvos entirely you need to tank some and do damage quickly Since production BCs spawn in top middle and bottom lanes if your squishy carriers are revealed by airplanes or Bombing Ships they will take a big one for the team You will need defensive auxes on at least the flag and top main fleet ships and possibly on the bottom ship too if you don t have good wave times However if your main fleet does too little damage due to lack of ammo weak healers or defensive auxes then enemy waves with Repair Ship and Anti Air Ship reinforcements can drag on for a long time Again enemies will ram or torp your vanguard Someone is about to take 7 for the team Someone is about to take 7 for the team Cargo Fleets are free healing as they do not contain submarines Command BBs or production BCs The threats are just shipgirl BCs and Bombing Ships</p>
+</article>
+</section>
+<section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<a href="/./home/home-page/">Home Page</a>
+</article>
+
+<article>
+<a href="/./home/suchiguma/">Suchiguma</a>
+</article>
+
+<article>
+<a href="/./home/contact/">Contact</a>
+</article>
+
+<article>
+<a href="/./home/donate/">Donate</a>
+</article>
+
+<article>
+<a href="/./guides/progression-guide/">Chapters 1 to 13 Progression</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-brief/">Chapter 14 Brief</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-detailed/">Chapter 14 Detailed</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-15/">Chapter 15</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-16-mechanics/">Chapter 16 Mechanics</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-16-fleets/">Chapter 16 Fleets</a>
+</article>
+
+<article>
+<a href="/./guides/augment-modules/">Augment Modules</a>
+</article>
+
+<article>
+<a href="/./miniguides/quick-gear-guide/">Quick Gear Guide</a>
+</article>
+
+<article>
+<a href="/./miniguides/research-focus/">Research Focus</a>
+</article>
+
+<article>
+<a href="/./miniguides/gear-lab/">Gear Lab</a>
+</article>
+
+<article>
+<a href="/./challengemode/challenge-mode/">Challenge Mode</a>
+</article>
+
+<article>
+<a href="/./challengemode/january/">January Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/february/">February Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/march/">March Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/april/">April Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/may/">May Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/june/">June Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/july/">July Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/august/">August Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/september/">September Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/october/">October Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/november/">November Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/december/">December Challenge</a>
+</article>
+
+<article>
+<a href="/./deepresearch/auto-search-exp-and-coins/">Auto Search Exp And Coins</a>
+</article>
+
+<article>
+<a href="/./deepresearch/single-113mm-vs-76mm/">Single 113mm Vs 76mm</a>
+</article>
+
+<article>
+<a href="/./deepresearch/submarine-calculator/">Submarine Calculator</a>
+</article>
+
+<article>
+<a href="/./deepresearch/concealment/">Concealment</a>
+</article>
+
+<article>
+<a href="/./deepresearch/interception/">Interception</a>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="module" src="/./static/main.js"></script>
+<script type="module">
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+window.ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "hidePresentationTrigger" : true,
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Chapter 16 Mechanics (this page) details the mechanics, how to sortie, and the support fleets. ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "/./guides/chapter-16-fleets",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Chapter 16 Fleets",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : " discusses good ships and gear to use in the two surface fleets.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "Note: 16-3 and 16-4 are currently bugged to have much fewer enemy airplanes, making them easier. The devs have acknowledged the bug but have yet to fix it.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "text" : "This guide is for first-time clearing Chapter 16 on auto in lethal threat level, with manual enemy node selection. Low-oil Fujinami farming on safe threat is not covered. If you have reached Chapter 16, we assume you know how to copy fleets, stagger main fleets, use ship positions correctly, and understand abbreviations or nicknames (search ",
+        "type" : "SimpleText"
+      }, {
+        "url" : "https://azurlane.mrlar.dev/db/",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "ALDB",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : " if you don't know a nickname).",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "type" : "Paragraph",
+      "content" : [ {
+        "type" : "StrongEmphasis",
+        "content" : [ {
+          "text" : "Most knowledge from the Chapter 14 and 15 guides, like lethal vs safe or submarine timing, apply here too.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "fit" : true,
+      "destination" : "/./guides\\bonuses.webp",
+      "alt" : "A message about requirements.",
+      "title" : null,
+      "inlined" : false,
+      "timestamp" : 1733690540082,
+      "type" : "Image"
+    }, {
+      "id" : "16-1-and-16-2",
+      "additionalIds" : [ ],
+      "title" : "16-1 and 16-2",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is Chapter 14 but really easy relative to the chapter number. The difficulty is like 14-4 < 16-1 <= 16-2 < Hard 14-4. Similarly to Chapter 14, the night battle mechanic applies to 16-1 and 16-2, so all ships are ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./deepresearch/concealment",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "concealed",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " at first. ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "There are enemy submarines in the whole chapter",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ", in Reconnaissance (DD) Fleets. Chapter 16's Bombing Ships (suicide boats) and submarines are also much tankier than those in Chapter 15 and slightly tankier than those in Chapter 14 Hard. Fortunately, the shielded Kagerou production suicide boats only have 6,000 HP in 16-1 and 16-2. Read ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./guides/chapter-14-detailed",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Chapter 14 Detailed",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " if you need a refresher.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "16-1-and-16-2-sub-support-mechanics",
+        "additionalIds" : [ "sub-support-mechanics" ],
+        "level" : 2,
+        "title" : "Sub Support Mechanics",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "New to Chapter 16, upon entering the sortie, before the first battle, you have the option of paying 10 oil to sortie your submarine support fleet. Your sub support fleet fights a one-off battle against the boss, who is Atago or Maya, both medium armor. You get slightly better buffs to ally concealment and debuffs to enemy concealment for the rest of the sortie if your subs take away 30%, 60%, or 100% of the boss's HP. Furthermore, in every battle, your support submarine fleet fires one salvo (preload) of torpedoes according to their equipped torpedoes and stats (not skills, gear skills, or oxygen). ",
+          "type" : "SimpleText"
+        }, {
+          "type" : "StrongEmphasis",
+          "content" : [ {
+            "text" : "Finally, if you \"sink\" the boss, then you need to fight one fewer mob node before the boss node spawns.",
+            "type" : "SimpleText"
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Sinking the boss is difficult for several reasons. The absence of cats is a large loss of RLD, and the battle ends as soon as your last ship retreats, so any final torpedoes that are en route may not hit. The boss also moves, and there are three waves of top and bottom mobs, spaced 8s apart, that distract your subs and waste their torpedo volleys.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\chapter-16\\support_sub_battle.png",
+        "alt" : "Support sub battle.",
+        "width" : 1250,
+        "title" : "I-404 being distracted.",
+        "inlined" : false,
+        "timestamp" : 1769374045940,
+        "height" : 624,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Here are some findings about the best support subs.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Flasher's slow combined with Type 95 Kai (not necessarily her own) is potent at catching the short reversals in the boss's movement.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Despite being able to finish three salvos of Type 95 Kai with double oxytorps, I-404 should bring an Improved Snorkel to delay her retreat so that all the torpedoes and bombs can land.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Subs with early barrages like Flasher, Archerfish, U-522 and several other wolves, da Vinci, and Baracca can sink one or two side mobs without wasting equipped torpedoes.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Wolfpack really struggles with the lack of cat RLD, meaning most of them are stuck with Bidders and cannot use rainbow G7e or Type 95 Kai.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Check the ",
+              "type" : "SimpleText"
+            }, {
+              "url" : "/./deepresearch/submarine-calculator#salvo-reload-calculator",
+              "isFile" : false,
+              "type" : "Link",
+              "content" : [ {
+                "text" : "Submarine Calculator",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " without adding cat RLD.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Tempesta frigates can deal with the side mobs quickly but are otherwise garbage as they deal less damage than well-built subs and don't contribute torpedoes or shells in the surface fleets' battles.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\chapter-16\\support_sub_example.png",
+        "alt" : "Example support sub fleet.",
+        "width" : 680,
+        "title" : "Example support sub fleet.",
+        "inlined" : false,
+        "timestamp" : 1769303097832,
+        "height" : 296,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Recommendation: Whether you have a chance to \"sink\" the boss or not, put your strongest sub fleet and gear on support and fill in your standard sub fleet with the leftovers. Even if you don't \"sink\" the boss, your support subs fire torpedoes for free in every battle. These maps are also pretty easy, so you could save oil by not summoning the standard sub fleet.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    }, {
+      "id" : "16-3-and-16-4",
+      "additionalIds" : [ ],
+      "title" : "16-3 and 16-4",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This is Chapter 15 jacked up with levels, stats, and BBs that delete your main fleet. Just clearing it to the boss is easier than Chapter 15 was on release, but three-starring Chapter 16 is more difficult due to the BBs, lack of ammo node, and battle length.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "id" : "16-3-and-16-4-air-support-mechanics",
+        "additionalIds" : [ "air-support-mechanics" ],
+        "level" : 2,
+        "title" : "Air Support Mechanics",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "For setting up your allied air support, refer to the ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./guides/chapter-15#support-carrier-fleet",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Chapter 15 Guide",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : ".",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In 16-3 and 16-4, there will also be enemy air support (or there would be, if it weren't bugged). Destroying air bases makes the support less frequent but does not remove it entirely.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "16-3: Every 7, 9, or 11 seconds depending on the number of remaining air bases, send 5 planes, total stack of 80 planes.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "16-4: Every 3, 5, 6, or 7 seconds depending on the number of remaining air bases, send 5 planes, total stack of 80 planes.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Chapter 15: Every 7 seconds, only if Special Aviation Fleet(s) are on the map, with everything else being the same except slightly lower HIT stat and level.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "If you move your fleet close enough to make an air base visible, you can use your support fleet's bombing command to destroy the air base. Of course, due to the bug, bombing the air bases is currently useless. But you can take this path to bomb them as soon as possible (actually, due to laziness, the pathing image is omitted until the devs fix the air bases).",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\chapter-16\\bomb_base.png",
+        "alt" : "Bombing two visible air bases.",
+        "width" : 1120,
+        "title" : "Bombing two visible air bases.",
+        "inlined" : false,
+        "timestamp" : 1769374468906,
+        "height" : 629,
+        "type" : "Image"
+      }, {
+        "id" : "16-3-and-16-4-fog-mechanics",
+        "additionalIds" : [ "fog-mechanics" ],
+        "level" : 2,
+        "title" : "Fog Mechanics",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Each fleet can have one of nine visibility levels, determining how far each fleet can see. Visibility level has two effects:",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "delimiter" : ".",
+        "startNumber" : 1,
+        "type" : "OrderedList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "When the combined visibility level reaches nine for 16-3 or ten for 16-4, the boss node spawns (but may be blocked by mob nodes).",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "If the total number of visible tiles is greater than 14% or 50% of the stage's total tiles, then all enemy surface ships in battle gain 10% or 5% EVA respectively instead of 15% EVA (technically, it's 15% of tiles for 16-3, but 14% and 15% are both 10 out of 66 tiles).",
+              "type" : "SimpleText"
+            }, {
+              "type" : "SoftLineBreak"
+            }, {
+              "text" : "The first effect is especially important for farming Fujinami before Clearing Mode releases. To save oil and time, you want 1701 AVI (see below) on both surface fleets so the boss spawns after four mobs. The second effect is insignificant, so unless you really need it for a three star run, we don't recommend spending time moving fleets away from the edges of the map to hit a threshold.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "The initial visibility level for each fleet is one by default but increases to two or three if the fleet's AVI stat is at least 801 or 1701 respectively according to the AVI number in the fleet formation screen (except that your max tech always counts, e.g. displaying 1680 AVI is fine if you decreased your AVI tech by 21 for some flexing reason). If a ship sinks mid-sortie and drops the fleet's AVI below the thresholds, the visibility level is NOT lost. Defeating an enemy node grants one more visibility level to the fleet that won.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Tip: The Destiny cat talent gives 10 AVI to all ships in the fleet, including non-carriers, so it's worth +60 AVI. The cat Every gives 16 AVI to everyone! Meanwhile, most carrier-focused talents like ACE and Carrier Officer don't even buff CVL AVI.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\chapter-16\\avi_check.png",
+        "alt" : "AVI stat on fleet formation screen.",
+        "width" : 1122,
+        "title" : "AVI stat on fleet formation screen.",
+        "inlined" : false,
+        "timestamp" : 1769374652535,
+        "height" : 630,
+        "type" : "Image"
+      }, {
+        "id" : "16-3-and-16-4-enemy-types",
+        "additionalIds" : [ "enemy-types" ],
+        "level" : 2,
+        "title" : "Enemy Types",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "All enemy mob fleets bring AA ships, airplanes from off-screen, standard Bombing Ships that can ram your vanguard for half their HP or chunk the main fleet, and BB/BCs that shell and burn the closest revealed target at least 75 units away from them. The BB/BCs, whether in shipgirl or production form, blind-fire igniting shells every few seconds if all of your main fleet ships are concealed. If there are revealed ships, expect them to be targeted every few seconds for 3000 potential damage per enemy BB. The shipgirl and mass-produced BCs are all medium armor, but the Command BBs are heavy armor and send airplanes in addition to shells.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Reconnaissance Fleets (DDs) include torpedo salvos that can do half of your vanguard's HP in a few seconds if unlucky, standard submarines with 3.2k HP and 58 EVA and 0 LUCK, and one or two Command BBs. These are quite easy when you have ammo as long as you have decent ASW, AA, and healing for both main and vanguard. The Command BBs only spawn in the middle lane, so give your flagship BB some defense to tank the hits because she will always be targeted. When you're out of ammo, you might leak more airplanes, more Bombing Ships, and some subs. Enemies will stay alive for longer, giving them more opportunities to ram your vanguard or face-torp.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\chapter-16\\dmg_950x2.png",
+        "alt" : "One ship taking 2 x 950 damage.",
+        "width" : 552,
+        "title" : "One ship taking 2 x 950 damage.",
+        "inlined" : false,
+        "timestamp" : 1769375062177,
+        "height" : 386,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Main Fleets (BBs) include torpedo salvos that can do half of your vanguard's HP in a few seconds if unlucky, one Command BB, and several shipgirl and production BCs. It is impossible to avoid the BB/BC salvos entirely; you need to tank some and do damage quickly. Since production BCs spawn in top, middle, and bottom lanes, if your squishy carriers are revealed by airplanes or Bombing Ships, they will take a big one for the team. You will need defensive auxes on at least the flag and top main fleet ships and possibly on the bottom ship too if you don't have good wave times. However, if your main fleet does too little damage due to lack of ammo, weak healers, or defensive auxes, then enemy waves with Repair Ship and Anti-Air Ship reinforcements can drag on for a long time. Again, enemies will ram or torp your vanguard.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\chapter-16\\bb_salvo.png",
+        "alt" : "Someone is about to take 7 for the team.",
+        "width" : 1128,
+        "title" : "Someone is about to take 7 for the team.",
+        "inlined" : false,
+        "timestamp" : 1769375819080,
+        "height" : 624,
+        "type" : "Image"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Cargo Fleets are free healing as they do not contain submarines, Command BBs, or production BCs. The threats are just shipgirl BCs and Bombing Ships.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1769392369354,
+    "tocItem" : {
+      "chapterTitle" : "Guides",
+      "pageTitle" : "Chapter 16 Mechanics",
+      "pageMeta" : { },
+      "dirName" : "guides",
+      "fileName" : "chapter-16-mechanics",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "16-1 and 16-2",
+        "id" : "16-1-and-16-2",
+        "customAnchorId" : "16-1-and-16-2"
+      }, {
+        "title" : "16-3 and 16-4",
+        "id" : "16-3-and-16-4",
+        "customAnchorId" : "16-3-and-16-4"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

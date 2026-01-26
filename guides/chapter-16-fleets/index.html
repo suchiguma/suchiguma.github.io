@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+<meta name="description" content="Second part of the Chapter 16 guide, with example surface fleets for auto and explanations of ship roles.">
+<title>Azur Lane Guides: Chapter 16 Fleets</title>
+<link rel="stylesheet" type="text/css" href="/./static/css/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/./static/main.css">
+<link rel="stylesheet" type="text/css" href="/./static/css/global-overrides.css">
+<link rel="stylesheet" type="text/css" href="/./style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="37473a17-3102-4a4a-9ff8-fc3a79f35e01"></script>
+</head>
+<link rel="shortcut icon" href="/./favicon.png"type="image/ico"/>
+<body class="znai-theme theme-znai-dark">
+<script>(function() {
+    var themeNameKey = 'znaiTheme';
+    var darkThemeName = 'znai-dark';
+    var lightThemeName = 'default';
+
+    var znaiTheme = {
+        changeHandlers: [],
+        addChangeHandler(handler) {
+            this.changeHandlers.push(handler);
+        },
+        removeChangeHandler(handler) {
+            var idx = this.changeHandlers.indexOf(handler);
+            this.changeHandlers.splice(idx, 1);
+        },
+        set(name) {
+            this.name = name;
+            document.body.className = 'znai-theme theme-' + name;
+
+            var idx = 0;
+            var len = this.changeHandlers.length;
+            for (; idx < len; idx++) {
+                this.changeHandlers[idx](name);
+            }
+        },
+        setExplicitly(name) {
+            storeThemeName(name);
+            this.set(name);
+        },
+        setExplicitlyIfNotSetAlready(name) {
+            const themeName = getStoredThemeName();
+            if (themeName) {
+                return
+            }
+
+            this.setExplicitly(name)
+        },
+        toggle() {
+            this.setExplicitly(this.name === lightThemeName ? darkThemeName : lightThemeName)
+        }
+    };
+
+    var mediaThemeName = setLightMatchMediaListenerAndGetThemeName()
+    var themeName = getStoredThemeName() || mediaThemeName;
+    znaiTheme.set(themeName);
+
+    window.znaiTheme = znaiTheme;
+
+    function getStoredThemeName() {
+        return localStorage.getItem(themeNameKey);
+    }
+
+    function storeThemeName(name) {
+        return localStorage.setItem(themeNameKey, name);
+    }
+
+    function setLightMatchMediaListenerAndGetThemeName() {
+        if (!window.matchMedia) {
+            return darkThemeName;
+        }
+
+        var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+        lightQuery.addListener(function (e) {
+            const newThemeName = e.matches ? lightThemeName : darkThemeName;
+            znaiTheme.setExplicitly(newThemeName);
+        });
+
+        return lightQuery.matches ? lightThemeName : darkThemeName;
+    }
+})()</script>
+<div id="znai"><div id="znai-initial-page-loading" style="margin: -20px 0 0 -20px; padding: 0 40px 40px 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center">
+    <div></div>
+</div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<p>Chapter 16 Mechanics details the mechanics how to sortie and the support fleets Chapter 16 Fleets this page discusses good ships and gear to use in the two surface fleets</p>
+</article>
+
+<article>
+<header><h1>Random Notes</h1></header>
+<p>This page applies to 16 3 and 16 4 only Because 16 1 and 16 2 are easy just copy a good fleet from Chapter 14 Brief and improve it Due to some guaranteed spawns you always need to fight some Reconnaissance Fleets and some Main Fleets to reach the boss Be ready to reset a battle Sometimes your vanguard just fails to evade two or more torpedoes in the span of three seconds and there s nothing you can do about it since you can only put one Laffey II in the fleet It cannot be overstated how strong Cowpens is She can bring fast planes for 15 16s reload and still do decent damage Faster reload compared to 20s CVs like Aquila means more healing and more screen clearing Gear Main fleet defensive auxes include washing machine Rudder fire extinguisher and feather BBs with poor AA stat may also consider AA radar Main fleet ships who expect to be shelled should of course not use Bowgun or Hunting Bow Remember gear requirements for skills like Eagle Union gear for Laffey II</p>
+</article>
+
+<article>
+<header><h1>Clearing</h1></header>
+<p>It is extremely beneficial to meet the 1701 AVI threshold on both fleets On the mob fleet with a BB and one or more CVLs it may be hard Musashi s taunt allows your carriers to focus purely on AVI auxes If you don t have enough tech or cats five mob battles is still easy to handle Position Suitable Traits Examples in no particular order Mob Flag BB BC Tanky using defensive aux es Musashi Raffaello Bismarck Zwei can act as a poverty version of Musashi because Geryon aggros production BB BCs Mob Top Bottom CV CVL Double healer is good but the best non healers can also work Cowpens Unicorn Aquila Zuihou Independence Mob Front VG Tanky while contributing AA ASW other defense healing and or DPS Laffey II Guam Gouden Leeuw Z52 Mob Mid Back VG Somewhat tanky while contributing AA ASW other defense healing and or DPS Any from the row above Eldridge William D Porter San Diego Shimanto Momo Belia Deviluke Noshiro Kurumi Tokisaki Boss Flag Top Bottom 2 or 3 CV CVL for ACV There are a few Bombing Ships so a BB or mob Guam could help but is not required Any rainbow CV Independence Cowpens Musashi Lion Soyuz Boss Front VG Tanky other defense healing and or DPS Laffey II Guam Gouden Leeuw Napoli Kurumi Tokisaki Boss Mid Back VG Somewhat tanky while contributing AA other defense healing and or DPS Same as Mob Mid Back VG Example mob and boss fleet that can get 1701 AVI Example mob and boss fleet</p>
+</article>
+
+<article>
+<header><h1>Three Starring</h1></header>
+<p>There are fourteen 14 mob battles and no ammo resupply As of January 2026 you re not getting through nine out of ammo mob battles in lethal threat without a lot of resets Thus you should do it on safe threat or have two mob fleets It is not important to reach 1701 AVI on either fleet This should be common sense but submarines must be used on the boss and or out of ammo battles only unless you have calculated that you have extra submarine ammo All enemy mob types are revealed after two battles Move your fleets around to count the number of Main Fleets and the number of Reconnaissance Fleets Two Mob Fleets Mob 1 deals with all Reconnaissance Fleets and Mob 2 specializes against Main Fleets The Cargo Fleets can be taken by either mob fleet and Mob 1 may also take some Main Fleets if it has extra ammo or HP The boss can be taken by either mob fleet with or without ammo If fighting the boss without ammo be sure to have submarine ammo remaining In the following example Mob 1 Raffaello does not use the typical Twin 457mm for campaign Independence has a high chance of getting Artist s Blessing on her airstrike Raffaello s reload time is 20s while Independence s is 18s so Raffaello fires within 10s after Independence greatly increasing the chance to heal four times as much We actually used Kurumi instead of Yukikaze and the clearly worse Akagi  instead of Independence In Mob 2 we have Cowpens and Zuihou healing Musashi and double flagship defense from Z52 and WDP Musashi never drops below 40% HP For slightly better vanguard survival and worse Musashi healing steal Unicorn from the other fleet to replace Zuihou Since Cowpens and Zuihou both heal based on their max HP Laffey II can use a washing machine despite being a DD Or just use Twin 76 AA or Manjuu Damage Control WDP and Z52 use double HP auxes to reduce the chances of taking an L from torpedoes and to have more time to heal if they do take an L Example of two mob fleets Example of two mob fleets One Mob Fleet Stack the boss fleet with crossfleets and ACV</p>
+</article>
+</section>
+<section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+<article>
+<a href="/./home/home-page/">Home Page</a>
+</article>
+
+<article>
+<a href="/./home/suchiguma/">Suchiguma</a>
+</article>
+
+<article>
+<a href="/./home/contact/">Contact</a>
+</article>
+
+<article>
+<a href="/./home/donate/">Donate</a>
+</article>
+
+<article>
+<a href="/./guides/progression-guide/">Chapters 1 to 13 Progression</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-brief/">Chapter 14 Brief</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-14-detailed/">Chapter 14 Detailed</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-15/">Chapter 15</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-16-mechanics/">Chapter 16 Mechanics</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-16-fleets/">Chapter 16 Fleets</a>
+</article>
+
+<article>
+<a href="/./guides/augment-modules/">Augment Modules</a>
+</article>
+
+<article>
+<a href="/./miniguides/quick-gear-guide/">Quick Gear Guide</a>
+</article>
+
+<article>
+<a href="/./miniguides/research-focus/">Research Focus</a>
+</article>
+
+<article>
+<a href="/./miniguides/gear-lab/">Gear Lab</a>
+</article>
+
+<article>
+<a href="/./challengemode/challenge-mode/">Challenge Mode</a>
+</article>
+
+<article>
+<a href="/./challengemode/january/">January Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/february/">February Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/march/">March Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/april/">April Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/may/">May Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/june/">June Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/july/">July Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/august/">August Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/september/">September Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/october/">October Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/november/">November Challenge</a>
+</article>
+
+<article>
+<a href="/./challengemode/december/">December Challenge</a>
+</article>
+
+<article>
+<a href="/./deepresearch/auto-search-exp-and-coins/">Auto Search Exp And Coins</a>
+</article>
+
+<article>
+<a href="/./deepresearch/single-113mm-vs-76mm/">Single 113mm Vs 76mm</a>
+</article>
+
+<article>
+<a href="/./deepresearch/submarine-calculator/">Submarine Calculator</a>
+</article>
+
+<article>
+<a href="/./deepresearch/concealment/">Concealment</a>
+</article>
+
+<article>
+<a href="/./deepresearch/interception/">Interception</a>
+</article>
+</section>
+</div>
+<script type="text/javascript" src="/./footer.js"></script>
+<script type="text/javascript" src="/./toc.js"></script>
+<script type="text/javascript" src="/./assets.js"></script>
+<script type="module" src="/./static/main.js"></script>
+<script type="module">
+document.getElementById('znai').innerHTML = '';
+/*<!--*/
+window.ReactDOM.render(React.createElement(Documentation, {
+  "docMeta" : {
+    "hidePresentationTrigger" : true,
+    "description" : "A collection of lategame to endgame guides, ship tier lists, mathematical or simulated calculations, and tools for the mobile game Azur Lane.",
+    "id" : ".",
+    "title" : "Azur Lane Guides",
+    "type" : "",
+    "previewEnabled" : false
+  },
+  "page" : {
+    "type" : "Page",
+    "content" : [ {
+      "type" : "Paragraph",
+      "content" : [ {
+        "url" : "/./guides/chapter-16-mechanics",
+        "isFile" : false,
+        "type" : "Link",
+        "content" : [ {
+          "text" : "Chapter 16 Mechanics",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "text" : " details the mechanics, how to sortie, and the support fleets. Chapter 16 Fleets (this page) discusses good ships and gear to use in the two surface fleets.",
+        "type" : "SimpleText"
+      } ]
+    }, {
+      "id" : "random-notes",
+      "additionalIds" : [ ],
+      "title" : "Random Notes",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "This page applies to 16-3 and 16-4 only. Because 16-1 and 16-2 are easy, just copy a good fleet from ",
+          "type" : "SimpleText"
+        }, {
+          "url" : "/./guides/chapter-14-brief",
+          "isFile" : false,
+          "type" : "Link",
+          "content" : [ {
+            "text" : "Chapter 14 Brief",
+            "type" : "SimpleText"
+          } ]
+        }, {
+          "text" : " and improve it.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Due to some guaranteed spawns, you always need to fight some Reconnaissance Fleets and some Main Fleets to reach the boss.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "type" : "StrongEmphasis",
+              "content" : [ {
+                "text" : "Be ready to reset a battle.",
+                "type" : "SimpleText"
+              } ]
+            }, {
+              "text" : " Sometimes your vanguard just fails to evade two or more torpedoes in the span of three seconds, and there's nothing you can do about it since you can only put one Laffey II in the fleet.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "It cannot be overstated how strong Cowpens is. She can bring fast planes for 15-16s reload and still do decent damage. Faster reload compared to 20s+ CVs like Aquila means more healing and more screen clearing.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "random-notes-gear",
+        "additionalIds" : [ "gear" ],
+        "level" : 2,
+        "title" : "Gear",
+        "type" : "SubHeading"
+      }, {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Main fleet defensive auxes include washing machine (Rudder), fire extinguisher, and feather. BBs with poor AA stat may also consider AA radar.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Main fleet ships who expect to be shelled should, of course, not use Bowgun or Hunting Bow.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Remember gear requirements for skills, like Eagle Union gear for Laffey II.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "id" : "clearing",
+      "additionalIds" : [ ],
+      "title" : "Clearing",
+      "type" : "Section",
+      "content" : [ {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "It is extremely beneficial to meet the 1701 AVI threshold on both fleets. On the mob fleet with a BB and one or more CVLs, it may be hard. Musashi's taunt allows your carriers to focus purely on AVI auxes. If you don't have enough tech or cats, five mob battles is still easy to handle.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "table" : {
+          "columns" : [ {
+            "title" : "Position"
+          }, {
+            "title" : "Suitable Traits"
+          }, {
+            "title" : "Examples in no particular order"
+          } ],
+          "data" : [ [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Mob Flag",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "BB/BC. Tanky, using defensive aux(es).",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Musashi, Raffaello. Bismarck Zwei can act as a poverty version of Musashi because Geryon aggros production BB/BCs.",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Mob Top/Bottom",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "CV/CVL. Double healer is good, but the best non-healers can also work.",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Cowpens, Unicorn, Aquila, Zuihou, Independence",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Mob Front VG",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Tanky while contributing AA, ASW, other defense/healing, and/or DPS.",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Laffey II, Guam, Gouden Leeuw, Z52",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Mob Mid/Back VG",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Somewhat tanky while contributing AA, ASW, other defense/healing, and/or DPS.",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Any from the row above, Eldridge, William D. Porter, San Diego, Shimanto, Momo Belia Deviluke, Noshiro, Kurumi Tokisaki",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Boss Flag/Top/Bottom",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "2 or 3 CV/CVL for ACV. There are a few Bombing Ships, so a BB or mob Guam could help but is not required.",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Any rainbow CV, Independence, Cowpens, Musashi, Lion, Soyuz",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Boss Front VG",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Tanky, other defense/healing, and/or DPS.",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Laffey II, Guam, Gouden Leeuw, Napoli, Kurumi Tokisaki",
+              "type" : "SimpleText"
+            } ]
+          } ] ], [ [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Boss Mid/Back VG",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Somewhat tanky while contributing AA, other defense/healing, and/or DPS.",
+              "type" : "SimpleText"
+            } ]
+          } ], [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "Same as Mob Mid/Back VG",
+              "type" : "SimpleText"
+            } ]
+          } ] ] ]
+        },
+        "type" : "Table"
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\chapter-16\\example_clear.png",
+        "alt" : "Example mob and boss fleet.",
+        "width" : 1357,
+        "title" : "Example mob and boss fleet that can get 1701 AVI.",
+        "inlined" : false,
+        "timestamp" : 1769388749190,
+        "height" : 715,
+        "type" : "Image"
+      } ]
+    }, {
+      "id" : "three-starring",
+      "additionalIds" : [ ],
+      "title" : "Three Starring",
+      "type" : "Section",
+      "content" : [ {
+        "bulletMarker" : "-",
+        "tight" : true,
+        "type" : "BulletList",
+        "content" : [ {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "There are fourteen (14) mob battles and no ammo resupply. As of January 2026, you're not getting through nine out-of-ammo mob battles in lethal threat without a lot of resets. Thus, you should do it on safe threat or have two mob fleets.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "It is not important to reach 1701 AVI on either fleet.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "This should be common sense, but submarines must be used on the boss and/or out-of-ammo battles only, unless you have calculated that you have extra submarine ammo.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        }, {
+          "type" : "ListItem",
+          "content" : [ {
+            "type" : "Paragraph",
+            "content" : [ {
+              "text" : "All enemy mob types are revealed after two battles. Move your fleets around to count the number of Main Fleets and the number of Reconnaissance Fleets.",
+              "type" : "SimpleText"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "three-starring-two-mob-fleets",
+        "additionalIds" : [ "two-mob-fleets" ],
+        "level" : 2,
+        "title" : "Two Mob Fleets",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Mob 1 deals with all Reconnaissance Fleets, and Mob 2 specializes against Main Fleets. The Cargo Fleets can be taken by either mob fleet, and Mob 1 may also take some Main Fleets if it has extra ammo or HP. The boss can be taken by either mob fleet with or without ammo. If fighting the boss without ammo, be sure to have submarine ammo remaining.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In the following example Mob 1, Raffaello does not use the typical Twin 457mm for campaign. Independence has a high chance of getting Artist's Blessing on her airstrike. Raffaello's reload time is 20s while Independence's is 18s, so Raffaello fires within 10s after Independence, greatly increasing the chance to heal four times as much. We actually used Kurumi instead of Yukikaze and the clearly worse Akagi μ instead of Independence.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "In Mob 2, we have Cowpens and Zuihou healing Musashi and double flagship defense from Z52 and WDP. Musashi never drops below 40% HP. For slightly better vanguard survival and worse Musashi healing, steal Unicorn from the other fleet to replace Zuihou. Since Cowpens and Zuihou both heal based on their max HP, Laffey II can use a washing machine despite being a DD. Or just use Twin 76 AA or Manjuu Damage Control. WDP and Z52 use double HP auxes to reduce the chances of taking an L from torpedoes and to have more time to heal if they do take an L.",
+          "type" : "SimpleText"
+        } ]
+      }, {
+        "fit" : true,
+        "destination" : "/./images\\chapter-16\\example_2mob.png",
+        "alt" : "Example of two mob fleets.",
+        "width" : 1357,
+        "title" : "Example of two mob fleets.",
+        "inlined" : false,
+        "timestamp" : 1769382951192,
+        "height" : 711,
+        "type" : "Image"
+      }, {
+        "id" : "three-starring-one-mob-fleet",
+        "additionalIds" : [ "one-mob-fleet" ],
+        "level" : 2,
+        "title" : "One Mob Fleet",
+        "type" : "SubHeading"
+      }, {
+        "type" : "Paragraph",
+        "content" : [ {
+          "text" : "Stack the boss fleet with crossfleets and ACV.",
+          "type" : "SimpleText"
+        } ]
+      } ]
+    } ],
+    "lastModifiedTime" : 1769392836647,
+    "tocItem" : {
+      "chapterTitle" : "Guides",
+      "pageTitle" : "Chapter 16 Fleets",
+      "pageMeta" : { },
+      "dirName" : "guides",
+      "fileName" : "chapter-16-fleets",
+      "fileExtension" : "md",
+      "viewOnRelativePath" : null,
+      "pageSectionIdTitles" : [ {
+        "title" : "Random Notes",
+        "id" : "random-notes",
+        "customAnchorId" : "random-notes"
+      }, {
+        "title" : "Clearing",
+        "id" : "clearing",
+        "customAnchorId" : "clearing"
+      }, {
+        "title" : "Three Starring",
+        "id" : "three-starring",
+        "customAnchorId" : "three-starring"
+      } ]
+    }
+  }
+}), document.getElementById("znai"));
+/*-->*/
+
+</script>
+
+</body>
+</html>

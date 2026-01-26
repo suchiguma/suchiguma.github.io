@@ -87,7 +87,7 @@
 </div><section id="page-content" style="max-width: 640px; margin-left: auto; margin-right: auto;">
 <article>
 <header><h1>Smokescreen Generation</h1></header>
-<p>Chapter 15 enemy smokescreens Every 30s two Mass Produced Kagerou Class spawn off screen The first spawn is at 2 42 for all I didnt check chapter 15 battles These Mass Produced Kagerou Class slowly move left to eventually crash into your main fleet They do not have to be killed for the battle to end They have 40 SPD with a 0 4 multiplier for 16 effective SPD After spawning each Mass Produced Kagerou Class spawns a tiny smokescreen on itself every 0 8s for 6 times After each smokescreen spawns it expands over 3s with a quadratic rate of expanstion to around 21x56 size can be smaller if your potato device skips calculation frames Then it disappears after 12s more for a total duration of 15s Enemies who touched the smokescreen get aim bias not an EVA rate buff</p>
+<p>Chapter 15 16 3 and 16 4 enemy smokescreens Every 30s two Mass Produced Kagerou Class spawn off screen The first spawn is at 2 42 for all I didnt check chapter 15 battles These Mass Produced Kagerou Class slowly move left to eventually crash into your main fleet They do not have to be killed for the battle to end They have 40 SPD with a 0 4 multiplier for 16 effective SPD After spawning each Mass Produced Kagerou Class spawns a tiny smokescreen on itself every 0 8s for 6 times After each smokescreen spawns it expands over 3s with a quadratic rate of expanstion to around 21x56 size can be smaller if your potato device skips calculation frames Then it disappears after 12s more for a total duration of 15s Enemies who touched the smokescreen get aim bias not an EVA rate buff</p>
 </article>
 
 <article>
@@ -97,7 +97,7 @@
 
 <article>
 <header><h1>Aim Bias Decay</h1></header>
-<p>The aim bias bar decays with a speed based on complex formulas Aim bias is measured in units and decay speeds are in units per second No Enemies In Chapter 14 when you wipe an enemy wave there are no enemies on screen But this is 0 at the beginning of the battle even though enemies haven t spawned yet Fog While battling enemy fleets that are located inside the foggy weather on a Chapter 14 sortie map all allied and enemy ships get aim bias decay speed 0 15 meaning that all ships stay concealed for longer Highest HIT stat Applies in both Chapters 14 and 15 The HIT stat of the ship with the highest HIT stat on either side friend or foe excluding support carriers will affect the rate of decay of the opposing side s aim bias Submarines are only affected by the highest HIT stat among the opposing side s DD CL and DDG V This effect is capped to 300 HIT on the highest HIT ship Radar gear Each ship equipped with a radar like gear excluding support carriers makes the enemy aim bias decay very slightly quicker Applies in both Chapters 14 and 15 Two radar like gear on one ship only counts as one This is the list of radar like gear as of May 2025 and they all add a constant 0 1 to the decay speed combinedSpeed decaySpeedRatio * maxAimBias decaySpeedFog decaySpeedHit decaySpeedRadar decaySpeedRatio 0 25 if no enemies else 0 decaySpeedFog 0 15 if foggyBattle else 0 decaySpeedHit min highestHit 100 3 decaySpeedRadar 0 1 * numberOfShipsWithRadar FuMO 25 T0 Air Radar T1 Air Radar T2 Air Radar T3 High Performance Air Radar T0 Fire Control Radar T1 Fire Control Radar T2 Fire Control Radar T3 High Standard Fire Control Radar T0 SG Radar T1 SG Radar T2 SG Radar T3 Admiralty Fire Control Table T0</p>
+<p>The aim bias bar decays with a speed based on complex formulas Aim bias is measured in units and decay speeds are in units per second No Enemies In Chapter 14 16 1 and 16 2 when you wipe an enemy wave there are no enemies on screen Your vanguard ships and submarines not frigates in the submarine fleet regain concealment for 1 second But this is 0 at the beginning of the battle even though enemies haven t spawned yet Fog While battling enemy fleets that are located inside the foggy weather in 14 4 all allied and enemy ships get aim bias decay speed 0 15 meaning that all ships stay concealed for longer Highest HIT stat Applies in Chapters 14 to 16 The HIT stat of the ship with the highest HIT stat on either side friend or foe excluding support carriers will affect the rate of decay of the opposing side s aim bias Submarines are only affected by the highest HIT stat among the opposing side s DD CL and DDG V This effect is capped to 300 HIT on the highest HIT ship Radar gear Each ship equipped with a radar like gear excluding support carriers makes the enemy aim bias decay very slightly quicker Applies in Chapters 14 to 16 Two radar like gear on one ship only counts as one This is the list of radar like gear as of May 2025 and they all add a constant 0 1 to the decay speed combinedSpeed decaySpeedRatio * maxAimBias decaySpeedFog decaySpeedHit decaySpeedRadar decaySpeedRatio 0 25 if no enemies else 0 decaySpeedFog 0 15 if foggyBattle else 0 decaySpeedHit min highestHit 100 3 decaySpeedRadar 0 1 * numberOfShipsWithRadar FuMO 25 T0 Air Radar T1 Air Radar T2 Air Radar T3 High Performance Air Radar T0 Fire Control Radar T1 Fire Control Radar T2 Fire Control Radar T3 High Standard Fire Control Radar T0 SG Radar T1 SG Radar T2 SG Radar T3 Admiralty Fire Control Table T0</p>
 </article>
 </section>
 <section id="table-of-contents" style="max-width: 640px; margin-left: auto; margin-right: auto;">
@@ -131,6 +131,14 @@
 
 <article>
 <a href="/./guides/chapter-15/">Chapter 15</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-16-mechanics/">Chapter 16 Mechanics</a>
+</article>
+
+<article>
+<a href="/./guides/chapter-16-fleets/">Chapter 16 Fleets</a>
 </article>
 
 <article>
@@ -248,7 +256,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
       "content" : [ {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Chapter 15 enemy smokescreens.",
+          "text" : "Chapter 15, 16-3, and 16-4 enemy smokescreens.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -345,7 +353,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "In Chapter 14, when you wipe an enemy wave, there are no enemies on screen.",
+          "text" : "In Chapter 14, 16-1, and 16-2, when you wipe an enemy wave, there are no enemies on screen. Your vanguard ships and submarines (not frigates in the submarine fleet) regain concealment for 1 second.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -368,7 +376,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "While battling enemy fleets that are located inside the foggy weather on a Chapter 14 sortie map, all allied and enemy ships get aim bias decay speed -0.15, meaning that all ships stay concealed for longer.",
+          "text" : "While battling enemy fleets that are located inside the foggy weather in 14-4, all allied and enemy ships get aim bias decay speed -0.15, meaning that all ships stay concealed for longer.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -385,7 +393,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
       }, {
         "type" : "Paragraph",
         "content" : [ {
-          "text" : "Applies in both Chapters 14 and 15. The HIT stat of the ship with the highest HIT stat on either side (friend or foe, excluding support carriers) will affect the rate of decay of the opposing side's aim bias. Submarines are only affected by the highest HIT stat among the opposing side's DD, CL, and DDG(V). This effect is capped to 300 HIT on the highest-HIT ship.",
+          "text" : "Applies in Chapters 14 to 16. The HIT stat of the ship with the highest HIT stat on either side (friend or foe, excluding support carriers) will affect the rate of decay of the opposing side's aim bias. Submarines are only affected by the highest HIT stat among the opposing side's DD, CL, and DDG(V). This effect is capped to 300 HIT on the highest-HIT ship.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -411,7 +419,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
             "type" : "SimpleText"
           } ]
         }, {
-          "text" : " quicker. Applies in both Chapters 14 and 15. Two radar-like gear on one ship only counts as one.",
+          "text" : " quicker. Applies in Chapters 14 to 16. Two radar-like gear on one ship only counts as one.",
           "type" : "SimpleText"
         } ]
       }, {
@@ -432,7 +440,7 @@ window.ReactDOM.render(React.createElement(Documentation, {
         "type" : "Snippet"
       } ]
     } ],
-    "lastModifiedTime" : 1747025779267,
+    "lastModifiedTime" : 1769306047276,
     "tocItem" : {
       "chapterTitle" : "Deep Research",
       "pageTitle" : "Concealment",

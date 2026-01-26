@@ -220,6 +220,44 @@ toc = [ {
     } ]
   }, {
     "chapterTitle" : "Guides",
+    "pageTitle" : "Chapter 16 Mechanics",
+    "pageMeta" : { },
+    "dirName" : "guides",
+    "fileName" : "chapter-16-mechanics",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "16-1 and 16-2",
+      "id" : "16-1-and-16-2",
+      "customAnchorId" : "16-1-and-16-2"
+    }, {
+      "title" : "16-3 and 16-4",
+      "id" : "16-3-and-16-4",
+      "customAnchorId" : "16-3-and-16-4"
+    } ]
+  }, {
+    "chapterTitle" : "Guides",
+    "pageTitle" : "Chapter 16 Fleets",
+    "pageMeta" : { },
+    "dirName" : "guides",
+    "fileName" : "chapter-16-fleets",
+    "fileExtension" : "md",
+    "viewOnRelativePath" : null,
+    "pageSectionIdTitles" : [ {
+      "title" : "Random Notes",
+      "id" : "random-notes",
+      "customAnchorId" : "random-notes"
+    }, {
+      "title" : "Clearing",
+      "id" : "clearing",
+      "customAnchorId" : "clearing"
+    }, {
+      "title" : "Three Starring",
+      "id" : "three-starring",
+      "customAnchorId" : "three-starring"
+    } ]
+  }, {
+    "chapterTitle" : "Guides",
     "pageTitle" : "Augment Modules",
     "pageMeta" : { },
     "dirName" : "guides",
