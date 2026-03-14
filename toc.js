@@ -23,6 +23,10 @@ toc = [ {
     "fileExtension" : "md",
     "viewOnRelativePath" : null,
     "pageSectionIdTitles" : [ {
+      "title" : "Ship Tier List",
+      "id" : "ship-tier-list",
+      "customAnchorId" : "ship-tier-list"
+    }, {
       "title" : "Guides",
       "id" : "guides",
       "customAnchorId" : "guides"
@@ -30,10 +34,6 @@ toc = [ {
       "title" : "Other Content",
       "id" : "other-content",
       "customAnchorId" : "other-content"
-    }, {
-      "title" : "Ship Tier List",
-      "id" : "ship-tier-list",
-      "customAnchorId" : "ship-tier-list"
     }, {
       "title" : "Other People",
       "id" : "other-people",
