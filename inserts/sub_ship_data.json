@@ -215,6 +215,15 @@
         "loveRld": 93,
         "oathRld": 98
     },
+    "Patty": {
+        "baseOxy": 268,
+        "addOxy": 20,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 104,
+        "oathRld": 110
+    },
     "Surcouf": {
         "baseOxy": 180,
         "addOxy": 0,
