@@ -269,6 +269,15 @@
         "loveRld": 86,
         "oathRld": 91
     },
+    "U-2501": {
+        "baseOxy": 308,
+        "addOxy": 40,
+        "percentRld": 10,
+        "attackDuration": 1,
+        "triggerDuration": 0.2,
+        "loveRld": 118,
+        "oathRld": 125
+    },
     "U-31": {
         "baseOxy": 188,
         "addOxy": 0,
