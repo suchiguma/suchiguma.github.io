@@ -107,6 +107,15 @@
         "loveRld": 110,
         "oathRld": 116
     },
+    "I-14": {
+        "baseOxy": 198,
+        "addOxy": 0,
+        "percentRld": 0,
+        "attackDuration": 5,
+        "triggerDuration": 0.2,
+        "loveRld": 110,
+        "oathRld": 116
+    },
     "I-168": {
         "baseOxy": 195,
         "addOxy": 0,
